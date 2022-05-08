@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://huangmayor0905.github.io/006-20220508/</loc>
+    <lastmod>2022-05-08</lastmod>
+  </url>
+  <url>
     <loc>http://huangmayor0905.github.io/005-make-a-blog-with-hexo/</loc>
-    <lastmod>2022-05-05</lastmod>
-  </url>
-  <url>
-    <loc>http://huangmayor0905.github.io/001-test-artical/</loc>
-    <lastmod>2022-05-04</lastmod>
-  </url>
-  <url>
-    <loc>http://huangmayor0905.github.io/002-cpp-compiler/</loc>
-    <lastmod>2022-05-01</lastmod>
+    <lastmod>2022-05-08</lastmod>
   </url>
   <url>
     <loc>http://huangmayor0905.github.io/004-meeting-hello-world/</loc>
+    <lastmod>2022-05-08</lastmod>
+  </url>
+  <url>
+    <loc>http://huangmayor0905.github.io/001-test-artical/</loc>
+    <lastmod>2022-05-08</lastmod>
+  </url>
+  <url>
+    <loc>http://huangmayor0905.github.io/002-cpp-compiler/</loc>
     <lastmod>2022-05-01</lastmod>
   </url>
   <url>
