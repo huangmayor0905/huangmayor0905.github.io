@@ -2832,6 +2832,7 @@ h1.page-title + .tag-cloud-list {
   transition: filter 375ms ease-in 0.2s;
 }
 #article-container p {
+  font-size: 15px;
   margin: 0 0 16px;
 }
 #article-container iframe {
@@ -2918,14 +2919,14 @@ h1.page-title + .tag-cloud-list {
   color: #49b1f5;
 }
 #article-container h1 {
-  padding-left: 62px;
+  padding-left: 32px;
 }
 #article-container h1:before {
-  margin-left: -56px;
-  font-size: 50px;
+  margin-left: -26px;
+  font-size: 20px;
 }
 #article-container h1:hover {
-  padding-left: 68px;
+  padding-left: 38px;
 }
 #article-container h2 {
   padding-left: 30px;
