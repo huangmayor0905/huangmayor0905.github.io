@@ -2918,14 +2918,14 @@ h1.page-title + .tag-cloud-list {
   color: #49b1f5;
 }
 #article-container h1 {
-  padding-left: 32px;
+  padding-left: 62px;
 }
 #article-container h1:before {
-  margin-left: -26px;
-  font-size: 20px;
+  margin-left: -56px;
+  font-size: 50px;
 }
 #article-container h1:hover {
-  padding-left: 38px;
+  padding-left: 68px;
 }
 #article-container h2 {
   padding-left: 30px;
