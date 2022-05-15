@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://huangmayor0905.github.io/005-make-a-blog-with-hexo/</loc>
+    <lastmod>2022-05-15</lastmod>
+  </url>
+  <url>
     <loc>http://huangmayor0905.github.io/009-20220511/</loc>
     <lastmod>2022-05-14</lastmod>
   </url>
@@ -18,10 +22,6 @@
   </url>
   <url>
     <loc>http://huangmayor0905.github.io/006-20220508/</loc>
-    <lastmod>2022-05-08</lastmod>
-  </url>
-  <url>
-    <loc>http://huangmayor0905.github.io/005-make-a-blog-with-hexo/</loc>
     <lastmod>2022-05-08</lastmod>
   </url>
   <url>
