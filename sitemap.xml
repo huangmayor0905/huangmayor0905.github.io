@@ -162,13 +162,6 @@
   </url>
   
   <url>
-    <loc>http://huangmayor0905.github.io/tags/test/</loc>
-    <lastmod>2022-05-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://huangmayor0905.github.io/tags/C-C/</loc>
     <lastmod>2022-05-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -177,6 +170,13 @@
   
   <url>
     <loc>http://huangmayor0905.github.io/tags/%E7%B7%A8%E8%AD%AF%E5%99%A8/</loc>
+    <lastmod>2022-05-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://huangmayor0905.github.io/tags/test/</loc>
     <lastmod>2022-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -220,14 +220,14 @@
   </url>
   
   <url>
-    <loc>http://huangmayor0905.github.io/categories/computer-science/cpp/</loc>
+    <loc>http://huangmayor0905.github.io/categories/hexo-blog/</loc>
     <lastmod>2022-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://huangmayor0905.github.io/categories/hexo-blog/</loc>
+    <loc>http://huangmayor0905.github.io/categories/computer-science/cpp/</loc>
     <lastmod>2022-05-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
