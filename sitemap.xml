@@ -2,7 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://huangmayor0905.github.io/2022/05/01/005-make-a-blog-with-hexo/</loc>
+    <loc>http://huangmayor0905.github.io/2022/05/27/011-The-Road-Less-Traveled/</loc>
+    
+    <lastmod>2022-05-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://huangmayor0905.github.io/book/index.html</loc>
+    
+    <lastmod>2022-05-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://huangmayor0905.github.io/2022/05/24/010-20220524/</loc>
+    
+    <lastmod>2022-05-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://huangmayor0905.github.io/2022/05/01/004-make-a-blog-with-hexo/</loc>
     
     <lastmod>2022-05-22</lastmod>
     
@@ -20,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://huangmayor0905.github.io/2022/05/08/006-20220508/</loc>
+    <loc>http://huangmayor0905.github.io/2022/05/08/005-20220508/</loc>
     
     <lastmod>2022-05-18</lastmod>
     
@@ -38,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://huangmayor0905.github.io/2022/05/11/009-20220511/</loc>
+    <loc>http://huangmayor0905.github.io/2022/05/11/008-20220511/</loc>
     
     <lastmod>2022-05-14</lastmod>
     
@@ -56,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://huangmayor0905.github.io/2022/05/12/010-20220512/</loc>
+    <loc>http://huangmayor0905.github.io/2022/05/12/009-20220512/</loc>
     
     <lastmod>2022-05-12</lastmod>
     
@@ -74,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://huangmayor0905.github.io/2022/05/10/008-20220510/</loc>
+    <loc>http://huangmayor0905.github.io/2022/05/10/007-20220510/</loc>
     
     <lastmod>2022-05-10</lastmod>
     
@@ -83,7 +110,7 @@
   </url>
   
   <url>
-    <loc>http://huangmayor0905.github.io/2022/05/09/007-20220509/</loc>
+    <loc>http://huangmayor0905.github.io/2022/05/09/006-20220509/</loc>
     
     <lastmod>2022-05-09</lastmod>
     
@@ -92,7 +119,7 @@
   </url>
   
   <url>
-    <loc>http://huangmayor0905.github.io/2022/03/26/004-meeting-hello-world/</loc>
+    <loc>http://huangmayor0905.github.io/2022/03/26/003-meeting-hello-world/</loc>
     
     <lastmod>2022-05-08</lastmod>
     
@@ -148,7 +175,7 @@
 
   <url>
     <loc>http://huangmayor0905.github.io/</loc>
-    <lastmod>2022-05-22</lastmod>
+    <lastmod>2022-05-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -156,56 +183,63 @@
   
   <url>
     <loc>http://huangmayor0905.github.io/tags/%E5%AE%98%E6%96%B9%E6%96%87%E7%AB%A0/</loc>
-    <lastmod>2022-05-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://huangmayor0905.github.io/tags/C-C/</loc>
-    <lastmod>2022-05-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://huangmayor0905.github.io/tags/Hexo/</loc>
-    <lastmod>2022-05-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://huangmayor0905.github.io/tags/GitHub-io/</loc>
-    <lastmod>2022-05-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://huangmayor0905.github.io/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/</loc>
-    <lastmod>2022-05-22</lastmod>
+    <lastmod>2022-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://huangmayor0905.github.io/tags/test/</loc>
-    <lastmod>2022-05-22</lastmod>
+    <lastmod>2022-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://huangmayor0905.github.io/tags/C-C/</loc>
+    <lastmod>2022-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://huangmayor0905.github.io/tags/%E7%B7%A8%E8%AD%AF%E5%99%A8/</loc>
-    <lastmod>2022-05-22</lastmod>
+    <lastmod>2022-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://huangmayor0905.github.io/tags/%E6%97%A5%E8%A8%98/</loc>
-    <lastmod>2022-05-22</lastmod>
+    <lastmod>2022-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://huangmayor0905.github.io/tags/Hexo/</loc>
+    <lastmod>2022-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://huangmayor0905.github.io/tags/GitHub-io/</loc>
+    <lastmod>2022-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://huangmayor0905.github.io/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/</loc>
+    <lastmod>2022-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://huangmayor0905.github.io/tags/%E5%BF%83%E5%BE%97/</loc>
+    <lastmod>2022-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -214,21 +248,21 @@
   
   <url>
     <loc>http://huangmayor0905.github.io/categories/computer-science/</loc>
-    <lastmod>2022-05-22</lastmod>
+    <lastmod>2022-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://huangmayor0905.github.io/categories/hexo-blog/</loc>
-    <lastmod>2022-05-22</lastmod>
+    <lastmod>2022-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://huangmayor0905.github.io/categories/computer-science/cpp/</loc>
-    <lastmod>2022-05-22</lastmod>
+    <lastmod>2022-05-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

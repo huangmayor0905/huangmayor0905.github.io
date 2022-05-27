@@ -2832,6 +2832,7 @@ h1.page-title + .tag-cloud-list {
   transition: filter 375ms ease-in 0.2s;
 }
 #article-container p {
+  letter-spacing: 1px;
   font-size: 15px;
   margin: 0 0 16px;
 }
