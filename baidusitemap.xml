@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://huangmayor0905.github.io/2022/05/27/012-infix-postfix/</loc>
-    <lastmod>2022-05-29</lastmod>
+    <lastmod>2022-06-04</lastmod>
+  </url>
+  <url>
+    <loc>http://huangmayor0905.github.io/2022/05/01/004-make-a-blog-with-hexo/</loc>
+    <lastmod>2022-05-31</lastmod>
   </url>
   <url>
     <loc>http://huangmayor0905.github.io/2022/05/27/011-The-Road-Less-Traveled/</loc>
@@ -19,10 +23,6 @@
   <url>
     <loc>http://huangmayor0905.github.io/2022/05/24/010-20220524/</loc>
     <lastmod>2022-05-25</lastmod>
-  </url>
-  <url>
-    <loc>http://huangmayor0905.github.io/2022/05/01/004-make-a-blog-with-hexo/</loc>
-    <lastmod>2022-05-22</lastmod>
   </url>
   <url>
     <loc>http://huangmayor0905.github.io/2022/05/08/005-20220508/</loc>
