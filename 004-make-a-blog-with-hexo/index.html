@@ -22,12 +22,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"github.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Blog 是什麼？ 是一種線上日記型式的個人網站，藉由張貼文章、圖片或影片來記錄生活、抒發情感或分享資訊。部落格上的文章通常根據張貼時間，以倒序方式由新到舊排列。by 維基百科  為何要寫 Blog？部落格可以為自己記錄成長軌跡，不只是日常稱活的趣事，也可以是科普文章，主題由自己策劃，選擇自己喜歡或擅長的領域，發布一篇文章，使更多人看到。別人既可以從文章中得到娛樂與知識，自己也可以得到寫作的提升，">
+    <meta name="description" content="如何用 Github Page 服務 + Hexo 架自己的網站">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用 Hexo 在 GitHub 架站吧">
 <meta property="og:url" content="https://github.com/huangmayor0905/huangmayor0905.github.io/004-make-a-blog-with-hexo/index.html">
 <meta property="og:site_name" content="Kuo&#39;s Blog">
-<meta property="og:description" content="Blog 是什麼？ 是一種線上日記型式的個人網站，藉由張貼文章、圖片或影片來記錄生活、抒發情感或分享資訊。部落格上的文章通常根據張貼時間，以倒序方式由新到舊排列。by 維基百科  為何要寫 Blog？部落格可以為自己記錄成長軌跡，不只是日常稱活的趣事，也可以是科普文章，主題由自己策劃，選擇自己喜歡或擅長的領域，發布一篇文章，使更多人看到。別人既可以從文章中得到娛樂與知識，自己也可以得到寫作的提升，">
+<meta property="og:description" content="如何用 Github Page 服務 + Hexo 架自己的網站">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://i.ibb.co/qkRdMQ3/image.png">
 <meta property="og:image" content="https://i.ibb.co/mqRR9T4/github-homepage.png">
@@ -43,7 +43,7 @@
 <meta property="og:image" content="https://i.ibb.co/qgF0mf7/hexo-v.png">
 <meta property="og:image" content="https://i.ibb.co/xqBFvdf/open-by-code.png">
 <meta property="article:published_time" content="2022-04-30T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-05-24T06:31:27.593Z">
+<meta property="article:modified_time" content="2023-05-24T14:48:10.263Z">
 <meta property="article:author" content="kuo-yu Huang">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="GitHub">
@@ -108,7 +108,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>時間表</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">29</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">8</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">40</span></a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>時間表</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
         </a>
@@ -159,7 +159,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Blog-%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">Blog 是什麼？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%82%BA%E4%BD%95%E8%A6%81%E5%AF%AB-Blog%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">為何要寫 Blog？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%94%A8-Hexo-%E5%9C%A8-GitHub-%E6%9E%B6%E7%AB%99%E5%91%A2%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">如何用 Hexo 在 GitHub 架站呢？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-Hexo%EF%BC%9F"><span class="nav-number">3.1.</span> <span class="nav-text">什麼是 Hexo？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-GitHub%EF%BC%9F"><span class="nav-number">3.2.</span> <span class="nav-text">什麼是 GitHub？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%B5%E5%BB%BA-GitHub-%E5%B8%B3%E8%99%9F-%E8%A8%AD%E7%BD%AE%E5%B0%88%E6%A1%88"><span class="nav-number">3.3.</span> <span class="nav-text">創建 GitHub 帳號 + 設置專案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%B8%E5%AE%9A%E5%A5%BD%E9%83%A8%E8%90%BD%E6%A0%BC%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="nav-number">3.4.</span> <span class="nav-text">選定好部落格的位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E7%99%BB%E5%A0%B4%EF%BC%81"><span class="nav-number">3.5.</span> <span class="nav-text">Hexo 登場！</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E5%AE%89%E8%A3%9D"><span class="nav-number">3.5.1.</span> <span class="nav-text">前置安裝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E8%A8%AD%E7%BD%AE"><span class="nav-number">3.5.2.</span> <span class="nav-text">初始設置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A8%AD%E7%BD%AE-Blog-%E7%9B%B8%E9%97%9C%E8%A8%8A%E6%81%AF"><span class="nav-number">3.6.</span> <span class="nav-text">設置 Blog 相關訊息</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Blog-%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F"><span class="nav-text">Blog 是什麼？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%82%BA%E4%BD%95%E8%A6%81%E5%AF%AB-Blog%EF%BC%9F"><span class="nav-text">為何要寫 Blog？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%94%A8-Hexo-%E5%9C%A8-GitHub-%E6%9E%B6%E7%AB%99%E5%91%A2%EF%BC%9F"><span class="nav-text">如何用 Hexo 在 GitHub 架站呢？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-Hexo%EF%BC%9F"><span class="nav-text">什麼是 Hexo？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-GitHub%EF%BC%9F"><span class="nav-text">什麼是 GitHub？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%B5%E5%BB%BA-GitHub-%E5%B8%B3%E8%99%9F-%E8%A8%AD%E7%BD%AE%E5%B0%88%E6%A1%88"><span class="nav-text">創建 GitHub 帳號 + 設置專案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%B8%E5%AE%9A%E5%A5%BD%E9%83%A8%E8%90%BD%E6%A0%BC%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="nav-text">選定好部落格的位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E7%99%BB%E5%A0%B4%EF%BC%81"><span class="nav-text">Hexo 登場！</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E5%AE%89%E8%A3%9D"><span class="nav-text">前置安裝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E8%A8%AD%E7%BD%AE"><span class="nav-text">初始設置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A8%AD%E7%BD%AE-Blog-%E7%9B%B8%E9%97%9C%E8%A8%8A%E6%81%AF"><span class="nav-text">設置 Blog 相關訊息</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -185,7 +185,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-count">29</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -193,6 +193,15 @@
   <div class="links-of-author animated">
       <span class="links-of-author-item">
         <a href="https://github.com/huangmayor0905" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huangmayor0905" rel="noopener me"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:lionhuang914903@gmail.com" title="E-Mail → mailto:lionhuang914903@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/profile.php?id=100008744280057" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;profile.php?id&#x3D;100008744280057" rel="noopener me" target="_blank"><i class="fab fa-facebook fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://instagram.com/kuokuo_0905" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;kuokuo_0905" rel="noopener me" target="_blank"><i class="fab fa-instagram fa-fw"></i></a>
       </span>
   </div>
 
@@ -235,7 +244,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="用 Hexo 在 GitHub 架站吧 | Kuo's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="如何用 Github Page 服務 + Hexo 架自己的網站">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -257,7 +266,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2023-05-24 14:31:27" itemprop="dateModified" datetime="2023-05-24T14:31:27+08:00">2023-05-24</time>
+      <time title="修改時間：2023-05-24 22:48:10" itemprop="dateModified" datetime="2023-05-24T22:48:10+08:00">2023-05-24</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -287,6 +296,7 @@
     </span>
 </div>
 
+            <div class="post-description">如何用 Github Page 服務 + Hexo 架自己的網站</div>
         </div>
       </header>
 
@@ -368,6 +378,23 @@
     
 
     <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>作者： </strong>kuo-yu Huang
+  </li>
+  <li class="post-copyright-link">
+      <strong>文章連結：</strong>
+      <a href="https://github.com/huangmayor0905/huangmayor0905.github.io/004-make-a-blog-with-hexo/" title="用 Hexo 在 GitHub 架站吧">https://github.com/huangmayor0905/huangmayor0905.github.io/004-make-a-blog-with-hexo/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-TW" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
           <div class="post-tags">
               <a href="/tags/Hexo/" rel="tag"># Hexo</a>
               <a href="/tags/GitHub/" rel="tag"># GitHub</a>
@@ -397,6 +424,7 @@
 
 
 
+    <div class="comments gitalk-container"></div>
 </div>
   </main>
 
@@ -405,7 +433,7 @@
 
 
 <div class="copyright">
-  &copy; 
+  &copy; 2022 – 
   <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -462,6 +490,10 @@
 
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"huangmayor0905","repo":"huangmayor0905.github.io","client_id":"2edf56fae528fa5e1662","client_secret":"b9d5dcfcb3733c370d2e9b6688fc5c2576469520","admin_user":"huangmayor0905","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"e7ea4fb308f8229f20910f0fd4d57682"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
 </html>
