@@ -23,29 +23,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"github.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="這是我第一次去考 APCS（誰叫你之前都忘記報），當天考觀念時肚子真的痛得要命，直到中午才去宣洩…我的考場在台北大學三峽校區，令我意外的是男女比沒有到很重，但是大佬倒是挺多的。考實作題時，不知道是不是緊張，就是一直在 debug…最後是寫到第三題寫了一點就結束了。我那天超孤單😢，我朋友給我請假…說他抽考沒讀，我也沒讀啊🤬。反正最後考了 4 &#x2F; 3 還蠻理想的。 數字遊戲（易）ZJ 連">
-<meta property="og:type" content="article">
-<meta property="og:title" content="【筆記】APCS 2022 年 6 月場">
-<meta property="og:url" content="https://github.com/huangmayor0905/huangmayor0905.github.io/013-202206apcs01/index.html">
+    <meta name="description" content="C++ STL 容器Sequence containers（序列容器）   主題 連結    array 點我前往   vector 點我前往   deque 尚未完成   list 尚未完成   forward_list 尚未完成   Associative containers（關聯容器）   主題 連結    set 尚未完成   queue 尚未完成   multiset 尚未完成   m">
+<meta property="og:type" content="website">
+<meta property="og:title" content="cplusplus">
+<meta property="og:url" content="https://github.com/huangmayor0905/huangmayor0905.github.io/cplusplus/index.html">
 <meta property="og:site_name" content="Kuo&#39;s Blog">
-<meta property="og:description" content="這是我第一次去考 APCS（誰叫你之前都忘記報），當天考觀念時肚子真的痛得要命，直到中午才去宣洩…我的考場在台北大學三峽校區，令我意外的是男女比沒有到很重，但是大佬倒是挺多的。考實作題時，不知道是不是緊張，就是一直在 debug…最後是寫到第三題寫了一點就結束了。我那天超孤單😢，我朋友給我請假…說他抽考沒讀，我也沒讀啊🤬。反正最後考了 4 &#x2F; 3 還蠻理想的。 數字遊戲（易）ZJ 連">
+<meta property="og:description" content="C++ STL 容器Sequence containers（序列容器）   主題 連結    array 點我前往   vector 點我前往   deque 尚未完成   list 尚未完成   forward_list 尚未完成   Associative containers（關聯容器）   主題 連結    set 尚未完成   queue 尚未完成   multiset 尚未完成   m">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2022-07-05T03:52:08.000Z">
-<meta property="article:modified_time" content="2022-12-14T10:15:10.701Z">
+<meta property="article:published_time" content="2023-06-03T11:12:06.000Z">
+<meta property="article:modified_time" content="2023-06-03T11:15:13.558Z">
 <meta property="article:author" content="kuo-yu Huang">
-<meta property="article:tag" content="APCS">
-<meta property="article:tag" content="筆記">
+<meta property="article:tag" content="黃國瑜, kuo-yu Huang">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://github.com/huangmayor0905/huangmayor0905.github.io/013-202206apcs01/">
+<link rel="canonical" href="https://github.com/huangmayor0905/huangmayor0905.github.io/cplusplus/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://github.com/huangmayor0905/huangmayor0905.github.io/013-202206apcs01/","path":"013-202206apcs01/","title":"【筆記】APCS 2022 年 6 月場"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-TW","comments":"","permalink":"https://github.com/huangmayor0905/huangmayor0905.github.io/cplusplus/index.html","path":"cplusplus/index.html","title":"cplusplus"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>【筆記】APCS 2022 年 6 月場 | Kuo's Blog</title>
+<title>cplusplus | Kuo's Blog
+</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H75BZLED7F"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-H75BZLED7F","only_pageview":false}</script>
@@ -148,7 +148,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B8%E5%AD%97%E9%81%8A%E6%88%B2%EF%BC%88%E6%98%93%EF%BC%89"><span class="nav-text">數字遊戲（易）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E4%B8%B2%E8%A7%A3%E7%A2%BC%EF%BC%88%E4%B8%AD%EF%BC%89"><span class="nav-text">字串解碼（中）</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-STL-%E5%AE%B9%E5%99%A8"><span class="nav-text">C++ STL 容器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sequence-containers%EF%BC%88%E5%BA%8F%E5%88%97%E5%AE%B9%E5%99%A8%EF%BC%89"><span class="nav-text">Sequence containers（序列容器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Associative-containers%EF%BC%88%E9%97%9C%E8%81%AF%E5%AE%B9%E5%99%A8%EF%BC%89"><span class="nav-text">Associative containers（關聯容器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unordered-associative-containers%EF%BC%88%E7%84%A1%E5%BA%8F%E9%97%9C%E8%81%AF%E5%AE%B9%E5%99%A8%EF%BC%89"><span class="nav-text">Unordered associative containers（無序關聯容器）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Container-adaptors%EF%BC%88%E5%AE%B9%E5%99%A8%E9%81%A9%E9%85%8D%E5%99%A8%EF%BC%89"><span class="nav-text">Container adaptors（容器適配器）</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -208,151 +208,132 @@
 
     </div>
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner page posts-expand">
 
 
-  
+    
+    
+    
+    <div class="post-block" lang="zh-TW"><header class="post-header">
 
+<h1 class="post-title" itemprop="name headline">cplusplus
+</h1>
 
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://github.com/huangmayor0905/huangmayor0905.github.io/013-202206apcs01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="kuo-yu Huang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Kuo's Blog">
-      <meta itemprop="description" content="個人網站">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="【筆記】APCS 2022 年 6 月場 | Kuo's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          【筆記】APCS 2022 年 6 月場
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發表於</span>
-
-      <time title="創建時間：2022-07-05 11:52:08" itemprop="dateCreated datePublished" datetime="2022-07-05T11:52:08+08:00">2022-07-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2022-12-14 18:15:10" itemprop="dateModified" datetime="2022-12-14T18:15:10+08:00">2022-12-14</time>
-    </span>
-
-  
-    <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">閱讀次數：</span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="文章字數">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">文章字數：</span>
-      <span>384</span>
-    </span>
-    <span class="post-meta-item" title="所需閱讀時間">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-      <span>1 分鐘</span>
-    </span>
+<div class="post-meta-container">
 </div>
 
-        </div>
-      </header>
+</header>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody"><p>這是我第一次去考 APCS（誰叫你之前都忘記報），當天考觀念時肚子真的痛得要命，直到中午才去宣洩…我的考場在台北大學三峽校區，令我意外的是男女比沒有到很重，但是大佬倒是挺多的。考實作題時，不知道是不是緊張，就是一直在 debug…最後是寫到第三題寫了一點就結束了。我那天超孤單😢，我朋友給我請假…說他抽考沒讀，我也沒讀啊🤬。反正最後考了 4 &#x2F; 3 還蠻理想的。</p>
-<h2 id="數字遊戲（易）"><a href="#數字遊戲（易）" class="headerlink" title="數字遊戲（易）"></a>數字遊戲（易）</h2><p>ZJ 連結：<a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=i399">https://zerojudge.tw/ShowProblem?problemid=i399</a></p>
-<p>輸入：3 個 1 ~ 9 的數字</p>
-<p>輸出：先輸出數值出現最多的次數，再輸出三個數，且去除重複，由大到小。</p>
-<p>想法：既要去掉重複又要排序，我的第一想法就是使用 set。set 是一個容器，它具有資料的唯一性，也就是不可重複，且容器內也會排序，跟 map 一樣。第一筆輸出我會用 4 - set 長度，這樣恰好是重複的個數，再用反向迭代器輸出 set 容器即可。</p>
-<p>實作：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> data[<span class="number">3</span>];</span><br><span class="line">    cin &gt;&gt; data[<span class="number">0</span>] &gt;&gt; data[<span class="number">1</span>] &gt;&gt; data[<span class="number">2</span>];</span><br><span class="line">    <span class="function">set&lt;<span class="type">int</span>&gt; <span class="title">myset</span><span class="params">(data, data + <span class="number">3</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="number">4</span> - myset.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> it = myset.<span class="built_in">rbegin</span>(); it != myset.<span class="built_in">rend</span>(); ++it) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; *it;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+      
+      <div class="post-body">
+          <h1 id="C-STL-容器"><a href="#C-STL-容器" class="headerlink" title="C++ STL 容器"></a>C++ STL 容器</h1><h2 id="Sequence-containers（序列容器）"><a href="#Sequence-containers（序列容器）" class="headerlink" title="Sequence containers（序列容器）"></a>Sequence containers（序列容器）</h2><table>
+<thead>
+<tr>
+<th align="center">主題</th>
+<th align="center">連結</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">array</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://bloggerkuo.ga/computer-science/cpp/array/">點我前往</a></td>
+</tr>
+<tr>
+<td align="center">vector</td>
+<td align="center"><a target="_blank" rel="noopener" href="https://bloggerkuo.ga/computer-science/cpp/vector/">點我前往</a></td>
+</tr>
+<tr>
+<td align="center">deque</td>
+<td align="center">尚未完成</td>
+</tr>
+<tr>
+<td align="center">list</td>
+<td align="center">尚未完成</td>
+</tr>
+<tr>
+<td align="center">forward_list</td>
+<td align="center">尚未完成</td>
+</tr>
+</tbody></table>
+<h2 id="Associative-containers（關聯容器）"><a href="#Associative-containers（關聯容器）" class="headerlink" title="Associative containers（關聯容器）"></a>Associative containers（關聯容器）</h2><table>
+<thead>
+<tr>
+<th align="center">主題</th>
+<th align="center">連結</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">set</td>
+<td align="center">尚未完成</td>
+</tr>
+<tr>
+<td align="center">queue</td>
+<td align="center">尚未完成</td>
+</tr>
+<tr>
+<td align="center">multiset</td>
+<td align="center">尚未完成</td>
+</tr>
+<tr>
+<td align="center">multimap</td>
+<td align="center">尚未完成</td>
+</tr>
+</tbody></table>
+<h2 id="Unordered-associative-containers（無序關聯容器）"><a href="#Unordered-associative-containers（無序關聯容器）" class="headerlink" title="Unordered associative containers（無序關聯容器）"></a>Unordered associative containers（無序關聯容器）</h2><table>
+<thead>
+<tr>
+<th align="center">主題</th>
+<th align="center">連結</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">unordered_set</td>
+<td align="center">尚未完成</td>
+</tr>
+<tr>
+<td align="center">unordered_map</td>
+<td align="center">尚未完成</td>
+</tr>
+<tr>
+<td align="center">unordered_multiset</td>
+<td align="center">尚未完成</td>
+</tr>
+<tr>
+<td align="center">unordered_multimap</td>
+<td align="center">尚未完成</td>
+</tr>
+</tbody></table>
+<h2 id="Container-adaptors（容器適配器）"><a href="#Container-adaptors（容器適配器）" class="headerlink" title="Container adaptors（容器適配器）"></a>Container adaptors（容器適配器）</h2><table>
+<thead>
+<tr>
+<th align="center">主題</th>
+<th align="center">連結</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">stack</td>
+<td align="center">尚未完成</td>
+</tr>
+<tr>
+<td align="center">queue</td>
+<td align="center">尚未完成</td>
+</tr>
+<tr>
+<td align="center">priority_queue</td>
+<td align="center">尚未完成</td>
+</tr>
+</tbody></table>
 
-<h2 id="字串解碼（中）"><a href="#字串解碼（中）" class="headerlink" title="字串解碼（中）"></a>字串解碼（中）</h2><p>想法：就…純粹的暴力解吧…，還有注意題目需求，這題要你解密，不是加密（我朋友不小心…）</p>
-<p>實作：未更新（懶）</p>
-
+      </div>
+      
+      
+      
     </div>
 
     
     
-    
-
-    <footer class="post-footer">
-          
-
-<div class="post-copyright">
-<ul>
-  <li class="post-copyright-author">
-      <strong>作者： </strong>kuo-yu Huang
-  </li>
-  <li class="post-copyright-link">
-      <strong>文章連結：</strong>
-      <a href="https://github.com/huangmayor0905/huangmayor0905.github.io/013-202206apcs01/" title="【筆記】APCS 2022 年 6 月場">https://github.com/huangmayor0905/huangmayor0905.github.io/013-202206apcs01/</a>
-  </li>
-  <li class="post-copyright-license">
-      <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-TW" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！
-  </li>
-</ul>
-</div>
-
-          <div class="post-tags">
-              <a href="/tags/APCS/" rel="tag"># APCS</a>
-              <a href="/tags/%E7%AD%86%E8%A8%98/" rel="tag"># 筆記</a>
-          </div>
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/012-infix-postfix/" rel="prev" title="【筆記】前序式、中序式與後序式">
-                  <i class="fa fa-chevron-left"></i> 【筆記】前序式、中序式與後序式
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/014-daily/" rel="next" title="【日常】無題">
-                  【日常】無題 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
 
 
-
-
-
-
-    <div class="comments gitalk-container"></div>
 </div>
   </main>
 
@@ -439,7 +420,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"huangmayor0905","repo":"huangmayor0905.github.io","client_id":"2edf56fae528fa5e1662","client_secret":"b9d5dcfcb3733c370d2e9b6688fc5c2576469520","admin_user":"huangmayor0905","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"4e51de0132fd961b61d0c525c508fda5"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"huangmayor0905","repo":"huangmayor0905.github.io","client_id":"2edf56fae528fa5e1662","client_secret":"b9d5dcfcb3733c370d2e9b6688fc5c2576469520","admin_user":"huangmayor0905","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"75f2167d4783a50f22404556da7f4d56"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
