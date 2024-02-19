@@ -1,460 +1,1572 @@
-<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Kuo's Blog - 夢想：資工系</title><meta name="author" content="kuo-yu Huang"><meta name="copyright" content="kuo-yu Huang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="個人網站">
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="AaEkoAT3i0UsXWrh4ue4tbkDSIPbitczMwTw376jzb4">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"github.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.16.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="個人網站">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Kuo&#39;s Blog">
 <meta property="og:url" content="https://github.com/huangmayor0905/huangmayor0905.github.io/page/3/index.html">
 <meta property="og:site_name" content="Kuo&#39;s Blog">
 <meta property="og:description" content="個人網站">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://github.com/huangmayor0905/huangmayor0905.github.io/img/avatar.jpg">
 <meta property="article:author" content="kuo-yu Huang">
 <meta property="article:tag" content="黃國瑜, kuo-yu Huang">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github.com/huangmayor0905/huangmayor0905.github.io/img/avatar.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://github.com/huangmayor0905/huangmayor0905.github.io/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="AOnrBmQ6QhS1CQWvl1Cw5aKbZ9JsDkj4p-W1Nw6gBsA"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-SPB0WLFBMH"></script><script>window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-SPB0WLFBMH');
-</script><script>const GLOBAL_CONFIG = {
-  root: '/',
-  algolia: undefined,
-  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查詢的內容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
-  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '複製成功',
-    error: '複製錯誤',
-    noSupport: '瀏覽器不支援'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '天',
-  dateSuffix: {
-    just: '剛剛',
-    min: '分鐘前',
-    hour: '小時前',
-    day: '天前',
-    month: '個月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: {"chs_to_cht":"你已切換為繁體","cht_to_chs":"你已切換為簡體","day_to_night":"你已切換為深色模式","night_to_day":"你已切換為淺色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'Kuo\'s Blog',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2023-06-26 00:12:11'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
+<link rel="canonical" href="https://github.com/huangmayor0905/huangmayor0905.github.io/page/3/">
 
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-TW","comments":"","permalink":"","path":"page/3/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Kuo's Blog - 夢想：資工系</title>
   
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
-      const link = document.createElement('link')
-      link.rel = 'stylesheet'
-      link.href = url
-      if (id) link.id = id
-      link.onerror = reject
-      link.onload = link.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        link.onload = link.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(link)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H75BZLED7F"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-H75BZLED7F","only_pageview":false}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Kuo's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">夢想：資工系</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">30</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">9</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">43</span></a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>時間表</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜尋..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
         
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><script>window.paceOptions = {
-  restartOnPushState: false
-}
-
-document.addEventListener('pjax:send', () => {
-  Pace.restart()
-})
-</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">41</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">30</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">9</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Kuo's Blog"><span class="site-name">Kuo's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜尋</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首頁</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 歸檔</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 標籤</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分類</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 關於</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Kuo's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/huangmayor0905" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/solved/ZeroJudge/f832/" title="【解題】f832: 隕石 (Meteorite)">【解題】f832: 隕石 (Meteorite)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2022-12-14T03:21:16.000Z" title="發表於 2022-12-14 11:21:16">2022-12-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/solved/">解題</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/solved/ZeroJudge/">ZeroJudge</a></span></div><div class="content">題目連結f832: 隕石 (Meteorite)
-我的想法貪婪演算法（Greedy），每一步都使用最佳的解，從而導致希望結果也是最佳的解。
-就範例二而言
-1234 41 8 5 71 9 6 6
-
-機器之間或隕石之間，又或者是機器與隕石間無任關聯，我們將他們排序
-121 5 7 81 6 6 9
-
-當機器可抓取的最大能力是 9，先找到能符合小於 9 的對大數字是 8（此時就是這一步的最佳解），sum += 8，並且換另一台機器。當機器可抓取的最大能力是 6，先找到能符合小於 6 的對大數字是 5（此時就是這一步的最佳解），sum += 5，並且換另一台機器。當機器可抓取的最大能力是 6，先找到能符合小於 6 的對大數字是 1（此時就是這一步的最佳解），sum += 1，並且換另一台機器。沒石頭可以抓，輸出 sum，結束程式。
-:::warning總和會大於 2^32，故 sum 要使用 long long:::
-參考解答f8321234567891011121314151617181920212223242526#include &lt;algorithm&gt;#include &l ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/solved/ZeroJudge/a290/" title="【解題】a290: 新手訓練系列 ~ 圖論">【解題】a290: 新手訓練系列 ~ 圖論</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2022-12-14T02:25:46.000Z" title="發表於 2022-12-14 10:25:46">2022-12-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/solved/">解題</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/solved/ZeroJudge/">ZeroJudge</a></span></div><div class="content">題目連結a290: 新手訓練系列 ~ 圖論
-我的想法先將圖建好，再用 BFS 慢慢走訪，從訪問的起點開始，走過的地方都標記為 true ，若最後終點是 true，輸出 Yes!!!，否則 No!!!
-參考解答a2901234567891011121314151617181920212223242526272829303132333435363738394041424344454647#include &lt;iostream&gt;#include &lt;queue&gt;#include &lt;vector&gt;using namespace std;int main() &#123;    ios_base::sync_with_stdio(false);    cin.tie(0);    int N, M;    while (cin &gt;&gt; N &gt;&gt; M) &#123;        vector&lt;int&gt; d[N];        queue&lt;int&gt; q;        bool check[800] = &#123;f ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/computer-science/cpp/vector/" title="【筆記】Vector">【筆記】Vector</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2022-12-12T07:05:34.000Z" title="發表於 2022-12-12 15:05:34">2022-12-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/computer-science/">計算機科學</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/computer-science/cpp/">C++</a></span></div><div class="content">基本介紹vector 是一個可以改變大小的容器，可以說是升級版的陣列，vector 更能夠高效地對記憶體進行管理及動態增長。
-如何宣告先引入標頭檔 #include &lt;vector&gt;
-基礎宣告基礎宣告範例12345678#include &lt;iostream&gt;#include &lt;vector&gt;using namespace std;int main() &#123;    vector&lt;int&gt; vec;    return 0;&#125;
-
-vec 為存取 int 型別的 vector，且裡面沒有元素，所以 size 為 0。
-設定初始值我們可以使用其內建函式把元素丟進去
-設定初始值範例1234vecotr&lt;int&gt; vec;vec.push_back(1);  // vec = &#123;1&#125;;vec.push_back(3);  // vec = &#123;1, 3&#125;;vec.push_back(5);  // vec = &#123;1, 3, 5&#125;;
-
-也可以直接寫成一行
-設定初始值 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/20221210/" title="【日常】我確診了">【日常】我確診了</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2022-12-10T15:44:05.000Z" title="發表於 2022-12-10 23:44:05">2022-12-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/life/">生活點滴</a></span></div><div class="content">
-  be2ff43f5a505a2494fffb6aa39cbe27b7cadae70a3c0c0413bbbf23fd16904a381701f73fbaa8fa5726ef00f2325b6ed413ce1c36ed363b10403fafdb9f4c84edf00bdd3ffd111f5d691d95a8a8fd7be81a6e929008e770c5a5966e6bac328cd042917076f1c2563db12c6a78fd082f3908827c1a81b3943cc7976b0511f0306bd12de30772406752a8256f676ccc91dff561f1a876793a43b78946977fe36e28345d697da12dfb882c13d8db54d5aa60797bf22dbeb30586f893dd26b18ef9ab422b4eef5e7229ac80e93b3b749065f0a0ab7c5dbed02ff81bb711494dcc79cb02e8694f45b24d8731c7a346743bbb8de02c1b017a9c199 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/computer-science/cpp/array/" title="【筆記】Array 陣列">【筆記】Array 陣列</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2022-12-10T07:00:00.000Z" title="發表於 2022-12-10 15:00:00">2022-12-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/computer-science/">計算機科學</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/computer-science/cpp/">C++</a></span></div><div class="content">基本介紹當我們需要存取一堆數據或資料時，總不能直接建立千個或上萬個變數吧！若這些數據具有相關性、型態一樣，可以使用 Array  來存取。陣列具有連續的記憶體位址，所以我們可以從頭走到尾來讀取 Array  中的數據。既可以減少變數的命名，還可以讓程式變得精簡、提高可讀性。
-如何宣告先引入標頭檔 #include &lt;array&gt;
-基礎宣告基礎宣告範例1array&lt;int, 10&gt; arr;
-
-從上方範例可知 arr 是一個長度為 10 的整數陣列
-在任何程式語言裡，陣列的第一項編號必為 0（編號我們通常稱之 index 索引）。所以若有一個長度為 10 的陣列，內容物的索引範圍為 0~9。
-
-
-設定初始值設定初始值範例12arr&lt;int, 5&gt; arr_A&#123;2, 5, 8, 3, 1&#125;;arr&lt;int, 5&gt; arr_B&#123;&#125;;  // 表示初始化 arr_B 元素皆為 0
-
-注意！若陣列未做初始值，其中元素可能為亂數。
-
-
-基礎使用
-
-
-array 函式
-功能
-
-
-
-begin(), end(),  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/20221208/" title="【測試】需密碼文章">【測試】需密碼文章</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2022-12-08T05:20:15.000Z" title="發表於 2022-12-08 13:20:15">2022-12-08</time></span></div><div class="content">
-  bd25ed9264b080267271e137e33d0ce1276c06c30ad3349bc1fd0ac9ef1064dce1362436ca4a0a173a8501aa56c1212bbb76dd99a1a7ec98efdab7ba17bd4d9a
   
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="kuo-yu Huang"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">kuo-yu Huang</p>
+  <div class="site-description" itemprop="description">個人網站</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/huangmayor0905" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huangmayor0905" rel="noopener me"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:lionhuang914903@gmail.com" title="E-Mail → mailto:lionhuang914903@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/profile.php?id=100008744280057" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;profile.php?id&#x3D;100008744280057" rel="noopener me" target="_blank"><i class="fab fa-facebook fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://instagram.com/kuokuo_0905" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;kuokuo_0905" rel="noopener me" target="_blank"><i class="fab fa-instagram fa-fw"></i></a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="回到頂端">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
     
-      
-      
-        密碼是 test
-      
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
     
+
+
+<div class="post-block">
+  
   
 
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/20221130/" title="【日常】20221130">【日常】20221130</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2022-11-30T14:23:53.000Z" title="發表於 2022-11-30 22:23:53">2022-11-30</time></span></div><div class="content">To-Do
- 未完成
- 已完成
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://github.com/huangmayor0905/huangmayor0905.github.io/20221217/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kuo-yu Huang">
+    </span>
 
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuo's Blog">
+      <meta itemprop="description" content="個人網站">
+    </span>
 
- 英文學習歷程
- 公民學習歷程
- 資訊學習歷程（12&#x2F;13）
- 音樂作業（One man acapella影音）（12&#x2F;6）
- 音樂作業（One man acapella文檔）（12&#x2F;6）
- 化學預報
- 健康學習歷程（12&#x2F;30）
- 地理寶典（平時成績）
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kuo's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/20221217/" class="post-title-link" itemprop="url">【單字】L7、L8</a>
+        </h2>
 
-煩死了最近真的太忙了，快喘不過氣，希望二段趕快過去，我要趕作業了 T_T
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/20221121/" title="【日常】我看了一些演算法:D">【日常】我看了一些演算法:D</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2022-11-21T11:03:44.000Z" title="發表於 2022-11-21 19:03:44">2022-11-21</time></span></div><div class="content">To-Do
-Maximum Product Subarray
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
 
-這不是費文，只是沒時間弄
-Tree
-linked list
-blablabla~~~~~~~~~
+      <time title="創建時間：2022-12-17 12:01:34" itemprop="dateCreated datePublished" datetime="2022-12-17T12:01:34+08:00">2022-12-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2022-12-30 02:18:53" itemprop="dateModified" datetime="2022-12-30T02:18:53+08:00">2022-12-30</time>
+    </span>
 
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/20221117/" title="【資培】20221117">【資培】20221117</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2022-11-17T10:21:03.000Z" title="發表於 2022-11-17 18:21:03">2022-11-17</time></span></div><div class="content">HackMD 課堂連結容器
-Zerojudge 題目
-c123: 00514 - Rails
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>2</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1 分鐘</span>
+    </span>
+</div>
 
-這是之前寫的，我知道用 goto 很醜，但…好爽:)
-12345678910111213141516171819202122232425262728293031323334353637383940414243#include &lt;iostream&gt;#include &lt;stack&gt;using namespace std;int main() &#123;    ios_base::sync_with_stdio(false);    cin.tie(0);    int n;    ouo:    while (cin &gt;&gt; n) &#123;        if (n == 0) &#123;            break;        &#125;        while (true) &#123;            stack&lt;int&gt; st;            int train;            int point  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/014-daily/" title="【日常】無題">【日常】無題</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">發表於</span><time datetime="2022-11-13T15:35:03.000Z" title="發表於 2022-11-13 23:35:03">2022-11-13</time></span></div><div class="content">好…… 剩兩天要抽考，兩天的周末直接擺爛，到底要怎麼不在意成績，真的有夠焦慮……
+        </div>
+      </header>
 
-這是中午的心血，但是之後又去打瓦了 T_T
-</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="page-number" href="/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">kuo-yu Huang</div><div class="author-info__description">個人網站</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">41</div></a><a href="/tags/"><div class="headline">標籤</div><div class="length-num">30</div></a><a href="/categories/"><div class="headline">分類</div><div class="length-num">9</div></a></div><a id="card-info-btn" href="https://github.com/huangmayor0905"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/huangmayor0905" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">學測倒數中</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/solved/TCFSH_CIRC_Judge/d075/" title="【解題】d075: Q-6-10. 置物櫃出租">【解題】d075: Q-6-10. 置物櫃出租</a><time datetime="2023-05-27T10:22:40.000Z" title="發表於 2023-05-27 18:22:40">2023-05-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/tag-plugins-test/" title="tag plugins 測試文章">tag plugins 測試文章</a><time datetime="2023-05-24T14:59:20.000Z" title="發表於 2023-05-24 22:59:20">2023-05-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/006-20220509/" title="5 月 9 日 陰">5 月 9 日 陰</a><time datetime="2023-05-24T06:26:23.564Z" title="發表於 2023-05-24 14:26:23">2023-05-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/solved/ZeroJudge/e287/" title="【解題】e287. 機器人的路徑">【解題】e287. 機器人的路徑</a><time datetime="2023-05-22T11:58:48.000Z" title="發表於 2023-05-22 19:58:48">2023-05-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/solved/ZeroJudge/j125/" title="【解題】j125. 4. 蓋步道">【解題】j125. 4. 蓋步道</a><time datetime="2023-04-04T09:05:17.000Z" title="發表於 2023-04-04 17:05:17">2023-04-04</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-comment-dots"></i><span>最新評論</span></div><div class="aside-list"><span>正在載入中...</span></div></div><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>分類</span>
-            <a class="card-more-btn" href="/categories/" title="檢視更多">
-    <i class="fas fa-angle-right"></i></a>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          Oops! 這裡似乎需要密碼
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/20221217/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
             </div>
-            <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/hexo-blog/"><span class="card-category-list-name">Hexo部落格</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/book/"><span class="card-category-list-name">心得</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/life/"><span class="card-category-list-name">生活點滴</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/note/"><span class="card-category-list-name">筆記</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/solved/"><span class="card-category-list-name">解題</span><span class="card-category-list-count">13</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/solved/CIRC-Judge/"><span class="card-category-list-name">CIRC_Judge</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/solved/ZeroJudge/"><span class="card-category-list-name">ZeroJudge</span><span class="card-category-list-count">12</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/computer-science/"><span class="card-category-list-name">計算機科學</span><span class="card-category-list-count">3</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>標籤</span></div><div class="card-tag-cloud"><a href="/tags/BST/" style="font-size: 1.1em; color: #999">BST</a> <a href="/tags/APCS/" style="font-size: 1.37em; color: #99a4b2">APCS</a> <a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/%E5%AD%B8%E6%B8%AC/" style="font-size: 1.1em; color: #999">學測</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 1.5em; color: #99a9bf">日常</a> <a href="/tags/DP/" style="font-size: 1.17em; color: #999c9f">DP</a> <a href="/tags/C/" style="font-size: 1.3em; color: #99a1ac">C++</a> <a href="/tags/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/" style="font-size: 1.1em; color: #999">資料結構</a> <a href="/tags/%E7%B7%A8%E8%AD%AF%E5%99%A8-%E7%B7%A8%E8%BC%AF%E5%99%A8/" style="font-size: 1.1em; color: #999">編譯器/編輯器</a> <a href="/tags/Greedy/" style="font-size: 1.1em; color: #999">Greedy</a> <a href="/tags/%E5%8D%80%E9%96%93/" style="font-size: 1.1em; color: #999">區間</a> <a href="/tags/GitHub/" style="font-size: 1.1em; color: #999">GitHub</a> <a href="/tags/%E9%80%B2%E4%BD%8D%E5%88%B6/" style="font-size: 1.1em; color: #999">進位制</a> <a href="/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/" style="font-size: 1.1em; color: #999">部落格</a> <a href="/tags/%E4%BA%8C%E5%88%86%E6%90%9C/" style="font-size: 1.1em; color: #999">二分搜</a> <a href="/tags/%E5%96%AE%E5%AD%97/" style="font-size: 1.1em; color: #999">單字</a> <a href="/tags/Zerojudge/" style="font-size: 1.43em; color: #99a6b9">Zerojudge</a> <a href="/tags/%E5%BF%83%E5%BE%97/" style="font-size: 1.17em; color: #999c9f">心得</a> <a href="/tags/01%E8%83%8C%E5%8C%85/" style="font-size: 1.1em; color: #999">01背包</a> <a href="/tags/%E5%BE%8C%E5%BA%8F%E5%BC%8F/" style="font-size: 1.1em; color: #999">後序式</a> <a href="/tags/%E9%80%B2%E9%9A%8E%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/" style="font-size: 1.1em; color: #999">進階資料結構</a> <a href="/tags/BFS/" style="font-size: 1.1em; color: #999">BFS</a> <a href="/tags/C-C/" style="font-size: 1.17em; color: #999c9f">C/C++</a> <a href="/tags/TOI/" style="font-size: 1.23em; color: #999ea6">TOI</a> <a href="/tags/%E7%AD%86%E8%A8%98/" style="font-size: 1.37em; color: #99a4b2">筆記</a> <a href="/tags/%E8%A2%AB%E8%A8%8E%E5%8E%AD%E7%9A%84%E5%8B%87%E6%B0%A3/" style="font-size: 1.1em; color: #999">被討厭的勇氣</a> <a href="/tags/%E8%B3%87%E5%9F%B9/" style="font-size: 1.1em; color: #999">資培</a> <a href="/tags/test/" style="font-size: 1.23em; color: #999ea6">test</a> <a href="/tags/%E8%A7%A3%E9%A1%8C/" style="font-size: 1.43em; color: #99a6b9">解題</a> <a href="/tags/Graph/" style="font-size: 1.1em; color: #999">Graph</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>歸檔</span><a class="card-more-btn" href="/archives/" title="檢視更多">
-    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">二月 2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/12/"><span class="card-archive-list-date">十二月 2022</span><span class="card-archive-list-count">13</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/11/"><span class="card-archive-list-date">十一月 2022</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/07/"><span class="card-archive-list-date">七月 2022</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>網站資訊</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章數目 :</div><div class="item-count">41</div></div><div class="webinfo-item"><div class="item-name">已執行時間 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-12-31T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站總字數 :</div><div class="item-count">14k</div></div><div class="webinfo-item"><div class="item-name">本站訪客數 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站總訪問量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最後更新時間 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-06-25T16:12:10.906Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By kuo-yu Huang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主題 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="簡繁轉換">簡</button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="設定"><i class="fas fa-cog fa-spin"></i></button><button id="chat-btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到頂部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
-  if (typeof pangu === 'object') pangu.autoSpacingPage()
-  else {
-    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
-      .then(() => {
-        pangu.autoSpacingPage()
-      })
-  }
-}
+          <!--/noindex-->
+        
+      
+    </div>
 
-function panguInit () {
-  if (false){
-    GLOBAL_CONFIG_SITE.isPost && panguFn()
-  } else {
-    panguFn()
-  }
-}
-
-document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>window.typedJSFn = {
-  init: (str) => {
-    window.typed = new Typed('#subtitle', Object.assign({
-      strings: str,
-      startDelay: 300,
-      typeSpeed: 150,
-      loop: true,
-      backSpeed: 50,
-    }, null))
-  },
-  run: (subtitleType) => {
-    if (true) {
-      if (typeof Typed === 'function') {
-        subtitleType()
-      } else {
-        getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
-      }
-    } else {
-      subtitleType()
-    }
-  }
-}
-</script><script>function subtitleType () {
-  if (true) {
-    typedJSFn.init(["Being slow can actually be efficient.","Focus on your interests."])
-  } else {
-    document.getElementById("subtitle").textContent = "Being slow can actually be efficient."
-  }
-}
-typedJSFn.run(subtitleType)</script></div><script>window.addEventListener('load', () => {
-  const changeContent = (content) => {
-    if (content === '') return content
-
-    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[圖片]') // replace image link
-    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[連結]') // replace url
-    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[程式碼]') // replace code
-    content = content.replace(/<[^>]+>/g,"") // remove html tag
-
-    if (content.length > 150) {
-      content = content.substring(0,150) + '...'
-    }
-    return content
-  }
-
-  const findTrueUrl = (array) => {
-    Promise.all(array.map(item =>
-      fetch(item.url).then(resp => resp.json()).then(data => {
-        const urlArray = data.body.match(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/ig)
-        if (data.user.login === 'utterances-bot') {
-          return urlArray.pop()
-        } else {
-          return urlArray.shift()
-        }
-      })
-    )).then(res => {
-        array = array.map((i,index)=> {
-          return {
-            ...i,
-            url: res[index]
-          }
-        })
-
-        saveToLocal.set('github-newest-comments', JSON.stringify(array), 10/(60*24))
-        generateHtml(array)
-    });
-  }
-
-  const getComment = () => {
-    fetch('https://api.github.com/repos/huangmayor0905/huangmayor0905.github.io/issues/comments?sort=updated&direction=desc&per_page=6&page=1',{
-      "headers": {
-        Accept: 'application/vnd.github.v3.html+json'
-      }
-    })
-      .then(response => response.json())
-      .then(data => {
-        const githubArray = data.map(item => {
-          return {
-            'avatar': item.user.avatar_url,
-            'content': changeContent(item.body_html),
-            'nick': item.user.login,
-            'url': item.issue_url,
-            'date': item.updated_at,
-            'githubUrl': item.html_url
-          }
-        })
-        findTrueUrl(githubArray)
-      }).catch(e => {
-        const $dom = document.querySelector('#card-newest-comments .aside-list')
-        $dom.textContent= "無法獲取評論，請確認相關配置是否正確"
-      })
-  }
-
-  const generateHtml = array => {
-    let result = ''
-
-    if (array.length) {
-      for (let i = 0; i < array.length; i++) {
-        result += '<div class=\'aside-list-item\'>'
-
-        if (true) {
-          const name = 'src'
-          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
-        }
-
-        result += `<div class='content'>
-        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
-        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
-        </div></div>`
-      }
-    } else {
-      result += '沒有評論'
-    }
-
-    let $dom = document.querySelector('#card-newest-comments .aside-list')
-    $dom.innerHTML= result
-    window.lazyLoadInstance && window.lazyLoadInstance.update()
-    window.pjax && window.pjax.refresh($dom)
-  }
-
-  const newestCommentInit = () => {
-    if (document.querySelector('#card-newest-comments .aside-list')) {
-      const data = saveToLocal.get('github-newest-comments')
-      if (data) {
-        generateHtml(JSON.parse(data))
-      } else {
-        getComment()
-      }
-    }
-  }
-
-  newestCommentInit()
-  document.addEventListener('pjax:complete', newestCommentInit)
-})</script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="//code.tidio.co/me3vkhkhppwcpea1gdhglk4vomicvqb0.js" async="async"></script><script>(() => {
-  const isChatBtn = true
-  const isChatHideShow = true
-
-  if (isChatBtn) {
-    let isShow = false
-    const close = () => {
-      window.tidioChatApi.hide()
-      isShow = false
-    }
     
-    const open = () => {
-      window.tidioChatApi.open()
-      window.tidioChatApi.show()
-      isShow = true
-    }
+    
+    
 
-    const onTidioChatApiReady = () => {
-      window.tidioChatApi.hide()
-      window.tidioChatApi.on("close", close)
-    }
-    if (window.tidioChatApi) {
-      window.tidioChatApi.on("ready", onTidioChatApiReady)
-    } else {
-      document.addEventListener("tidioChat-ready", onTidioChatApiReady)
-    }
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
 
-    window.chatBtnFn = () => {
-      if (!window.tidioChatApi) return
-      isShow ? close() : open()
-    }
-  } else if (isChatHideShow) {
-    window.chatBtn = {
-      hide: () => {
-        window.tidioChatApi && window.tidioChatApi.hide()
-      },
-      show: () => {
-        window.tidioChatApi && window.tidioChatApi.show()
-      }
-    }
-  }
-})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜尋</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  資料庫載入中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://github.com/huangmayor0905/huangmayor0905.github.io/20221216/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kuo-yu Huang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuo's Blog">
+      <meta itemprop="description" content="個人網站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kuo's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/20221216/" class="post-title-link" itemprop="url">【日常】想死，不是一天兩天的事了</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-12-16 12:37:49" itemprop="dateCreated datePublished" datetime="2022-12-16T12:37:49+08:00">2022-12-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2022-12-18 22:40:32" itemprop="dateModified" datetime="2022-12-18T22:40:32+08:00">2022-12-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/life/" itemprop="url" rel="index"><span itemprop="name">生活點滴</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>785</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>3 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="想死，不是一天兩天的事了"><a href="#想死，不是一天兩天的事了" class="headerlink" title="想死，不是一天兩天的事了"></a>想死，不是一天兩天的事了</h1><h2 id="昨日深夜"><a href="#昨日深夜" class="headerlink" title="昨日深夜"></a>昨日深夜</h2><p>今天是 111 年 12 月 16 日星期五，也是確診後的第五天，我好了很多，症狀都緩解了。我起的特別晚，昨天因為晚收到媽媽傳來的訊息而起了疑惑，她寫：要傳快篩結果給老師，明天就要回學校上課囉。我百思不得其解，因為醫生給的居隔單是 12 月 11 至 12 月 16 日，也有跟媽媽在確診當天說：醫生說星期一是第一天，阿老師說星期日是第一天，所以到星期五時可能要跟老師講一下。而這三封訊息讓我罪惡感很重，因為這表示：老師等我等了 30 分鐘，我媽也還沒睡，可是我甚麼都說了，怎麼還是這樣，反倒讓我很自責，更是白快篩了一遍。</p>
+<h2 id="起床之後"><a href="#起床之後" class="headerlink" title="起床之後"></a>起床之後</h2><p>起床之後我在想這三件東西</p>
+<ol>
+<li>獨立</li>
+<li>讀書讀不進去</li>
+<li>為甚麼我是悲觀的</li>
+</ol>
+<p>　　今天我 12: 17 起床，特別晚，可能是真的不太高興，不過這也讓我有點決心，我已經要成年了，是一個獨立的個體了，有自主的能力，所以我現在就要有能一個人生活的樣子，畢竟，這也是我最希望的事情：自己住。</p>
+<p>　　起床之後在想我為什麼讀書讀不進去，好似是因為當我感覺到我比其他人笨時，我才有能力讀進去，可是當我在家裡，這些知識，足以在家族裡面拿個前兩名，就是因為鬆懈戒備，我才覺得自己聰明，也讀不下去。</p>
+<p>　　為甚麼我是悲觀的？這問題牽扯到人體基因、家庭關係、成長環境等等任何因素，但我仔細想想，大概率是父親對我的相處模式，我不想多說他曾經對我怎麼樣，但我當時肯定不好受，回首過往，我看到我手緊握著，指甲深深地往手掌裡面扣，留下明顯的痕跡，我好痛可是心更痛，這應該也是抒發的一種方式，藉由肉體上的疼痛將心靈的痛釋放出來。那我跟自殘的那些人有區別嗎？我想死，不是一天兩天的事了，像在開玩笑，但偶爾也會有認真的成分在，這是種對世人的警告，這句話透漏著：我好痛苦、快救我，可人們只會笑笑的回：喔，那去死一死啊。誰不想死。這無非是在給病人加重病情嗎？願大家能夠多關心身邊的朋友，也願我能走出那些陰影。</p>
+<h2 id="佳句"><a href="#佳句" class="headerlink" title="佳句"></a>佳句</h2><ol>
+<li>早餐店的飲料：沒必要去做第一，但是可以去做唯一</li>
+<li>奇葩說 by 蔡康永：你不一定要做你最喜歡的一件事，可是呢，你要去做你能夠學到東西的事，因為學習是快樂的。</li>
+<li>奇葩說 by 薛兆豐：我們對努力看得太輕了，我們不夠努力。</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://github.com/huangmayor0905/huangmayor0905.github.io/solved/ZeroJudge/f832/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kuo-yu Huang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuo's Blog">
+      <meta itemprop="description" content="個人網站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kuo's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/solved/ZeroJudge/f832/" class="post-title-link" itemprop="url">【解題】f832: 隕石 (Meteorite)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-12-14 11:21:16" itemprop="dateCreated datePublished" datetime="2022-12-14T11:21:16+08:00">2022-12-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-05-27 18:37:32" itemprop="dateModified" datetime="2023-05-27T18:37:32+08:00">2023-05-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/solved/" itemprop="url" rel="index"><span itemprop="name">解題</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/solved/ZeroJudge/" itemprop="url" rel="index"><span itemprop="name">ZeroJudge</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>366</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="題目連結"><a href="#題目連結" class="headerlink" title="題目連結"></a>題目連結</h1><p><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=f832">f832: 隕石 (Meteorite)</a></p>
+<h1 id="我的想法"><a href="#我的想法" class="headerlink" title="我的想法"></a>我的想法</h1><p>貪婪演算法（Greedy），每一步都使用最佳的解，從而導致希望結果也是最佳的解。</p>
+<p>就範例二而言</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">4 4</span><br><span class="line">1 8 5 7</span><br><span class="line">1 9 6 6</span><br></pre></td></tr></table></figure>
+
+<p>機器之間或隕石之間，又或者是機器與隕石間無任關聯，我們將他們排序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 5 7 8</span><br><span class="line">1 6 6 9</span><br></pre></td></tr></table></figure>
+
+<p>當機器可抓取的最大能力是 9，先找到能符合小於 9 的對大數字是 8（此時就是這一步的最佳解），<code>sum += 8</code>，並且換另一台機器。<br>當機器可抓取的最大能力是 6，先找到能符合小於 6 的對大數字是 5（此時就是這一步的最佳解），<code>sum += 5</code>，並且換另一台機器。<br>當機器可抓取的最大能力是 6，先找到能符合小於 6 的對大數字是 1（此時就是這一步的最佳解），<code>sum += 1</code>，並且換另一台機器。<br>沒石頭可以抓，輸出 <code>sum</code>，結束程式。</p>
+<p>:::warning<br>總和會大於 <code>2^32</code>，故 <code>sum</code> 要使用 <code>long long</code><br>:::</p>
+<h1 id="參考解答"><a href="#參考解答" class="headerlink" title="參考解答"></a>參考解答</h1><figure class="highlight cpp"><figcaption><span>f832</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="type">int</span> n, m;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> rock[n], robot[m];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) cin &gt;&gt; rock[i];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) cin &gt;&gt; robot[i];</span><br><span class="line">    <span class="built_in">sort</span>(rock, rock + n);</span><br><span class="line">    <span class="built_in">sort</span>(robot, robot + m);</span><br><span class="line"></span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> index_bot = m - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span> &amp;&amp; index_bot &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="keyword">if</span> (robot[index_bot] &gt;= rock[i]) &#123;</span><br><span class="line">            sum += rock[i];</span><br><span class="line">            index_bot--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; sum &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://github.com/huangmayor0905/huangmayor0905.github.io/solved/ZeroJudge/a290/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kuo-yu Huang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuo's Blog">
+      <meta itemprop="description" content="個人網站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kuo's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/solved/ZeroJudge/a290/" class="post-title-link" itemprop="url">【解題】a290: 新手訓練系列 ~ 圖論</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-12-14 10:25:46" itemprop="dateCreated datePublished" datetime="2022-12-14T10:25:46+08:00">2022-12-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-05-27 18:37:15" itemprop="dateModified" datetime="2023-05-27T18:37:15+08:00">2023-05-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/solved/" itemprop="url" rel="index"><span itemprop="name">解題</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/solved/ZeroJudge/" itemprop="url" rel="index"><span itemprop="name">ZeroJudge</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>182</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="題目連結"><a href="#題目連結" class="headerlink" title="題目連結"></a>題目連結</h1><p><a target="_blank" rel="noopener" href="https://zerojudge.tw/ShowProblem?problemid=a290">a290: 新手訓練系列 ~ 圖論</a></p>
+<h1 id="我的想法"><a href="#我的想法" class="headerlink" title="我的想法"></a>我的想法</h1><p>先將圖建好，再用 BFS 慢慢走訪，從訪問的起點開始，走過的地方都標記為 true ，若最後終點是 true，輸出 Yes!!!，否則 No!!!</p>
+<h1 id="參考解答"><a href="#參考解答" class="headerlink" title="參考解答"></a>參考解答</h1><figure class="highlight cpp"><figcaption><span>a290</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> N, M;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; N &gt;&gt; M) &#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; d[N];</span><br><span class="line">        queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">        <span class="type">bool</span> check[<span class="number">800</span>] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; M; i++) &#123;</span><br><span class="line">            <span class="type">int</span> a, b;</span><br><span class="line">            cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">            a--;</span><br><span class="line">            b--;</span><br><span class="line">            d[a].<span class="built_in">push_back</span>(b);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 將能走的路徑都設為 true</span></span><br><span class="line">        <span class="type">int</span> A, B;</span><br><span class="line">        cin &gt;&gt; A &gt;&gt; B;</span><br><span class="line">        A--;</span><br><span class="line">        B--;</span><br><span class="line">        q.<span class="built_in">push</span>(A);</span><br><span class="line">        check[A] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="type">int</span> temp = q.<span class="built_in">front</span>();</span><br><span class="line">            q.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;i : d[temp]) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!check[i]) &#123;</span><br><span class="line">                    check[i] = <span class="literal">true</span>;</span><br><span class="line">                    q.<span class="built_in">push</span>(i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 訪問 B 點是否能走到</span></span><br><span class="line">        <span class="keyword">if</span> (check[B]) &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Yes!!!\n&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;No!!!\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://github.com/huangmayor0905/huangmayor0905.github.io/computer-science/cpp/vector/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kuo-yu Huang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuo's Blog">
+      <meta itemprop="description" content="個人網站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kuo's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/computer-science/cpp/vector/" class="post-title-link" itemprop="url">【筆記】Vector</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-12-12 15:05:34" itemprop="dateCreated datePublished" datetime="2022-12-12T15:05:34+08:00">2022-12-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2022-12-14 18:16:49" itemprop="dateModified" datetime="2022-12-14T18:16:49+08:00">2022-12-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/computer-science/" itemprop="url" rel="index"><span itemprop="name">計算機科學</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/computer-science/cpp/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>1.2k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>4 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="基本介紹"><a href="#基本介紹" class="headerlink" title="基本介紹"></a>基本介紹</h1><p><code>vector</code> 是一個可以改變大小的容器，可以說是升級版的陣列，<code>vector</code> 更能夠高效地對記憶體進行管理及動態增長。</p>
+<h1 id="如何宣告"><a href="#如何宣告" class="headerlink" title="如何宣告"></a>如何宣告</h1><p>先引入標頭檔 <code>#include &lt;vector&gt;</code></p>
+<h2 id="基礎宣告"><a href="#基礎宣告" class="headerlink" title="基礎宣告"></a>基礎宣告</h2><figure class="highlight cpp"><figcaption><span>基礎宣告範例</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>vec</code> 為存取 <code>int</code> 型別的 <code>vector</code>，且裡面沒有元素，所以 <code>size</code> 為 <code>0</code>。</p>
+<h2 id="設定初始值"><a href="#設定初始值" class="headerlink" title="設定初始值"></a>設定初始值</h2><p>我們可以使用其內建函式把元素丟進去</p>
+<figure class="highlight cpp"><figcaption><span>設定初始值範例</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vecotr&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">1</span>);  <span class="comment">// vec = &#123;1&#125;;</span></span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">3</span>);  <span class="comment">// vec = &#123;1, 3&#125;;</span></span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">5</span>);  <span class="comment">// vec = &#123;1, 3, 5&#125;;</span></span><br></pre></td></tr></table></figure>
+
+<p>也可以直接寫成一行</p>
+<figure class="highlight cpp"><figcaption><span>設定初始值範例</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; vec = &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight cpp"><figcaption><span>設定初始值範例</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">vec</span><span class="params">(&#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>&#125;)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>若想要複製一份相同的 <code>vector</code>，可以這樣做</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; vec_1 = &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>&#125;;</span><br><span class="line">vecotr&lt;<span class="type">int</span>&gt; vec_2 = vec_1;</span><br><span class="line"><span class="comment">// 當然這句也可以寫成</span></span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">vec_2</span><span class="params">(vec_1)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>也可以複製一份陣列</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> data[<span class="number">3</span>] = &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">vec</span><span class="params">(data, data+<span class="number">3</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>還可以複製其中一段就好</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; vec_1 = &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>&#125;;</span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">vec_2</span><span class="params">(vec_1.begin() + <span class="number">2</span>, vec_1.end() - <span class="number">1</span>)</span></span>;  <span class="comment">// vec_2 = &#123;5, 7&#125;;</span></span><br></pre></td></tr></table></figure>
+
+<p>陣列也可以複製其中一段</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> data[<span class="number">5</span>] = &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>&#125;;</span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">vec</span><span class="params">(data+<span class="number">2</span>, data+<span class="number">4</span>)</span></span>; <span class="comment">// vec = &#123;5, 7&#125;;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="基礎使用"><a href="#基礎使用" class="headerlink" title="基礎使用"></a>基礎使用</h1><p>下方為 <code>vector</code> 可用的函式，有誤還請多指教</p>
+<table>
+<thead>
+<tr>
+<th>vector 函式</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>begin()</code>, <code>end()</code>, <code>cbegin()</code>, <code>cend()</code></td>
+<td>提供正向跌代器</td>
+</tr>
+<tr>
+<td><code>rbegin()</code>, <code>rend()</code>, <code>crbegin()</code>, <code>crend()</code></td>
+<td>提供反向跌代器</td>
+</tr>
+<tr>
+<td><code>size()</code></td>
+<td>返回 <code>vector</code> 大小</td>
+</tr>
+<tr>
+<td><code>max_size()</code></td>
+<td>返回 <code>vector</code> 最大大小（因為 <code>vector</code> 的大小是隨者元素的多寡而增加，所以數字極大）</td>
+</tr>
+<tr>
+<td><code>resize()</code></td>
+<td>配置 <code>vector</code> 大小，且補滿 <code>0</code></td>
+</tr>
+<tr>
+<td><code>capacity()</code></td>
+<td>返回目前 <code>vector</code> 配置大小</td>
+</tr>
+<tr>
+<td><code>empty()</code></td>
+<td>判斷 <code>vector</code> 是否為空</td>
+</tr>
+<tr>
+<td><code>reserve()</code></td>
+<td>配置 <code>vector</code> 大小</td>
+</tr>
+<tr>
+<td><code>shrink_to_fit()</code></td>
+<td>釋放 <code>vector</code> 未使用的空間</td>
+</tr>
+<tr>
+<td><code>at()</code>, <code>operator[]</code></td>
+<td>取得元素</td>
+</tr>
+<tr>
+<td><code>front()</code></td>
+<td>返回第一個元素</td>
+</tr>
+<tr>
+<td><code>back()</code></td>
+<td>返回最後一個元素</td>
+</tr>
+<tr>
+<td><code>data()</code></td>
+<td>返回元素的指標</td>
+</tr>
+<tr>
+<td><code>assign()</code></td>
+<td>配置 <code>(0~n)</code> 的數值</td>
+</tr>
+<tr>
+<td><code>push_back()</code></td>
+<td>先複製一份要 <code>push_back</code> 的元素，再貼在 <code>vector</code> 後面</td>
+</tr>
+<tr>
+<td><code>pop_back()</code></td>
+<td>刪除最後一個元素</td>
+</tr>
+<tr>
+<td><code>insert()</code></td>
+<td>插入元素</td>
+</tr>
+<tr>
+<td><code>erase()</code></td>
+<td>刪除一個或一段元素</td>
+</tr>
+<tr>
+<td><code>clear()</code></td>
+<td>清空 <code>vector</code> 內的元素</td>
+</tr>
+<tr>
+<td><code>swap()</code></td>
+<td>交換兩個 <code>vector</code> 元素</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://cplusplus.com/reference/vector/vector/">查看更多可參考 cplusplus 官網</a></p>
+<h1 id="基礎操作"><a href="#基礎操作" class="headerlink" title="基礎操作"></a>基礎操作</h1><h2 id="正向遍歷"><a href="#正向遍歷" class="headerlink" title="正向遍歷"></a>正向遍歷</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">vec</span><span class="params">(&#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>&#125;)</span></span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> it = vec.<span class="built_in">begin</span>(); it &lt; vec.<span class="built_in">end</span>(); it++) &#123;</span><br><span class="line">    cout &lt;&lt; *it &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="反向遍歷"><a href="#反向遍歷" class="headerlink" title="反向遍歷"></a>反向遍歷</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">vec</span><span class="params">(&#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>&#125;)</span></span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> it = vec.<span class="built_in">rbegin</span>(); it &lt; vec.<span class="built_in">rend</span>(); it++) &#123;</span><br><span class="line">    cout &lt;&lt; *it &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="size-與-max-size-差異"><a href="#size-與-max-size-差異" class="headerlink" title="size() 與 max_size() 差異"></a>size() 與 max_size() 差異</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">vec</span><span class="params">(&#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>&#125;)</span></span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;size: &quot;</span> &lt;&lt; vec.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;max_size: &quot;</span> &lt;&lt; vec.<span class="built_in">max_size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">輸出：</span><br><span class="line">size: 4</span><br><span class="line">max_size: 4611686018427387903</span><br></pre></td></tr></table></figure>
+
+<h2 id="size-與-capacity-差異"><a href="#size-與-capacity-差異" class="headerlink" title="size() 與 capacity() 差異"></a>size() 與 capacity() 差異</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">vec</span><span class="params">(&#123;<span class="number">1</span>&#125;)</span></span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec size: &quot;</span> &lt;&lt; vec.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec capacity: &quot;</span> &lt;&lt; vec.<span class="built_in">capacity</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">10</span>);</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec size: &quot;</span> &lt;&lt; vec.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec capacity: &quot;</span> &lt;&lt; vec.<span class="built_in">capacity</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">10</span>);</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec size: &quot;</span> &lt;&lt; vec.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec capacity: &quot;</span> &lt;&lt; vec.<span class="built_in">capacity</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">10</span>);</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec size: &quot;</span> &lt;&lt; vec.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec capacity: &quot;</span> &lt;&lt; vec.<span class="built_in">capacity</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">10</span>);</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec size: &quot;</span> &lt;&lt; vec.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec capacity: &quot;</span> &lt;&lt; vec.<span class="built_in">capacity</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">10</span>);</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec size: &quot;</span> &lt;&lt; vec.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec capacity: &quot;</span> &lt;&lt; vec.<span class="built_in">capacity</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">10</span>);</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec size: &quot;</span> &lt;&lt; vec.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec capacity: &quot;</span> &lt;&lt; vec.<span class="built_in">capacity</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">輸出：</span><br><span class="line">vec size: 1</span><br><span class="line">vec capacity: 1</span><br><span class="line">vec size: 2</span><br><span class="line">vec capacity: 2</span><br><span class="line">vec size: 3</span><br><span class="line">vec capacity: 4</span><br><span class="line">vec size: 4</span><br><span class="line">vec capacity: 4</span><br><span class="line">vec size: 5</span><br><span class="line">vec capacity: 8</span><br><span class="line">vec size: 6</span><br><span class="line">vec capacity: 8</span><br><span class="line">vec size: 7</span><br><span class="line">vec capacity: 8</span><br></pre></td></tr></table></figure>
+
+<p>可以發現，使用 <code>size()</code> 時，元素個數及為 <code>size</code>，而使用 <code>capacity()</code> 時，回傳目前 <code>vector</code> 預先給予的空間大小，且如果超過預先給予的空間大小，空間會再給予 &#x3D;&#x3D;兩倍&#x3D;&#x3D; 的空間。</p>
+<h2 id="reserve-預先配置-vector-如器大小"><a href="#reserve-預先配置-vector-如器大小" class="headerlink" title="reserve() 預先配置 vector 如器大小"></a>reserve() 預先配置 vector 如器大小</h2><p>若想要預先給予固定的空間大小，可以使用 <code>reserve()</code>。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">vec</span><span class="params">(&#123;<span class="number">1</span>&#125;)</span></span>;</span><br><span class="line">vec.<span class="built_in">reserve</span>(<span class="number">3</span>);</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec size: &quot;</span> &lt;&lt; vec.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec capacity: &quot;</span> &lt;&lt; vec.<span class="built_in">capacity</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">10</span>);</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec size: &quot;</span> &lt;&lt; vec.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec capacity: &quot;</span> &lt;&lt; vec.<span class="built_in">capacity</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">10</span>);</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec size: &quot;</span> &lt;&lt; vec.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec capacity: &quot;</span> &lt;&lt; vec.<span class="built_in">capacity</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">10</span>);</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec size: &quot;</span> &lt;&lt; vec.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;vec capacity: &quot;</span> &lt;&lt; vec.<span class="built_in">capacity</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">輸出：</span><br><span class="line">vec size: 1</span><br><span class="line">vec capacity: 3</span><br><span class="line">vec size: 2</span><br><span class="line">vec capacity: 3</span><br><span class="line">vec size: 3</span><br><span class="line">vec capacity: 3</span><br><span class="line">vec size: 4</span><br><span class="line">vec capacity: 6</span><br></pre></td></tr></table></figure>
+
+<p>可以再次發現，若元素長度大於預先設置的空間大小，<code>capacity()</code> 依舊以 &#x3D;&#x3D;兩倍的方式增大&#x3D;&#x3D; 。</p>
+<h2 id="使用-shrink-to-fit-將未使用的空間釋放"><a href="#使用-shrink-to-fit-將未使用的空間釋放" class="headerlink" title="使用 shrink_to_fit() 將未使用的空間釋放"></a>使用 shrink_to_fit() 將未使用的空間釋放</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line"><span class="comment">// 使用 shrink 前</span></span><br><span class="line">cout &lt;&lt; <span class="string">&quot;---使用 shrink 前---\n&quot;</span>;</span><br><span class="line">vec.<span class="built_in">reserve</span>(<span class="number">10</span>);</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;size: &quot;</span> &lt;&lt; vec.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;capacity: &quot;</span> &lt;&lt; vec.<span class="built_in">capacity</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">1</span>);</span><br><span class="line">vec.<span class="built_in">push_back</span>(<span class="number">1</span>);</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;size: &quot;</span> &lt;&lt; vec.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;capacity: &quot;</span> &lt;&lt; vec.<span class="built_in">capacity</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"><span class="comment">// 使用 shrink 後</span></span><br><span class="line">cout &lt;&lt; <span class="string">&quot;---使用 shrink 後---\n&quot;</span>;</span><br><span class="line">vec.<span class="built_in">shrink_to_fit</span>();</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;size: &quot;</span> &lt;&lt; vec.<span class="built_in">size</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;capacity: &quot;</span> &lt;&lt; vec.<span class="built_in">capacity</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">輸出：</span><br><span class="line">---使用 shrink 前---</span><br><span class="line">size: 0</span><br><span class="line">capacity: 10</span><br><span class="line">size: 2</span><br><span class="line">capacity: 10</span><br><span class="line">---使用 shrink 後---</span><br><span class="line">size: 2</span><br><span class="line">capacity: 2</span><br></pre></td></tr></table></figure>
+
+<h2 id="resize-配置大小，並將新的空間設為-0"><a href="#resize-配置大小，並將新的空間設為-0" class="headerlink" title="resize() 配置大小，並將新的空間設為 0"></a>resize() 配置大小，並將新的空間設為 0</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">vec.<span class="built_in">resize</span>(<span class="number">10</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;v : vec) &#123;</span><br><span class="line">    cout &lt;&lt; v &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">輸出：</span><br><span class="line">0 0 0 0 0 0 0 0 0 0 </span><br></pre></td></tr></table></figure>
+
+<p>可以發現原本空的 <code>vector</code> 使用 <code>size()</code> 後，預設為 <code>0</code>，但如果不想預設為 <code>0</code>，可以這樣做。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; vec;</span><br><span class="line">vec.<span class="built_in">resize</span>(<span class="number">10</span>, <span class="number">5</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> &amp;v : vec) &#123;</span><br><span class="line">    cout &lt;&lt; v &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">輸出：</span><br><span class="line">5 5 5 5 5 5 5 5 5 5</span><br></pre></td></tr></table></figure>
+
+<h1 id="克堂小考"><a href="#克堂小考" class="headerlink" title="克堂小考"></a>克堂小考</h1><ol>
+<li>對空的整數型態 <code>vector</code> 使用 <code>resize(10.5, 3.3)</code> 後，<code>capacity()</code> 變為多少，且元素設定為多少 。 {.quiz}<ul>
+<li>capacity: 11，且 元素皆為 4</li>
+<li>capacity: 11，且 元素皆為 3</li>
+<li>capacity: 10，且 元素皆為 3 {.correct}</li>
+<li>capacity: 10，且 元素皆為 4</li>
+<li>Run Time Error<br>{.options}</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://github.com/huangmayor0905/huangmayor0905.github.io/20221210/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kuo-yu Huang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuo's Blog">
+      <meta itemprop="description" content="個人網站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kuo's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/20221210/" class="post-title-link" itemprop="url">【日常】我確診了</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-12-10 23:44:05" itemprop="dateCreated datePublished" datetime="2022-12-10T23:44:05+08:00">2022-12-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2022-12-14 18:13:19" itemprop="dateModified" datetime="2022-12-14T18:13:19+08:00">2022-12-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/life/" itemprop="url" rel="index"><span itemprop="name">生活點滴</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>511</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>2 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          Oops! 這裡似乎需要密碼
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/20221210/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://github.com/huangmayor0905/huangmayor0905.github.io/computer-science/cpp/array/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kuo-yu Huang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuo's Blog">
+      <meta itemprop="description" content="個人網站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kuo's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/computer-science/cpp/array/" class="post-title-link" itemprop="url">【筆記】Array 陣列</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-12-10 15:00:00" itemprop="dateCreated datePublished" datetime="2022-12-10T15:00:00+08:00">2022-12-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2023-05-25 13:05:20" itemprop="dateModified" datetime="2023-05-25T13:05:20+08:00">2023-05-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/computer-science/" itemprop="url" rel="index"><span itemprop="name">計算機科學</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/computer-science/cpp/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>456</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>2 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="基本介紹"><a href="#基本介紹" class="headerlink" title="基本介紹"></a>基本介紹</h1><p>當我們需要存取一堆數據或資料時，總不能直接建立千個或上萬個變數吧！若這些數據具有相關性、型態一樣，可以使用 <code>Array </code> 來存取。陣列具有連續的記憶體位址，所以我們可以從頭走到尾來讀取 <code>Array </code> 中的數據。既可以減少變數的命名，還可以讓程式變得精簡、提高可讀性。</p>
+<h1 id="如何宣告"><a href="#如何宣告" class="headerlink" title="如何宣告"></a>如何宣告</h1><p>先引入標頭檔 <code>#include &lt;array&gt;</code></p>
+<h2 id="基礎宣告"><a href="#基礎宣告" class="headerlink" title="基礎宣告"></a>基礎宣告</h2><figure class="highlight cpp"><figcaption><span>基礎宣告範例</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array&lt;<span class="type">int</span>, 10&gt; arr;</span><br></pre></td></tr></table></figure>
+
+<p>從上方範例可知 <code>arr</code> 是一個長度為 10 的整數陣列</p>
+<div class="note info"><p>在任何程式語言裡，陣列的第一項編號必為 <code>0</code>（編號我們通常稱之 index 索引）。所以若有一個長度為 <code>10</code> 的陣列，內容物的索引範圍為 <code>0~9</code>。</p>
+</div>
+
+<h2 id="設定初始值"><a href="#設定初始值" class="headerlink" title="設定初始值"></a>設定初始值</h2><figure class="highlight cpp"><figcaption><span>設定初始值範例</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arr&lt;<span class="type">int</span>, <span class="number">5</span>&gt; arr_A&#123;<span class="number">2</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">3</span>, <span class="number">1</span>&#125;;</span><br><span class="line">arr&lt;<span class="type">int</span>, <span class="number">5</span>&gt; arr_B&#123;&#125;;  <span class="comment">// 表示初始化 arr_B 元素皆為 0</span></span><br></pre></td></tr></table></figure>
+
+<details class="note "><summary><p>denger</p>
+</summary>
+<p>注意！若陣列未做初始值，其中元素可能為亂數。</p>
+
+</details>
+
+<h1 id="基礎使用"><a href="#基礎使用" class="headerlink" title="基礎使用"></a>基礎使用</h1><table>
+<thead>
+<tr>
+<th>array 函式</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>begin()</code>, <code>end()</code>, <code>cbegin()</code>, <code>cend()</code></td>
+<td>提供正向跌代器</td>
+</tr>
+<tr>
+<td><code>rbegin()</code>, <code>rend()</code>, <code>crbegin()</code>, <code>crend()</code></td>
+<td>提供反向跌代器</td>
+</tr>
+<tr>
+<td><code>size()</code></td>
+<td>返回陣列大小</td>
+</tr>
+<tr>
+<td><code>max_size()</code></td>
+<td>返回陣列最大大小（由於 <code>array</code> 為固定序列，故返回值與 <code>size()</code> 一樣）</td>
+</tr>
+<tr>
+<td><code>at()</code>, <code>operator[]</code></td>
+<td>取得元素</td>
+</tr>
+<tr>
+<td><code>front()</code></td>
+<td>返回第一個元素</td>
+</tr>
+<tr>
+<td><code>back()</code></td>
+<td>返回最後一個元素</td>
+</tr>
+<tr>
+<td><code>data()</code></td>
+<td>返回元素的指標</td>
+</tr>
+<tr>
+<td><code>fill()</code></td>
+<td>填滿陣列</td>
+</tr>
+<tr>
+<td><code>swap()</code></td>
+<td>交換兩個陣列元素</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://cplusplus.com/reference/array/array/">查看更多可參考 cplusplus 官網</a></p>
+<h1 id="各種遍歷"><a href="#各種遍歷" class="headerlink" title="各種遍歷"></a>各種遍歷</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 正向遍歷</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    cout &lt;&lt; data[i] &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> i : data) &#123;</span><br><span class="line">    cout &lt;&lt; i &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> iter = data.<span class="built_in">begin</span>(); iter != data.<span class="built_in">end</span>(); ++iter) &#123;</span><br><span class="line">    cout &lt;&lt; *iter &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 反向遍歷</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">9</span>; i &lt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    cout &lt;&lt; data[i] &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> iter = data.<span class="built_in">rbegin</span>(); iter != data.<span class="built_in">rend</span>(); ++iter) &#123;</span><br><span class="line">    cout &lt;&lt; *iter &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://github.com/huangmayor0905/huangmayor0905.github.io/20221208/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kuo-yu Huang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuo's Blog">
+      <meta itemprop="description" content="個人網站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kuo's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/20221208/" class="post-title-link" itemprop="url">【測試】需密碼文章</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-12-08 13:20:15" itemprop="dateCreated datePublished" datetime="2022-12-08T13:20:15+08:00">2022-12-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2022-12-14 18:14:19" itemprop="dateModified" datetime="2022-12-14T18:14:19+08:00">2022-12-14</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>6</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          Oops! 這裡似乎需要密碼
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/20221208/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://github.com/huangmayor0905/huangmayor0905.github.io/20221130/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kuo-yu Huang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuo's Blog">
+      <meta itemprop="description" content="個人網站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kuo's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/20221130/" class="post-title-link" itemprop="url">【日常】20221130</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-11-30 22:23:53" itemprop="dateCreated datePublished" datetime="2022-11-30T22:23:53+08:00">2022-11-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2022-12-14 18:14:33" itemprop="dateModified" datetime="2022-12-14T18:14:33+08:00">2022-12-14</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>101</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="To-Do"><a href="#To-Do" class="headerlink" title="To-Do"></a>To-Do</h1><ul>
+<li><input disabled="" type="checkbox"> 未完成</li>
+<li><input checked="" disabled="" type="checkbox"> 已完成</li>
+</ul>
+<hr>
+<ul>
+<li><input disabled="" type="checkbox"> 英文學習歷程</li>
+<li><input disabled="" type="checkbox"> 公民學習歷程</li>
+<li><input disabled="" type="checkbox"> <a target="_blank" rel="noopener" href="https://classroom.google.com/u/1/c/NTQ0NzEzOTM4ODQz/a/NTQwMDI4MjE1MTIw/details">資訊學習歷程（12&#x2F;13）</a></li>
+<li><input disabled="" type="checkbox"> <a target="_blank" rel="noopener" href="https://classroom.google.com/u/1/c/NDk4MTY0ODkyNjYz/a/NTczMjAxMTI1MzA4/details">音樂作業（One man acapella影音）（12&#x2F;6）</a></li>
+<li><input disabled="" type="checkbox"> <a target="_blank" rel="noopener" href="https://classroom.google.com/u/1/c/NDk4MTY0ODkyNjYz/a/NTA3NjQ4NDc4NDY2/details">音樂作業（One man acapella文檔）（12&#x2F;6）</a></li>
+<li><input disabled="" type="checkbox"> 化學預報</li>
+<li><input disabled="" type="checkbox"> <a target="_blank" rel="noopener" href="https://classroom.google.com/u/1/c/NTM5NTcwMzExMDM1/a/NTAyMTE3NzE2MDAw/details">健康學習歷程（12&#x2F;30）</a></li>
+<li><input disabled="" type="checkbox"> 地理寶典（平時成績）</li>
+</ul>
+<h1 id="煩死了"><a href="#煩死了" class="headerlink" title="煩死了"></a>煩死了</h1><p>最近真的太忙了，快喘不過氣，希望二段趕快過去，我要趕作業了 T_T</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://github.com/huangmayor0905/huangmayor0905.github.io/20221121/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="kuo-yu Huang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuo's Blog">
+      <meta itemprop="description" content="個人網站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kuo's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/20221121/" class="post-title-link" itemprop="url">【日常】我看了一些演算法:D</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發表於</span>
+
+      <time title="創建時間：2022-11-21 19:03:44" itemprop="dateCreated datePublished" datetime="2022-11-21T19:03:44+08:00">2022-11-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2022-12-14 18:14:50" itemprop="dateModified" datetime="2022-12-14T18:14:50+08:00">2022-12-14</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>24</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="To-Do"><a href="#To-Do" class="headerlink" title="To-Do"></a>To-Do</h1><ol start="152">
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/maximum-product-subarray/">Maximum Product Subarray</a></li>
+</ol>
+<h1 id="這不是費文，只是沒時間弄"><a href="#這不是費文，只是沒時間弄" class="headerlink" title="這不是費文，只是沒時間弄"></a>這不是費文，只是沒時間弄</h1><ol>
+<li>Tree</li>
+<li>linked list</li>
+<li>blablabla~~~~~~~~~</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="上一頁" aria-label="上一頁" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" title="下一頁" aria-label="下一頁" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2022 – 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">若要轉載文章，麻煩請保留原作者名稱與原始連結。</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>總字數：</span>
+    <span title="總字數">14k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">52 分鐘</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"huangmayor0905","repo":"huangmayor0905.github.io","client_id":"2edf56fae528fa5e1662","client_secret":"b9d5dcfcb3733c370d2e9b6688fc5c2576469520","admin_user":"huangmayor0905","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"9d8d3da09189165dcde8f1d3e109ad78"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
