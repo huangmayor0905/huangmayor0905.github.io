@@ -235,7 +235,7 @@ pjax.refresh(newContent);
 <h3 id="reload"><a href="#reload" class="headerlink" title="reload()"></a><code>reload()</code></h3><p>A helper shortcut for <code>window.location.reload()</code>. Used to force a page reload.</p>
 <pre><code class="js">pjax.reload()
 </code></pre>
-<h2 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h2><h3 id="elements-String-default-quot-a-href-form-action-quot"><a href="#elements-String-default-quot-a-href-form-action-quot" class="headerlink" title="elements (String, default: &quot;a[href], form[action]&quot;)"></a><code>elements</code> (String, default: <code>&quot;a[href], form[action]&quot;</code>)</h3><p>CSS selector(s) used to find links to apply Pjax to. If needing multiple specific selectors, separate them by a comma.</p>
+<h2 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h2><h3 id="elements-String-default-a-href-form-action"><a href="#elements-String-default-a-href-form-action" class="headerlink" title="elements (String, default: &quot;a[href], form[action]&quot;)"></a><code>elements</code> (String, default: <code>&quot;a[href], form[action]&quot;</code>)</h3><p>CSS selector(s) used to find links to apply Pjax to. If needing multiple specific selectors, separate them by a comma.</p>
 <pre><code class="js">// Single element
 var pjax = new Pjax({
   elements: &quot;.ajax&quot;
@@ -246,7 +246,7 @@ var pjax = new Pjax({
   elements: &quot;.pjax, .ajax&quot;,
 })
 </code></pre>
-<h3 id="selectors-Array-default-quot-title-quot-quot-js-Pjax-quot"><a href="#selectors-Array-default-quot-title-quot-quot-js-Pjax-quot" class="headerlink" title="selectors (Array, default: [&quot;title&quot;, &quot;.js-Pjax&quot;])"></a><code>selectors</code> (Array, default: <code>[&quot;title&quot;, &quot;.js-Pjax&quot;]</code>)</h3><p>CSS selectors used to find which content to replace.</p>
+<h3 id="selectors-Array-default-title-js-Pjax"><a href="#selectors-Array-default-title-js-Pjax" class="headerlink" title="selectors (Array, default: [&quot;title&quot;, &quot;.js-Pjax&quot;])"></a><code>selectors</code> (Array, default: <code>[&quot;title&quot;, &quot;.js-Pjax&quot;]</code>)</h3><p>CSS selectors used to find which content to replace.</p>
 <pre><code class="js">var pjax = new Pjax({
   selectors: [
     &quot;title&quot;,
