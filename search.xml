@@ -35,6 +35,42 @@
       </tags>
   </entry>
   <entry>
+    <title>【C++】 認識 Hello World</title>
+    <url>/003-meeting-hello-world/</url>
+    <content><![CDATA[<h1 id="第一個程式，認識-Hello-world"><a href="#第一個程式，認識-Hello-world" class="headerlink" title="第一個程式，認識 Hello world"></a>第一個程式，認識 Hello world</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>說到程式語言，Hello World 想必是程式入門時最常見的詞，它是什麼時候出現的，那為甚麼會被廣泛流傳呢？</p>
+<p>首先，大部分人認為是《C 程序設計語言》此書作者之一，Brian Kernighan 在 1973 年出版的《程式語言 B 教程導論》裡首次提到。以下是當時首次提到 Hello World 的程式碼：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">main()&#123;</span><br><span class="line">  extrn a,b,c;</span><br><span class="line">  putchar(a); putchar(b); putchar(c); putchar(&#x27;!*n&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">a &#x27;hell&#x27;;</span><br><span class="line">b &#x27;o, w&#x27;;</span><br><span class="line">c &#x27;orld&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>但不幸的是他受訪時，他無法準確的講述原因跟時間。「我只記得，我好像看過一幅漫畫，講述一枚雞蛋和一隻小雞的故事，在那副漫畫中，小雞說了一句：『Hello World』。」他是這樣說的。</p>
+<p>結論，Hello World 的起源應該是 Brian Kernighan 小時候曾看過的漫畫。</p>
+<hr>
+<h2 id="用-C-實作吧！"><a href="#用-C-實作吧！" class="headerlink" title="用 C++ 實作吧！"></a>用 C++ 實作吧！</h2><p>說了這小小的故事，其實 Hello World 也代表著程式的運行無礙，那我們也可以開始動手做看看 C++ 世界裡的 Hello World 啦！</p>
+<ol>
+<li>你可以使用 <a href="https://replit.com/">Repl</a> 線上的編譯器，註冊後，按下右上角的加號，在 Template 那一欄打上 C++，並選擇好 C++ 的環境模板。 </li>
+<li>在右邊 Title 欄打上這個程式專案的名稱，若是練習通常我會打上今天的日期，如：20220326，除非是特別的專案才會特別取名，如果不取名，你的專案會在左邊的側邊欄 My Repls 的 Unnamed。</li>
+</ol>
+<figure class="highlight cpp"><figcaption><span>程式範例</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;hello world!&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>首先我們可以觀察看看，C++ 有人麼特別之處？如：句尾的共同處、有大括弧、小括弧等。那作者我就開始一一介紹吧！</p>
+<ol>
+<li><p>標頭檔：程式裡 <code>#include &lt;iostream&gt;</code> 就像是工具箱，它可以叫出你想用的工具，在這裡，我們使用 <code>cout</code> ，所以每當我們使用輸出時，就會使用到這個 <code>&lt;iostream&gt;</code> 標頭檔。</p>
+</li>
+<li><p>命名空間： <code>using namespace std;</code> 叫做命名空間，它的用處就像是你在學校裡，可能會有同名的人，所以我們會叫「某班的」誰誰誰，這個「某班的」，就是我們的 std 。若我們不先在程式裡輸入這行，程式碼就要在 cout 前面多打 std:: ，這樣就會變得更複雜。所以為了方便，我們習慣在程式一開始就先打 <code>using namespace std;</code> 。簡單來說，工具也會被重複命名到，然而我們只需要用到其中一個，所以直接在程式上打 <code>using namespace std;</code> 可以免去不斷撰寫的麻煩。</p>
+</li>
+<li><p>main 函式：我們也可以說它是主程式，用來執行你撰寫的程式。我們會在一對大括號內撰寫。int 是變數型態，表整數（integer）之意，在函式前的變數型態與回傳值有關，如下兩行的 <code>return 0;</code> 。</p>
+</li>
+<li><p>輸出 cout：用來輸出箭頭後方箭頭後的字串、變數和值。</p>
+</li>
+<li><p>return 0：表示回傳值為 0，也就是程式正常結束，但現在的編譯器都會在編譯時偷偷幫你補上這行，不過！還是要多多保持多打這行的習慣會比較好。</p>
+</li>
+</ol>
+<h2 id="參考資料："><a href="#參考資料：" class="headerlink" title="參考資料："></a>參考資料：</h2><p><a href="http://blog.fujiji.com/the-history-of-hello-world/">Hello World 程序的起源与历史</a></p>
+]]></content>
+      <tags>
+        <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>用 Hexo 在 GitHub 架站吧</title>
     <url>/004-make-a-blog-with-hexo/</url>
     <content><![CDATA[<h1 id="Blog-是什麼？"><a href="#Blog-是什麼？" class="headerlink" title="Blog 是什麼？"></a>Blog 是什麼？</h1><blockquote>
@@ -115,42 +151,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【C++】 認識 Hello World</title>
-    <url>/003-meeting-hello-world/</url>
-    <content><![CDATA[<h1 id="第一個程式，認識-Hello-world"><a href="#第一個程式，認識-Hello-world" class="headerlink" title="第一個程式，認識 Hello world"></a>第一個程式，認識 Hello world</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>說到程式語言，Hello World 想必是程式入門時最常見的詞，它是什麼時候出現的，那為甚麼會被廣泛流傳呢？</p>
-<p>首先，大部分人認為是《C 程序設計語言》此書作者之一，Brian Kernighan 在 1973 年出版的《程式語言 B 教程導論》裡首次提到。以下是當時首次提到 Hello World 的程式碼：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">main()&#123;</span><br><span class="line">  extrn a,b,c;</span><br><span class="line">  putchar(a); putchar(b); putchar(c); putchar(&#x27;!*n&#x27;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">a &#x27;hell&#x27;;</span><br><span class="line">b &#x27;o, w&#x27;;</span><br><span class="line">c &#x27;orld&#x27;;</span><br></pre></td></tr></table></figure>
-
-<p>但不幸的是他受訪時，他無法準確的講述原因跟時間。「我只記得，我好像看過一幅漫畫，講述一枚雞蛋和一隻小雞的故事，在那副漫畫中，小雞說了一句：『Hello World』。」他是這樣說的。</p>
-<p>結論，Hello World 的起源應該是 Brian Kernighan 小時候曾看過的漫畫。</p>
-<hr>
-<h2 id="用-C-實作吧！"><a href="#用-C-實作吧！" class="headerlink" title="用 C++ 實作吧！"></a>用 C++ 實作吧！</h2><p>說了這小小的故事，其實 Hello World 也代表著程式的運行無礙，那我們也可以開始動手做看看 C++ 世界裡的 Hello World 啦！</p>
-<ol>
-<li>你可以使用 <a href="https://replit.com/">Repl</a> 線上的編譯器，註冊後，按下右上角的加號，在 Template 那一欄打上 C++，並選擇好 C++ 的環境模板。 </li>
-<li>在右邊 Title 欄打上這個程式專案的名稱，若是練習通常我會打上今天的日期，如：20220326，除非是特別的專案才會特別取名，如果不取名，你的專案會在左邊的側邊欄 My Repls 的 Unnamed。</li>
-</ol>
-<figure class="highlight cpp"><figcaption><span>程式範例</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;hello world!&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>首先我們可以觀察看看，C++ 有人麼特別之處？如：句尾的共同處、有大括弧、小括弧等。那作者我就開始一一介紹吧！</p>
-<ol>
-<li><p>標頭檔：程式裡 <code>#include &lt;iostream&gt;</code> 就像是工具箱，它可以叫出你想用的工具，在這裡，我們使用 <code>cout</code> ，所以每當我們使用輸出時，就會使用到這個 <code>&lt;iostream&gt;</code> 標頭檔。</p>
-</li>
-<li><p>命名空間： <code>using namespace std;</code> 叫做命名空間，它的用處就像是你在學校裡，可能會有同名的人，所以我們會叫「某班的」誰誰誰，這個「某班的」，就是我們的 std 。若我們不先在程式裡輸入這行，程式碼就要在 cout 前面多打 std:: ，這樣就會變得更複雜。所以為了方便，我們習慣在程式一開始就先打 <code>using namespace std;</code> 。簡單來說，工具也會被重複命名到，然而我們只需要用到其中一個，所以直接在程式上打 <code>using namespace std;</code> 可以免去不斷撰寫的麻煩。</p>
-</li>
-<li><p>main 函式：我們也可以說它是主程式，用來執行你撰寫的程式。我們會在一對大括號內撰寫。int 是變數型態，表整數（integer）之意，在函式前的變數型態與回傳值有關，如下兩行的 <code>return 0;</code> 。</p>
-</li>
-<li><p>輸出 cout：用來輸出箭頭後方箭頭後的字串、變數和值。</p>
-</li>
-<li><p>return 0：表示回傳值為 0，也就是程式正常結束，但現在的編譯器都會在編譯時偷偷幫你補上這行，不過！還是要多多保持多打這行的習慣會比較好。</p>
-</li>
-</ol>
-<h2 id="參考資料："><a href="#參考資料：" class="headerlink" title="參考資料："></a>參考資料：</h2><p><a href="http://blog.fujiji.com/the-history-of-hello-world/">Hello World 程序的起源与历史</a></p>
-]]></content>
-      <tags>
-        <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>5 月 8 日 雲</title>
     <url>/005-20220508/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 這組密碼似乎有些錯誤, 請再試試." data-whm="抱歉, 這篇文章不能被校驗, 不過您還是能看看解密後的內容.">
@@ -190,23 +190,22 @@
       </tags>
   </entry>
   <entry>
-    <title>5 月 10 日 小雨</title>
-    <url>/007-20220510/</url>
-    <content><![CDATA[<p>離段考剩下 2 天……線上課程真的很難專注，現在根本是亡羊補牢而已。</p>
-<p>要求不高來個 60。</p>
+    <title>5 月 11 日 雨</title>
+    <url>/008-20220511/</url>
+    <content><![CDATA[<p>距離二段僅剩 1 天啦……明天就要回學校考段考了……而且考程還很擠……明天根本沒有時間讀，從二抽到二段，我們班只有兩天實體課，學習效果好差呀……（有沒有一種可能，是你自己不認真🤣）</p>
+<hr>
+<p>大概下午 1 點左右，我家旁邊居然發生火災！！！當時我正好吃完午餐，聽到消防車的聲音越開越近，直到停在我家旁邊，我想說：「嗯？火災？我又跑到前陽台從窗戶往外看，天啊……真的是有火災。」我哥這時也跑出來看，他說後陽台那邊都是煙，我也跑去看。Oh wow 煙也太大了吧！而且味道好臭，猜是塑膠製品，或許是電線？_？不知道，但就很臭。樓下的爺爺也出來查看，還在陽台幫忙潑水。我和我哥把後面的門窗都緊關起來，把抽油煙機打開，真的很難聞。好在，好像沒人受傷，但就是有點嚇到我了。</p>
+<p>附圖：<br>兩台消防車（一台在後面沒拍到）<br><a href="https://i.ibb.co/870JHz0/IMG-20220511-131807.jpg"></a></p>
 ]]></content>
       <tags>
         <tag>日常</tag>
       </tags>
   </entry>
   <entry>
-    <title>5 月 24 日</title>
-    <url>/010-20220524/</url>
-    <content><![CDATA[<p>線上課的第二天，總覺得每次在家裡都沒辦法專心做事，一直想看手機。</p>
-<p><img src="https://drive.google.com/uc?export=view&id=1cpm5NRSYjAfJqSLTUi-vGE5aphtClZz6"></p>
-<p>哈哈哈，結果只有上午成功，下午直接破功。</p>
-<hr>
-<p>話說我這幾天沒更新不是我懶，我有在更新這篇<a href="https://huangmayor0905.github.io/2022/05/01/005-make-a-blog-with-hexo/">用 Hexo 在 GitHub 架站吧</a>，目前是更新完了，但後面的更換主題還沒準備。還有我居然看到有學長用他自己的部落格放空英單字，害得我也想放筆記在上面，歐對齁……我這個預設本來就是放筆記啊。</p>
+    <title>5 月 10 日 小雨</title>
+    <url>/007-20220510/</url>
+    <content><![CDATA[<p>離段考剩下 2 天……線上課程真的很難專注，現在根本是亡羊補牢而已。</p>
+<p>要求不高來個 60。</p>
 ]]></content>
       <tags>
         <tag>日常</tag>
@@ -225,12 +224,13 @@
       </tags>
   </entry>
   <entry>
-    <title>5 月 11 日 雨</title>
-    <url>/008-20220511/</url>
-    <content><![CDATA[<p>距離二段僅剩 1 天啦……明天就要回學校考段考了……而且考程還很擠……明天根本沒有時間讀，從二抽到二段，我們班只有兩天實體課，學習效果好差呀……（有沒有一種可能，是你自己不認真🤣）</p>
+    <title>5 月 24 日</title>
+    <url>/010-20220524/</url>
+    <content><![CDATA[<p>線上課的第二天，總覺得每次在家裡都沒辦法專心做事，一直想看手機。</p>
+<p><img src="https://drive.google.com/uc?export=view&id=1cpm5NRSYjAfJqSLTUi-vGE5aphtClZz6"></p>
+<p>哈哈哈，結果只有上午成功，下午直接破功。</p>
 <hr>
-<p>大概下午 1 點左右，我家旁邊居然發生火災！！！當時我正好吃完午餐，聽到消防車的聲音越開越近，直到停在我家旁邊，我想說：「嗯？火災？我又跑到前陽台從窗戶往外看，天啊……真的是有火災。」我哥這時也跑出來看，他說後陽台那邊都是煙，我也跑去看。Oh wow 煙也太大了吧！而且味道好臭，猜是塑膠製品，或許是電線？_？不知道，但就很臭。樓下的爺爺也出來查看，還在陽台幫忙潑水。我和我哥把後面的門窗都緊關起來，把抽油煙機打開，真的很難聞。好在，好像沒人受傷，但就是有點嚇到我了。</p>
-<p>附圖：<br>兩台消防車（一台在後面沒拍到）<br><a href="https://i.ibb.co/870JHz0/IMG-20220511-131807.jpg"></a></p>
+<p>話說我這幾天沒更新不是我懶，我有在更新這篇<a href="https://huangmayor0905.github.io/2022/05/01/005-make-a-blog-with-hexo/">用 Hexo 在 GitHub 架站吧</a>，目前是更新完了，但後面的更換主題還沒準備。還有我居然看到有學長用他自己的部落格放空英單字，害得我也想放筆記在上面，歐對齁……我這個預設本來就是放筆記啊。</p>
 ]]></content>
       <tags>
         <tag>日常</tag>
@@ -362,17 +362,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【日常】無題</title>
-    <url>/014-daily/</url>
-    <content><![CDATA[<p>好…… 剩兩天要抽考，兩天的周末直接擺爛，到底要怎麼不在意成績，真的有夠焦慮……</p>
-<p><img src="https://drive.google.com/uc?export=view&id=1oCbFkiO-w4e1Qzz3nwzQiJ5twViyUSCi"></p>
-<p>這是中午的心血，但是之後又去打瓦了 T_T</p>
-]]></content>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【筆記】APCS 2022 年 6 月場</title>
     <url>/013-202206apcs01/</url>
     <content><![CDATA[<p>這是我第一次去考 APCS（誰叫你之前都忘記報），當天考觀念時肚子真的痛得要命，直到中午才去宣洩…我的考場在台北大學三峽校區，令我意外的是男女比沒有到很重，但是大佬倒是挺多的。考實作題時，不知道是不是緊張，就是一直在 debug…最後是寫到第三題寫了一點就結束了。我那天超孤單😢，我朋友給我請假…說他抽考沒讀，我也沒讀啊🤬。反正最後考了 4 &#x2F; 3 還蠻理想的。</p>
@@ -423,6 +412,17 @@
       </tags>
   </entry>
   <entry>
+    <title>【日常】無題</title>
+    <url>/014-daily/</url>
+    <content><![CDATA[<p>好…… 剩兩天要抽考，兩天的周末直接擺爛，到底要怎麼不在意成績，真的有夠焦慮……</p>
+<p><img src="https://drive.google.com/uc?export=view&id=1oCbFkiO-w4e1Qzz3nwzQiJ5twViyUSCi"></p>
+<p>這是中午的心血，但是之後又去打瓦了 T_T</p>
+]]></content>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【日常】我看了一些演算法:D</title>
     <url>/20221121/</url>
     <content><![CDATA[<h1 id="To-Do"><a href="#To-Do" class="headerlink" title="To-Do"></a>To-Do</h1><ol start="152">
@@ -436,25 +436,6 @@
 ]]></content>
       <tags>
         <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【測試】需密碼文章</title>
-    <url>/20221208/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 這組密碼似乎有些錯誤, 請再試試." data-whm="抱歉, 這篇文章不能被校驗, 不過您還是能看看解密後的內容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="c5f962a59016e1a6ecfe828b27d27df2e5f89b624e75c40addf0dd3622642acb">bd25ed9264b080267271e137e33d0ce1276c06c30ad3349bc1fd0ac9ef1064dce1362436ca4a0a173a8501aa56c1212bbb76dd99a1a7ec98efdab7ba17bd4d9a</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">密碼是 test</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <tags>
-        <tag>test</tag>
       </tags>
   </entry>
   <entry>
@@ -479,6 +460,25 @@
 ]]></content>
       <tags>
         <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【測試】需密碼文章</title>
+    <url>/20221208/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 這組密碼似乎有些錯誤, 請再試試." data-whm="抱歉, 這篇文章不能被校驗, 不過您還是能看看解密後的內容.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="c5f962a59016e1a6ecfe828b27d27df2e5f89b624e75c40addf0dd3622642acb">bd25ed9264b080267271e137e33d0ce1276c06c30ad3349bc1fd0ac9ef1064dce1362436ca4a0a173a8501aa56c1212bbb76dd99a1a7ec98efdab7ba17bd4d9a</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">密碼是 test</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>test</tag>
       </tags>
   </entry>
   <entry>
@@ -549,6 +549,23 @@
       </tags>
   </entry>
   <entry>
+    <title>【日常】給一整年的自己</title>
+    <url>/20221218/</url>
+    <content><![CDATA[<h1 id="年尾了，又適合寫這種文章了"><a href="#年尾了，又適合寫這種文章了" class="headerlink" title="年尾了，又適合寫這種文章了"></a>年尾了，又適合寫這種文章了</h1><h2 id="2022-再見了"><a href="#2022-再見了" class="headerlink" title="2022 再見了"></a>2022 再見了</h2><p>這是來自 111 年 12 月 18 號星期日的你所寫下的一切。</p>
+<p>今年發生了好多趣事，我感覺到我不斷在成長，比以往更能夠掌握時間，但年底好像又有點掉漆了哈哈哈。在 2022，我發燒兩次，第一次是 SITCON 後的腸胃炎；第二次是 12 月中的確診，差點因為繁雜的作業焦慮不息，但確診成為我的休息站，讓我好好放鬆了一周。我知道還有許多事情還擺著尚未完成，但我相信休息是為了走更長遠的路，所以提起那份熱誠，把 12 月好好的過完吧！</p>
+<h2 id="今年的自己又變了"><a href="#今年的自己又變了" class="headerlink" title="今年的自己又變了"></a>今年的自己又變了</h2><p>今年的自己又變了，變得很好了。變得更認識自己，變得更勇於社交，認識了一群新朋友，柏希、柏廷、二義的各位。</p>
+<h3 id="認識自己"><a href="#認識自己" class="headerlink" title="認識自己"></a>認識自己</h3><p>日前還一直會因為自己同性戀的身分而感到彆扭、不敢面對，但自從認識了柏希，令我大開眼界，他當著我的面還有我隔壁的洪承暘等人面前大聲說道：你對同性戀有意見嗎？我驚訝到用笑聲掩蓋過去，謝謝你，讓我知道我是被包容的、被關心的、被重視的，我漸漸地放下包袱繼續成為原本的自己。我是同志，我 17 歲了，再兩百多天將要成年了，明年初，希望可以為自己規劃好自己的目標及方向，不管是打工、學業等等的。</p>
+<h2 id="你好-2023"><a href="#你好-2023" class="headerlink" title="你好 2023"></a>你好 2023</h2><p>你好，希望你能夠遠裡病毒與口罩，讓這顆地球找回原有的樣子。2023，我們將會越來越好，踩著學長姐走過的路，一起並肩為學測加油！</p>
+<p>:::info<br>提示：我還沒寫完…<br>:::</p>
+]]></content>
+      <categories>
+        <category>生活點滴</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>112 學測字彙題</title>
     <url>/20230212/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 這組密碼似乎有些錯誤, 請再試試." data-whm="抱歉, 這篇文章不能被校驗, 不過您還是能看看解密後的內容.">
@@ -568,25 +585,34 @@
       </tags>
   </entry>
   <entry>
-    <title>【日常】給一整年的自己</title>
-    <url>/20221218/</url>
-    <content><![CDATA[<h1 id="年尾了，又適合寫這種文章了"><a href="#年尾了，又適合寫這種文章了" class="headerlink" title="年尾了，又適合寫這種文章了"></a>年尾了，又適合寫這種文章了</h1><h2 id="2022-再見了"><a href="#2022-再見了" class="headerlink" title="2022 再見了"></a>2022 再見了</h2><p>這是來自 111 年 12 月 18 號星期日的你所寫下的一切。</p>
-<p>今年發生了好多趣事，我感覺到我不斷在成長，比以往更能夠掌握時間，但年底好像又有點掉漆了哈哈哈。在 2022，我發燒兩次，第一次是 SITCON 後的腸胃炎；第二次是 12 月中的確診，差點因為繁雜的作業焦慮不息，但確診成為我的休息站，讓我好好放鬆了一周。我知道還有許多事情還擺著尚未完成，但我相信休息是為了走更長遠的路，所以提起那份熱誠，把 12 月好好的過完吧！</p>
-<h2 id="今年的自己又變了"><a href="#今年的自己又變了" class="headerlink" title="今年的自己又變了"></a>今年的自己又變了</h2><p>今年的自己又變了，變得很好了。變得更認識自己，變得更勇於社交，認識了一群新朋友，柏希、柏廷、二義的各位。</p>
-<h3 id="認識自己"><a href="#認識自己" class="headerlink" title="認識自己"></a>認識自己</h3><p>日前還一直會因為自己同性戀的身分而感到彆扭、不敢面對，但自從認識了柏希，令我大開眼界，他當著我的面還有我隔壁的洪承暘等人面前大聲說道：你對同性戀有意見嗎？我驚訝到用笑聲掩蓋過去，謝謝你，讓我知道我是被包容的、被關心的、被重視的，我漸漸地放下包袱繼續成為原本的自己。我是同志，我 17 歲了，再兩百多天將要成年了，明年初，希望可以為自己規劃好自己的目標及方向，不管是打工、學業等等的。</p>
-<h2 id="你好-2023"><a href="#你好-2023" class="headerlink" title="你好 2023"></a>你好 2023</h2><p>你好，希望你能夠遠裡病毒與口罩，讓這顆地球找回原有的樣子。2023，我們將會越來越好，踩著學長姐走過的路，一起並肩為學測加油！</p>
-<p>:::info<br>提示：我還沒寫完…<br>:::</p>
-]]></content>
-      <categories>
-        <category>生活點滴</category>
-      </categories>
+    <title>TOIP-202404-beginner</title>
+    <url>/TOIP-202404-beginner/</url>
+    <content><![CDATA[<h1 id="說明"><a href="#說明" class="headerlink" title="說明"></a>說明</h1><p>這次只涉及到一維陣列，暴力解就行了。</p>
+<h2 id="1-電影院-Cinema"><a href="#1-電影院-Cinema" class="headerlink" title="1. 電影院 (Cinema)"></a>1. 電影院 (Cinema)</h2><details class="note default"><summary><p>展開程式碼</p>
+</summary>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> arr[n];</span><br><span class="line">    <span class="type">int</span> hr, min;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; hr &gt;&gt; min;</span><br><span class="line">        arr[i] = hr * <span class="number">60</span> + min;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(arr, arr + n);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; hr &gt;&gt; min;</span><br><span class="line">    <span class="type">int</span> now = hr * <span class="number">60</span> + min;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[i] &gt;= now + <span class="number">20</span>) &#123;</span><br><span class="line">            cout &lt;&lt; ((arr[i] / <span class="number">60</span> / <span class="number">10</span> == <span class="number">0</span>) ? <span class="string">&quot;0&quot;</span> : <span class="string">&quot;&quot;</span>) </span><br><span class="line">                 &lt;&lt; arr[i] / <span class="number">60</span> &lt;&lt; <span class="string">&quot; &quot;</span> </span><br><span class="line">                 &lt;&lt; ((arr[i] % <span class="number">60</span> / <span class="number">10</span> == <span class="number">0</span>) ? <span class="string">&quot;0&quot;</span> : <span class="string">&quot;&quot;</span>)</span><br><span class="line">                 &lt;&lt; arr[i] % <span class="number">60</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Too Late\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>
+
+<h1 id="2-撲克-Poker"><a href="#2-撲克-Poker" class="headerlink" title="2. 撲克 (Poker)"></a>2. 撲克 (Poker)</h1><details class="note default"><summary><p>展開程式碼</p>
+</summary>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n, mx = <span class="number">-1</span>;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> arr[<span class="number">52</span> + <span class="number">1</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="type">int</span> tmp;</span><br><span class="line">        cin &gt;&gt; tmp;</span><br><span class="line">        arr[tmp]++;</span><br><span class="line">        mx = <span class="built_in">max</span>(mx, arr[tmp]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> mn = INT_MAX;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">52</span>; i++) mn = <span class="built_in">min</span>(mn, arr[i]);</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; mn &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; (mx - mn) * <span class="number">52</span> - (n - mn * <span class="number">52</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>
+
+<h1 id="3-熱門商品-Commodity"><a href="#3-熱門商品-Commodity" class="headerlink" title="3. 熱門商品 (Commodity)"></a>3. 熱門商品 (Commodity)</h1><details class="note default"><summary><p>展開程式碼</p>
+</summary>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> k, n;</span><br><span class="line">    cin &gt;&gt; k &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> arr[k];</span><br><span class="line">    <span class="type">int</span> goods[<span class="number">1005</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        cin &gt;&gt; arr[i];</span><br><span class="line">        goods[arr[i]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> mx = <span class="number">0</span>, favorite = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (goods[arr[i]] &gt; mx) &#123;</span><br><span class="line">            mx = goods[arr[i]];</span><br><span class="line">            favorite = arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> shop[n];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) cin &gt;&gt; shop[i];</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> mn = INT_MAX, flag = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="type">int</span> val = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> q = <span class="number">0</span>; q &lt; shop[i]; q++) &#123;</span><br><span class="line">            <span class="type">int</span> quetion;</span><br><span class="line">            cin &gt;&gt; quetion;</span><br><span class="line">            val += goods[quetion];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (val &lt; mn) &#123;</span><br><span class="line">            mn = val;</span><br><span class="line">            flag = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ans</span></span><br><span class="line">    cout &lt;&lt; favorite &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; flag + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>]]></content>
       <tags>
-        <tag>日常</tag>
+        <tag>TOI</tag>
+        <tag>TOIP</tag>
       </tags>
   </entry>
   <entry>
     <title>APCS 2024 1 月場</title>
-    <url>/post/</url>
+    <url>/APCS-2024-01/</url>
     <content><![CDATA[<h1 id="1-遊戲選角"><a href="#1-遊戲選角" class="headerlink" title="1. 遊戲選角"></a>1. 遊戲選角</h1><details class="note default"><summary><p>展開程式碼</p>
 </summary>
 <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">p</span> &#123;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="type">int</span> d;</span><br><span class="line">    <span class="type">int</span> ability;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(p a, p b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.ability &gt; b.ability;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ouo;</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    p player[n];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; player[i].a &gt;&gt; player[i].d;</span><br><span class="line">        player[i].ability = player[i].a * player[i].a + player[i].d * player[i].d;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(player, player + n, cmp);</span><br><span class="line">    cout &lt;&lt; player[<span class="number">1</span>].a &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; player[<span class="number">1</span>].d;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -604,18 +630,6 @@
       </categories>
       <tags>
         <tag>APCS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【心得】被討厭的勇氣</title>
-    <url>/the-Courage-to-Be-Disliked/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>心得</category>
-      </categories>
-      <tags>
-        <tag>心得</tag>
-        <tag>被討厭的勇氣</tag>
       </tags>
   </entry>
   <entry>
@@ -654,6 +668,18 @@
 ]]></content>
       <tags>
         <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【心得】被討厭的勇氣</title>
+    <url>/the-Courage-to-Be-Disliked/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>心得</category>
+      </categories>
+      <tags>
+        <tag>心得</tag>
+        <tag>被討厭的勇氣</tag>
       </tags>
   </entry>
   <entry>
@@ -1156,6 +1182,21 @@
       </tags>
   </entry>
   <entry>
+    <title>【解題】j178: 手遊廣告 (Advertisement)</title>
+    <url>/solved/ZeroJudge/j178/</url>
+    <content><![CDATA[<h1 id="題目連結"><a href="#題目連結" class="headerlink" title="題目連結"></a>題目連結</h1><p><a href="https://zerojudge.tw/ShowProblem?problemid=j178">j178: 手遊廣告 (Advertisement)</a></p>
+<h1 id="我的想法"><a href="#我的想法" class="headerlink" title="我的想法"></a>我的想法</h1><p>水題。</p>
+<h1 id="參考解答"><a href="#參考解答" class="headerlink" title="參考解答"></a>參考解答</h1><figure class="highlight cpp"><figcaption><span>j178</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> m, a;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; a;</span><br><span class="line">    <span class="type">int</span> T[m];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        cin &gt;&gt; T[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (a &lt;= T[i]) <span class="keyword">break</span>;</span><br><span class="line">        a += T[i];</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; a &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>解題</category>
+        <category>ZeroJudge</category>
+      </categories>
+      <tags>
+        <tag>TOI</tag>
+        <tag>解題</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【解題】j179: 資料分類 (Classification)</title>
     <url>/solved/ZeroJudge/j179/</url>
     <content><![CDATA[<h1 id="題目連結"><a href="#題目連結" class="headerlink" title="題目連結"></a>題目連結</h1><p><a href="https://zerojudge.tw/ShowProblem?problemid=j179">j179: 資料分類 (Classification)</a></p>
@@ -1176,24 +1217,9 @@
         <category>ZeroJudge</category>
       </categories>
       <tags>
+        <tag>TOI</tag>
         <tag>解題</tag>
         <tag>Zerojudge</tag>
-        <tag>TOI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【解題】j178: 手遊廣告 (Advertisement)</title>
-    <url>/solved/ZeroJudge/j178/</url>
-    <content><![CDATA[<h1 id="題目連結"><a href="#題目連結" class="headerlink" title="題目連結"></a>題目連結</h1><p><a href="https://zerojudge.tw/ShowProblem?problemid=j178">j178: 手遊廣告 (Advertisement)</a></p>
-<h1 id="我的想法"><a href="#我的想法" class="headerlink" title="我的想法"></a>我的想法</h1><p>水題。</p>
-<h1 id="參考解答"><a href="#參考解答" class="headerlink" title="參考解答"></a>參考解答</h1><figure class="highlight cpp"><figcaption><span>j178</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> m, a;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; a;</span><br><span class="line">    <span class="type">int</span> T[m];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        cin &gt;&gt; T[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (a &lt;= T[i]) <span class="keyword">break</span>;</span><br><span class="line">        a += T[i];</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; a &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>解題</category>
-        <category>ZeroJudge</category>
-      </categories>
-      <tags>
-        <tag>解題</tag>
-        <tag>TOI</tag>
       </tags>
   </entry>
   <entry>
@@ -1222,9 +1248,9 @@
         <category>ZeroJudge</category>
       </categories>
       <tags>
+        <tag>TOI</tag>
         <tag>解題</tag>
         <tag>Zerojudge</tag>
-        <tag>TOI</tag>
       </tags>
   </entry>
   <entry>
