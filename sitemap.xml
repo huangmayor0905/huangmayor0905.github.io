@@ -479,21 +479,14 @@
 
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/C-C/</loc>
-    <lastmod>2024-05-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E7%B7%A8%E8%AD%AF%E5%99%A8-%E7%B7%A8%E8%BC%AF%E5%99%A8/</loc>
-    <lastmod>2024-05-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/test/</loc>
+    <lastmod>2024-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/C-C/</loc>
     <lastmod>2024-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -521,7 +514,21 @@
   </url>
   
   <url>
+    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E7%B7%A8%E8%AD%AF%E5%99%A8-%E7%B7%A8%E8%BC%AF%E5%99%A8/</loc>
+    <lastmod>2024-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E6%97%A5%E5%B8%B8/</loc>
+    <lastmod>2024-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E5%BF%83%E5%BE%97/</loc>
     <lastmod>2024-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -536,13 +543,6 @@
   
   <url>
     <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E7%AD%86%E8%A8%98/</loc>
-    <lastmod>2024-05-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E5%BF%83%E5%BE%97/</loc>
     <lastmod>2024-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -570,6 +570,13 @@
   </url>
   
   <url>
+    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E5%AD%B8%E6%B8%AC/</loc>
+    <lastmod>2024-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/TOI/</loc>
     <lastmod>2024-05-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -585,13 +592,6 @@
   
   <url>
     <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E6%96%B0%E6%89%8B%E7%B5%84/</loc>
-    <lastmod>2024-05-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E5%AD%B8%E6%B8%AC/</loc>
     <lastmod>2024-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -661,13 +661,6 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/BFS/</loc>
-    <lastmod>2024-05-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/DP/</loc>
     <lastmod>2024-05-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -676,6 +669,13 @@
   
   <url>
     <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E5%8D%80%E9%96%93/</loc>
+    <lastmod>2024-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/BFS/</loc>
     <lastmod>2024-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
