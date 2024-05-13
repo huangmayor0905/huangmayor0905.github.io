@@ -23,7 +23,7 @@ HTMLElement.prototype.wrap = function(wrapper) {
 
 NexT.utils = {
 
-  registerExtURL: function() {
+  registerExtURL() {
     document.querySelectorAll('span.exturl').forEach(element => {
       const link = document.createElement('a');
       // https://stackoverflow.com/questions/30106476/using-javascripts-atob-to-decode-base64-doesnt-properly-decode-utf-8-strings
@@ -39,60 +39,105 @@ NexT.utils = {
     });
   },
 
-  /**
-   * One-click copy code support.
-   */
-  registerCopyCode: function() {
-    let figure = document.querySelectorAll('figure.highlight');
-    if (figure.length === 0) figure = document.querySelectorAll('pre:not(.mermaid)');
-    figure.forEach(element => {
-      element.querySelectorAll('.code .line span').forEach(span => {
-        span.classList.forEach(name => {
-          span.classList.replace(name, `hljs-${name}`);
+  registerCopyButton(target, element, code) {
+    // One-click copy code support.
+    target.insertAdjacentHTML('beforeend', '<div class="copy-btn"><i class="fa fa-copy fa-fw"></i></div>');
+    const button = target.querySelector('.copy-btn');
+    button.addEventListener('click', () => {
+      if (navigator.clipboard) {
+        // https://caniuse.com/mdn-api_clipboard_writetext
+        navigator.clipboard.writeText(code).then(() => {
+          button.querySelector('i').className = 'fa fa-check-circle fa-fw';
+        }, () => {
+          button.querySelector('i').className = 'fa fa-times-circle fa-fw';
         });
-      });
-      if (!CONFIG.copycode.enable) return;
-      let target = element;
-      if (CONFIG.copycode.style !== 'mac') target = element.querySelector('.table-container') || element;
-      target.insertAdjacentHTML('beforeend', '<div class="copy-btn"><i class="fa fa-copy fa-fw"></i></div>');
-      const button = element.querySelector('.copy-btn');
-      button.addEventListener('click', () => {
-        const lines = element.querySelector('.code') || element.querySelector('code');
-        const code = lines.innerText;
-        if (navigator.clipboard) {
-          // https://caniuse.com/mdn-api_clipboard_writetext
-          navigator.clipboard.writeText(code).then(() => {
-            button.querySelector('i').className = 'fa fa-check-circle fa-fw';
-          }, () => {
-            button.querySelector('i').className = 'fa fa-times-circle fa-fw';
-          });
-        } else {
-          const ta = document.createElement('textarea');
-          ta.style.top = window.scrollY + 'px'; // Prevent page scrolling
-          ta.style.position = 'absolute';
-          ta.style.opacity = '0';
-          ta.readOnly = true;
-          ta.value = code;
-          document.body.append(ta);
-          ta.select();
-          ta.setSelectionRange(0, code.length);
-          ta.readOnly = false;
-          const result = document.execCommand('copy');
-          button.querySelector('i').className = result ? 'fa fa-check-circle fa-fw' : 'fa fa-times-circle fa-fw';
-          ta.blur(); // For iOS
-          button.blur();
-          document.body.removeChild(ta);
-        }
-      });
-      element.addEventListener('mouseleave', () => {
-        setTimeout(() => {
-          button.querySelector('i').className = 'fa fa-copy fa-fw';
-        }, 300);
-      });
+      } else {
+        const ta = document.createElement('textarea');
+        ta.style.top = window.scrollY + 'px'; // Prevent page scrolling
+        ta.style.position = 'absolute';
+        ta.style.opacity = '0';
+        ta.readOnly = true;
+        ta.value = code;
+        document.body.append(ta);
+        ta.select();
+        ta.setSelectionRange(0, code.length);
+        ta.readOnly = false;
+        const result = document.execCommand('copy');
+        button.querySelector('i').className = result ? 'fa fa-check-circle fa-fw' : 'fa fa-times-circle fa-fw';
+        ta.blur(); // For iOS
+        button.blur();
+        document.body.removeChild(ta);
+      }
+    });
+    // If copycode.style is not mac, element is larger than target
+    // So we need to accept both of them as parameters
+    element.addEventListener('mouseleave', () => {
+      setTimeout(() => {
+        button.querySelector('i').className = 'fa fa-copy fa-fw';
+      }, 300);
     });
   },
 
-  wrapTableWithBox: function() {
+  registerCodeblock(element) {
+    const inited = !!element;
+    let figure;
+    if (CONFIG.hljswrap) {
+      figure = (inited ? element : document).querySelectorAll('figure.highlight');
+    } else {
+      figure = document.querySelectorAll('pre');
+    }
+    figure.forEach(element => {
+      // Skip pre > .mermaid for folding and copy button
+      if (element.querySelector('.mermaid')) return;
+      if (!inited) {
+        let span = element.querySelectorAll('.code .line span');
+        if (span.length === 0) {
+          // Hljs without line_number and wrap
+          span = element.querySelectorAll('code.highlight span');
+        }
+        span.forEach(s => {
+          s.classList.forEach(name => {
+            s.classList.replace(name, `hljs-${name}`);
+          });
+        });
+      }
+      const height = parseInt(window.getComputedStyle(element).height, 10);
+      const needFold = CONFIG.fold.enable && (height > CONFIG.fold.height);
+      if (!needFold && !CONFIG.copycode.enable) return;
+      let target;
+      if (CONFIG.hljswrap && CONFIG.copycode.style === 'mac') {
+        target = element;
+      } else {
+        let box = element.querySelector('.code-container');
+        if (!box) {
+          // https://github.com/next-theme/hexo-theme-next/issues/98
+          // https://github.com/next-theme/hexo-theme-next/pull/508
+          const container = element.querySelector('.table-container') || element;
+          box = document.createElement('div');
+          box.className = 'code-container';
+          container.wrap(box);
+
+          // add "notranslate" to prevent Google Translate from translating it, which also completely messes up the layout
+          box.classList.add('notranslate');
+        }
+        target = box;
+      }
+      if (needFold && !target.classList.contains('unfold')) {
+        target.classList.add('highlight-fold');
+        target.insertAdjacentHTML('beforeend', '<div class="fold-cover"></div><div class="expand-btn"><i class="fa fa-angle-down fa-fw"></i></div>');
+        target.querySelector('.expand-btn').addEventListener('click', () => {
+          target.classList.remove('highlight-fold');
+          target.classList.add('unfold');
+        });
+      }
+      if (!inited && CONFIG.copycode.enable) {
+        const lines = element.querySelector('.code') || element.querySelector('code');
+        this.registerCopyButton(target, element, lines.innerText);
+      }
+    });
+  },
+
+  wrapTableWithBox() {
     document.querySelectorAll('table').forEach(element => {
       const box = document.createElement('div');
       box.className = 'table-container';
@@ -100,7 +145,7 @@ NexT.utils = {
     });
   },
 
-  registerVideoIframe: function() {
+  registerVideoIframe() {
     document.querySelectorAll('iframe').forEach(element => {
       const supported = [
         'www.youtube.com',
@@ -122,20 +167,20 @@ NexT.utils = {
     });
   },
 
-  updateActiveNav: function() {
-    if (!Array.isArray(NexT.utils.sections)) return;
-    let index = NexT.utils.sections.findIndex(element => {
+  updateActiveNav() {
+    if (!Array.isArray(this.sections)) return;
+    let index = this.sections.findIndex(element => {
       return element && element.getBoundingClientRect().top > 10;
     });
     if (index === -1) {
-      index = NexT.utils.sections.length - 1;
+      index = this.sections.length - 1;
     } else if (index > 0) {
       index--;
     }
     this.activateNavByIndex(index);
   },
 
-  registerScrollPercent: function() {
+  registerScrollPercent() {
     const backToTop = document.querySelector('.back-to-top');
     const readingProgressBar = document.querySelector('.reading-progress-bar');
     // For init back to top in sidebar if page was scrolled after page refresh.
@@ -167,7 +212,7 @@ NexT.utils = {
   /**
    * Tabs tag listener (without twitter bootstrap).
    */
-  registerTabsTag: function() {
+  registerTabsTag() {
     // Binding `nav-tabs` & `tab-content` by real time permalink changing.
     document.querySelectorAll('.tabs ul.nav-tabs .tab').forEach(element => {
       element.addEventListener('click', event => {
@@ -182,9 +227,9 @@ NexT.utils = {
         // Comment system selection tab does not contain .active class.
         const activeTab = tabContent.querySelector('.active') || tabContent.firstElementChild;
         // Hight might be `auto`.
-        const prevHeight = parseInt(window.getComputedStyle(activeTab).height.replace('px', ''), 10) || 0;
-        const paddingTop = parseInt(window.getComputedStyle(activeTab).paddingTop.replace('px', ''), 10);
-        const marginBottom = parseInt(window.getComputedStyle(activeTab.firstElementChild).marginBottom.replace('px', ''), 10);
+        const prevHeight = parseInt(window.getComputedStyle(activeTab).height, 10) || 0;
+        const paddingTop = parseInt(window.getComputedStyle(activeTab).paddingTop, 10);
+        const marginBottom = parseInt(window.getComputedStyle(activeTab.firstElementChild).marginBottom, 10);
         tabContent.style.height = prevHeight + paddingTop + marginBottom + 'px';
         // Add & Remove active class on `nav-tabs` & `tab-content`.
         [...nav.children].forEach(target => {
@@ -201,7 +246,7 @@ NexT.utils = {
         }));
         // Get the height of `tab-pane` which is activated now.
         const hasScrollBar = document.body.scrollHeight > (window.innerHeight || document.documentElement.clientHeight);
-        const currHeight = parseInt(window.getComputedStyle(tabContent.querySelector('.active')).height.replace('px', ''), 10);
+        const currHeight = parseInt(window.getComputedStyle(tabContent.querySelector('.active')).height, 10);
         // Reset the height of `tab-content` and see the animation.
         tabContent.style.height = currHeight + paddingTop + marginBottom + 'px';
         // Change the height of `tab-content` may cause scrollbar show / disappear, which may result in the change of the `tab-pane`'s height
@@ -209,7 +254,7 @@ NexT.utils = {
           if ((document.body.scrollHeight > (window.innerHeight || document.documentElement.clientHeight)) !== hasScrollBar) {
             tabContent.style.transition = 'height 0.3s linear';
             // After the animation, we need reset the height of `tab-content` again.
-            const currHeightAfterScrollBarChange = parseInt(window.getComputedStyle(tabContent.querySelector('.active')).height.replace('px', ''), 10);
+            const currHeightAfterScrollBarChange = parseInt(window.getComputedStyle(tabContent.querySelector('.active')).height, 10);
             tabContent.style.height = currHeightAfterScrollBarChange + paddingTop + marginBottom + 'px';
           }
           // Remove all the inline styles, and let the height be adaptive again.
@@ -232,7 +277,7 @@ NexT.utils = {
     window.dispatchEvent(new Event('tabs:register'));
   },
 
-  registerCanIUseTag: function() {
+  registerCanIUseTag() {
     // Get responsive height passed from iframe.
     window.addEventListener('message', ({ data }) => {
       if (typeof data === 'string' && data.includes('ciu_embed')) {
@@ -243,7 +288,7 @@ NexT.utils = {
     }, false);
   },
 
-  registerActiveMenuItem: function() {
+  registerActiveMenuItem() {
     document.querySelectorAll('.menu-item a[href]').forEach(target => {
       const isSamePath = target.pathname === location.pathname || target.pathname === location.pathname.replace('index.html', '');
       const isSubPath = !CONFIG.root.startsWith(target.pathname) && location.pathname.startsWith(target.pathname);
@@ -251,7 +296,7 @@ NexT.utils = {
     });
   },
 
-  registerLangSelect: function() {
+  registerLangSelect() {
     const selects = document.querySelectorAll('.lang-select');
     selects.forEach(sel => {
       sel.value = CONFIG.page.lang;
@@ -266,7 +311,7 @@ NexT.utils = {
     });
   },
 
-  registerSidebarTOC: function() {
+  registerSidebarTOC() {
     this.sections = [...document.querySelectorAll('.post-toc:not(.placeholder-toc) li a.nav-link')].map(element => {
       const target = document.getElementById(decodeURI(element.getAttribute('href')).replace('#', ''));
       // TOC item animation navigate.
@@ -288,7 +333,7 @@ NexT.utils = {
     this.updateActiveNav();
   },
 
-  registerPostReward: function() {
+  registerPostReward() {
     const button = document.querySelector('.reward-container button');
     if (!button) return;
     button.addEventListener('click', () => {
@@ -296,7 +341,7 @@ NexT.utils = {
     });
   },
 
-  activateNavByIndex: function(index) {
+  activateNavByIndex(index) {
     const nav = document.querySelector('.post-toc:not(.placeholder-toc) .nav');
     if (!nav) return;
 
@@ -337,7 +382,7 @@ NexT.utils = {
     });
   },
 
-  updateSidebarPosition: function() {
+  updateSidebarPosition() {
     if (window.innerWidth < 1200 || CONFIG.scheme === 'Pisces' || CONFIG.scheme === 'Gemini') return;
     // Expand sidebar on post detail page by default, when post has a toc.
     const hasTOC = document.querySelector('.post-toc:not(.placeholder-toc)');
@@ -351,7 +396,7 @@ NexT.utils = {
     }
   },
 
-  activateSidebarPanel: function(index) {
+  activateSidebarPanel(index) {
     const sidebar = document.querySelector('.sidebar-inner');
     const activeClassNames = ['sidebar-toc-active', 'sidebar-overview-active'];
     if (sidebar.classList.contains(activeClassNames[index])) return;
@@ -378,7 +423,20 @@ NexT.utils = {
     sidebar.classList.replace(activeClassNames[1 - index], activeClassNames[index]);
   },
 
-  getScript: function(src, options = {}, legacyCondition) {
+  updateFooterPosition() {
+    if (CONFIG.scheme === 'Pisces' || CONFIG.scheme === 'Gemini') return;
+    function updateFooterPosition() {
+      const footer = document.querySelector('.footer');
+      const containerHeight = document.querySelector('.main').offsetHeight + footer.offsetHeight;
+      footer.classList.toggle('footer-fixed', containerHeight <= window.innerHeight);
+    }
+
+    updateFooterPosition();
+    window.addEventListener('resize', updateFooterPosition);
+    window.addEventListener('scroll', updateFooterPosition, { passive: true });
+  },
+
+  getScript(src, options = {}, legacyCondition) {
     if (typeof options === 'function') {
       return this.getScript(src, {
         condition: legacyCondition
@@ -429,7 +487,7 @@ NexT.utils = {
     });
   },
 
-  loadComments: function(selector, legacyCallback) {
+  loadComments(selector, legacyCallback) {
     if (legacyCallback) {
       return this.loadComments(selector).then(legacyCallback);
     }
@@ -448,5 +506,14 @@ NexT.utils = {
       });
       intersectionObserver.observe(element);
     });
+  },
+
+  debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+      const context = this;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(context, args), wait);
+    };
   }
 };
