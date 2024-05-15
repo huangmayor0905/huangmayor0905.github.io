@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/TOIP-202404-beginner/</loc>
+    <loc>https://huangmayor0905.github.io/004-make-a-blog-with-hexo/</loc>
+    
+    <lastmod>2024-05-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://huangmayor0905.github.io/TOIP-202404-beginner/</loc>
     
     <lastmod>2024-05-14</lastmod>
     
@@ -11,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/404.html</loc>
+    <loc>https://huangmayor0905.github.io/404.html</loc>
     
     <lastmod>2024-05-14</lastmod>
     
@@ -20,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/004-make-a-blog-with-hexo/</loc>
+    <loc>https://huangmayor0905.github.io/computer-science/cpp/array/</loc>
     
     <lastmod>2024-05-13</lastmod>
     
@@ -29,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/computer-science/cpp/array/</loc>
+    <loc>https://huangmayor0905.github.io/computer-science/cpp/vector/</loc>
     
     <lastmod>2024-05-13</lastmod>
     
@@ -38,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/computer-science/cpp/vector/</loc>
+    <loc>https://huangmayor0905.github.io/cplusplus/index.html</loc>
     
     <lastmod>2024-05-13</lastmod>
     
@@ -47,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/cplusplus/index.html</loc>
+    <loc>https://huangmayor0905.github.io/APCS-2024-01/</loc>
     
     <lastmod>2024-05-13</lastmod>
     
@@ -56,16 +65,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/APCS-2024-01/</loc>
-    
-    <lastmod>2024-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/about/index.html</loc>
+    <loc>https://huangmayor0905.github.io/about/index.html</loc>
     
     <lastmod>2023-07-07</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/solved/TCFSH_CIRC_Judge/d001/</loc>
+    <loc>https://huangmayor0905.github.io/solved/TCFSH_CIRC_Judge/d001/</loc>
     
     <lastmod>2023-07-07</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/solved/TCFSH_CIRC_Judge/d002/</loc>
+    <loc>https://huangmayor0905.github.io/solved/TCFSH_CIRC_Judge/d002/</loc>
     
     <lastmod>2023-07-07</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/solved/TCFSH_CIRC_Judge/d075/</loc>
+    <loc>https://huangmayor0905.github.io/solved/TCFSH_CIRC_Judge/d075/</loc>
     
     <lastmod>2023-05-27</lastmod>
     
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/solved/ZeroJudge/j605/</loc>
+    <loc>https://huangmayor0905.github.io/solved/ZeroJudge/j605/</loc>
     
     <lastmod>2023-05-27</lastmod>
     
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/solved/ZeroJudge/j180/</loc>
+    <loc>https://huangmayor0905.github.io/solved/ZeroJudge/j180/</loc>
     
     <lastmod>2023-05-27</lastmod>
     
@@ -119,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/solved/ZeroJudge/j179/</loc>
+    <loc>https://huangmayor0905.github.io/solved/ZeroJudge/j179/</loc>
     
     <lastmod>2023-05-27</lastmod>
     
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/solved/ZeroJudge/j178/</loc>
+    <loc>https://huangmayor0905.github.io/solved/ZeroJudge/j178/</loc>
     
     <lastmod>2023-05-27</lastmod>
     
@@ -137,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/solved/ZeroJudge/j125/</loc>
+    <loc>https://huangmayor0905.github.io/solved/ZeroJudge/j125/</loc>
     
     <lastmod>2023-05-27</lastmod>
     
@@ -146,7 +146,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/solved/ZeroJudge/f832/</loc>
+    <loc>https://huangmayor0905.github.io/solved/ZeroJudge/f832/</loc>
     
     <lastmod>2023-05-27</lastmod>
     
@@ -155,7 +155,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/solved/ZeroJudge/f377/</loc>
+    <loc>https://huangmayor0905.github.io/solved/ZeroJudge/f377/</loc>
     
     <lastmod>2023-05-27</lastmod>
     
@@ -164,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/solved/ZeroJudge/e287/</loc>
+    <loc>https://huangmayor0905.github.io/solved/ZeroJudge/e287/</loc>
     
     <lastmod>2023-05-27</lastmod>
     
@@ -173,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/solved/ZeroJudge/d784/</loc>
+    <loc>https://huangmayor0905.github.io/solved/ZeroJudge/d784/</loc>
     
     <lastmod>2023-05-27</lastmod>
     
@@ -182,7 +182,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/solved/ZeroJudge/d732/</loc>
+    <loc>https://huangmayor0905.github.io/solved/ZeroJudge/d732/</loc>
     
     <lastmod>2023-05-27</lastmod>
     
@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/solved/ZeroJudge/a290/</loc>
+    <loc>https://huangmayor0905.github.io/solved/ZeroJudge/a290/</loc>
     
     <lastmod>2023-05-27</lastmod>
     
@@ -200,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/solved/ZeroJudge/a013/</loc>
+    <loc>https://huangmayor0905.github.io/solved/ZeroJudge/a013/</loc>
     
     <lastmod>2023-05-27</lastmod>
     
@@ -209,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tag-plugins-test/</loc>
+    <loc>https://huangmayor0905.github.io/tag-plugins-test/</loc>
     
     <lastmod>2023-05-24</lastmod>
     
@@ -218,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/20221218/</loc>
+    <loc>https://huangmayor0905.github.io/20221218/</loc>
     
     <lastmod>2023-05-24</lastmod>
     
@@ -227,7 +227,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/the-Courage-to-Be-Disliked/</loc>
+    <loc>https://huangmayor0905.github.io/the-Courage-to-Be-Disliked/</loc>
     
     <lastmod>2023-05-24</lastmod>
     
@@ -236,7 +236,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/archives/index.html</loc>
+    <loc>https://huangmayor0905.github.io/archives/index.html</loc>
     
     <lastmod>2023-05-24</lastmod>
     
@@ -245,7 +245,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/schedule/index.html</loc>
+    <loc>https://huangmayor0905.github.io/schedule/index.html</loc>
     
     <lastmod>2023-05-24</lastmod>
     
@@ -254,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/categories/index.html</loc>
+    <loc>https://huangmayor0905.github.io/categories/index.html</loc>
     
     <lastmod>2023-05-24</lastmod>
     
@@ -263,7 +263,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/index.html</loc>
+    <loc>https://huangmayor0905.github.io/tags/index.html</loc>
     
     <lastmod>2023-05-24</lastmod>
     
@@ -272,7 +272,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/008-20220511/</loc>
+    <loc>https://huangmayor0905.github.io/008-20220511/</loc>
     
     <lastmod>2023-05-24</lastmod>
     
@@ -281,7 +281,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/012-infix-postfix/</loc>
+    <loc>https://huangmayor0905.github.io/012-infix-postfix/</loc>
     
     <lastmod>2023-04-04</lastmod>
     
@@ -290,7 +290,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/computer-science/cpp/binary-search-tree/</loc>
+    <loc>https://huangmayor0905.github.io/computer-science/cpp/binary-search-tree/</loc>
     
     <lastmod>2023-02-15</lastmod>
     
@@ -299,7 +299,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/20230212/</loc>
+    <loc>https://huangmayor0905.github.io/20230212/</loc>
     
     <lastmod>2023-02-15</lastmod>
     
@@ -308,7 +308,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/20221217/</loc>
+    <loc>https://huangmayor0905.github.io/20221217/</loc>
     
     <lastmod>2022-12-29</lastmod>
     
@@ -317,7 +317,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/20221216/</loc>
+    <loc>https://huangmayor0905.github.io/20221216/</loc>
     
     <lastmod>2022-12-18</lastmod>
     
@@ -326,7 +326,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/002-cpp-compiler/</loc>
+    <loc>https://huangmayor0905.github.io/002-cpp-compiler/</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -335,7 +335,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/003-meeting-hello-world/</loc>
+    <loc>https://huangmayor0905.github.io/003-meeting-hello-world/</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -344,7 +344,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/005-20220508/</loc>
+    <loc>https://huangmayor0905.github.io/005-20220508/</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -353,7 +353,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/006-20220509/</loc>
+    <loc>https://huangmayor0905.github.io/006-20220509/</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -362,7 +362,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/007-20220510/</loc>
+    <loc>https://huangmayor0905.github.io/007-20220510/</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -371,7 +371,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/009-20220512/</loc>
+    <loc>https://huangmayor0905.github.io/009-20220512/</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -380,7 +380,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/010-20220524/</loc>
+    <loc>https://huangmayor0905.github.io/010-20220524/</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -389,7 +389,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/011-The-Road-Less-Traveled/</loc>
+    <loc>https://huangmayor0905.github.io/011-The-Road-Less-Traveled/</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -398,7 +398,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/013-202206apcs01/</loc>
+    <loc>https://huangmayor0905.github.io/013-202206apcs01/</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -407,7 +407,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/014-daily/</loc>
+    <loc>https://huangmayor0905.github.io/014-daily/</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -416,7 +416,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/20221117/</loc>
+    <loc>https://huangmayor0905.github.io/20221117/</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -425,7 +425,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/20221121/</loc>
+    <loc>https://huangmayor0905.github.io/20221121/</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -434,7 +434,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/20221130/</loc>
+    <loc>https://huangmayor0905.github.io/20221130/</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -443,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/20221208/</loc>
+    <loc>https://huangmayor0905.github.io/20221208/</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -452,7 +452,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/20221210/</loc>
+    <loc>https://huangmayor0905.github.io/20221210/</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -461,7 +461,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/001-test-artical/</loc>
+    <loc>https://huangmayor0905.github.io/001-test-artical/</loc>
     
     <lastmod>2022-12-14</lastmod>
     
@@ -471,314 +471,13 @@
   
 
   <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io</loc>
+    <loc>https://huangmayor0905.github.io/</loc>
     <lastmod>2024-05-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/test/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/C-C/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E7%B7%A8%E8%AD%AF%E5%99%A8-%E7%B7%A8%E8%BC%AF%E5%99%A8/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/Hexo/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/GitHub/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E6%97%A5%E5%B8%B8/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E5%BF%83%E5%BE%97/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/C/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E7%AD%86%E8%A8%98/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/APCS/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E8%B3%87%E5%9F%B9/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E5%96%AE%E5%AD%97/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E5%AD%B8%E6%B8%AC/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/TOI/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/TOIP/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E6%96%B0%E6%89%8B%E7%B5%84/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E8%A2%AB%E8%A8%8E%E5%8E%AD%E7%9A%84%E5%8B%87%E6%B0%A3/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/BST/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E9%80%B2%E9%9A%8E%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/DP/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/01%E8%83%8C%E5%8C%85/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E8%A7%A3%E9%A1%8C/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/Zerojudge/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E9%80%B2%E4%BD%8D%E5%88%B6/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/Graph/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E4%BA%8C%E5%88%86%E6%90%9C/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E5%8D%80%E9%96%93/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/BFS/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/%E5%BE%8C%E5%BA%8F%E5%BC%8F/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/tags/Greedy/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/categories/hexo-blog/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/categories/life/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/categories/note/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/categories/APCS/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/categories/TOIP/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/categories/book/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/categories/computer-science/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/categories/solved/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/categories/computer-science/cpp/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/categories/solved/ZeroJudge/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/huangmayor0905/huangmayor0905.github.io/categories/solved/CIRC-Judge/</loc>
-    <lastmod>2024-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
 </urlset>
