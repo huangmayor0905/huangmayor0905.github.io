@@ -31,10 +31,11 @@
 <meta property="og:description" content="基本介紹vector 是一個可以改變大小的容器，可以說是升級版的陣列，vector 更能夠高效地對記憶體進行管理及動態增長。 如何宣告先引入標頭檔 #include &lt;vector&gt; 基礎宣告基礎宣告範例12345678#include &lt;iostream&gt;#include &lt;vector&gt;using namespace std;int main() &amp;#123">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2022-12-12T07:05:34.000Z">
-<meta property="article:modified_time" content="2024-05-13T07:09:10.523Z">
+<meta property="article:modified_time" content="2024-05-16T02:58:09.390Z">
 <meta property="article:author" content="Huang kuo-yu">
-<meta property="article:tag" content="C++">
 <meta property="article:tag" content="筆記">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="vector">
 <meta name="twitter:card" content="summary">
 
 
@@ -98,7 +99,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">32</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">11</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">45</span></a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>時間表</a></li><li class="menu-item menu-item-note"><a href="/cplusplus/" rel="section"><i class="fa-solid fa-note-sticky fa-fw"></i>C++ 筆記</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">33</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">11</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">45</span></a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>時間表</a></li><li class="menu-item menu-item-note"><a href="/cplusplus/" rel="section"><i class="fa-solid fa-note-sticky fa-fw"></i>C++ 筆記</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
         </a>
@@ -175,7 +176,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-count">33</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -257,7 +258,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-05-13 15:09:10" itemprop="dateModified" datetime="2024-05-13T15:09:10+08:00">2024-05-13</time>
+      <time title="修改時間：2024-05-16 10:58:09" itemprop="dateModified" datetime="2024-05-16T10:58:09+08:00">2024-05-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -452,9 +453,7 @@
 
 <figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">輸出：</span><br><span class="line">5<span class="number"> 5 </span>5<span class="number"> 5 </span>5<span class="number"> 5 </span>5<span class="number"> 5 </span>5 5</span><br></pre></td></tr></table></figure>
 
-<h1 id="課堂小考"><a href="#課堂小考" class="headerlink" title="課堂小考"></a>課堂小考</h1><ol>
-<li>對空的整數型態 <code>vector</code> 使用 <code>resize(10.5, 3.3)</code> 後，<code>capacity()</code> 變為多少，且元素設定為多少。<br> A. capacity: 11，且 元素皆為 4<br> B. capacity: 11，且 元素皆為 3<br> C. capacity: 10，且 元素皆為 3<br> D. capacity: 10，且 元素皆為 4<br> E. Run Time Error</li>
-</ol>
+<h1 id="課堂小考"><a href="#課堂小考" class="headerlink" title="課堂小考"></a>課堂小考</h1><p>對空的整數型態 <code>vector</code> 使用 <code>resize(10.5, 3.3)</code> 後，<code>capacity()</code> 變為多少，且元素設定為多少。<br>    A. capacity: 11，且元素皆為 4<br>    B. capacity: 11，且元素皆為 3<br>    C. capacity: 10，且元素皆為 3<br>    D. capacity: 10，且元素皆為 4<br>    E. Run Time Error</p>
 <details class="note default"><summary><p>解答</p>
 </summary>
 <p>選項 C</p>
@@ -485,8 +484,9 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/C/" rel="tag"># C++</a>
               <a href="/tags/%E7%AD%86%E8%A8%98/" rel="tag"># 筆記</a>
+              <a href="/tags/C/" rel="tag"># C++</a>
+              <a href="/tags/vector/" rel="tag"># vector</a>
           </div>
 
         
@@ -533,14 +533,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>總字數：</span>
-    <span title="總字數">15k</span>
+    <span title="總字數">16k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">56 分鐘</span>
+    <span title="所需總閱讀時間">58 分鐘</span>
   </span>
 </div>
 <div class="busuanzi-count">
