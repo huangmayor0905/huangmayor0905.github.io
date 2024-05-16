@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://huangmayor0905.github.io/cplusplus/index.html</loc>
+    
+    <lastmod>2024-05-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://huangmayor0905.github.io/computer-science/cpp/set/</loc>
     
     <lastmod>2024-05-16</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://huangmayor0905.github.io/computer-science/cpp/array/</loc>
-    
-    <lastmod>2024-05-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huangmayor0905.github.io/cplusplus/index.html</loc>
     
     <lastmod>2024-05-16</lastmod>
     
