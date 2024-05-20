@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>【筆記】APCS 2022 年 6 月場</title>
+    <url>/APCS-2022-01/</url>
+    <content><![CDATA[<p>這是我第一次去考 APCS（誰叫你之前都忘記報），當天考觀念時肚子真的痛得要命，直到中午才去宣洩…我的考場在台北大學三峽校區，令我意外的是男女比沒有到很重，但是大佬倒是挺多的。考實作題時，不知道是不是緊張，就是一直在 debug…最後是寫到第三題寫了一點就結束了。我那天超孤單😢，我朋友給我請假…說他抽考沒讀，我也沒讀啊🤬。反正最後考了 4 / 3 還蠻理想的。</p>
+<h2 id="數字遊戲易"><a class="markdownIt-Anchor" href="#數字遊戲易"></a> 數字遊戲（易）</h2>
+<p>ZJ 連結：<span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWkzOTk=">https://zerojudge.tw/ShowProblem?problemid=i399<i class="fa fa-external-link-alt"></i></span></p>
+<p>輸入：3 個 1 ~ 9 的數字</p>
+<p>輸出：先輸出數值出現最多的次數，再輸出三個數，且去除重複，由大到小。</p>
+<p>想法：既要去掉重複又要排序，我的第一想法就是使用 set。set 是一個容器，它具有資料的唯一性，也就是不可重複，且容器內也會排序，跟 map 一樣。第一筆輸出我會用 4 - set 長度，這樣恰好是重複的個數，再用反向迭代器輸出 set 容器即可。</p>
+<p>實作：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> data[<span class="number">3</span>];</span><br><span class="line">    cin &gt;&gt; data[<span class="number">0</span>] &gt;&gt; data[<span class="number">1</span>] &gt;&gt; data[<span class="number">2</span>];</span><br><span class="line">    <span class="function">set&lt;<span class="type">int</span>&gt; <span class="title">myset</span><span class="params">(data, data + <span class="number">3</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="number">4</span> - myset.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> it = myset.<span class="built_in">rbegin</span>(); it != myset.<span class="built_in">rend</span>(); ++it) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; *it;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="字串解碼中"><a class="markdownIt-Anchor" href="#字串解碼中"></a> 字串解碼（中）</h2>
+<p>想法：就…純粹的暴力解吧…，還有注意題目需求，這題要你解密，不是加密（我朋友不小心…）</p>
+<p>實作：未更新（懶）</p>
+]]></content>
+      <tags>
+        <tag>APCS</tag>
+        <tag>筆記</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>APCS 2024 1 月場</title>
     <url>/APCS-2024-01/</url>
     <content><![CDATA[<h1 id="說明"><a class="markdownIt-Anchor" href="#說明"></a> 說明</h1>
@@ -32,135 +52,8 @@
       </tags>
   </entry>
   <entry>
-    <title>【筆記】APCS 2022 年 6 月場</title>
-    <url>/APCS-2022-01/</url>
-    <content><![CDATA[<p>這是我第一次去考 APCS（誰叫你之前都忘記報），當天考觀念時肚子真的痛得要命，直到中午才去宣洩…我的考場在台北大學三峽校區，令我意外的是男女比沒有到很重，但是大佬倒是挺多的。考實作題時，不知道是不是緊張，就是一直在 debug…最後是寫到第三題寫了一點就結束了。我那天超孤單😢，我朋友給我請假…說他抽考沒讀，我也沒讀啊🤬。反正最後考了 4 / 3 還蠻理想的。</p>
-<h2 id="數字遊戲易"><a class="markdownIt-Anchor" href="#數字遊戲易"></a> 數字遊戲（易）</h2>
-<p>ZJ 連結：<span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWkzOTk=">https://zerojudge.tw/ShowProblem?problemid=i399<i class="fa fa-external-link-alt"></i></span></p>
-<p>輸入：3 個 1 ~ 9 的數字</p>
-<p>輸出：先輸出數值出現最多的次數，再輸出三個數，且去除重複，由大到小。</p>
-<p>想法：既要去掉重複又要排序，我的第一想法就是使用 set。set 是一個容器，它具有資料的唯一性，也就是不可重複，且容器內也會排序，跟 map 一樣。第一筆輸出我會用 4 - set 長度，這樣恰好是重複的個數，再用反向迭代器輸出 set 容器即可。</p>
-<p>實作：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> data[<span class="number">3</span>];</span><br><span class="line">    cin &gt;&gt; data[<span class="number">0</span>] &gt;&gt; data[<span class="number">1</span>] &gt;&gt; data[<span class="number">2</span>];</span><br><span class="line">    <span class="function">set&lt;<span class="type">int</span>&gt; <span class="title">myset</span><span class="params">(data, data + <span class="number">3</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="number">4</span> - myset.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> it = myset.<span class="built_in">rbegin</span>(); it != myset.<span class="built_in">rend</span>(); ++it) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; *it;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="字串解碼中"><a class="markdownIt-Anchor" href="#字串解碼中"></a> 字串解碼（中）</h2>
-<p>想法：就…純粹的暴力解吧…，還有注意題目需求，這題要你解密，不是加密（我朋友不小心…）</p>
-<p>實作：未更新（懶）</p>
-]]></content>
-      <tags>
-        <tag>APCS</tag>
-        <tag>筆記</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【心得】少有人走的路：心智成熟的旅程</title>
-    <url>/The-Road-Less-Traveled/</url>
-    <content><![CDATA[<p>這本書在講的是自律、愛、心智成長、信仰、恩典等各個問題。主要在於心智的成長</p>
-<h3 id="自律"><a class="markdownIt-Anchor" href="#自律"></a> 自律</h3>
-<p>作者要求我們要做到 推遲滿足感、承擔責任、忠於事實、保持平衡 並細心理解其中道理。</p>
-<p>我們其實早已得知何為推遲滿足感，又或稱延遲享受。最早可推至小時候，那時的我們總能聽到大人說：「去寫完功課再去玩手機」「完成家事後，才能看電視」「被完單字才能睡覺」這都是先苦後樂的道理，而自律就是基於這個道理去執行的。我很常聽到：「要怎麼自律？」其實我也不清楚，我只知道，自律使人充滿幹勁，他會義無反顧的完成他的任務。自從我有了平板、手機的四年級起，我就開始每天玩著諸如此類的 3C 產品，甚至連電視也不跟爸媽搶著看了。說實話，這樣的行為，早已打破了自律。自律是從小就該培養的東西，而父母正是傳遞自律的途徑。在出生不到一歲嬰兒的意識裡，不存在爸媽的形象，只知道這兩個人會不斷的出現在自己眼中，然後供給自己生活所需。因此父母是我們一生的依賴，我們從小就在他們身上學到所有行為，包含吵架方式、打掃方式、溝通方式等處理事務的能力。所以自律也不例外，它是需要被培養的，它能使我們面對問題。</p>
-<blockquote>
-<p>解決人生問題的首要方案，乃是自律，缺少了這一環，你不可能解決任何麻煩和困難。局部的自律只能解決局部的問題，完整的自律才能解決所有的問題。<br />
-《少有人走的路》Page 18</p>
-</blockquote>
-<p>而它關聯性較強的無非是爸媽的愛，爸媽的愛告訴我們：有他們在，我可以不怕前方恐懼，進而得到勇氣，因為我們知道我們是被愛的，所以不怕被拋棄、遺棄，充滿著安全感。這安全感能讓我們面對問題、正視問題。</p>
-<p>倘若沒有了愛，那我們面對世界會變得恐懼、不敢面對，導致常常逃避問題，把問題把在一旁，時常提醒自己要解決它，但都是以不想弄、懶得弄、今天好累不想做、之後有時間再弄作為結尾。</p>
-<blockquote>
-<p>美國開國先哲本傑明．富蘭克林說過：「惟有痛苦才會帶來教益。」面對問題，聰明者不因害怕痛苦而選擇逃避，而是迎上前去，直至將其戰勝為止。<br />
-《少有人走的路》Page 19</p>
-</blockquote>
-<p>作者還提到人生的意義是甚麼，也正如他所說：許多人應該都答不太出來。或許人生的意義就是遇到問題，然後解決問題，再遇到新的問題，繼續解決它，反覆無常，使我們意識裡得到了許多感悟並從問題中成長，或許這就是人生的意義吧。</p>
-<p>而作者特別將沒辦法自律多推究給父母親。通常爸媽面對孩子的不斷詢問後的反應總是不耐煩的說：「你再吵，我就不要你了」這種威脅會不斷出現在孩子的回憶裡，不斷重演，也包括我的過去，爸媽的責怪、罵聲，總能讓我重回當下的陰影裡揮之不去。但幸虧於那些慘不忍睹的記憶，我告誡自己：我不要成為和自己父母一樣的大人。至此之後，我總是一個人在房間度過自己和自己相處的時光，作業、課本似乎一動也沒動，因為我腦中出現太多畫面，根本沒有機會去想我還有甚麼事情沒做，就算想起自己還有一堆課業要顧，但每每還是沒辦法有那動力去學習，不斷的困住自己。</p>
-<blockquote>
-<p>父母同樣是指揮官，其使命和管理企業一樣複雜。正像軍隊指揮官那樣，大多數父母面對孩子的問題束手無策，連續數月乃至數年都無任何舉措，只可一味拖延。<br />
-《少有人走的路》Page 37</p>
-</blockquote>
-<p>我不怪罪於父母，他們的養育我感恩在心。若父母都不自律，我為甚麼還要與父母親計較，我若有能力自律，我大可不必大吵一架之後，委屈自己還打破家庭的平靜，說實話我不知道甚麼是錯甚麼是對，所謂的叛逆又是什麼，是我們的頂嘴還是與大人之間的爭吵，難道大人都是對的，我們都是錯的，或許並非如此。所以我再次告訴自己：要學會與自己和解，才能與家人和解，到現在我仍過意不去，明明是因為幫你抬瓶汽水，我覺得重所以才嘆口氣，你卻要說我：「你這甚麼態度！」現在才覺得我父親挺可笑的…未釐清事實真相，就血口噴人，我為何要受這委屈呢？我當時若有我現在的想法那有多好啊！我多恨我父親啊！所以即使爸媽沒有自律，我也要變的自律，才有辦法洗掉那些慘痛的經歷。這不是說大話，這位心理學作者接觸過的病人，即變成年了，也沒有能力自律，我同意它所說的。</p>
-<p>所以作者希望我們能學會的四個要素</p>
-<ol>
-<li>推遲滿足感</li>
-<li>承擔責任</li>
-<li>忠於事實</li>
-<li>保持平衡</li>
-</ol>
-<p>我也大都能理解了。</p>
-]]></content>
-      <tags>
-        <tag>心得</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TOI 練習賽 202404 新手組</title>
-    <url>/TOIP-202404-beginner/</url>
-    <content><![CDATA[<h1 id="說明"><a class="markdownIt-Anchor" href="#說明"></a> 說明</h1>
-<p>這次 TOIP 只涉及到一維陣列，暴力解就行了。</p>
-<h1 id="解題"><a class="markdownIt-Anchor" href="#解題"></a> 解題</h1>
-<h2 id="1-電影院cinema"><a class="markdownIt-Anchor" href="#1-電影院cinema"></a> 1. 電影院（Cinema）</h2>
-<details class="note default"><summary><p>展開程式碼</p>
-</summary>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> arr[n];</span><br><span class="line">    <span class="type">int</span> hr, min;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; hr &gt;&gt; min;</span><br><span class="line">        arr[i] = hr * <span class="number">60</span> + min;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(arr, arr + n);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; hr &gt;&gt; min;</span><br><span class="line">    <span class="type">int</span> now = hr * <span class="number">60</span> + min;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[i] &gt;= now + <span class="number">20</span>) &#123;</span><br><span class="line">            cout &lt;&lt; ((arr[i] / <span class="number">60</span> / <span class="number">10</span> == <span class="number">0</span>) ? <span class="string">&quot;0&quot;</span> : <span class="string">&quot;&quot;</span>) </span><br><span class="line">                 &lt;&lt; arr[i] / <span class="number">60</span> &lt;&lt; <span class="string">&quot; &quot;</span> </span><br><span class="line">                 &lt;&lt; ((arr[i] % <span class="number">60</span> / <span class="number">10</span> == <span class="number">0</span>) ? <span class="string">&quot;0&quot;</span> : <span class="string">&quot;&quot;</span>)</span><br><span class="line">                 &lt;&lt; arr[i] % <span class="number">60</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Too Late\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</details>
-<h2 id="2-撲克poker"><a class="markdownIt-Anchor" href="#2-撲克poker"></a> 2. 撲克（Poker）</h2>
-<details class="note default"><summary><p>展開程式碼</p>
-</summary>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n, mx = <span class="number">-1</span>;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> arr[<span class="number">52</span> + <span class="number">1</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="type">int</span> tmp;</span><br><span class="line">        cin &gt;&gt; tmp;</span><br><span class="line">        arr[tmp]++;</span><br><span class="line">        mx = <span class="built_in">max</span>(mx, arr[tmp]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> mn = INT_MAX;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">52</span>; i++) mn = <span class="built_in">min</span>(mn, arr[i]);</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; mn &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; (mx - mn) * <span class="number">52</span> - (n - mn * <span class="number">52</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</details>
-<h2 id="3-熱門商品commodity"><a class="markdownIt-Anchor" href="#3-熱門商品commodity"></a> 3. 熱門商品（Commodity）</h2>
-<details class="note default"><summary><p>展開程式碼</p>
-</summary>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> k, n;</span><br><span class="line">    cin &gt;&gt; k &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> arr[k];</span><br><span class="line">    <span class="type">int</span> goods[<span class="number">1005</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        cin &gt;&gt; arr[i];</span><br><span class="line">        goods[arr[i]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> mx = <span class="number">0</span>, favorite = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (goods[arr[i]] &gt; mx) &#123;</span><br><span class="line">            mx = goods[arr[i]];</span><br><span class="line">            favorite = arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> shop[n];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) cin &gt;&gt; shop[i];</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> mn = INT_MAX, flag = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="type">int</span> val = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> q = <span class="number">0</span>; q &lt; shop[i]; q++) &#123;</span><br><span class="line">            <span class="type">int</span> quetion;</span><br><span class="line">            cin &gt;&gt; quetion;</span><br><span class="line">            val += goods[quetion];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (val &lt; mn) &#123;</span><br><span class="line">            mn = val;</span><br><span class="line">            flag = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ans</span></span><br><span class="line">    cout &lt;&lt; favorite &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; flag + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</details>]]></content>
-      <categories>
-        <category>TOIP</category>
-      </categories>
-      <tags>
-        <tag>TOI</tag>
-        <tag>TOIP</tag>
-        <tag>新手組</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>作者使用的 C++ 編譯器</title>
-    <url>/cpp-compiler/</url>
-    <content><![CDATA[<h2 id="線上"><a class="markdownIt-Anchor" href="#線上"></a> 線上</h2>
-<ol>
-<li><span class="exturl" data-url="aHR0cHM6Ly9yZXBsaXQuY29tL34=">Repl.it<i class="fa fa-external-link-alt"></i></span><br />
-<strong>優點</strong>：線上編譯，可以在不同地方不同電腦上寫 code ，可隨時新增不同程式語言的專案。打好的 code 可以直接複製網址給其他人（放心，其他人更改不了你的 code ）。<br />
-<strong>缺點</strong>：帳號的存放大小有限，不過對方變性就已經不錯了。以及部分功能需付費。<em>雖不用按下你的 ctrl + s ，但是如果網站剛好卡住就沒辦法隨時存檔。 （作者曾經歷過…）</em></li>
-</ol>
-<h2 id="應用程式"><a class="markdownIt-Anchor" href="#應用程式"></a> 應用程式</h2>
-<ol>
-<li>
-<p><span class="exturl" data-url="aHR0cHM6Ly9jb2RlLnZpc3VhbHN0dWRpby5jb20v">Visual Studio Code<i class="fa fa-external-link-alt"></i></span><br />
-<strong>優點</strong>：可自行下載延伸模組，自由度較高<br />
-<strong>缺點</strong>：也許是作者還不夠理解，新手可能對這個有點難因為還有環境的配置，作者的同學也編譯不了 C++，不過作者本人有成功，但就是在這上面研究許久…</p>
-</li>
-<li>
-<p><span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvbWluZ3ctdzY0L2ZpbGVzL21pbmd3LXc2NC9taW5ndy13NjQtcmVsZWFzZS8=">MinGW<i class="fa fa-external-link-alt"></i></span><br />
-<strong>特點</strong>：提供一個可執行 gcc 程式開發環境，整合了許多 windows 下可運行的標頭檔案和檔案庫，為 c++ 的開發提供了良好基礎支援，他不是一種編輯器，是一個提供環境做編譯的程式，非常重要。</p>
-</li>
-<li>
-<p><span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvb3J3ZWxsZGV2Y3BwLw==">Dev-C++<i class="fa fa-external-link-alt"></i></span><br />
-<strong>特點</strong>：使用 MinGW32/gcc 編譯器，可高亮度語法顯示，以減少編輯錯誤。</p>
-</li>
-<li>
-<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY29kZWJsb2Nrcy5vcmcvZG93bmxvYWRzL2JpbmFyaWVzLw==">Code Blocks<i class="fa fa-external-link-alt"></i></span><br />
-<strong>特點</strong>：也是使用 MinGW 做編譯的，擴充性強大，也適合開發應用程式。</p>
-</li>
-</ol>
-<h2 id="結語"><a class="markdownIt-Anchor" href="#結語"></a> 結語</h2>
-<p>作者目前使用的是 <span class="exturl" data-url="aHR0cDovL1JlcGwuaXQ=">Repl.it<i class="fa fa-external-link-alt"></i></span> 和 VScode，其他編輯器我也只有在學校電腦上使用，所以還不知道他們的特性。線上的編譯器和延伸模組多到用不完的編輯器真的很好用，包括我撰寫的這篇文章也是用 VScode 編輯出來的，他的延伸模組之後也會出一篇來推薦幾個好用的，提供大家使用。</p>
-]]></content>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>編譯器/編輯器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【經驗】逢甲資工系 APCS 組面試經驗</title>
-    <url>/fcu-interview/</url>
+    <url>/FCU-CSIE-APCS-interview/</url>
     <content><![CDATA[<h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
 <p>其實面試不用緊張，照你們平常跟老師的講話方式就好。目前我面的學校，教授們都很 Nice，我本人就慢熟，但我的高中有模擬面試，有模擬面試就去試試看，體驗一下那種感覺，然後說實話不用太壓抑自己，把想說的說出來即可，教授特喜歡這種有想法的人。</p>
 <h1 id="面試過程"><a class="markdownIt-Anchor" href="#面試過程"></a> 面試過程</h1>
@@ -223,6 +116,113 @@
       <tags>
         <tag>逢甲</tag>
         <tag>資工</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TOI 練習賽 202404 新手組</title>
+    <url>/TOIP-202404-beginner/</url>
+    <content><![CDATA[<h1 id="說明"><a class="markdownIt-Anchor" href="#說明"></a> 說明</h1>
+<p>這次 TOIP 只涉及到一維陣列，暴力解就行了。</p>
+<h1 id="解題"><a class="markdownIt-Anchor" href="#解題"></a> 解題</h1>
+<h2 id="1-電影院cinema"><a class="markdownIt-Anchor" href="#1-電影院cinema"></a> 1. 電影院（Cinema）</h2>
+<details class="note default"><summary><p>展開程式碼</p>
+</summary>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> arr[n];</span><br><span class="line">    <span class="type">int</span> hr, min;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; hr &gt;&gt; min;</span><br><span class="line">        arr[i] = hr * <span class="number">60</span> + min;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(arr, arr + n);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; hr &gt;&gt; min;</span><br><span class="line">    <span class="type">int</span> now = hr * <span class="number">60</span> + min;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[i] &gt;= now + <span class="number">20</span>) &#123;</span><br><span class="line">            cout &lt;&lt; ((arr[i] / <span class="number">60</span> / <span class="number">10</span> == <span class="number">0</span>) ? <span class="string">&quot;0&quot;</span> : <span class="string">&quot;&quot;</span>) </span><br><span class="line">                 &lt;&lt; arr[i] / <span class="number">60</span> &lt;&lt; <span class="string">&quot; &quot;</span> </span><br><span class="line">                 &lt;&lt; ((arr[i] % <span class="number">60</span> / <span class="number">10</span> == <span class="number">0</span>) ? <span class="string">&quot;0&quot;</span> : <span class="string">&quot;&quot;</span>)</span><br><span class="line">                 &lt;&lt; arr[i] % <span class="number">60</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Too Late\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>
+<h2 id="2-撲克poker"><a class="markdownIt-Anchor" href="#2-撲克poker"></a> 2. 撲克（Poker）</h2>
+<details class="note default"><summary><p>展開程式碼</p>
+</summary>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n, mx = <span class="number">-1</span>;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> arr[<span class="number">52</span> + <span class="number">1</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="type">int</span> tmp;</span><br><span class="line">        cin &gt;&gt; tmp;</span><br><span class="line">        arr[tmp]++;</span><br><span class="line">        mx = <span class="built_in">max</span>(mx, arr[tmp]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> mn = INT_MAX;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">52</span>; i++) mn = <span class="built_in">min</span>(mn, arr[i]);</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; mn &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; (mx - mn) * <span class="number">52</span> - (n - mn * <span class="number">52</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>
+<h2 id="3-熱門商品commodity"><a class="markdownIt-Anchor" href="#3-熱門商品commodity"></a> 3. 熱門商品（Commodity）</h2>
+<details class="note default"><summary><p>展開程式碼</p>
+</summary>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> k, n;</span><br><span class="line">    cin &gt;&gt; k &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> arr[k];</span><br><span class="line">    <span class="type">int</span> goods[<span class="number">1005</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        cin &gt;&gt; arr[i];</span><br><span class="line">        goods[arr[i]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> mx = <span class="number">0</span>, favorite = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (goods[arr[i]] &gt; mx) &#123;</span><br><span class="line">            mx = goods[arr[i]];</span><br><span class="line">            favorite = arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> shop[n];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) cin &gt;&gt; shop[i];</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> mn = INT_MAX, flag = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="type">int</span> val = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> q = <span class="number">0</span>; q &lt; shop[i]; q++) &#123;</span><br><span class="line">            <span class="type">int</span> quetion;</span><br><span class="line">            cin &gt;&gt; quetion;</span><br><span class="line">            val += goods[quetion];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (val &lt; mn) &#123;</span><br><span class="line">            mn = val;</span><br><span class="line">            flag = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ans</span></span><br><span class="line">    cout &lt;&lt; favorite &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; flag + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>]]></content>
+      <categories>
+        <category>TOIP</category>
+      </categories>
+      <tags>
+        <tag>TOI</tag>
+        <tag>TOIP</tag>
+        <tag>新手組</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【心得】少有人走的路：心智成熟的旅程</title>
+    <url>/The-Road-Less-Traveled/</url>
+    <content><![CDATA[<p>這本書在講的是自律、愛、心智成長、信仰、恩典等各個問題。主要在於心智的成長</p>
+<h3 id="自律"><a class="markdownIt-Anchor" href="#自律"></a> 自律</h3>
+<p>作者要求我們要做到 推遲滿足感、承擔責任、忠於事實、保持平衡 並細心理解其中道理。</p>
+<p>我們其實早已得知何為推遲滿足感，又或稱延遲享受。最早可推至小時候，那時的我們總能聽到大人說：「去寫完功課再去玩手機」「完成家事後，才能看電視」「被完單字才能睡覺」這都是先苦後樂的道理，而自律就是基於這個道理去執行的。我很常聽到：「要怎麼自律？」其實我也不清楚，我只知道，自律使人充滿幹勁，他會義無反顧的完成他的任務。自從我有了平板、手機的四年級起，我就開始每天玩著諸如此類的 3C 產品，甚至連電視也不跟爸媽搶著看了。說實話，這樣的行為，早已打破了自律。自律是從小就該培養的東西，而父母正是傳遞自律的途徑。在出生不到一歲嬰兒的意識裡，不存在爸媽的形象，只知道這兩個人會不斷的出現在自己眼中，然後供給自己生活所需。因此父母是我們一生的依賴，我們從小就在他們身上學到所有行為，包含吵架方式、打掃方式、溝通方式等處理事務的能力。所以自律也不例外，它是需要被培養的，它能使我們面對問題。</p>
+<blockquote>
+<p>解決人生問題的首要方案，乃是自律，缺少了這一環，你不可能解決任何麻煩和困難。局部的自律只能解決局部的問題，完整的自律才能解決所有的問題。<br />
+《少有人走的路》Page 18</p>
+</blockquote>
+<p>而它關聯性較強的無非是爸媽的愛，爸媽的愛告訴我們：有他們在，我可以不怕前方恐懼，進而得到勇氣，因為我們知道我們是被愛的，所以不怕被拋棄、遺棄，充滿著安全感。這安全感能讓我們面對問題、正視問題。</p>
+<p>倘若沒有了愛，那我們面對世界會變得恐懼、不敢面對，導致常常逃避問題，把問題把在一旁，時常提醒自己要解決它，但都是以不想弄、懶得弄、今天好累不想做、之後有時間再弄作為結尾。</p>
+<blockquote>
+<p>美國開國先哲本傑明．富蘭克林說過：「惟有痛苦才會帶來教益。」面對問題，聰明者不因害怕痛苦而選擇逃避，而是迎上前去，直至將其戰勝為止。<br />
+《少有人走的路》Page 19</p>
+</blockquote>
+<p>作者還提到人生的意義是甚麼，也正如他所說：許多人應該都答不太出來。或許人生的意義就是遇到問題，然後解決問題，再遇到新的問題，繼續解決它，反覆無常，使我們意識裡得到了許多感悟並從問題中成長，或許這就是人生的意義吧。</p>
+<p>而作者特別將沒辦法自律多推究給父母親。通常爸媽面對孩子的不斷詢問後的反應總是不耐煩的說：「你再吵，我就不要你了」這種威脅會不斷出現在孩子的回憶裡，不斷重演，也包括我的過去，爸媽的責怪、罵聲，總能讓我重回當下的陰影裡揮之不去。但幸虧於那些慘不忍睹的記憶，我告誡自己：我不要成為和自己父母一樣的大人。至此之後，我總是一個人在房間度過自己和自己相處的時光，作業、課本似乎一動也沒動，因為我腦中出現太多畫面，根本沒有機會去想我還有甚麼事情沒做，就算想起自己還有一堆課業要顧，但每每還是沒辦法有那動力去學習，不斷的困住自己。</p>
+<blockquote>
+<p>父母同樣是指揮官，其使命和管理企業一樣複雜。正像軍隊指揮官那樣，大多數父母面對孩子的問題束手無策，連續數月乃至數年都無任何舉措，只可一味拖延。<br />
+《少有人走的路》Page 37</p>
+</blockquote>
+<p>我不怪罪於父母，他們的養育我感恩在心。若父母都不自律，我為甚麼還要與父母親計較，我若有能力自律，我大可不必大吵一架之後，委屈自己還打破家庭的平靜，說實話我不知道甚麼是錯甚麼是對，所謂的叛逆又是什麼，是我們的頂嘴還是與大人之間的爭吵，難道大人都是對的，我們都是錯的，或許並非如此。所以我再次告訴自己：要學會與自己和解，才能與家人和解，到現在我仍過意不去，明明是因為幫你抬瓶汽水，我覺得重所以才嘆口氣，你卻要說我：「你這甚麼態度！」現在才覺得我父親挺可笑的…未釐清事實真相，就血口噴人，我為何要受這委屈呢？我當時若有我現在的想法那有多好啊！我多恨我父親啊！所以即使爸媽沒有自律，我也要變的自律，才有辦法洗掉那些慘痛的經歷。這不是說大話，這位心理學作者接觸過的病人，即變成年了，也沒有能力自律，我同意它所說的。</p>
+<p>所以作者希望我們能學會的四個要素</p>
+<ol>
+<li>推遲滿足感</li>
+<li>承擔責任</li>
+<li>忠於事實</li>
+<li>保持平衡</li>
+</ol>
+<p>我也大都能理解了。</p>
+]]></content>
+      <tags>
+        <tag>心得</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>作者使用的 C++ 編譯器</title>
+    <url>/cpp-compiler/</url>
+    <content><![CDATA[<h2 id="線上"><a class="markdownIt-Anchor" href="#線上"></a> 線上</h2>
+<ol>
+<li><span class="exturl" data-url="aHR0cHM6Ly9yZXBsaXQuY29tL34=">Repl.it<i class="fa fa-external-link-alt"></i></span><br />
+<strong>優點</strong>：線上編譯，可以在不同地方不同電腦上寫 code ，可隨時新增不同程式語言的專案。打好的 code 可以直接複製網址給其他人（放心，其他人更改不了你的 code ）。<br />
+<strong>缺點</strong>：帳號的存放大小有限，不過對方變性就已經不錯了。以及部分功能需付費。<em>雖不用按下你的 ctrl + s ，但是如果網站剛好卡住就沒辦法隨時存檔。 （作者曾經歷過…）</em></li>
+</ol>
+<h2 id="應用程式"><a class="markdownIt-Anchor" href="#應用程式"></a> 應用程式</h2>
+<ol>
+<li>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jb2RlLnZpc3VhbHN0dWRpby5jb20v">Visual Studio Code<i class="fa fa-external-link-alt"></i></span><br />
+<strong>優點</strong>：可自行下載延伸模組，自由度較高<br />
+<strong>缺點</strong>：也許是作者還不夠理解，新手可能對這個有點難因為還有環境的配置，作者的同學也編譯不了 C++，不過作者本人有成功，但就是在這上面研究許久…</p>
+</li>
+<li>
+<p><span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvbWluZ3ctdzY0L2ZpbGVzL21pbmd3LXc2NC9taW5ndy13NjQtcmVsZWFzZS8=">MinGW<i class="fa fa-external-link-alt"></i></span><br />
+<strong>特點</strong>：提供一個可執行 gcc 程式開發環境，整合了許多 windows 下可運行的標頭檔案和檔案庫，為 c++ 的開發提供了良好基礎支援，他不是一種編輯器，是一個提供環境做編譯的程式，非常重要。</p>
+</li>
+<li>
+<p><span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvb3J3ZWxsZGV2Y3BwLw==">Dev-C++<i class="fa fa-external-link-alt"></i></span><br />
+<strong>特點</strong>：使用 MinGW32/gcc 編譯器，可高亮度語法顯示，以減少編輯錯誤。</p>
+</li>
+<li>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY29kZWJsb2Nrcy5vcmcvZG93bmxvYWRzL2JpbmFyaWVzLw==">Code Blocks<i class="fa fa-external-link-alt"></i></span><br />
+<strong>特點</strong>：也是使用 MinGW 做編譯的，擴充性強大，也適合開發應用程式。</p>
+</li>
+</ol>
+<h2 id="結語"><a class="markdownIt-Anchor" href="#結語"></a> 結語</h2>
+<p>作者目前使用的是 <span class="exturl" data-url="aHR0cDovL1JlcGwuaXQ=">Repl.it<i class="fa fa-external-link-alt"></i></span> 和 VScode，其他編輯器我也只有在學校電腦上使用，所以還不知道他們的特性。線上的編譯器和延伸模組多到用不完的編輯器真的很好用，包括我撰寫的這篇文章也是用 VScode 編輯出來的，他的延伸模組之後也會出一篇來推薦幾個好用的，提供大家使用。</p>
+]]></content>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>編譯器/編輯器</tag>
       </tags>
   </entry>
   <entry>
@@ -653,10 +653,10 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【日常】5 月 24 日</title>
-    <url>/life/20220524/</url>
+    <title>【日常】5 月 12 日 雨</title>
+    <url>/life/20220512/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="61275d55d8a4ff17b1b056a4a5d1a548d0d72268d5a32aa48fd3e6ad494cf8b9">c4379dbc51520bb23a681c5b597ae53afcd71c255395340f680c5e0e1e6fc2c29190548a9cb49bc2bd0e055147b0521f854fcd8dda1f2d75d19efaa25053e1653c6450d6b294bc23dab3f63bb18dd61b900d2d744672b4998c6a3a479f281dbc35274b9cb50b6c6b0c95faba600384189589a4165e364719d68834d96b2d4b13d569fca54ab5c5ad2fc090962704f97215511e3f430e30e883f0e2a7adc0b71d78c3e9968aaf70499432f06613a68c5a78d8e44b57be345e354c2d376b00e921114b8a34d309af462eba164bdbb344745b031d25cef69ae87341a30ba6d3c66f5dc09c8bba3eeaf9c9b926a43703b1bcfc9f2dab124bd58d3d27546f80d69db10062f22fd1df4cd03d3f59db771b400361a5378a4855e173050d74076c84317750ec732629e26c321dddf9f7fce289be5fe0f65c4485ba88261b918cf4935a8991de9fe1da5ee3d84f6b748b1e62a77fe2c21edcab454d27bf5550e2aa5226d89662b289e45cd83bd03f4e117e366f1c784f285c14ad9669e77fd71d519334145c30c7cd19a033660420621804b873f77dda605bd2dbff90044f6d40c4691de5155af4c671fcd44cb783e8fe3220ad4fe617c965a30e86b5329f4dcff1609644ddfb3621c0bd53481a74ed127402a6bc4210ba75d6c59777b6e3a844f96809212b688a4004ace2ec89d1f78f011968e916620c76fb35ebfe6815810864cd46eeb14ea2641a2a53b02699b38a0d3251b9b8fe4c399a3d3f11d3ab57f6dccb54dc18202c3cccf15be5c80480a56e157e17263943dca0e920dbf1506bf2cfccd441aebef93d600d65d222a9d4176e0f5fc85628c9e168842e47c08d5aa6e820f945747f91f8a262bcc90f7a34f1c5ef459a290d089fb3aee95ba4aa910f776601ab6091611d6816f34ca4e63f75643354f1313c3f8bda24b67cf7fee951fa420474657219e84e31f843bcbc104e5a74b4858504802f8dd8c4ee638e14da0e17620ae791a03f5dccaf6323214677aa33b8abc130dda43fb401a9f9b960e0708e910e</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="4652d18ff984276ee3e6fe4a4bc93a29a5e7796e1d1974c3305f7b37a60ed51f">c4379dbc51520bb23a681c5b597ae53a756d9c806c58b9ee8e50462704426c28b913582215f7cd543dac6eef4415db46619c1ffa985d4cf9b814ea16e487c64a026613f94533d4e3b37eb79fdf80eed24e92fc5401e85c10bcec4f2ba38e63d7bb7bac1f2e1210dbc6857935b385655120d301f55e037c7fdf43b125aad342a9602462365e5b041f4d89200782bbb9aa0d3e5af6e5d73778b4175da5c63a250a6e56322ad2d0eb8b18cbec9ee704fa3e4b3f89faadb8abd3a480da5326bba1abc444bc95a248faa36149987891afdf27c8cca4b7a63baf7bdfe5d2a2697b047a544ff85700257a7be731433ae10e60db5dead0328aa5d76e136df8c89f95924d2c8679ccc295fbefee0529b3146640e9507ae3491e39e2dc7b1755ccb35410e37697a03d60620e00af19a05ffc5fefc827091be16dc57b0d2547fd10ffde7eb5fe4558c7c07fa1185f7a5647c4dfa96f81d78f685bae6ead013f36da14d11f4d1a1c93816ba437c1ce21318cc19176841fe04b29d56cddb996c6570f6fb6b98eeba285659b67b64c7999a5b45f6b3323f6d9aaff24d214efbacaf9117ca7c44da2f051272bf361b93079ec764b7807b8c070438e36b7f4216ca283693350d7d033a8a89d919308af03d6cfa73a03161b742626a7e529798dd321b23cd6eb7cc15cdeeee4f9bfb84b2e20354b858a87641fde1a7ebc1523086e84f9389f8cde89c9095dcfe8e4ceb389bbb857d7c1e78bda18f6d615e1cecadbe39c63e9d769633932a234ad6ae1f2c3b5737c135302c6beded90517df9764aba71ed521334946e0a61f33b1f19e7bb8401caff3809336f5ebbd3c6c5a6ab0a03ca4ee99d3bf80c9b409b33208df1fcf6bc56002dfff9083e876bde8b2337ba7899a5c7e774c59c39909f0f542dcc733d8d373687a6f7e0c75cc26d592c80e2e651126d917a5319f2206ad1006b5e964b333e2ba4ac0466b41f5cd82b2798003cf5b1d0499624e5f2887d15755be39bd82a527d11e619e213f41d7489e9fffa94bef3432e2e057211e2d38e157dfd21c019b42978d91ab9c226f4e2a42e9bf60bcf52166590f1e</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -675,10 +675,10 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【日常】5 月 12 日 雨</title>
-    <url>/life/20220512/</url>
+    <title>【日常】5 月 24 日</title>
+    <url>/life/20220524/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="4652d18ff984276ee3e6fe4a4bc93a29a5e7796e1d1974c3305f7b37a60ed51f">c4379dbc51520bb23a681c5b597ae53a756d9c806c58b9ee8e50462704426c28b913582215f7cd543dac6eef4415db46619c1ffa985d4cf9b814ea16e487c64a026613f94533d4e3b37eb79fdf80eed24e92fc5401e85c10bcec4f2ba38e63d7bb7bac1f2e1210dbc6857935b385655120d301f55e037c7fdf43b125aad342a9602462365e5b041f4d89200782bbb9aa0d3e5af6e5d73778b4175da5c63a250a6e56322ad2d0eb8b18cbec9ee704fa3e4b3f89faadb8abd3a480da5326bba1abc444bc95a248faa36149987891afdf27c8cca4b7a63baf7bdfe5d2a2697b047a544ff85700257a7be731433ae10e60db5dead0328aa5d76e136df8c89f95924d2c8679ccc295fbefee0529b3146640e9507ae3491e39e2dc7b1755ccb35410e37697a03d60620e00af19a05ffc5fefc827091be16dc57b0d2547fd10ffde7eb5fe4558c7c07fa1185f7a5647c4dfa96f81d78f685bae6ead013f36da14d11f4d1a1c93816ba437c1ce21318cc19176841fe04b29d56cddb996c6570f6fb6b98eeba285659b67b64c7999a5b45f6b3323f6d9aaff24d214efbacaf9117ca7c44da2f051272bf361b93079ec764b7807b8c070438e36b7f4216ca283693350d7d033a8a89d919308af03d6cfa73a03161b742626a7e529798dd321b23cd6eb7cc15cdeeee4f9bfb84b2e20354b858a87641fde1a7ebc1523086e84f9389f8cde89c9095dcfe8e4ceb389bbb857d7c1e78bda18f6d615e1cecadbe39c63e9d769633932a234ad6ae1f2c3b5737c135302c6beded90517df9764aba71ed521334946e0a61f33b1f19e7bb8401caff3809336f5ebbd3c6c5a6ab0a03ca4ee99d3bf80c9b409b33208df1fcf6bc56002dfff9083e876bde8b2337ba7899a5c7e774c59c39909f0f542dcc733d8d373687a6f7e0c75cc26d592c80e2e651126d917a5319f2206ad1006b5e964b333e2ba4ac0466b41f5cd82b2798003cf5b1d0499624e5f2887d15755be39bd82a527d11e619e213f41d7489e9fffa94bef3432e2e057211e2d38e157dfd21c019b42978d91ab9c226f4e2a42e9bf60bcf52166590f1e</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="61275d55d8a4ff17b1b056a4a5d1a548d0d72268d5a32aa48fd3e6ad494cf8b9">c4379dbc51520bb23a681c5b597ae53afcd71c255395340f680c5e0e1e6fc2c29190548a9cb49bc2bd0e055147b0521f854fcd8dda1f2d75d19efaa25053e1653c6450d6b294bc23dab3f63bb18dd61b900d2d744672b4998c6a3a479f281dbc35274b9cb50b6c6b0c95faba600384189589a4165e364719d68834d96b2d4b13d569fca54ab5c5ad2fc090962704f97215511e3f430e30e883f0e2a7adc0b71d78c3e9968aaf70499432f06613a68c5a78d8e44b57be345e354c2d376b00e921114b8a34d309af462eba164bdbb344745b031d25cef69ae87341a30ba6d3c66f5dc09c8bba3eeaf9c9b926a43703b1bcfc9f2dab124bd58d3d27546f80d69db10062f22fd1df4cd03d3f59db771b400361a5378a4855e173050d74076c84317750ec732629e26c321dddf9f7fce289be5fe0f65c4485ba88261b918cf4935a8991de9fe1da5ee3d84f6b748b1e62a77fe2c21edcab454d27bf5550e2aa5226d89662b289e45cd83bd03f4e117e366f1c784f285c14ad9669e77fd71d519334145c30c7cd19a033660420621804b873f77dda605bd2dbff90044f6d40c4691de5155af4c671fcd44cb783e8fe3220ad4fe617c965a30e86b5329f4dcff1609644ddfb3621c0bd53481a74ed127402a6bc4210ba75d6c59777b6e3a844f96809212b688a4004ace2ec89d1f78f011968e916620c76fb35ebfe6815810864cd46eeb14ea2641a2a53b02699b38a0d3251b9b8fe4c399a3d3f11d3ab57f6dccb54dc18202c3cccf15be5c80480a56e157e17263943dca0e920dbf1506bf2cfccd441aebef93d600d65d222a9d4176e0f5fc85628c9e168842e47c08d5aa6e820f945747f91f8a262bcc90f7a34f1c5ef459a290d089fb3aee95ba4aa910f776601ab6091611d6816f34ca4e63f75643354f1313c3f8bda24b67cf7fee951fa420474657219e84e31f843bcbc104e5a74b4858504802f8dd8c4ee638e14da0e17620ae791a03f5dccaf6323214677aa33b8abc130dda43fb401a9f9b960e0708e910e</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -841,6 +841,25 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
+    <title>【日常】112 學測字彙題</title>
+    <url>/life/20230212/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="c7c3feda04efa79eec7ed3f8cd54d2d87bf722ce0a5415ae2bac7c93025c87a4">c4379dbc51520bb23a681c5b597ae53ae83953acc4205c882fe5f1b87eb724f0e52cbaeded9772aa1d163808d1e2b678edbe6cb0b02e0bdda0222739852df27541613880a270557179f78c4038e761e1d7c4a68c6b1ad5026a3f988c1b851bdcc2a53839e63a9885b071f9c92f87ce1995181274fbbb938d752064b4c13f1b070b446ed4ed10a85ec4e381b7155537dff0909d1f37f9e6b4dc7e08b83472453a2df98c30d3bb8452a5109e74549be7fb8e956e3383ff0b83d15033dff13839df4b07ec6627a9c8f255a46997a1472e487217eed62544985df22809d4a0c11db7dc925bc2a853f0160cc02e5055836da754422ef2984723f2c113d253847da5ef5ae519400a16aa85aaf04db774bb6e593e88758e81b0da6e9796ad97d37413cd67a724e008892e411bccb13d51410381b27c19a983812dc58d6cc1f5cf4716104e336dbaaabf81d43ea4220eb28bef19a04c925c21a8c8318c2889631f27067ac35986d77b23d4151a8a06bc4265354b766191e7f0dcd0f1d9c21e1604d62dcfadb0089e2e9b4c5d6ad26aa4b82f91fc0fdab0a0f8b12f68c9b7314a80bba93e12f77f0083d6726d57265937cc5f20c4638558b98d3fafd3e6ba9932c88b5f138f184bfbd2de26086c2142211408fb4e84893a0a4a15643f667936e3839bae79cf9c9c0e514e68417a21b41da552d3fc93dc8cde0a460687cca7de7dc9e7cf457725ba98b13c5e4713e216e6c0a299832fb47d5198195d44d8f0eba63131e63ba3c654ae0c41c366c9df1b91d6cbae0989e2d87f0b2e722d59c2a8070bf7af3dce3b3ce14bb34a8d0a9d83f30f6882ed76388779124a4862d9bafcc40f5711a757eb3b9f86bbc3378712f5500334fb5ea7c7bfec5e0a623d3827c91385886e6506c000d791be8938568276d48b046ba075abfad071540680db80d8e0167d72593e2ec3f0cfcab3f3f728ff2e576b1c070cffba4a227e50696534737e126e4b9c8a0ab5a11dfd8c1db446e4ba982e4ff4d5c6156cb9e283f2f02092fac2a851e316b8ca6df0a894124a89908212bff6ea2f880e7588fef480ea5d76ce858b38c89f8e48e36ec7a13bac0746514cf597eb15d4ee8110c2dc33622fba4b484dd9771bf2387f670518f5548f010f5695d108eadb82adbd903869c0e3c9d7d1a8d606793f48d958390263aa65c37ce851430120954bb2e654117c4c84c59b73cd6d7ccb2b7a4b4ff6d3d1eeaa334e69e82b128be7ef28939e0108639c7f912be576f9629590c7cb4307176ea59ec8e3ba7b9feaf97ba1d77d92b504a575bb20646657fe2dc9d2c31e63aa070bb8e493de334a074902cae31a2873f4d7a1c370d1176a419ebb08efec127c3374b53e5aa76287aebe115793dbc91c59b15b14488c3a35a0a2e451235973b1be6d8c5881e4daeebefbc5fa044891621c03fcb2d8fe73669110f750a97356c6bc0efb24e0c088d617c6745c66256b963e9055abca10752f4baed08949a193d697e9a447950dfdec2e275e563b15c4eab30a4f9f69b81cac12f39ab3e9a2ffbf78cae044b704e1451bb1110ff479baf24b86d1ce6e2fb8788397025a447089077fabc286b17d583cd7c05ff31d759a1ca9cbcd7c538232c6497b1d7f75ae3c367ac6281e87d5af225e6a28ba24402f66a1872cbd729bff568c11552c1086240729069072870a50a3d05c756c9b3d36b97dc4f6a1c178a371129ad381ea7fe12066caa0ff7df9a8096754a7f8f6247badfbe62b68a91ed5fb54b2b193f2e294b3f034181b90729e91ba388d0b8abde2dfc4ed7780d0ca0f8df55532133a7a5a720b4f298bdd2878b2362cc7edc81d7f12ab410325aea9e2f412574d9951fcd07e77b41dc969d63f7de2bab39085168cc60ae8fe7bb28d3118b103f24d81689a2bae96bd5d591ad88f36486c8a6efa754af073d55357f40ab07c2af2c4bd73232533945f40bcc9c4216e6ad22d03d5d9ca83b70a43284a95621aadb0e2bea7b7a837bea593046390564741d620a8ec7ebb1654057ce6eaec13e026c53dc8958ee852271e65eaa7c78d092ce34c2399a1d0f4f6e6a1a0a7a85ae314f3c0de0709d9ebd1e9004287d4da4823ed228424aeae5ff338c3722c098c0c3ce8b98ffcb6b245fc001b2d05b47c5157b5952ada2464dd9f1613abb73625fe053520af125549290ec2568e60fa5b32143737c3831992e29fcbd6c749765273d484988abbd1bf92caa8097df5e725aa2b32cae9a3ae20e4810aff69e392fb5bcbb25ea422b82111adc731257375e74dde80c27510c418419bd41bf109b8b738e4fb7c30907b3c1752c88fe4f6631029597fc3883ded90575cdcc452a4cf0485e08aa3ecb335e79ae22971457599b49385975f5fab0c16def222964161e0a8ee8f0544b4304ba2c273e459072f2840f32ccdd5756c5b9b10e3b6834a7cb31379cfee79bb99f506f3267011414b20949c232b6e72176a7005713b608d46b0b54a8b98e2c63b9c108a2ccb8837243c4147d3bf74a92fd5716280220691a67e038d9724e9277cd5168f46575c3a92c284b37787eb4cd5410d86dbcc414701a080cbb3022352d107b420c76b05db6f7153c1cd52b5094d3398c5eb1a017766b15b59f252a9185ccd37b73cb603e35bffda982a98303bffa523b4f3597d963ecb4c8c9034554e5f990bfd02d41bbfadd4484c13ae4a67dba0f6021c18545b906c32becda205540ca0013c7c91df0e314e6c22d3805eede2f0787b6c3ec8eab092fb1c8b7cde6c6200751d83ebfdbddb6da16f6f34ba0fed7e3a0cb14360e9be270845d55fe9cbd1535c0c404d2939969b17e5f2b5f1aa753a4ac7b5a38412a308b511e56595a226d30a801b17da3de740eb9f676473ef3d865e949cf957d86c52647f4afb6fd5c6381bed4b57d6c216ee451142f5f06053af1a4486f1f61a25c41dae930b96165a179ae7e935bd2d97a92a50efb101ecf0dbcaf36ac7aa77f5709e94f9e7da6a3673ce7e67f795c63196132ac98a70d55ae7f94ddc39071040640fa5887bca2d519ce93289a5c4f513594b739b935197b9f61f6e6ee6302bc8339a80faf4ae70999bacd2fe523138dd3e63cf713d81c680f68e66e43e71359e77203eaa46f29839cec8eca578a89a7607f0b5891906acbdca9be7420c208eac36953ca960e86a1e8b5fdab588c867d91b2a</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>學測</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【日常】給一整年的自己</title>
     <url>/life/20221218/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
@@ -863,25 +882,6 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【日常】112 學測字彙題</title>
-    <url>/life/20230212/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="c7c3feda04efa79eec7ed3f8cd54d2d87bf722ce0a5415ae2bac7c93025c87a4">c4379dbc51520bb23a681c5b597ae53ae83953acc4205c882fe5f1b87eb724f0e52cbaeded9772aa1d163808d1e2b678edbe6cb0b02e0bdda0222739852df27541613880a270557179f78c4038e761e1d7c4a68c6b1ad5026a3f988c1b851bdcc2a53839e63a9885b071f9c92f87ce1995181274fbbb938d752064b4c13f1b070b446ed4ed10a85ec4e381b7155537dff0909d1f37f9e6b4dc7e08b83472453a2df98c30d3bb8452a5109e74549be7fb8e956e3383ff0b83d15033dff13839df4b07ec6627a9c8f255a46997a1472e487217eed62544985df22809d4a0c11db7dc925bc2a853f0160cc02e5055836da754422ef2984723f2c113d253847da5ef5ae519400a16aa85aaf04db774bb6e593e88758e81b0da6e9796ad97d37413cd67a724e008892e411bccb13d51410381b27c19a983812dc58d6cc1f5cf4716104e336dbaaabf81d43ea4220eb28bef19a04c925c21a8c8318c2889631f27067ac35986d77b23d4151a8a06bc4265354b766191e7f0dcd0f1d9c21e1604d62dcfadb0089e2e9b4c5d6ad26aa4b82f91fc0fdab0a0f8b12f68c9b7314a80bba93e12f77f0083d6726d57265937cc5f20c4638558b98d3fafd3e6ba9932c88b5f138f184bfbd2de26086c2142211408fb4e84893a0a4a15643f667936e3839bae79cf9c9c0e514e68417a21b41da552d3fc93dc8cde0a460687cca7de7dc9e7cf457725ba98b13c5e4713e216e6c0a299832fb47d5198195d44d8f0eba63131e63ba3c654ae0c41c366c9df1b91d6cbae0989e2d87f0b2e722d59c2a8070bf7af3dce3b3ce14bb34a8d0a9d83f30f6882ed76388779124a4862d9bafcc40f5711a757eb3b9f86bbc3378712f5500334fb5ea7c7bfec5e0a623d3827c91385886e6506c000d791be8938568276d48b046ba075abfad071540680db80d8e0167d72593e2ec3f0cfcab3f3f728ff2e576b1c070cffba4a227e50696534737e126e4b9c8a0ab5a11dfd8c1db446e4ba982e4ff4d5c6156cb9e283f2f02092fac2a851e316b8ca6df0a894124a89908212bff6ea2f880e7588fef480ea5d76ce858b38c89f8e48e36ec7a13bac0746514cf597eb15d4ee8110c2dc33622fba4b484dd9771bf2387f670518f5548f010f5695d108eadb82adbd903869c0e3c9d7d1a8d606793f48d958390263aa65c37ce851430120954bb2e654117c4c84c59b73cd6d7ccb2b7a4b4ff6d3d1eeaa334e69e82b128be7ef28939e0108639c7f912be576f9629590c7cb4307176ea59ec8e3ba7b9feaf97ba1d77d92b504a575bb20646657fe2dc9d2c31e63aa070bb8e493de334a074902cae31a2873f4d7a1c370d1176a419ebb08efec127c3374b53e5aa76287aebe115793dbc91c59b15b14488c3a35a0a2e451235973b1be6d8c5881e4daeebefbc5fa044891621c03fcb2d8fe73669110f750a97356c6bc0efb24e0c088d617c6745c66256b963e9055abca10752f4baed08949a193d697e9a447950dfdec2e275e563b15c4eab30a4f9f69b81cac12f39ab3e9a2ffbf78cae044b704e1451bb1110ff479baf24b86d1ce6e2fb8788397025a447089077fabc286b17d583cd7c05ff31d759a1ca9cbcd7c538232c6497b1d7f75ae3c367ac6281e87d5af225e6a28ba24402f66a1872cbd729bff568c11552c1086240729069072870a50a3d05c756c9b3d36b97dc4f6a1c178a371129ad381ea7fe12066caa0ff7df9a8096754a7f8f6247badfbe62b68a91ed5fb54b2b193f2e294b3f034181b90729e91ba388d0b8abde2dfc4ed7780d0ca0f8df55532133a7a5a720b4f298bdd2878b2362cc7edc81d7f12ab410325aea9e2f412574d9951fcd07e77b41dc969d63f7de2bab39085168cc60ae8fe7bb28d3118b103f24d81689a2bae96bd5d591ad88f36486c8a6efa754af073d55357f40ab07c2af2c4bd73232533945f40bcc9c4216e6ad22d03d5d9ca83b70a43284a95621aadb0e2bea7b7a837bea593046390564741d620a8ec7ebb1654057ce6eaec13e026c53dc8958ee852271e65eaa7c78d092ce34c2399a1d0f4f6e6a1a0a7a85ae314f3c0de0709d9ebd1e9004287d4da4823ed228424aeae5ff338c3722c098c0c3ce8b98ffcb6b245fc001b2d05b47c5157b5952ada2464dd9f1613abb73625fe053520af125549290ec2568e60fa5b32143737c3831992e29fcbd6c749765273d484988abbd1bf92caa8097df5e725aa2b32cae9a3ae20e4810aff69e392fb5bcbb25ea422b82111adc731257375e74dde80c27510c418419bd41bf109b8b738e4fb7c30907b3c1752c88fe4f6631029597fc3883ded90575cdcc452a4cf0485e08aa3ecb335e79ae22971457599b49385975f5fab0c16def222964161e0a8ee8f0544b4304ba2c273e459072f2840f32ccdd5756c5b9b10e3b6834a7cb31379cfee79bb99f506f3267011414b20949c232b6e72176a7005713b608d46b0b54a8b98e2c63b9c108a2ccb8837243c4147d3bf74a92fd5716280220691a67e038d9724e9277cd5168f46575c3a92c284b37787eb4cd5410d86dbcc414701a080cbb3022352d107b420c76b05db6f7153c1cd52b5094d3398c5eb1a017766b15b59f252a9185ccd37b73cb603e35bffda982a98303bffa523b4f3597d963ecb4c8c9034554e5f990bfd02d41bbfadd4484c13ae4a67dba0f6021c18545b906c32becda205540ca0013c7c91df0e314e6c22d3805eede2f0787b6c3ec8eab092fb1c8b7cde6c6200751d83ebfdbddb6da16f6f34ba0fed7e3a0cb14360e9be270845d55fe9cbd1535c0c404d2939969b17e5f2b5f1aa753a4ac7b5a38412a308b511e56595a226d30a801b17da3de740eb9f676473ef3d865e949cf957d86c52647f4afb6fd5c6381bed4b57d6c216ee451142f5f06053af1a4486f1f61a25c41dae930b96165a179ae7e935bd2d97a92a50efb101ecf0dbcaf36ac7aa77f5709e94f9e7da6a3673ce7e67f795c63196132ac98a70d55ae7f94ddc39071040640fa5887bca2d519ce93289a5c4f513594b739b935197b9f61f6e6ee6302bc8339a80faf4ae70999bacd2fe523138dd3e63cf713d81c680f68e66e43e71359e77203eaa46f29839cec8eca578a89a7607f0b5891906acbdca9be7420c208eac36953ca960e86a1e8b5fdab588c867d91b2a</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <tags>
-        <tag>學測</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【日常】給高中畢業的自己</title>
     <url>/life/20240517/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
@@ -901,6 +901,146 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </categories>
       <tags>
         <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【筆記】二分搜尋樹（Binary Search Tree）</title>
+    <url>/computer-science/cpp/binary-search-tree/</url>
+    <content><![CDATA[<h1 id="基本介紹"><a class="markdownIt-Anchor" href="#基本介紹"></a> 基本介紹</h1>
+<h2 id="定義"><a class="markdownIt-Anchor" href="#定義"></a> 定義</h2>
+<ul>
+<li>父節點的左子節點（left node）皆小於父節點。</li>
+<li>父節點的右子節點（right node）皆大於父節點。</li>
+<li>任意節點的左右子樹都符合 BST 的定義。</li>
+<li>不存在等值的資料。</li>
+</ul>
+<p>圖例：</p>
+<p><img src="https://i.imgur.com/cTf49p0.png" alt="Imgur" /></p>
+<h2 id="時間複雜度"><a class="markdownIt-Anchor" href="#時間複雜度"></a> 時間複雜度</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">演算法</th>
+<th style="text-align:center">平均</th>
+<th style="text-align:center">最差</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>空間</strong></td>
+<td style="text-align:center">O(n)</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>搜尋</strong></td>
+<td style="text-align:center">O(log n)</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>插入</strong></td>
+<td style="text-align:center">O(log n)</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>刪除</strong></td>
+<td style="text-align:center">O(log n)</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+</tbody>
+</table>
+<p><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU0JUJBJThDJUU1JTg1JTgzJUU2JTkwJTlDJUU1JUIwJThCJUU2JUE4JUI5">了解更多點我<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="實作"><a class="markdownIt-Anchor" href="#實作"></a> 實作</h1>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span> &#123;</span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Node</span>* left;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Node</span>* right;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 中序</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">inorder</span><span class="params">(Node* root)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root != <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="built_in">inorder</span>(root-&gt;left);</span><br><span class="line">        cout &lt;&lt; root-&gt;data &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        <span class="built_in">inorder</span>(root-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Node* <span class="title">add_node</span><span class="params">(Node* new_node, <span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (new_node == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        new_node = <span class="keyword">new</span> Node;</span><br><span class="line">        new_node-&gt;data = n;</span><br><span class="line">        new_node-&gt;left = <span class="literal">NULL</span>;</span><br><span class="line">        new_node-&gt;right = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span> new_node;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> new_node;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// BST 的遞迴</span></span><br><span class="line"><span class="function">Node* <span class="title">input_data</span><span class="params">(Node* btree, <span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (btree == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        btree = <span class="built_in">add_node</span>(btree, n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (n &lt; btree-&gt;data) &#123;</span><br><span class="line">        btree-&gt;left = <span class="built_in">input_data</span>(btree-&gt;left, n);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (n &gt; btree-&gt;data) &#123;</span><br><span class="line">        btree-&gt;right = <span class="built_in">input_data</span>(btree-&gt;right, n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> btree;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Node* binary_tree = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; n) &#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">-1</span>) <span class="keyword">break</span>;</span><br><span class="line">        binary_tree = <span class="built_in">input_data</span>(binary_tree, n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">inorder</span>(binary_tree);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>計算機科學</category>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>筆記</tag>
+        <tag>C++</tag>
+        <tag>BST</tag>
+        <tag>資料結構</tag>
+        <tag>進階資料結構</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【筆記】Array 陣列</title>
+    <url>/computer-science/cpp/array/</url>
+    <content><![CDATA[<h1 id="基本介紹"><a class="markdownIt-Anchor" href="#基本介紹"></a> 基本介紹</h1>
+<p>當我們需要存取一堆數據或資料時，總不能直接建立千個或上萬個變數吧！若這些數據具有相關性、型態一樣，可以使用 <code>Array</code> 來存取。陣列具有連續的記憶體位址，所以我們可以從頭走到尾來讀取 <code>Array</code> 中的數據。既可以減少變數的命名，還可以讓程式變得精簡、提高可讀性。</p>
+<h1 id="如何宣告"><a class="markdownIt-Anchor" href="#如何宣告"></a> 如何宣告</h1>
+<p>先引入標頭檔 <code>#include &lt;array&gt;</code></p>
+<h2 id="基礎宣告"><a class="markdownIt-Anchor" href="#基礎宣告"></a> 基礎宣告</h2>
+<figure class="highlight cpp"><figcaption><span>基礎宣告範例</span></figcaption><table><tr><td class="code"><pre><span class="line">array&lt;<span class="type">int</span>, 10&gt; arr;</span><br></pre></td></tr></table></figure>
+<p>從上方範例可知 <code>arr</code> 是一個長度為 10 的整數陣列</p>
+<div class="note info"><p>在任何程式語言裡，陣列的第一項編號必為 <code>0</code>（編號我們通常稱之 index 索引）。所以若有一個長度為 <code>10</code> 的陣列，內容物的索引範圍為 <code>0~9</code>。</p>
+</div>
+<h2 id="設定初始值"><a class="markdownIt-Anchor" href="#設定初始值"></a> 設定初始值</h2>
+<figure class="highlight cpp"><figcaption><span>設定初始值範例</span></figcaption><table><tr><td class="code"><pre><span class="line">arr&lt;<span class="type">int</span>, <span class="number">5</span>&gt; arr_A&#123;<span class="number">2</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">3</span>, <span class="number">1</span>&#125;;</span><br><span class="line">arr&lt;<span class="type">int</span>, <span class="number">5</span>&gt; arr_B&#123;&#125;;  <span class="comment">// 表示初始化 arr_B 元素皆為 0</span></span><br></pre></td></tr></table></figure>
+<div class="note danger"><p>注意！若陣列未做初始值，其中元素可能為亂數。</p>
+</div>
+<h1 id="基礎使用"><a class="markdownIt-Anchor" href="#基礎使用"></a> 基礎使用</h1>
+<table>
+<thead>
+<tr>
+<th>array 函式</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>begin()</code>, <code>end()</code>, <code>cbegin()</code>, <code>cend()</code></td>
+<td>提供正向跌代器</td>
+</tr>
+<tr>
+<td><code>rbegin()</code>, <code>rend()</code>, <code>crbegin()</code>, <code>crend()</code></td>
+<td>提供反向跌代器</td>
+</tr>
+<tr>
+<td><code>size()</code></td>
+<td>返回陣列大小</td>
+</tr>
+<tr>
+<td><code>max_size()</code></td>
+<td>返回陣列最大大小（由於 <code>array</code> 為固定序列，故返回值與 <code>size()</code> 一樣）</td>
+</tr>
+<tr>
+<td><code>at()</code>, <code>operator[]</code></td>
+<td>取得元素</td>
+</tr>
+<tr>
+<td><code>front()</code></td>
+<td>返回第一個元素</td>
+</tr>
+<tr>
+<td><code>back()</code></td>
+<td>返回最後一個元素</td>
+</tr>
+<tr>
+<td><code>data()</code></td>
+<td>返回元素的指標</td>
+</tr>
+<tr>
+<td><code>fill()</code></td>
+<td>填滿陣列</td>
+</tr>
+<tr>
+<td><code>swap()</code></td>
+<td>交換兩個陣列元素</td>
+</tr>
+</tbody>
+</table>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jcGx1c3BsdXMuY29tL3JlZmVyZW5jZS9hcnJheS9hcnJheS8=">查看更多可參考 cplusplus 官網<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="各種遍歷"><a class="markdownIt-Anchor" href="#各種遍歷"></a> 各種遍歷</h1>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 正向遍歷</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    cout &lt;&lt; data[i] &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> i : data) &#123;</span><br><span class="line">    cout &lt;&lt; i &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> iter = data.<span class="built_in">begin</span>(); iter != data.<span class="built_in">end</span>(); ++iter) &#123;</span><br><span class="line">    cout &lt;&lt; *iter &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 反向遍歷</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">9</span>; i &lt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    cout &lt;&lt; data[i] &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> iter = data.<span class="built_in">rbegin</span>(); iter != data.<span class="built_in">rend</span>(); ++iter) &#123;</span><br><span class="line">    cout &lt;&lt; *iter &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>計算機科學</category>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>筆記</tag>
+        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -1306,66 +1446,6 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【筆記】二分搜尋樹（Binary Search Tree）</title>
-    <url>/computer-science/cpp/binary-search-tree/</url>
-    <content><![CDATA[<h1 id="基本介紹"><a class="markdownIt-Anchor" href="#基本介紹"></a> 基本介紹</h1>
-<h2 id="定義"><a class="markdownIt-Anchor" href="#定義"></a> 定義</h2>
-<ul>
-<li>父節點的左子節點（left node）皆小於父節點。</li>
-<li>父節點的右子節點（right node）皆大於父節點。</li>
-<li>任意節點的左右子樹都符合 BST 的定義。</li>
-<li>不存在等值的資料。</li>
-</ul>
-<p>圖例：</p>
-<p><img src="https://i.imgur.com/cTf49p0.png" alt="Imgur" /></p>
-<h2 id="時間複雜度"><a class="markdownIt-Anchor" href="#時間複雜度"></a> 時間複雜度</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">演算法</th>
-<th style="text-align:center">平均</th>
-<th style="text-align:center">最差</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><strong>空間</strong></td>
-<td style="text-align:center">O(n)</td>
-<td style="text-align:center">O(n)</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>搜尋</strong></td>
-<td style="text-align:center">O(log n)</td>
-<td style="text-align:center">O(n)</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>插入</strong></td>
-<td style="text-align:center">O(log n)</td>
-<td style="text-align:center">O(n)</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>刪除</strong></td>
-<td style="text-align:center">O(log n)</td>
-<td style="text-align:center">O(n)</td>
-</tr>
-</tbody>
-</table>
-<p><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU0JUJBJThDJUU1JTg1JTgzJUU2JTkwJTlDJUU1JUIwJThCJUU2JUE4JUI5">了解更多點我<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="實作"><a class="markdownIt-Anchor" href="#實作"></a> 實作</h1>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span> &#123;</span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Node</span>* left;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Node</span>* right;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 中序</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">inorder</span><span class="params">(Node* root)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root != <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="built_in">inorder</span>(root-&gt;left);</span><br><span class="line">        cout &lt;&lt; root-&gt;data &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        <span class="built_in">inorder</span>(root-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Node* <span class="title">add_node</span><span class="params">(Node* new_node, <span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (new_node == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        new_node = <span class="keyword">new</span> Node;</span><br><span class="line">        new_node-&gt;data = n;</span><br><span class="line">        new_node-&gt;left = <span class="literal">NULL</span>;</span><br><span class="line">        new_node-&gt;right = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span> new_node;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> new_node;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// BST 的遞迴</span></span><br><span class="line"><span class="function">Node* <span class="title">input_data</span><span class="params">(Node* btree, <span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (btree == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        btree = <span class="built_in">add_node</span>(btree, n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (n &lt; btree-&gt;data) &#123;</span><br><span class="line">        btree-&gt;left = <span class="built_in">input_data</span>(btree-&gt;left, n);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (n &gt; btree-&gt;data) &#123;</span><br><span class="line">        btree-&gt;right = <span class="built_in">input_data</span>(btree-&gt;right, n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> btree;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Node* binary_tree = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; n) &#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">-1</span>) <span class="keyword">break</span>;</span><br><span class="line">        binary_tree = <span class="built_in">input_data</span>(binary_tree, n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">inorder</span>(binary_tree);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>計算機科學</category>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>筆記</tag>
-        <tag>C++</tag>
-        <tag>BST</tag>
-        <tag>資料結構</tag>
-        <tag>進階資料結構</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【筆記】set</title>
     <url>/computer-science/cpp/set/</url>
     <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
@@ -1488,41 +1568,6 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
         <tag>筆記</tag>
         <tag>C++</tag>
         <tag>set</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【解題】d001: 例題 P-1-1. 合成函數(1)</title>
-    <url>/solved/TCFSH_CIRC_Judge/d001/</url>
-    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly9qdWRnZS50Y2lyYy50dy9TaG93UHJvYmxlbT9wcm9ibGVtaWQ9ZDAwMQ==">d001: 例題 P-1-1. 合成函數(1)<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
-<p>利用遞迴做函數的輸入及計算</p>
-<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
-<figure class="highlight cpp"><figcaption><span>d001</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">eval</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> val, x, y;</span><br><span class="line">    <span class="type">char</span> token[<span class="number">5</span>];</span><br><span class="line">    cin &gt;&gt; token;</span><br><span class="line">    <span class="keyword">if</span> (token[<span class="number">0</span>] == <span class="string">&#x27;f&#x27;</span>) &#123;</span><br><span class="line">        x = <span class="built_in">eval</span>();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span> * x - <span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (token[<span class="number">0</span>] == <span class="string">&#x27;g&#x27;</span>) &#123;</span><br><span class="line">        x = <span class="built_in">eval</span>();</span><br><span class="line">        y = <span class="built_in">eval</span>();</span><br><span class="line">        <span class="keyword">return</span> x + <span class="number">2</span> * y - <span class="number">3</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">atoi</span>(token);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> ans = <span class="built_in">eval</span>();</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>解題</category>
-        <category>CIRC_Judge</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>【解題】d075: Q-6-10. 置物櫃出租</title>
-    <url>/solved/TCFSH_CIRC_Judge/d075/</url>
-    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly9qdWRnZS50Y2lyYy50dy9TaG93UHJvYmxlbT9wcm9ibGVtaWQ9ZDA3NQ==">d075: Q-6-10. 置物櫃出租<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
-<p>我用子集合的方式，如：ZeroJudge <span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWE1MjI=">a522<i class="fa fa-external-link-alt"></i></span>，求出可退房間的數量，最後從 S 開始往上找是否有可退房數量的房間數。</p>
-<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
-<figure class="highlight cpp"><figcaption><span>d075</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n, M, S;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; M &gt;&gt; S;</span><br><span class="line">    <span class="type">int</span> c[n], sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; c[i];</span><br><span class="line">        sum += c[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">bool</span> h[M + <span class="number">1</span>] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line">    h[<span class="number">0</span>] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="type">bool</span> check[M + <span class="number">1</span>] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= M; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (h[j] &amp;&amp; !check[j]) &#123;</span><br><span class="line">                <span class="comment">// 這裡是預防連續兩位客人占用的房間一樣</span></span><br><span class="line">                <span class="comment">// 所以會扣 6% 的隱藏測資</span></span><br><span class="line">                <span class="keyword">if</span> (h[j + c[i]] == <span class="literal">true</span>) &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                h[j + c[i]] = <span class="literal">true</span>;</span><br><span class="line">                check[j + c[i]] = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// S - (M - sum) 有可能為負數</span></span><br><span class="line">    <span class="comment">// 所以會扣 7% 的隱藏測資</span></span><br><span class="line">    <span class="type">int</span> x = S - (M - sum);</span><br><span class="line">    <span class="keyword">if</span> (x &lt; <span class="number">0</span>) x = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = x; i &lt;= M; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (h[i]) &#123;</span><br><span class="line">            cout &lt;&lt; i &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>解題</category>
-        <category>CIRC_Judge</category>
-      </categories>
-      <tags>
-        <tag>APCS</tag>
-        <tag>DP</tag>
-        <tag>01背包</tag>
       </tags>
   </entry>
   <entry>
@@ -1692,83 +1737,56 @@ E. Run Time Error</p>
       </tags>
   </entry>
   <entry>
-    <title>【筆記】Array 陣列</title>
-    <url>/computer-science/cpp/array/</url>
-    <content><![CDATA[<h1 id="基本介紹"><a class="markdownIt-Anchor" href="#基本介紹"></a> 基本介紹</h1>
-<p>當我們需要存取一堆數據或資料時，總不能直接建立千個或上萬個變數吧！若這些數據具有相關性、型態一樣，可以使用 <code>Array</code> 來存取。陣列具有連續的記憶體位址，所以我們可以從頭走到尾來讀取 <code>Array</code> 中的數據。既可以減少變數的命名，還可以讓程式變得精簡、提高可讀性。</p>
-<h1 id="如何宣告"><a class="markdownIt-Anchor" href="#如何宣告"></a> 如何宣告</h1>
-<p>先引入標頭檔 <code>#include &lt;array&gt;</code></p>
-<h2 id="基礎宣告"><a class="markdownIt-Anchor" href="#基礎宣告"></a> 基礎宣告</h2>
-<figure class="highlight cpp"><figcaption><span>基礎宣告範例</span></figcaption><table><tr><td class="code"><pre><span class="line">array&lt;<span class="type">int</span>, 10&gt; arr;</span><br></pre></td></tr></table></figure>
-<p>從上方範例可知 <code>arr</code> 是一個長度為 10 的整數陣列</p>
-<div class="note info"><p>在任何程式語言裡，陣列的第一項編號必為 <code>0</code>（編號我們通常稱之 index 索引）。所以若有一個長度為 <code>10</code> 的陣列，內容物的索引範圍為 <code>0~9</code>。</p>
-</div>
-<h2 id="設定初始值"><a class="markdownIt-Anchor" href="#設定初始值"></a> 設定初始值</h2>
-<figure class="highlight cpp"><figcaption><span>設定初始值範例</span></figcaption><table><tr><td class="code"><pre><span class="line">arr&lt;<span class="type">int</span>, <span class="number">5</span>&gt; arr_A&#123;<span class="number">2</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">3</span>, <span class="number">1</span>&#125;;</span><br><span class="line">arr&lt;<span class="type">int</span>, <span class="number">5</span>&gt; arr_B&#123;&#125;;  <span class="comment">// 表示初始化 arr_B 元素皆為 0</span></span><br></pre></td></tr></table></figure>
-<div class="note danger"><p>注意！若陣列未做初始值，其中元素可能為亂數。</p>
-</div>
-<h1 id="基礎使用"><a class="markdownIt-Anchor" href="#基礎使用"></a> 基礎使用</h1>
-<table>
-<thead>
-<tr>
-<th>array 函式</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>begin()</code>, <code>end()</code>, <code>cbegin()</code>, <code>cend()</code></td>
-<td>提供正向跌代器</td>
-</tr>
-<tr>
-<td><code>rbegin()</code>, <code>rend()</code>, <code>crbegin()</code>, <code>crend()</code></td>
-<td>提供反向跌代器</td>
-</tr>
-<tr>
-<td><code>size()</code></td>
-<td>返回陣列大小</td>
-</tr>
-<tr>
-<td><code>max_size()</code></td>
-<td>返回陣列最大大小（由於 <code>array</code> 為固定序列，故返回值與 <code>size()</code> 一樣）</td>
-</tr>
-<tr>
-<td><code>at()</code>, <code>operator[]</code></td>
-<td>取得元素</td>
-</tr>
-<tr>
-<td><code>front()</code></td>
-<td>返回第一個元素</td>
-</tr>
-<tr>
-<td><code>back()</code></td>
-<td>返回最後一個元素</td>
-</tr>
-<tr>
-<td><code>data()</code></td>
-<td>返回元素的指標</td>
-</tr>
-<tr>
-<td><code>fill()</code></td>
-<td>填滿陣列</td>
-</tr>
-<tr>
-<td><code>swap()</code></td>
-<td>交換兩個陣列元素</td>
-</tr>
-</tbody>
-</table>
-<p><span class="exturl" data-url="aHR0cHM6Ly9jcGx1c3BsdXMuY29tL3JlZmVyZW5jZS9hcnJheS9hcnJheS8=">查看更多可參考 cplusplus 官網<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="各種遍歷"><a class="markdownIt-Anchor" href="#各種遍歷"></a> 各種遍歷</h1>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 正向遍歷</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    cout &lt;&lt; data[i] &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> i : data) &#123;</span><br><span class="line">    cout &lt;&lt; i &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> iter = data.<span class="built_in">begin</span>(); iter != data.<span class="built_in">end</span>(); ++iter) &#123;</span><br><span class="line">    cout &lt;&lt; *iter &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 反向遍歷</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">9</span>; i &lt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    cout &lt;&lt; data[i] &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> iter = data.<span class="built_in">rbegin</span>(); iter != data.<span class="built_in">rend</span>(); ++iter) &#123;</span><br><span class="line">    cout &lt;&lt; *iter &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>【解題】d001: 例題 P-1-1. 合成函數(1)</title>
+    <url>/solved/TCFSH_CIRC_Judge/d001/</url>
+    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly9qdWRnZS50Y2lyYy50dy9TaG93UHJvYmxlbT9wcm9ibGVtaWQ9ZDAwMQ==">d001: 例題 P-1-1. 合成函數(1)<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
+<p>利用遞迴做函數的輸入及計算</p>
+<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
+<figure class="highlight cpp"><figcaption><span>d001</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">eval</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> val, x, y;</span><br><span class="line">    <span class="type">char</span> token[<span class="number">5</span>];</span><br><span class="line">    cin &gt;&gt; token;</span><br><span class="line">    <span class="keyword">if</span> (token[<span class="number">0</span>] == <span class="string">&#x27;f&#x27;</span>) &#123;</span><br><span class="line">        x = <span class="built_in">eval</span>();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span> * x - <span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (token[<span class="number">0</span>] == <span class="string">&#x27;g&#x27;</span>) &#123;</span><br><span class="line">        x = <span class="built_in">eval</span>();</span><br><span class="line">        y = <span class="built_in">eval</span>();</span><br><span class="line">        <span class="keyword">return</span> x + <span class="number">2</span> * y - <span class="number">3</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">atoi</span>(token);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> ans = <span class="built_in">eval</span>();</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>計算機科學</category>
-        <category>C++</category>
+        <category>解題</category>
+        <category>CIRC_Judge</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>【解題】d002: 習題 Q-1-2. 合成函數(2) (APCS201902)</title>
+    <url>/solved/TCFSH_CIRC_Judge/d002/</url>
+    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly9qdWRnZS50Y2lyYy50dy9TaG93UHJvYmxlbT9wcm9ibGVtaWQ9ZDAwMg==">d002: 習題 Q-1-2. 合成函數(2) (APCS201902)<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
+<p>利用遞迴做函數的輸入及計算，同 <span class="exturl" data-url="aHR0cHM6Ly9qdWRnZS50Y2lyYy50dy9TaG93UHJvYmxlbT9wcm9ibGVtaWQ9ZDAwMQ==">d001: 例題 P-1-1. 合成函數(1)<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
+<figure class="highlight cpp"><figcaption><span>d002</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">eval</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> x, y, z;</span><br><span class="line">    <span class="type">char</span> token[<span class="number">5</span>];</span><br><span class="line">    cin &gt;&gt; token;</span><br><span class="line">    <span class="keyword">if</span> (token[<span class="number">0</span>] == <span class="string">&#x27;f&#x27;</span>) &#123;</span><br><span class="line">        x = <span class="built_in">eval</span>();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span> * x - <span class="number">3</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (token[<span class="number">0</span>] == <span class="string">&#x27;g&#x27;</span>) &#123;</span><br><span class="line">        x = <span class="built_in">eval</span>();</span><br><span class="line">        y = <span class="built_in">eval</span>();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span> * x + y - <span class="number">7</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (token[<span class="number">0</span>] == <span class="string">&#x27;h&#x27;</span>) &#123;</span><br><span class="line">        x = <span class="built_in">eval</span>();</span><br><span class="line">        y = <span class="built_in">eval</span>();</span><br><span class="line">        z = <span class="built_in">eval</span>();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">3</span> * x - <span class="number">2</span> * y + z;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">atoi</span>(token);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">eval</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>解題</category>
+        <category>CIRC_Judge</category>
       </categories>
       <tags>
-        <tag>筆記</tag>
-        <tag>C++</tag>
+        <tag>APCS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【解題】d075: Q-6-10. 置物櫃出租</title>
+    <url>/solved/TCFSH_CIRC_Judge/d075/</url>
+    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly9qdWRnZS50Y2lyYy50dy9TaG93UHJvYmxlbT9wcm9ibGVtaWQ9ZDA3NQ==">d075: Q-6-10. 置物櫃出租<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
+<p>我用子集合的方式，如：ZeroJudge <span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWE1MjI=">a522<i class="fa fa-external-link-alt"></i></span>，求出可退房間的數量，最後從 S 開始往上找是否有可退房數量的房間數。</p>
+<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
+<figure class="highlight cpp"><figcaption><span>d075</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n, M, S;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; M &gt;&gt; S;</span><br><span class="line">    <span class="type">int</span> c[n], sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; c[i];</span><br><span class="line">        sum += c[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">bool</span> h[M + <span class="number">1</span>] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line">    h[<span class="number">0</span>] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="type">bool</span> check[M + <span class="number">1</span>] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt;= M; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (h[j] &amp;&amp; !check[j]) &#123;</span><br><span class="line">                <span class="comment">// 這裡是預防連續兩位客人占用的房間一樣</span></span><br><span class="line">                <span class="comment">// 所以會扣 6% 的隱藏測資</span></span><br><span class="line">                <span class="keyword">if</span> (h[j + c[i]] == <span class="literal">true</span>) &#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                h[j + c[i]] = <span class="literal">true</span>;</span><br><span class="line">                check[j + c[i]] = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// S - (M - sum) 有可能為負數</span></span><br><span class="line">    <span class="comment">// 所以會扣 7% 的隱藏測資</span></span><br><span class="line">    <span class="type">int</span> x = S - (M - sum);</span><br><span class="line">    <span class="keyword">if</span> (x &lt; <span class="number">0</span>) x = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = x; i &lt;= M; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (h[i]) &#123;</span><br><span class="line">            cout &lt;&lt; i &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>解題</category>
+        <category>CIRC_Judge</category>
+      </categories>
+      <tags>
+        <tag>APCS</tag>
+        <tag>DP</tag>
+        <tag>01背包</tag>
       </tags>
   </entry>
   <entry>
@@ -1789,43 +1807,6 @@ E. Run Time Error</p>
         <tag>解題</tag>
         <tag>Zerojudge</tag>
         <tag>進位制</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【解題】a290: 新手訓練系列 ~ 圖論</title>
-    <url>/solved/ZeroJudge/a290/</url>
-    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWEyOTA=">a290: 新手訓練系列 ~ 圖論<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
-<p>先將圖建好，再用 BFS 慢慢走訪，從訪問的起點開始，走過的地方都標記為 true ，若最後終點是 true，輸出 Yes!!!，否則 No!!!</p>
-<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
-<figure class="highlight cpp"><figcaption><span>a290</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> N, M;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; N &gt;&gt; M) &#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; d[N];</span><br><span class="line">        queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">        <span class="type">bool</span> check[<span class="number">800</span>] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; M; i++) &#123;</span><br><span class="line">            <span class="type">int</span> a, b;</span><br><span class="line">            cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">            a--;</span><br><span class="line">            b--;</span><br><span class="line">            d[a].<span class="built_in">push_back</span>(b);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 將能走的路徑都設為 true</span></span><br><span class="line">        <span class="type">int</span> A, B;</span><br><span class="line">        cin &gt;&gt; A &gt;&gt; B;</span><br><span class="line">        A--;</span><br><span class="line">        B--;</span><br><span class="line">        q.<span class="built_in">push</span>(A);</span><br><span class="line">        check[A] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="type">int</span> temp = q.<span class="built_in">front</span>();</span><br><span class="line">            q.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;i : d[temp]) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!check[i]) &#123;</span><br><span class="line">                    check[i] = <span class="literal">true</span>;</span><br><span class="line">                    q.<span class="built_in">push</span>(i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 訪問 B 點是否能走到</span></span><br><span class="line">        <span class="keyword">if</span> (check[B]) &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Yes!!!\n&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;No!!!\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>解題</category>
-        <category>ZeroJudge</category>
-      </categories>
-      <tags>
-        <tag>解題</tag>
-        <tag>Zerojudge</tag>
-        <tag>Graph</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【解題】d002: 習題 Q-1-2. 合成函數(2) (APCS201902)</title>
-    <url>/solved/TCFSH_CIRC_Judge/d002/</url>
-    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly9qdWRnZS50Y2lyYy50dy9TaG93UHJvYmxlbT9wcm9ibGVtaWQ9ZDAwMg==">d002: 習題 Q-1-2. 合成函數(2) (APCS201902)<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
-<p>利用遞迴做函數的輸入及計算，同 <span class="exturl" data-url="aHR0cHM6Ly9qdWRnZS50Y2lyYy50dy9TaG93UHJvYmxlbT9wcm9ibGVtaWQ9ZDAwMQ==">d001: 例題 P-1-1. 合成函數(1)<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
-<figure class="highlight cpp"><figcaption><span>d002</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">eval</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> x, y, z;</span><br><span class="line">    <span class="type">char</span> token[<span class="number">5</span>];</span><br><span class="line">    cin &gt;&gt; token;</span><br><span class="line">    <span class="keyword">if</span> (token[<span class="number">0</span>] == <span class="string">&#x27;f&#x27;</span>) &#123;</span><br><span class="line">        x = <span class="built_in">eval</span>();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span> * x - <span class="number">3</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (token[<span class="number">0</span>] == <span class="string">&#x27;g&#x27;</span>) &#123;</span><br><span class="line">        x = <span class="built_in">eval</span>();</span><br><span class="line">        y = <span class="built_in">eval</span>();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span> * x + y - <span class="number">7</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (token[<span class="number">0</span>] == <span class="string">&#x27;h&#x27;</span>) &#123;</span><br><span class="line">        x = <span class="built_in">eval</span>();</span><br><span class="line">        y = <span class="built_in">eval</span>();</span><br><span class="line">        z = <span class="built_in">eval</span>();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">3</span> * x - <span class="number">2</span> * y + z;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">atoi</span>(token);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">eval</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>解題</category>
-        <category>CIRC_Judge</category>
-      </categories>
-      <tags>
-        <tag>APCS</tag>
       </tags>
   </entry>
   <entry>
@@ -1876,6 +1857,26 @@ E. Run Time Error</p>
       </tags>
   </entry>
   <entry>
+    <title>【解題】e287. 機器人的路徑</title>
+    <url>/solved/ZeroJudge/e287/</url>
+    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWUyODc=">e287. 機器人的路徑<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
+<p>純屬 BFS</p>
+<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
+<figure class="highlight cpp"><figcaption><span>e287</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MN_const 1000001</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> x = <span class="number">0</span>, y = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> G[<span class="number">105</span>][<span class="number">105</span>];</span><br><span class="line"><span class="type">bool</span> visit[<span class="number">105</span>][<span class="number">105</span>] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line"><span class="type">int</span> mn = MN_const;</span><br><span class="line"><span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> dx[<span class="number">4</span>] = &#123;<span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">0</span>&#125;;</span><br><span class="line"><span class="type">int</span> dy[<span class="number">4</span>] = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= m; j++) &#123;</span><br><span class="line">            cin &gt;&gt; G[i][j];</span><br><span class="line">            <span class="keyword">if</span> (G[i][j] &lt; mn) &#123;</span><br><span class="line">                x = i;</span><br><span class="line">                y = j;</span><br><span class="line">                mn = G[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// set boundary</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= n; i++) visit[i][<span class="number">0</span>] = visit[i][m + <span class="number">1</span>] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= m; i++) visit[<span class="number">0</span>][i] = visit[n + <span class="number">1</span>][i] = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="type">int</span> nx, ny;</span><br><span class="line">        <span class="type">int</span> d_mn = MN_const;</span><br><span class="line">        ans += G[x][y];</span><br><span class="line">        visit[x][y] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">            <span class="type">int</span> ix = x + dx[i], iy = y + dy[i];</span><br><span class="line">            <span class="keyword">if</span> (G[ix][iy] &lt; d_mn &amp;&amp; visit[ix][iy] == <span class="literal">false</span>) &#123;</span><br><span class="line">                nx = ix;</span><br><span class="line">                ny = iy;</span><br><span class="line">                d_mn = G[ix][iy];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (d_mn == MN_const) <span class="keyword">break</span>;</span><br><span class="line">        x = nx;</span><br><span class="line">        y = ny;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>解題</category>
+        <category>ZeroJudge</category>
+      </categories>
+      <tags>
+        <tag>APCS</tag>
+        <tag>Zerojudge</tag>
+        <tag>BFS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【解題】f377. 運算式轉換</title>
     <url>/solved/ZeroJudge/f377/</url>
     <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
@@ -1893,6 +1894,25 @@ E. Run Time Error</p>
         <tag>解題</tag>
         <tag>Zerojudge</tag>
         <tag>後序式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【解題】a290: 新手訓練系列 ~ 圖論</title>
+    <url>/solved/ZeroJudge/a290/</url>
+    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWEyOTA=">a290: 新手訓練系列 ~ 圖論<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
+<p>先將圖建好，再用 BFS 慢慢走訪，從訪問的起點開始，走過的地方都標記為 true ，若最後終點是 true，輸出 Yes!!!，否則 No!!!</p>
+<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
+<figure class="highlight cpp"><figcaption><span>a290</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> N, M;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; N &gt;&gt; M) &#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; d[N];</span><br><span class="line">        queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">        <span class="type">bool</span> check[<span class="number">800</span>] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; M; i++) &#123;</span><br><span class="line">            <span class="type">int</span> a, b;</span><br><span class="line">            cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">            a--;</span><br><span class="line">            b--;</span><br><span class="line">            d[a].<span class="built_in">push_back</span>(b);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 將能走的路徑都設為 true</span></span><br><span class="line">        <span class="type">int</span> A, B;</span><br><span class="line">        cin &gt;&gt; A &gt;&gt; B;</span><br><span class="line">        A--;</span><br><span class="line">        B--;</span><br><span class="line">        q.<span class="built_in">push</span>(A);</span><br><span class="line">        check[A] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="type">int</span> temp = q.<span class="built_in">front</span>();</span><br><span class="line">            q.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;i : d[temp]) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!check[i]) &#123;</span><br><span class="line">                    check[i] = <span class="literal">true</span>;</span><br><span class="line">                    q.<span class="built_in">push</span>(i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 訪問 B 點是否能走到</span></span><br><span class="line">        <span class="keyword">if</span> (check[B]) &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Yes!!!\n&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;No!!!\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>解題</category>
+        <category>ZeroJudge</category>
+      </categories>
+      <tags>
+        <tag>解題</tag>
+        <tag>Zerojudge</tag>
+        <tag>Graph</tag>
       </tags>
   </entry>
   <entry>
@@ -1945,23 +1965,21 @@ E. Run Time Error</p>
       </tags>
   </entry>
   <entry>
-    <title>【解題】e287. 機器人的路徑</title>
-    <url>/solved/ZeroJudge/e287/</url>
+    <title>【解題】j178: 手遊廣告 (Advertisement)</title>
+    <url>/solved/ZeroJudge/j178/</url>
     <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWUyODc=">e287. 機器人的路徑<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWoxNzg=">j178: 手遊廣告 (Advertisement)<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
-<p>純屬 BFS</p>
+<p>水題。</p>
 <h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
-<figure class="highlight cpp"><figcaption><span>e287</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MN_const 1000001</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> x = <span class="number">0</span>, y = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> G[<span class="number">105</span>][<span class="number">105</span>];</span><br><span class="line"><span class="type">bool</span> visit[<span class="number">105</span>][<span class="number">105</span>] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line"><span class="type">int</span> mn = MN_const;</span><br><span class="line"><span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> dx[<span class="number">4</span>] = &#123;<span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">0</span>&#125;;</span><br><span class="line"><span class="type">int</span> dy[<span class="number">4</span>] = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= m; j++) &#123;</span><br><span class="line">            cin &gt;&gt; G[i][j];</span><br><span class="line">            <span class="keyword">if</span> (G[i][j] &lt; mn) &#123;</span><br><span class="line">                x = i;</span><br><span class="line">                y = j;</span><br><span class="line">                mn = G[i][j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// set boundary</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= n; i++) visit[i][<span class="number">0</span>] = visit[i][m + <span class="number">1</span>] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= m; i++) visit[<span class="number">0</span>][i] = visit[n + <span class="number">1</span>][i] = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="type">int</span> nx, ny;</span><br><span class="line">        <span class="type">int</span> d_mn = MN_const;</span><br><span class="line">        ans += G[x][y];</span><br><span class="line">        visit[x][y] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">            <span class="type">int</span> ix = x + dx[i], iy = y + dy[i];</span><br><span class="line">            <span class="keyword">if</span> (G[ix][iy] &lt; d_mn &amp;&amp; visit[ix][iy] == <span class="literal">false</span>) &#123;</span><br><span class="line">                nx = ix;</span><br><span class="line">                ny = iy;</span><br><span class="line">                d_mn = G[ix][iy];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (d_mn == MN_const) <span class="keyword">break</span>;</span><br><span class="line">        x = nx;</span><br><span class="line">        y = ny;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
+<figure class="highlight cpp"><figcaption><span>j178</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> m, a;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; a;</span><br><span class="line">    <span class="type">int</span> T[m];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        cin &gt;&gt; T[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (a &lt;= T[i]) <span class="keyword">break</span>;</span><br><span class="line">        a += T[i];</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; a &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>解題</category>
         <category>ZeroJudge</category>
       </categories>
       <tags>
-        <tag>APCS</tag>
-        <tag>Zerojudge</tag>
-        <tag>BFS</tag>
+        <tag>TOI</tag>
+        <tag>解題</tag>
       </tags>
   </entry>
   <entry>
@@ -1987,25 +2005,6 @@ E. Run Time Error</p>
       </categories>
       <tags>
         <tag>TOI</tag>
-        <tag>解題</tag>
-        <tag>Zerojudge</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【解題】j605. 1. 程式考試</title>
-    <url>/solved/ZeroJudge/j605/</url>
-    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWo2MDU=">j605. 1. 程式考試<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
-<p>APCS 第一題純水題</p>
-<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
-<figure class="highlight cpp"><figcaption><span>j605</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> data[n][<span class="number">2</span>];</span><br><span class="line">    <span class="type">int</span> max_num = <span class="number">-1</span>;</span><br><span class="line">    <span class="type">int</span> max_num_time = <span class="number">-1</span>;</span><br><span class="line">    <span class="type">int</span> error_times = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; data[i][<span class="number">0</span>] &gt;&gt; data[i][<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span> (data[i][<span class="number">1</span>] &gt; max_num) &#123;</span><br><span class="line">            max_num_time = data[i][<span class="number">0</span>];</span><br><span class="line">            max_num = data[i][<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (data[i][<span class="number">1</span>] == <span class="number">-1</span>) &#123;</span><br><span class="line">            error_times++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> total = max_num - n - (error_times * <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; ((total &lt; <span class="number">0</span>) ? <span class="number">0</span> : total) &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; max_num_time &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>解題</category>
-        <category>ZeroJudge</category>
-      </categories>
-      <tags>
-        <tag>APCS</tag>
         <tag>解題</tag>
         <tag>Zerojudge</tag>
       </tags>
@@ -2044,21 +2043,22 @@ E. Run Time Error</p>
       </tags>
   </entry>
   <entry>
-    <title>【解題】j178: 手遊廣告 (Advertisement)</title>
-    <url>/solved/ZeroJudge/j178/</url>
+    <title>【解題】j605. 1. 程式考試</title>
+    <url>/solved/ZeroJudge/j605/</url>
     <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWoxNzg=">j178: 手遊廣告 (Advertisement)<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWo2MDU=">j605. 1. 程式考試<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
-<p>水題。</p>
+<p>APCS 第一題純水題</p>
 <h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
-<figure class="highlight cpp"><figcaption><span>j178</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> m, a;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; a;</span><br><span class="line">    <span class="type">int</span> T[m];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        cin &gt;&gt; T[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (a &lt;= T[i]) <span class="keyword">break</span>;</span><br><span class="line">        a += T[i];</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; a &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight cpp"><figcaption><span>j605</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> data[n][<span class="number">2</span>];</span><br><span class="line">    <span class="type">int</span> max_num = <span class="number">-1</span>;</span><br><span class="line">    <span class="type">int</span> max_num_time = <span class="number">-1</span>;</span><br><span class="line">    <span class="type">int</span> error_times = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; data[i][<span class="number">0</span>] &gt;&gt; data[i][<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span> (data[i][<span class="number">1</span>] &gt; max_num) &#123;</span><br><span class="line">            max_num_time = data[i][<span class="number">0</span>];</span><br><span class="line">            max_num = data[i][<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (data[i][<span class="number">1</span>] == <span class="number">-1</span>) &#123;</span><br><span class="line">            error_times++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> total = max_num - n - (error_times * <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; ((total &lt; <span class="number">0</span>) ? <span class="number">0</span> : total) &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; max_num_time &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>解題</category>
         <category>ZeroJudge</category>
       </categories>
       <tags>
-        <tag>TOI</tag>
+        <tag>APCS</tag>
         <tag>解題</tag>
+        <tag>Zerojudge</tag>
       </tags>
   </entry>
 </search>
