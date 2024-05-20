@@ -24,6 +24,43 @@
   --highlight-gutter-foreground: #656565;
   color-scheme: light;
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg-color: #282828;
+    --content-bg-color: #333;
+    --card-bg-color: #555;
+    --text-color: #ccc;
+    --blockquote-color: #bbb;
+    --link-color: #ccc;
+    --link-hover-color: #eee;
+    --brand-color: #ddd;
+    --brand-hover-color: #ddd;
+    --table-row-odd-bg-color: #282828;
+    --table-row-hover-bg-color: #363636;
+    --menu-item-bg-color: #555;
+    --theme-color: #222;
+    --btn-default-bg: #222;
+    --btn-default-color: #ccc;
+    --btn-default-border-color: #555;
+    --btn-default-hover-bg: #666;
+    --btn-default-hover-color: #ccc;
+    --btn-default-hover-border-color: #666;
+    --highlight-background: #000;
+    --highlight-foreground: #eaeaea;
+    --highlight-gutter-background: #171717;
+    --highlight-gutter-foreground: #d2d2d2;
+    color-scheme: dark;
+  }
+  img {
+    opacity: 0.75;
+  }
+  img:hover {
+    opacity: 0.9;
+  }
+  iframe {
+    color-scheme: light;
+  }
+}
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -468,6 +505,76 @@ code.hljs {
     font-weight: bold
   }
 }
+@media (prefers-color-scheme: dark) {
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+/* Tomorrow Night Bright Theme */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #969896
+}
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+  color: #d54e53
+}
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+  color: #e78c45
+}
+/* Tomorrow Yellow */
+.hljs-attribute {
+  color: #e7c547
+}
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #b9ca4a
+}
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+  color: #7aa6da
+}
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #c397d8
+}
+.hljs {
+  background: black;
+  color: #eaeaea
+}
+.hljs-emphasis {
+  font-style: italic
+}
+.hljs-strong {
+  font-weight: bold
+}
+}
 .highlight:hover .copy-btn,
 .code-container:hover .copy-btn {
   opacity: 1;
@@ -675,7 +782,7 @@ pre code {
   background: #f0f0f0;
 }
 .post-body .label.primary {
-  background: #efe6f7;
+  background: #f8f0ff;
 }
 .post-body .label.info {
   background: #e5f2f8;
@@ -783,7 +890,7 @@ pre code {
   }
 }
 .post-body .note {
-  border-radius: 3px;
+  border-radius: 5px;
   margin-bottom: 20px;
   padding: 1em;
   position: relative;
@@ -826,6 +933,11 @@ pre code {
   background: #f7f7f7;
   border-left-color: #777;
 }
+@media (prefers-color-scheme: dark) {
+  .post-body .note.default {
+    background: #515151;
+  }
+}
 .post-body .note.default h2,
 .post-body .note.default h3,
 .post-body .note.default h4,
@@ -840,25 +952,35 @@ pre code {
   color: #777;
 }
 .post-body .note.primary {
-  background: #f5f0fa;
-  border-left-color: #6f42c1;
+  background: #faf5ff;
+  border-left-color: #b288ff;
+}
+@media (prefers-color-scheme: dark) {
+  .post-body .note.primary {
+    background: #525153;
+  }
 }
 .post-body .note.primary h2,
 .post-body .note.primary h3,
 .post-body .note.primary h4,
 .post-body .note.primary h5,
 .post-body .note.primary h6 {
-  color: #6f42c1;
+  color: #b288ff;
 }
 .post-body .note.primary:not(.no-icon)::before {
   content: '\f055';
   font-family: 'Font Awesome 6 Free';
   font-weight: 900;
-  color: #6f42c1;
+  color: #b288ff;
 }
 .post-body .note.info {
   background: #eef7fa;
   border-left-color: #428bca;
+}
+@media (prefers-color-scheme: dark) {
+  .post-body .note.info {
+    background: #4f5152;
+  }
 }
 .post-body .note.info h2,
 .post-body .note.info h3,
@@ -877,6 +999,11 @@ pre code {
   background: #eff8f0;
   border-left-color: #5cb85c;
 }
+@media (prefers-color-scheme: dark) {
+  .post-body .note.success {
+    background: #4f5150;
+  }
+}
 .post-body .note.success h2,
 .post-body .note.success h3,
 .post-body .note.success h4,
@@ -894,6 +1021,11 @@ pre code {
   background: #fdf8ea;
   border-left-color: #f0ad4e;
 }
+@media (prefers-color-scheme: dark) {
+  .post-body .note.warning {
+    background: #52514e;
+  }
+}
 .post-body .note.warning h2,
 .post-body .note.warning h3,
 .post-body .note.warning h4,
@@ -910,6 +1042,11 @@ pre code {
 .post-body .note.danger {
   background: #fcf1f2;
   border-left-color: #d9534f;
+}
+@media (prefers-color-scheme: dark) {
+  .post-body .note.danger {
+    background: #525050;
+  }
 }
 .post-body .note.danger h2,
 .post-body .note.danger h3,
@@ -1310,7 +1447,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #ff78ad;
+    background: #41ffff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2462,6 +2599,52 @@ ul.breadcrumb li:last-child {
   border-bottom-color: #111;
   color: #111;
 }
+@media (prefers-color-scheme: dark) {
+  .tag-cloud-0 {
+    border-bottom-color: #555;
+    color: #555;
+  }
+  .tag-cloud-1 {
+    border-bottom-color: #646464;
+    color: #646464;
+  }
+  .tag-cloud-2 {
+    border-bottom-color: #737373;
+    color: #737373;
+  }
+  .tag-cloud-3 {
+    border-bottom-color: #828282;
+    color: #828282;
+  }
+  .tag-cloud-4 {
+    border-bottom-color: #929292;
+    color: #929292;
+  }
+  .tag-cloud-5 {
+    border-bottom-color: #a1a1a1;
+    color: #a1a1a1;
+  }
+  .tag-cloud-6 {
+    border-bottom-color: #b0b0b0;
+    color: #b0b0b0;
+  }
+  .tag-cloud-7 {
+    border-bottom-color: #c0c0c0;
+    color: #c0c0c0;
+  }
+  .tag-cloud-8 {
+    border-bottom-color: #cfcfcf;
+    color: #cfcfcf;
+  }
+  .tag-cloud-9 {
+    border-bottom-color: #dedede;
+    color: #dedede;
+  }
+  .tag-cloud-10 {
+    border-bottom-color: #eee;
+    color: #eee;
+  }
+}
 .gt-header a,
 .gt-comments a,
 .gt-popup a {
@@ -2469,6 +2652,11 @@ ul.breadcrumb li:last-child {
 }
 .gt-container .gt-popup .gt-action.is--active::before {
   top: 0.7em;
+}
+@media (prefers-color-scheme: dark) {
+  .gt-container .gt-header-textarea {
+    background-color: var(--card-bg-color) !important;
+  }
 }
 .search-active {
   overflow: hidden;
@@ -2526,6 +2714,11 @@ ul.breadcrumb li:last-child {
   border-top-right-radius: 5px;
   display: flex;
   padding: 5px;
+}
+@media (prefers-color-scheme: dark) {
+  .search-popup .search-header {
+    background: #666;
+  }
 }
 .search-popup input.search-input {
   background: transparent;
