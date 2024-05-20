@@ -21,37 +21,6 @@
       </tags>
   </entry>
   <entry>
-    <title>APCS 2024 1 月場</title>
-    <url>/APCS-2024-01/</url>
-    <content><![CDATA[<h1 id="說明"><a class="markdownIt-Anchor" href="#說明"></a> 說明</h1>
-<p>第 4 題還在研究~</p>
-<h2 id="1-遊戲選角"><a class="markdownIt-Anchor" href="#1-遊戲選角"></a> 1. 遊戲選角</h2>
-<details class="note default"><summary><p>展開程式碼</p>
-</summary>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">p</span> &#123;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="type">int</span> d;</span><br><span class="line">    <span class="type">int</span> ability;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(p a, p b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.ability &gt; b.ability;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ouo;</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    p player[n];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; player[i].a &gt;&gt; player[i].d;</span><br><span class="line">        player[i].ability = player[i].a * player[i].a + player[i].d * player[i].d;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(player, player + n, cmp);</span><br><span class="line">    cout &lt;&lt; player[<span class="number">1</span>].a &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; player[<span class="number">1</span>].d;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</details>
-<h2 id="2-蜜蜂觀察"><a class="markdownIt-Anchor" href="#2-蜜蜂觀察"></a> 2. 蜜蜂觀察</h2>
-<details class="note default"><summary><p>展開程式碼</p>
-</summary>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> m, n, k;</span><br><span class="line"><span class="type">int</span> amount = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; n &gt;&gt; k;</span><br><span class="line"></span><br><span class="line">    string arr[m];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        cin &gt;&gt; arr[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> p_x = m - <span class="number">1</span>, p_y = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">bool</span> alpha[<span class="number">2</span>][<span class="number">26</span>] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> t = <span class="number">0</span>; t &lt; k; t++) &#123;</span><br><span class="line">        <span class="type">int</span> d = <span class="number">-1</span>;</span><br><span class="line">        cin &gt;&gt; d;</span><br><span class="line">        <span class="type">int</span> d_x = <span class="number">0</span>, d_y = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">switch</span> (d) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">                d_x -= <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                d_y += <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                d_x += <span class="number">1</span>;</span><br><span class="line">                d_y += <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                d_x += <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">                d_y -= <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">                d_x -= <span class="number">1</span>;</span><br><span class="line">                d_y -= <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (p_x + d_x &lt; m &amp;&amp; p_x + d_x &gt;= <span class="number">0</span> &amp;&amp; p_y + d_y &lt; n &amp;&amp; p_y + d_y &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">            p_x += d_x;</span><br><span class="line">            p_y += d_y;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; arr[p_x][p_y];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (arr[p_x][p_y] &gt;= <span class="string">&#x27;a&#x27;</span> &amp;&amp; arr[p_x][p_y] &lt;= <span class="string">&#x27;z&#x27;</span>) &#123;</span><br><span class="line">            alpha[<span class="number">0</span>][arr[p_x][p_y] - <span class="string">&#x27;a&#x27;</span>] = <span class="literal">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[p_x][p_y] &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; arr[p_x][p_y] &lt;= <span class="string">&#x27;Z&#x27;</span>) &#123;</span><br><span class="line">            alpha[<span class="number">1</span>][arr[p_x][p_y] - <span class="string">&#x27;A&#x27;</span>] = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">26</span>; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (alpha[i][j] == <span class="literal">true</span>) amount++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;\n&quot;</span></span><br><span class="line">         &lt;&lt; amount;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</details>
-<h2 id="3-邏輯電路"><a class="markdownIt-Anchor" href="#3-邏輯電路"></a> 3. 邏輯電路</h2>
-<p>參考 <span class="exturl" data-url="aHR0cHM6Ly9oYWNrbWQuaW8vQFlvdXRvbmcwODI2L3pqX205OTM=">@Youtong0826<i class="fa fa-external-link-alt"></i></span> 的思路，原本只有做 DFS 的部分但會超時，所以改成用 DP 紀錄已經跑過的邏輯閘。</p>
-<details class="note default"><summary><p>展開程式碼</p>
-</summary>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> &#123;</span><br><span class="line">    <span class="type">int</span> type;  <span class="comment">// 1: AND, 2: OR, 3: XOR, 4: NOT</span></span><br><span class="line">    <span class="type">int</span> result;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> p, q, r, m;</span><br><span class="line">vector&lt;node&gt; vc;</span><br><span class="line">vector&lt;<span class="type">bool</span>&gt; visited;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; ans;</span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; g;</span><br><span class="line">vector&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt; dp;</span><br><span class="line"></span><br><span class="line"><span class="comment">// pair&lt;int, int&gt; = &#123;result, delay&#125;</span></span><br><span class="line"><span class="function">pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; <span class="title">dfs</span><span class="params">(<span class="type">int</span> idx)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (idx &lt;= p) &#123;</span><br><span class="line">        visited[idx] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> dp[idx] = &#123;vc[idx].result, <span class="number">0</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 輸出節點必只有一個輸入端</span></span><br><span class="line">    <span class="keyword">if</span> (idx &gt; p + q &amp;&amp; idx &lt;= p + q + r) <span class="keyword">return</span> <span class="built_in">dfs</span>(g[idx][<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (visited[idx]) <span class="keyword">return</span> dp[idx];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// do</span></span><br><span class="line">    visited[idx] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">auto</span> a = <span class="built_in">dfs</span>(g[idx][<span class="number">0</span>]);  <span class="comment">// 先取得第一個輸入端</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (vc[idx].type == <span class="number">4</span>) <span class="keyword">return</span> dp[idx] = &#123;!a.first, a.second + <span class="number">1</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> b = <span class="built_in">dfs</span>(g[idx][<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (vc[idx].type == <span class="number">1</span>) <span class="keyword">return</span> dp[idx] = &#123;(a.first &amp;&amp; b.first), <span class="built_in">max</span>(a.second, b.second) + <span class="number">1</span>&#125;;</span><br><span class="line">    <span class="keyword">if</span> (vc[idx].type == <span class="number">2</span>) <span class="keyword">return</span> dp[idx] = &#123;(a.first || b.first), <span class="built_in">max</span>(a.second, b.second) + <span class="number">1</span>&#125;;</span><br><span class="line">    <span class="keyword">if</span> (vc[idx].type == <span class="number">3</span>) <span class="keyword">return</span> dp[idx] = &#123;(a.first != b.first), <span class="built_in">max</span>(a.second, b.second) + <span class="number">1</span>&#125;;</span><br><span class="line">    <span class="keyword">return</span> &#123;vc[idx].result, <span class="number">0</span>&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ouo;</span><br><span class="line">    cin &gt;&gt; p &gt;&gt; q &gt;&gt; r &gt;&gt; m;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// init</span></span><br><span class="line">    vc.<span class="built_in">resize</span>(p + q + r + <span class="number">1</span>);</span><br><span class="line">    visited.<span class="built_in">assign</span>(p + q + r + <span class="number">1</span>, <span class="literal">false</span>);</span><br><span class="line">    g.<span class="built_in">assign</span>(p + q + r + <span class="number">1</span>, &#123;&#125;);</span><br><span class="line">    dp.<span class="built_in">resize</span>(p + q + r + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= p + q; i++) &#123;</span><br><span class="line">        vc[i].result = <span class="number">0</span>;</span><br><span class="line">        vc[i].type = <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// in</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= p; i++) &#123;</span><br><span class="line">        cin &gt;&gt; vc[i].result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// logic</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= q; i++) &#123;</span><br><span class="line">        cin &gt;&gt; vc[p + i].type;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// graph</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">        <span class="type">int</span> a, b;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">        g[b].<span class="built_in">push_back</span>(a);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> delay = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = p + q + <span class="number">1</span>; i &lt;= p + q + r; i++) &#123;</span><br><span class="line">        <span class="keyword">auto</span> f = <span class="built_in">dfs</span>(i);</span><br><span class="line">        ans.<span class="built_in">push_back</span>(f.first);</span><br><span class="line">        delay = <span class="built_in">max</span>(delay, f.second);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; delay &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> i : ans) cout &lt;&lt; i &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</details>
-]]></content>
-      <categories>
-        <category>APCS</category>
-      </categories>
-      <tags>
-        <tag>APCS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【經驗】逢甲資工系 APCS 組面試經驗</title>
     <url>/FCU-CSIE-APCS-interview/</url>
     <content><![CDATA[<h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
@@ -149,6 +118,37 @@
         <tag>TOI</tag>
         <tag>TOIP</tag>
         <tag>新手組</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>APCS 2024 1 月場</title>
+    <url>/APCS-2024-01/</url>
+    <content><![CDATA[<h1 id="說明"><a class="markdownIt-Anchor" href="#說明"></a> 說明</h1>
+<p>第 4 題還在研究~</p>
+<h2 id="1-遊戲選角"><a class="markdownIt-Anchor" href="#1-遊戲選角"></a> 1. 遊戲選角</h2>
+<details class="note default"><summary><p>展開程式碼</p>
+</summary>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">p</span> &#123;</span><br><span class="line">    <span class="type">int</span> a;</span><br><span class="line">    <span class="type">int</span> d;</span><br><span class="line">    <span class="type">int</span> ability;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(p a, p b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.ability &gt; b.ability;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ouo;</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    p player[n];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; player[i].a &gt;&gt; player[i].d;</span><br><span class="line">        player[i].ability = player[i].a * player[i].a + player[i].d * player[i].d;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(player, player + n, cmp);</span><br><span class="line">    cout &lt;&lt; player[<span class="number">1</span>].a &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; player[<span class="number">1</span>].d;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+<h2 id="2-蜜蜂觀察"><a class="markdownIt-Anchor" href="#2-蜜蜂觀察"></a> 2. 蜜蜂觀察</h2>
+<details class="note default"><summary><p>展開程式碼</p>
+</summary>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> m, n, k;</span><br><span class="line"><span class="type">int</span> amount = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; n &gt;&gt; k;</span><br><span class="line"></span><br><span class="line">    string arr[m];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        cin &gt;&gt; arr[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> p_x = m - <span class="number">1</span>, p_y = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">bool</span> alpha[<span class="number">2</span>][<span class="number">26</span>] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> t = <span class="number">0</span>; t &lt; k; t++) &#123;</span><br><span class="line">        <span class="type">int</span> d = <span class="number">-1</span>;</span><br><span class="line">        cin &gt;&gt; d;</span><br><span class="line">        <span class="type">int</span> d_x = <span class="number">0</span>, d_y = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">switch</span> (d) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">                d_x -= <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                d_y += <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                d_x += <span class="number">1</span>;</span><br><span class="line">                d_y += <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                d_x += <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">                d_y -= <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">                d_x -= <span class="number">1</span>;</span><br><span class="line">                d_y -= <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (p_x + d_x &lt; m &amp;&amp; p_x + d_x &gt;= <span class="number">0</span> &amp;&amp; p_y + d_y &lt; n &amp;&amp; p_y + d_y &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">            p_x += d_x;</span><br><span class="line">            p_y += d_y;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; arr[p_x][p_y];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (arr[p_x][p_y] &gt;= <span class="string">&#x27;a&#x27;</span> &amp;&amp; arr[p_x][p_y] &lt;= <span class="string">&#x27;z&#x27;</span>) &#123;</span><br><span class="line">            alpha[<span class="number">0</span>][arr[p_x][p_y] - <span class="string">&#x27;a&#x27;</span>] = <span class="literal">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[p_x][p_y] &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; arr[p_x][p_y] &lt;= <span class="string">&#x27;Z&#x27;</span>) &#123;</span><br><span class="line">            alpha[<span class="number">1</span>][arr[p_x][p_y] - <span class="string">&#x27;A&#x27;</span>] = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">26</span>; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (alpha[i][j] == <span class="literal">true</span>) amount++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;\n&quot;</span></span><br><span class="line">         &lt;&lt; amount;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>
+<h2 id="3-邏輯電路"><a class="markdownIt-Anchor" href="#3-邏輯電路"></a> 3. 邏輯電路</h2>
+<p>參考 <span class="exturl" data-url="aHR0cHM6Ly9oYWNrbWQuaW8vQFlvdXRvbmcwODI2L3pqX205OTM=">@Youtong0826<i class="fa fa-external-link-alt"></i></span> 的思路，原本只有做 DFS 的部分但會超時，所以改成用 DP 紀錄已經跑過的邏輯閘。</p>
+<details class="note default"><summary><p>展開程式碼</p>
+</summary>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> &#123;</span><br><span class="line">    <span class="type">int</span> type;  <span class="comment">// 1: AND, 2: OR, 3: XOR, 4: NOT</span></span><br><span class="line">    <span class="type">int</span> result;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> p, q, r, m;</span><br><span class="line">vector&lt;node&gt; vc;</span><br><span class="line">vector&lt;<span class="type">bool</span>&gt; visited;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; ans;</span><br><span class="line">vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; g;</span><br><span class="line">vector&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt; dp;</span><br><span class="line"></span><br><span class="line"><span class="comment">// pair&lt;int, int&gt; = &#123;result, delay&#125;</span></span><br><span class="line"><span class="function">pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt; <span class="title">dfs</span><span class="params">(<span class="type">int</span> idx)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (idx &lt;= p) &#123;</span><br><span class="line">        visited[idx] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> dp[idx] = &#123;vc[idx].result, <span class="number">0</span>&#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 輸出節點必只有一個輸入端</span></span><br><span class="line">    <span class="keyword">if</span> (idx &gt; p + q &amp;&amp; idx &lt;= p + q + r) <span class="keyword">return</span> <span class="built_in">dfs</span>(g[idx][<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (visited[idx]) <span class="keyword">return</span> dp[idx];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// do</span></span><br><span class="line">    visited[idx] = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">auto</span> a = <span class="built_in">dfs</span>(g[idx][<span class="number">0</span>]);  <span class="comment">// 先取得第一個輸入端</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (vc[idx].type == <span class="number">4</span>) <span class="keyword">return</span> dp[idx] = &#123;!a.first, a.second + <span class="number">1</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> b = <span class="built_in">dfs</span>(g[idx][<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (vc[idx].type == <span class="number">1</span>) <span class="keyword">return</span> dp[idx] = &#123;(a.first &amp;&amp; b.first), <span class="built_in">max</span>(a.second, b.second) + <span class="number">1</span>&#125;;</span><br><span class="line">    <span class="keyword">if</span> (vc[idx].type == <span class="number">2</span>) <span class="keyword">return</span> dp[idx] = &#123;(a.first || b.first), <span class="built_in">max</span>(a.second, b.second) + <span class="number">1</span>&#125;;</span><br><span class="line">    <span class="keyword">if</span> (vc[idx].type == <span class="number">3</span>) <span class="keyword">return</span> dp[idx] = &#123;(a.first != b.first), <span class="built_in">max</span>(a.second, b.second) + <span class="number">1</span>&#125;;</span><br><span class="line">    <span class="keyword">return</span> &#123;vc[idx].result, <span class="number">0</span>&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ouo;</span><br><span class="line">    cin &gt;&gt; p &gt;&gt; q &gt;&gt; r &gt;&gt; m;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// init</span></span><br><span class="line">    vc.<span class="built_in">resize</span>(p + q + r + <span class="number">1</span>);</span><br><span class="line">    visited.<span class="built_in">assign</span>(p + q + r + <span class="number">1</span>, <span class="literal">false</span>);</span><br><span class="line">    g.<span class="built_in">assign</span>(p + q + r + <span class="number">1</span>, &#123;&#125;);</span><br><span class="line">    dp.<span class="built_in">resize</span>(p + q + r + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= p + q; i++) &#123;</span><br><span class="line">        vc[i].result = <span class="number">0</span>;</span><br><span class="line">        vc[i].type = <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// in</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= p; i++) &#123;</span><br><span class="line">        cin &gt;&gt; vc[i].result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// logic</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= q; i++) &#123;</span><br><span class="line">        cin &gt;&gt; vc[p + i].type;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// graph</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">        <span class="type">int</span> a, b;</span><br><span class="line">        cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">        g[b].<span class="built_in">push_back</span>(a);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> delay = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = p + q + <span class="number">1</span>; i &lt;= p + q + r; i++) &#123;</span><br><span class="line">        <span class="keyword">auto</span> f = <span class="built_in">dfs</span>(i);</span><br><span class="line">        ans.<span class="built_in">push_back</span>(f.first);</span><br><span class="line">        delay = <span class="built_in">max</span>(delay, f.second);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; delay &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> i : ans) cout &lt;&lt; i &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>
+]]></content>
+      <categories>
+        <category>APCS</category>
+      </categories>
+      <tags>
+        <tag>APCS</tag>
       </tags>
   </entry>
   <entry>
@@ -609,28 +609,6 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【日常】5 月 10 日 小雨</title>
-    <url>/life/20220510/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="865d69b420b60fa41ad859d77e662a4902f8acbba84a77d066f95f7a64d8505d">c4379dbc51520bb23a681c5b597ae53a1869955313f65a29abd12e88faa2d4aa923b96bcaea208789f9d7c66f64cbcd8dd88157bfaaa17266ef48cb0fe008e2ea95e1f579ca8704608b6a868ec00be564167b080c787864c9b759cd716c43a63952246f471a30134b8b6d422b5b6dba3e0ff29c00d1c0d63f028b3b0f7fd95707fceaa8ba43ce757c7cecccc6c9848a3abab425754a1c7af5cd04b0371eb1c2b</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>生活點滴</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【日常】5 月 11 日 雨</title>
     <url>/life/20220511/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
@@ -653,54 +631,32 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
+    <title>【日常】5 月 10 日 小雨</title>
+    <url>/life/20220510/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="865d69b420b60fa41ad859d77e662a4902f8acbba84a77d066f95f7a64d8505d">c4379dbc51520bb23a681c5b597ae53a1869955313f65a29abd12e88faa2d4aa923b96bcaea208789f9d7c66f64cbcd8dd88157bfaaa17266ef48cb0fe008e2ea95e1f579ca8704608b6a868ec00be564167b080c787864c9b759cd716c43a63952246f471a30134b8b6d422b5b6dba3e0ff29c00d1c0d63f028b3b0f7fd95707fceaa8ba43ce757c7cecccc6c9848a3abab425754a1c7af5cd04b0371eb1c2b</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>生活點滴</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【日常】5 月 12 日 雨</title>
     <url>/life/20220512/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
   <script id="hbeData" type="hbeData" data-hmacdigest="4652d18ff984276ee3e6fe4a4bc93a29a5e7796e1d1974c3305f7b37a60ed51f">c4379dbc51520bb23a681c5b597ae53a756d9c806c58b9ee8e50462704426c28b913582215f7cd543dac6eef4415db46619c1ffa985d4cf9b814ea16e487c64a026613f94533d4e3b37eb79fdf80eed24e92fc5401e85c10bcec4f2ba38e63d7bb7bac1f2e1210dbc6857935b385655120d301f55e037c7fdf43b125aad342a9602462365e5b041f4d89200782bbb9aa0d3e5af6e5d73778b4175da5c63a250a6e56322ad2d0eb8b18cbec9ee704fa3e4b3f89faadb8abd3a480da5326bba1abc444bc95a248faa36149987891afdf27c8cca4b7a63baf7bdfe5d2a2697b047a544ff85700257a7be731433ae10e60db5dead0328aa5d76e136df8c89f95924d2c8679ccc295fbefee0529b3146640e9507ae3491e39e2dc7b1755ccb35410e37697a03d60620e00af19a05ffc5fefc827091be16dc57b0d2547fd10ffde7eb5fe4558c7c07fa1185f7a5647c4dfa96f81d78f685bae6ead013f36da14d11f4d1a1c93816ba437c1ce21318cc19176841fe04b29d56cddb996c6570f6fb6b98eeba285659b67b64c7999a5b45f6b3323f6d9aaff24d214efbacaf9117ca7c44da2f051272bf361b93079ec764b7807b8c070438e36b7f4216ca283693350d7d033a8a89d919308af03d6cfa73a03161b742626a7e529798dd321b23cd6eb7cc15cdeeee4f9bfb84b2e20354b858a87641fde1a7ebc1523086e84f9389f8cde89c9095dcfe8e4ceb389bbb857d7c1e78bda18f6d615e1cecadbe39c63e9d769633932a234ad6ae1f2c3b5737c135302c6beded90517df9764aba71ed521334946e0a61f33b1f19e7bb8401caff3809336f5ebbd3c6c5a6ab0a03ca4ee99d3bf80c9b409b33208df1fcf6bc56002dfff9083e876bde8b2337ba7899a5c7e774c59c39909f0f542dcc733d8d373687a6f7e0c75cc26d592c80e2e651126d917a5319f2206ad1006b5e964b333e2ba4ac0466b41f5cd82b2798003cf5b1d0499624e5f2887d15755be39bd82a527d11e619e213f41d7489e9fffa94bef3432e2e057211e2d38e157dfd21c019b42978d91ab9c226f4e2a42e9bf60bcf52166590f1e</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>生活點滴</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【日常】5 月 24 日</title>
-    <url>/life/20220524/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="61275d55d8a4ff17b1b056a4a5d1a548d0d72268d5a32aa48fd3e6ad494cf8b9">c4379dbc51520bb23a681c5b597ae53afcd71c255395340f680c5e0e1e6fc2c29190548a9cb49bc2bd0e055147b0521f854fcd8dda1f2d75d19efaa25053e1653c6450d6b294bc23dab3f63bb18dd61b900d2d744672b4998c6a3a479f281dbc35274b9cb50b6c6b0c95faba600384189589a4165e364719d68834d96b2d4b13d569fca54ab5c5ad2fc090962704f97215511e3f430e30e883f0e2a7adc0b71d78c3e9968aaf70499432f06613a68c5a78d8e44b57be345e354c2d376b00e921114b8a34d309af462eba164bdbb344745b031d25cef69ae87341a30ba6d3c66f5dc09c8bba3eeaf9c9b926a43703b1bcfc9f2dab124bd58d3d27546f80d69db10062f22fd1df4cd03d3f59db771b400361a5378a4855e173050d74076c84317750ec732629e26c321dddf9f7fce289be5fe0f65c4485ba88261b918cf4935a8991de9fe1da5ee3d84f6b748b1e62a77fe2c21edcab454d27bf5550e2aa5226d89662b289e45cd83bd03f4e117e366f1c784f285c14ad9669e77fd71d519334145c30c7cd19a033660420621804b873f77dda605bd2dbff90044f6d40c4691de5155af4c671fcd44cb783e8fe3220ad4fe617c965a30e86b5329f4dcff1609644ddfb3621c0bd53481a74ed127402a6bc4210ba75d6c59777b6e3a844f96809212b688a4004ace2ec89d1f78f011968e916620c76fb35ebfe6815810864cd46eeb14ea2641a2a53b02699b38a0d3251b9b8fe4c399a3d3f11d3ab57f6dccb54dc18202c3cccf15be5c80480a56e157e17263943dca0e920dbf1506bf2cfccd441aebef93d600d65d222a9d4176e0f5fc85628c9e168842e47c08d5aa6e820f945747f91f8a262bcc90f7a34f1c5ef459a290d089fb3aee95ba4aa910f776601ab6091611d6816f34ca4e63f75643354f1313c3f8bda24b67cf7fee951fa420474657219e84e31f843bcbc104e5a74b4858504802f8dd8c4ee638e14da0e17620ae791a03f5dccaf6323214677aa33b8abc130dda43fb401a9f9b960e0708e910e</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>生活點滴</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【日常】無題</title>
-    <url>/life/20221113/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="7f2070ffcd1c24eac1029c8edb3789a1c1b24488c9978bdae8fe4eab3eaf6fc2">c4379dbc51520bb23a681c5b597ae53a2aaeab1cae9a21943aaccdcc72d88e4f1a48d0c9d4a2541ae06d118f219b8f761edae319f3de136f9f54b12177f6dbdeb718438225154e1a8eb797eeb16082fcb25363f156abb848574e9c0f1cc7185d25440bc8ccc0cfd6af49d1ee1627196abcfc5388e0c63c382aeb272390ecc8487d536a401bd037032636bec78786cfea410f202086358574e443d544a11a96fcdb88e22e7f1f29c3a8fc579e83c2f99631358b2c9b9c212c7cd52f3c5a7b994565b2824840c7d4533c43c1ce501358aec52fc0eac102d2028f33f546e0cb1cf25f810c56ca1cef744565dfc959e264049bd741d5112d21c5020283dc8607cbe80fa30b43381ac8d1389a07c5e0fb8e00c5494f13946150926bc753d2eb39fb2ac48ca9cf9b832a251154039042743196e706382922e6a97636a097abc24a0d56</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -753,10 +709,10 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【日常】我看了一些演算法 :D</title>
-    <url>/life/20221121/</url>
+    <title>【日常】5 月 24 日</title>
+    <url>/life/20220524/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="6f62a175075fb13790f9fe2076775c91726c42ff17d918051886b5dd3c1613ee">c4379dbc51520bb23a681c5b597ae53ae83953acc4205c882fe5f1b87eb724f0b8abc3f3f00c593a16026af5f9250fa5ef0ab89d750bdefd56b82ec9924125980621ad98e8b699657784ed2753ef49c4a33b882e94bb5099a9e952330639dbeff498b515e55f974438e5829045eea9b25740bf76a585586f14657611f0e24338f970be5eef24cd6eee3433c4bdbf9e8eccf7d7414a221a08f682b5ac3a9640943e81c0b0fc2cd1032a2b1a4d5516a35c1ac4ce28b5d02d317ba8214159cda47b57602c2aff22695d2efdc398da5ff3f90efca9aa141860f4e279e44e700242b2f2031a2037eb8d6b57d4aef3f356cc20a5cd1194fe6d247064558054aff4bb61d7ad69193f399f4e66d8fb27581b29854c765e2ad73322fc6b1e23a82552ea1a8b56c37e36e848e055101d73f85e0b297e1ef3e520108edfb93b1088944ff20938c0fbb57a17810375ad575f1811db2168c5db6475fbff70bb34b8519fc393dc9c57c593f5823a765c2e4e10dbfa010da83d15e2c2addd5d53a96781058eb465072f4a4114868875d637608d97b0dd3e1618cad7c142c5ab25e5889b8e0c6e839e509084b83c10507d626dd9bbc10ca04f2f684ba160b9396426980b190ea7209a8b1c9b5b5d43ec8f427d6f8958af948ec69d53a77e981070ca2fac54daa1fe9494b84f9a8a1e82cff7afa9e2e091344dd7a451507ac14629c5cf0abb3578d959eec563b0ee7a416d0bc53628ed1dda17a68ea34f37d077bf5d5bf972f6134dd24aec5899eb73efd9968fc9a43863e0</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="61275d55d8a4ff17b1b056a4a5d1a548d0d72268d5a32aa48fd3e6ad494cf8b9">c4379dbc51520bb23a681c5b597ae53afcd71c255395340f680c5e0e1e6fc2c29190548a9cb49bc2bd0e055147b0521f854fcd8dda1f2d75d19efaa25053e1653c6450d6b294bc23dab3f63bb18dd61b900d2d744672b4998c6a3a479f281dbc35274b9cb50b6c6b0c95faba600384189589a4165e364719d68834d96b2d4b13d569fca54ab5c5ad2fc090962704f97215511e3f430e30e883f0e2a7adc0b71d78c3e9968aaf70499432f06613a68c5a78d8e44b57be345e354c2d376b00e921114b8a34d309af462eba164bdbb344745b031d25cef69ae87341a30ba6d3c66f5dc09c8bba3eeaf9c9b926a43703b1bcfc9f2dab124bd58d3d27546f80d69db10062f22fd1df4cd03d3f59db771b400361a5378a4855e173050d74076c84317750ec732629e26c321dddf9f7fce289be5fe0f65c4485ba88261b918cf4935a8991de9fe1da5ee3d84f6b748b1e62a77fe2c21edcab454d27bf5550e2aa5226d89662b289e45cd83bd03f4e117e366f1c784f285c14ad9669e77fd71d519334145c30c7cd19a033660420621804b873f77dda605bd2dbff90044f6d40c4691de5155af4c671fcd44cb783e8fe3220ad4fe617c965a30e86b5329f4dcff1609644ddfb3621c0bd53481a74ed127402a6bc4210ba75d6c59777b6e3a844f96809212b688a4004ace2ec89d1f78f011968e916620c76fb35ebfe6815810864cd46eeb14ea2641a2a53b02699b38a0d3251b9b8fe4c399a3d3f11d3ab57f6dccb54dc18202c3cccf15be5c80480a56e157e17263943dca0e920dbf1506bf2cfccd441aebef93d600d65d222a9d4176e0f5fc85628c9e168842e47c08d5aa6e820f945747f91f8a262bcc90f7a34f1c5ef459a290d089fb3aee95ba4aa910f776601ab6091611d6816f34ca4e63f75643354f1313c3f8bda24b67cf7fee951fa420474657219e84e31f843bcbc104e5a74b4858504802f8dd8c4ee638e14da0e17620ae791a03f5dccaf6323214677aa33b8abc130dda43fb401a9f9b960e0708e910e</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -819,10 +775,76 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
+    <title>【日常】無題</title>
+    <url>/life/20221113/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="7f2070ffcd1c24eac1029c8edb3789a1c1b24488c9978bdae8fe4eab3eaf6fc2">c4379dbc51520bb23a681c5b597ae53a2aaeab1cae9a21943aaccdcc72d88e4f1a48d0c9d4a2541ae06d118f219b8f761edae319f3de136f9f54b12177f6dbdeb718438225154e1a8eb797eeb16082fcb25363f156abb848574e9c0f1cc7185d25440bc8ccc0cfd6af49d1ee1627196abcfc5388e0c63c382aeb272390ecc8487d536a401bd037032636bec78786cfea410f202086358574e443d544a11a96fcdb88e22e7f1f29c3a8fc579e83c2f99631358b2c9b9c212c7cd52f3c5a7b994565b2824840c7d4533c43c1ce501358aec52fc0eac102d2028f33f546e0cb1cf25f810c56ca1cef744565dfc959e264049bd741d5112d21c5020283dc8607cbe80fa30b43381ac8d1389a07c5e0fb8e00c5494f13946150926bc753d2eb39fb2ac48ca9cf9b832a251154039042743196e706382922e6a97636a097abc24a0d56</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>生活點滴</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【日常】我看了一些演算法 :D</title>
+    <url>/life/20221121/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="6f62a175075fb13790f9fe2076775c91726c42ff17d918051886b5dd3c1613ee">c4379dbc51520bb23a681c5b597ae53ae83953acc4205c882fe5f1b87eb724f0b8abc3f3f00c593a16026af5f9250fa5ef0ab89d750bdefd56b82ec9924125980621ad98e8b699657784ed2753ef49c4a33b882e94bb5099a9e952330639dbeff498b515e55f974438e5829045eea9b25740bf76a585586f14657611f0e24338f970be5eef24cd6eee3433c4bdbf9e8eccf7d7414a221a08f682b5ac3a9640943e81c0b0fc2cd1032a2b1a4d5516a35c1ac4ce28b5d02d317ba8214159cda47b57602c2aff22695d2efdc398da5ff3f90efca9aa141860f4e279e44e700242b2f2031a2037eb8d6b57d4aef3f356cc20a5cd1194fe6d247064558054aff4bb61d7ad69193f399f4e66d8fb27581b29854c765e2ad73322fc6b1e23a82552ea1a8b56c37e36e848e055101d73f85e0b297e1ef3e520108edfb93b1088944ff20938c0fbb57a17810375ad575f1811db2168c5db6475fbff70bb34b8519fc393dc9c57c593f5823a765c2e4e10dbfa010da83d15e2c2addd5d53a96781058eb465072f4a4114868875d637608d97b0dd3e1618cad7c142c5ab25e5889b8e0c6e839e509084b83c10507d626dd9bbc10ca04f2f684ba160b9396426980b190ea7209a8b1c9b5b5d43ec8f427d6f8958af948ec69d53a77e981070ca2fac54daa1fe9494b84f9a8a1e82cff7afa9e2e091344dd7a451507ac14629c5cf0abb3578d959eec563b0ee7a416d0bc53628ed1dda17a68ea34f37d077bf5d5bf972f6134dd24aec5899eb73efd9968fc9a43863e0</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>生活點滴</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【日常】想死，不是一天兩天的事了</title>
     <url>/life/20221216/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
   <script id="hbeData" type="hbeData" data-hmacdigest="1ba52068d08f7d9f63673890078eb7937c282ebf6d79cde3f81b886b2e9b7f3b">c4379dbc51520bb23a681c5b597ae53ae83953acc4205c882fe5f1b87eb724f09c4dbcb9f84f0f5f61ddebc937605f4bd3fad3cc756d428960ad1618ae05d696bfb0a7dc5ea9cefe71f1e70ec309c7396bb95849d2150ba8abe4e25a8eadbc1f00c91f898ba3ef105189f8a4e4ebd83b642b66b4afd22674d25f347adf5c64370d66c7caf1a1d2798acbc98605b416e94e19aebd80d4b585e21431a785b08ceedd3bf9b6513c3c278403b136d7455216ee990c3720d4b871a56133f9a6a8aafb4146691603b3721be103af19cd3e5e31b1e66af7aad0fde20160411dfe80392a05201b022d3afa68c454d84459696f4edfeb9d00cf01867223638a74883054056642c3d03eb38f36cd2480d44f677f379cc55a25b0a9d472425b9173f8780c2813c60bdbf885da64ad85f50c2004f593b9a2f48d7d40d8ee8230cf77dd734a5f3fd675e502cdb106e59bdef3db231aa8f109ecf54d24a8d1cbee7337834b121dbcebe70d307be6d3b674966b788ee3c2397be18198db24c77338df06423dda23da169374ac61848dd8219ffbf77d7f774f63d5eb0760eab42602f3b1574e24a7598e2d85ed1a4f0401a2f7d0699ffce9397730256d04239fee08d62bb7fbdf2e2268da244f3549510f245098a6ff7d6ba820f4908955f41c90485e355864a470414cbf13eaffa75e35f2bfc236a71ce34aa398d3d9fa328ffd98161e51640fe9ea705a9df6e83c935b0467c3a1d6e2262012166507ababa9bc1a8f0d90a8c6079cfd90eff260117a38120ed20e22bbea5cf8e59c8b58629d0592e3de2d432b7c26df2d0d9a8b46ba0090c523b0883abeb8a6f6ebd9d6beda7ffc2c93b19f63cde28a3aa04caf5d6cc24ffc3776923acb72dbf725c29ea1e850547e9ac72aa0cb797efe91b89eddc4dda0ecf72476cbe8511d5d91929774a08360d35df2398df3cde67cf278a6e156511783c4ac638460341c18ac92fc0ff104e49f71b673de3c0746fc4c6846964e08515217e49fd8bacb691ca16f8ec773e5064815a78d55c53f8b6fb2317f42269456577fd1d5e54fbb642ab7e0458525fe2e66967d6fd49d9d6176d53e70ab71de5e53ad82a5d0a26cd0bc0ee936358732f2ac92a70cd4c9654172741bfd9a1c3c3e8ac746fb0d1657a5c991bcfe376c540f847e73c5f5c4bf15c3f5bb809dc0d7c2974f0dac13cb7a466cb47618633065941903f114a6e1adc1063e8e223f7bef96e7e9da8e5642529fd0158532fc3785114eb0a27c076922bf0f11e60c6da1c18c024ae7ea8d59c8bbc642c07aa39ec90b1591010058ff2261e199edb20135cb676602c6f8ea00d8559b84ad5cfd389612207ea8f78d7eb3d3c0ea560d9d17857994060ef1b8cabab4963588a2d2cfcbe4b7557735ccad5bfe028ce6dc7f516575680857290c6b195c99685fa543e00b34b1f3d1448b410e983ffbe043dc92ae82f6c99e341f7cd4c8499d7eb50a1300e17bad5af1ef2c15ca157882bd403c49f8e0f8fc92a5634d510b857a1dbd4f016181e9b53a34f4abe7bafafa03fed06f50bc9fdbe92928920639757d45da705bda86cb1a25adf75946e6b45e4a850a055b834e89050ddfd108981ed59b2183b296d6f36a31be115064965e3c6088837d7952fa0704872581785cdcf4ed404a96d361213745d2f2ffe9cece7b9cac3d4ee2316473d4dbe576218931dbc981afd5c6388d25f336a8e89bb1b3b1756bb69d0ace3edd891b975b45bbe012de2efe24c9b697df62af2c121b1826d211d133eb87c9a8535f687fe04c65602a7cf91d2dcbb48eadd9c913694421b5b3d6c19405c9566f49d6efa563aac9e5eb7aeb61c788735257f2048986cd81f2519f2bdc3a1eeffac6080b068abc55c5aabee31349b6c79ba1846df56b553fd5abd4bbcbc50111244d0d01932c7d74dd9fc97b6b6a8ac92e4860a9b7dd0865b70bf27173606f4b92d953e1a17d55101c25df3104317e9691768197d8f49d2bad407def109e3c926a70ad911576587df1977416e166d8a845f69880b7bf9daa4cfce68621d8ed5f5d5cc469811dbf8213d032f418257bbad434ad6d040ed0535fb16a08007f9f96645ea92a02e2f2872d2b588b32b0c907fd14f8e614dd152ea21575808c3475641859346badb5b03fbcefaba9ab1fecf73b49afdbe19d5cc3796de963b67aeaf2baa32afccc8f7039b04f2949be47b88edf13d4f297c6963cf0a749cf79d4e52682802f93ccbe08723b11bc14aac87ca349c005be02629ea1860ae72baf9bb8e9877bb7ccb93662490e6d0a3a3ccab8b6f6d3c380e2e21525178d7474a1dfe6c322ccd361e1e735c85c5c00d3f0be736c43c5754cbd979e18d9a46904f793f245b0f9f6bc8b1282ae1143e4c39f2dcda10f6fd5d05b93a3c84b46a31e48800c20b7550a1bf741061c973e0add048f596198fb5d0019394ea296e445903bc92821e9edb4c2a81092dd23b6a6ff0bd20f5c7d4a41f328c58aeb5134d2deed1ee80b7705889c322f0b763e6815aadacf532d33c76d0589cb4d3c5184b7a23ad0ff5948ef8faa1e89dc5caa771627b19eea11effc53cb650715d05edfe5724a31ec80bbb9bb20e844bdc2615a249a06274308e62d409852bae52a0101f53e59790fa0b3edd79529aa085daf203ada00789cf57e88b731a7cc95d2f29ead7e62f74ec2780ab2caf8bea7039e1d5108ee89f85f9c8e9c6c6b1ce8136abad59604f105969a4db0738aae9197c447155d4dd2364d33e7bcfbd4b1810bfb85fd21b00105de0b73c642cf62d0456056b6dc58882c18b1907327efde5b19393141b1b249ff8d61fcc58a51e5c1af354319ba98061af7ac5d95543b658d3ad0c4b04b59f3eafdfcd4e1bec6ff3509f306492b5f2f96d073a66247e31fe64e54e1889c42f3b266b6338ba40a7f25829aa99320cc0c0c906b9ec21d1a38e0e56d3bf533e8d02cf5b60d98d93504375926ced4ef0270a91b0da2af8146306a738bec6922cf8a45fc7f4e476b591b76b9c7b8bcbb814d93ce08a3306c6d41885cb20603261d0e9559c20b7688854cc9f28a9fa3bd962c093a0af1794979f8e3d3493713705eac397a06c1db2788b6935edc6a5cbbac6bebd8de388280f9f55aec3efa9410189dc277da08289f0e00fa52e4101dd08610cc6cd8099a678912a215251657b329bf1049ae357f46cbccc0ce50da7c0522e3b4e172521aa296e353e49b2311f4151ae78062dd2d2129c935192e2ff93353aed5bb860d11a7d1bd0056c403e67035ef0743c7c631bf3f6ed71815d6d70e63998d8d487cec5ae105f243467968e6c1cab03e0cbb987d75f8e653afaf63d047890b30f46335ac572cf37aeb9ca99e83b9ef29ea34818f37fee2925ed030fcaea5c7b3255d95f2de1ce032844418d7dadf299ac09415ad09cfcb1ccc33824c98939d8ac7df1314b79386ee85a8e01abbe4fecd7f895eab58eb13f2f268f0f80cb84754d3661200f6b8ee87416cf4adff9862a0dbd92d3bfbb0e92b1727453abfdfadbad2c65e28139c467a8204659f2acb3c01bbfa9e159304de9367223a53aeb5ab228831ca9ff17260427780c72edb2afbfec1ee401ba7c24494e221c0f10b2b0e66884abf59f206c57660f3c17ac0965d12404d5f16b252bd7c74df15b8ae3fbba88fb4b9c0e43a0a9cd0010298c5f963f56f093f939c6b8757588d90150fa7424c2fd6b1ec0aa3baa03a894564136903c95e75de702b3653617f6f6408929c799fb74fd3124653f68ab462add93fa1cc1363056e39437bb51a50f1f3c98e13063a33bdf27d64114656160bd440fef6bffce9240b6e6cfdf5ca5b9be441734c33e66ecceb8682915588fa339673685cf2c0cb431846766581fd3c3fa851790871623a87a276b67f6be80df2646070e11ad3ca9147db5cebfd9dd70fed059224b91e2c6e6627b4aa76d1c232c3cba43faa31469ede645594a5d7eaee8ebf222b1d663d632987ab640500a1cd2bcd50fa7b5eafb47c9b217c2b68b4a671400aca5fb961a81397fa687ea0c645fda8e70ee31bca6a05fef6a695c7da3e91fad99d626538d8d7fc89906347e13eebe3f1b52665b4b4ec80e94a07bd6af6d8625c9884b37ea2fdd8fb0103f83434c4c06ea982f5cbc25c6d440b22713360e690e4724b0079f0e98340edd25b2cba42289b9ad20766f83a15623c22532f848e685a8cd546884654faa1fdd74c25e3464ff18f9ef0eedafc05416877eed72c4d574ed181484e1c84357716a809775cd367a7d616e3ad9584cbb8586d95a83395ba9621261b1621e3167f010e2bbd883addbf8344eaa61606174c4fda843e5ef6b7e6bdba0681f493490dc6730399ef55e3a7602e51dadfb0effafb2abf0f298441c66e8d190b4e7a96b54ace0014352da71cc3fc65d546d6c130</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>生活點滴</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【日常】給一整年的自己</title>
+    <url>/life/20221218/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="a8cbbcdac4ebf1d1452a9ecf6dd3e2e476381c161258b45a73a3760ed7fa8eff">c4379dbc51520bb23a681c5b597ae53ae83953acc4205c882fe5f1b87eb724f0f186c58319e1149d09828743a782d9409a4cacee4fab39db88730ffad20c4f831d5543e3e5d95fcb83d9078eaaf69af8879c71b25edd18531ac7ed96c111746ca96e1771f3318fe0ff1d19a33dc832b623a6573b53901df4ba346ba619fbba43dc8557f978c85a2ff730d9cdb085841c0665a04c7053fe87ebe9c1606ab1f2ef5aa842da4a570ebe1776e6a62379f3607d466850dce05eb484f0731debb6eb8cd7b088cbc9c04405f784aa7c22a307bd2cccd5e60f144c101f234e3f34f53aeeebf77c171911f6258e42e47d4de0b8eddcadd2c1597360f9a42d4c1ba2db01b30e9273ba7954958f76b33c339fcaca40183a580c62189b01c23b8df2ba2942321e8599a11b6d9499cdcf5c2aeee1c6223be1813de99db04cfc1e269d84070a5998c3b014a42b8c47b8ba9b5be09aaf4533f59dd7cd0ef96e58aad6391a77fb328025194d2bed29e12e667b5e53d0bb47efc3584786fef17b25f3a803bd2927df6caddd73df5e927fb48729a5a077ea264a034cf6c00fdac841b9fa960b46a099b3ce8c09bc14e959bc43fcbb3b4fefe4cbf24bf5d80c93c8d6f3a614c9669c3ffd1a88b0442552eb2abb3dbdddf0fb04a57658a4221170f962d0c887df3b2a63fe1eb666c8c14fcbd6178008af1266e3d0a44a7891931fc8b9b77dc99e07188d315ff057140061e7e1cd635cf1508e57eee4b6a555d5f1cdab53ead27e2dbcb13bfcd98915f0938b15d9a3907cf651a0cb3b7f915c08d291b69cde9158725f0233a783734008dc21a6b8cacf53deb06ffe70a13a9d3b107e812b4427d2e08e9680a2f357878fe12664d497162653ca0ab479b2ad6d72766e58adc1673ebc357e74db8f7391b5b9a34408a8052789acbf41289821c2f2b51e5ca46fb8f67e3a23c303c556d8ee4ddbe83577297c7f7e686cb2496292115ecf987ce99c1e3e8aab36a47bb22b2f029e7257d0f5c509c04bb49236c00bc29a137c5432a76b369bea902c9c1630863c685c0f2dfc98179517931c255d6e44867f5c7da9cd2bc6befa60e0665d0bfdb49ebeed712cec0c7a830f2c066f8cc94115e2f629dc11d593c4b4195b679c696789c2ad93c84185201d3e3c410aaa16b502209bab96bce9a95c60e7546c497505e2e32a582908984419d045b7b55704f0995c4ef124d46310154032f4b005c25ffff99b165c471057afcab6d5206ccae85b6ae21a4794c55c5bb2d6ad753de3fe6b318e1171e3cbd42f13a39f676750947f650f9872bc1bfb55e6e4f7f12295c45fac8f3c5a0c7d6fe1807e87fd462077544f19b1c5340d432886e5d0ddada0656734d19b7b12d85e9d583bdf8c09a1a734107104da26284743024e3e7124cf30ca214c561ceea1dd9df53bd513d06082c6c77693646962ae9f85080f34850239da2f8f0669dfdbb609e8009b33d2307d93f0014f56008d09086a151d8fff2381acfe6e59f160c3805aa2ffa28f6783cc39bf38578480b4ab29f3ad3663b6b734fe428265a092de42991ae364e4e6ce045913abcdb4734934ad6758c59431de99c33e7e5af9556ee64ecdd9221dfe4c1fd60f9ed480266518536546b47ed57ac680901e595a2f41b5aa95e4c6fffe05e162554250318f2b8749474e5369a2e29b11d01828c781400644a85fc853e86bea0aba4be5e81c5ced6d1d3b3e26f64fb0ad489af8376093f1b54f0c43eacae147c46fe3d0b6cd0b1a1a10f5beabedab920afa7517467897811f064eb63fa1f8487719ef1035a9e27faf1110c5206643aa83bbc38cef7de30cffb35526d1d61029739c68e1d0d423ae98870ecaac662592eab2a693512f35e81c366cc2964868c10bf8c565c142838812bc857cab8d257cc2be017b43be51c2597927938df4735e6703b37545946a9ec8b336e61e944fc7d2f736096d9cadaf63a444229d253ebc5ad9af19532d9c6128477faf9a061f04d46b6a91ad3e7f6c0eeb797471c2799d343cc422d7bb9af52bff2179baaa7a5feab7d6ec84198e8e129df9903672309fc41f6e26907ea7916fcdcbc05a1dbb2fe31c0ca5150c4a31a90fe6d221d1e179d071d2a95e2efe4437bcf149245a6281a07540fc72761d374707d48cb5be533d72fb36aa7adb5a535a9fd80b55af9accdd1d0104e6f9d65cfb7d3aee85faac214b622960f62893c8aac189c349270b6dda11cd748f5cf6c7b4a3b34fdbc10775bc52434e6f649999972b5045d978d80c8aaa57040d62129d547ecf17337423f78a4589ef32670fb835f228ef54afa1663d41d7751ffdbee7e9da7b110cc0a1d328ce8fb10c4b2a8daad17c82f4ae150a5ec3dabae0afdce04fcd51a49cd90b475b73b81182b7aa59a553c652c398582d2b820cc56f8dcab05d24a17c5acbcc26d9a3fe7e24b9ef39f4e210e436ccc9c5d787830b4d8d4bd5e62bb24cc023389de9be602cf85ed2340c74c9a9eb528c1c503abf4edbbd673215f1a1eb38003c0eb77ab658618873a38714d57e7dc846350a7df33574da258a784b3c836ddab4cd8e7abdd9aa009b7d5d0991751ed387729cf2c93e244e35272a094a58a1d2bf18453c8a794e900797bbd49d9e4f3880b308fba4f3729acdf9d9449d1fa2c66d047da3e1320452f6a638d04be6fe647177c4045b3b7cfd66aba98b63abd23d24a8477e82d917370c54c833427a375465f137bbce087f905d826a4a4d7b1f28fb6039b5e49c9eeeeb45882805889107be76a15a7eb1b8f093d9cbfd9a1e8273d8c6e05dfb472ec5587c5698e4cf9ef9f717c706216712fe74d2feab411653dd3ab8dd351bb7d1f53e4ed5fe4af5b1830c58607f4fde1bc19dde478cb89e4bf766aef9d573d3ed95e25bd5beaafedb860491722134ecfe1faee4f89aceeb71d7bfda5ad56c2f402448414fd63edd82eacea4e7a7305a4fc5441702939b2d8ad78d3566e9add82a08805be27357e0c1cbcfa68133b0b652c49bce12a5f237b26da5ec474c18ae4024a03b85</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -860,28 +882,6 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【日常】給一整年的自己</title>
-    <url>/life/20221218/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="a8cbbcdac4ebf1d1452a9ecf6dd3e2e476381c161258b45a73a3760ed7fa8eff">c4379dbc51520bb23a681c5b597ae53ae83953acc4205c882fe5f1b87eb724f0f186c58319e1149d09828743a782d9409a4cacee4fab39db88730ffad20c4f831d5543e3e5d95fcb83d9078eaaf69af8879c71b25edd18531ac7ed96c111746ca96e1771f3318fe0ff1d19a33dc832b623a6573b53901df4ba346ba619fbba43dc8557f978c85a2ff730d9cdb085841c0665a04c7053fe87ebe9c1606ab1f2ef5aa842da4a570ebe1776e6a62379f3607d466850dce05eb484f0731debb6eb8cd7b088cbc9c04405f784aa7c22a307bd2cccd5e60f144c101f234e3f34f53aeeebf77c171911f6258e42e47d4de0b8eddcadd2c1597360f9a42d4c1ba2db01b30e9273ba7954958f76b33c339fcaca40183a580c62189b01c23b8df2ba2942321e8599a11b6d9499cdcf5c2aeee1c6223be1813de99db04cfc1e269d84070a5998c3b014a42b8c47b8ba9b5be09aaf4533f59dd7cd0ef96e58aad6391a77fb328025194d2bed29e12e667b5e53d0bb47efc3584786fef17b25f3a803bd2927df6caddd73df5e927fb48729a5a077ea264a034cf6c00fdac841b9fa960b46a099b3ce8c09bc14e959bc43fcbb3b4fefe4cbf24bf5d80c93c8d6f3a614c9669c3ffd1a88b0442552eb2abb3dbdddf0fb04a57658a4221170f962d0c887df3b2a63fe1eb666c8c14fcbd6178008af1266e3d0a44a7891931fc8b9b77dc99e07188d315ff057140061e7e1cd635cf1508e57eee4b6a555d5f1cdab53ead27e2dbcb13bfcd98915f0938b15d9a3907cf651a0cb3b7f915c08d291b69cde9158725f0233a783734008dc21a6b8cacf53deb06ffe70a13a9d3b107e812b4427d2e08e9680a2f357878fe12664d497162653ca0ab479b2ad6d72766e58adc1673ebc357e74db8f7391b5b9a34408a8052789acbf41289821c2f2b51e5ca46fb8f67e3a23c303c556d8ee4ddbe83577297c7f7e686cb2496292115ecf987ce99c1e3e8aab36a47bb22b2f029e7257d0f5c509c04bb49236c00bc29a137c5432a76b369bea902c9c1630863c685c0f2dfc98179517931c255d6e44867f5c7da9cd2bc6befa60e0665d0bfdb49ebeed712cec0c7a830f2c066f8cc94115e2f629dc11d593c4b4195b679c696789c2ad93c84185201d3e3c410aaa16b502209bab96bce9a95c60e7546c497505e2e32a582908984419d045b7b55704f0995c4ef124d46310154032f4b005c25ffff99b165c471057afcab6d5206ccae85b6ae21a4794c55c5bb2d6ad753de3fe6b318e1171e3cbd42f13a39f676750947f650f9872bc1bfb55e6e4f7f12295c45fac8f3c5a0c7d6fe1807e87fd462077544f19b1c5340d432886e5d0ddada0656734d19b7b12d85e9d583bdf8c09a1a734107104da26284743024e3e7124cf30ca214c561ceea1dd9df53bd513d06082c6c77693646962ae9f85080f34850239da2f8f0669dfdbb609e8009b33d2307d93f0014f56008d09086a151d8fff2381acfe6e59f160c3805aa2ffa28f6783cc39bf38578480b4ab29f3ad3663b6b734fe428265a092de42991ae364e4e6ce045913abcdb4734934ad6758c59431de99c33e7e5af9556ee64ecdd9221dfe4c1fd60f9ed480266518536546b47ed57ac680901e595a2f41b5aa95e4c6fffe05e162554250318f2b8749474e5369a2e29b11d01828c781400644a85fc853e86bea0aba4be5e81c5ced6d1d3b3e26f64fb0ad489af8376093f1b54f0c43eacae147c46fe3d0b6cd0b1a1a10f5beabedab920afa7517467897811f064eb63fa1f8487719ef1035a9e27faf1110c5206643aa83bbc38cef7de30cffb35526d1d61029739c68e1d0d423ae98870ecaac662592eab2a693512f35e81c366cc2964868c10bf8c565c142838812bc857cab8d257cc2be017b43be51c2597927938df4735e6703b37545946a9ec8b336e61e944fc7d2f736096d9cadaf63a444229d253ebc5ad9af19532d9c6128477faf9a061f04d46b6a91ad3e7f6c0eeb797471c2799d343cc422d7bb9af52bff2179baaa7a5feab7d6ec84198e8e129df9903672309fc41f6e26907ea7916fcdcbc05a1dbb2fe31c0ca5150c4a31a90fe6d221d1e179d071d2a95e2efe4437bcf149245a6281a07540fc72761d374707d48cb5be533d72fb36aa7adb5a535a9fd80b55af9accdd1d0104e6f9d65cfb7d3aee85faac214b622960f62893c8aac189c349270b6dda11cd748f5cf6c7b4a3b34fdbc10775bc52434e6f649999972b5045d978d80c8aaa57040d62129d547ecf17337423f78a4589ef32670fb835f228ef54afa1663d41d7751ffdbee7e9da7b110cc0a1d328ce8fb10c4b2a8daad17c82f4ae150a5ec3dabae0afdce04fcd51a49cd90b475b73b81182b7aa59a553c652c398582d2b820cc56f8dcab05d24a17c5acbcc26d9a3fe7e24b9ef39f4e210e436ccc9c5d787830b4d8d4bd5e62bb24cc023389de9be602cf85ed2340c74c9a9eb528c1c503abf4edbbd673215f1a1eb38003c0eb77ab658618873a38714d57e7dc846350a7df33574da258a784b3c836ddab4cd8e7abdd9aa009b7d5d0991751ed387729cf2c93e244e35272a094a58a1d2bf18453c8a794e900797bbd49d9e4f3880b308fba4f3729acdf9d9449d1fa2c66d047da3e1320452f6a638d04be6fe647177c4045b3b7cfd66aba98b63abd23d24a8477e82d917370c54c833427a375465f137bbce087f905d826a4a4d7b1f28fb6039b5e49c9eeeeb45882805889107be76a15a7eb1b8f093d9cbfd9a1e8273d8c6e05dfb472ec5587c5698e4cf9ef9f717c706216712fe74d2feab411653dd3ab8dd351bb7d1f53e4ed5fe4af5b1830c58607f4fde1bc19dde478cb89e4bf766aef9d573d3ed95e25bd5beaafedb860491722134ecfe1faee4f89aceeb71d7bfda5ad56c2f402448414fd63edd82eacea4e7a7305a4fc5441702939b2d8ad78d3566e9add82a08805be27357e0c1cbcfa68133b0b652c49bce12a5f237b26da5ec474c18ae4024a03b85</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>生活點滴</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【日常】給高中畢業的自己</title>
     <url>/life/20240517/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
@@ -901,146 +901,6 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </categories>
       <tags>
         <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【筆記】二分搜尋樹（Binary Search Tree）</title>
-    <url>/computer-science/cpp/binary-search-tree/</url>
-    <content><![CDATA[<h1 id="基本介紹"><a class="markdownIt-Anchor" href="#基本介紹"></a> 基本介紹</h1>
-<h2 id="定義"><a class="markdownIt-Anchor" href="#定義"></a> 定義</h2>
-<ul>
-<li>父節點的左子節點（left node）皆小於父節點。</li>
-<li>父節點的右子節點（right node）皆大於父節點。</li>
-<li>任意節點的左右子樹都符合 BST 的定義。</li>
-<li>不存在等值的資料。</li>
-</ul>
-<p>圖例：</p>
-<p><img src="https://i.imgur.com/cTf49p0.png" alt="Imgur" /></p>
-<h2 id="時間複雜度"><a class="markdownIt-Anchor" href="#時間複雜度"></a> 時間複雜度</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">演算法</th>
-<th style="text-align:center">平均</th>
-<th style="text-align:center">最差</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><strong>空間</strong></td>
-<td style="text-align:center">O(n)</td>
-<td style="text-align:center">O(n)</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>搜尋</strong></td>
-<td style="text-align:center">O(log n)</td>
-<td style="text-align:center">O(n)</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>插入</strong></td>
-<td style="text-align:center">O(log n)</td>
-<td style="text-align:center">O(n)</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>刪除</strong></td>
-<td style="text-align:center">O(log n)</td>
-<td style="text-align:center">O(n)</td>
-</tr>
-</tbody>
-</table>
-<p><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU0JUJBJThDJUU1JTg1JTgzJUU2JTkwJTlDJUU1JUIwJThCJUU2JUE4JUI5">了解更多點我<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="實作"><a class="markdownIt-Anchor" href="#實作"></a> 實作</h1>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span> &#123;</span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Node</span>* left;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Node</span>* right;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 中序</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">inorder</span><span class="params">(Node* root)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root != <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="built_in">inorder</span>(root-&gt;left);</span><br><span class="line">        cout &lt;&lt; root-&gt;data &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        <span class="built_in">inorder</span>(root-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Node* <span class="title">add_node</span><span class="params">(Node* new_node, <span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (new_node == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        new_node = <span class="keyword">new</span> Node;</span><br><span class="line">        new_node-&gt;data = n;</span><br><span class="line">        new_node-&gt;left = <span class="literal">NULL</span>;</span><br><span class="line">        new_node-&gt;right = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span> new_node;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> new_node;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// BST 的遞迴</span></span><br><span class="line"><span class="function">Node* <span class="title">input_data</span><span class="params">(Node* btree, <span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (btree == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        btree = <span class="built_in">add_node</span>(btree, n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (n &lt; btree-&gt;data) &#123;</span><br><span class="line">        btree-&gt;left = <span class="built_in">input_data</span>(btree-&gt;left, n);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (n &gt; btree-&gt;data) &#123;</span><br><span class="line">        btree-&gt;right = <span class="built_in">input_data</span>(btree-&gt;right, n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> btree;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Node* binary_tree = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; n) &#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">-1</span>) <span class="keyword">break</span>;</span><br><span class="line">        binary_tree = <span class="built_in">input_data</span>(binary_tree, n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">inorder</span>(binary_tree);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>計算機科學</category>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>筆記</tag>
-        <tag>C++</tag>
-        <tag>BST</tag>
-        <tag>資料結構</tag>
-        <tag>進階資料結構</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【筆記】Array 陣列</title>
-    <url>/computer-science/cpp/array/</url>
-    <content><![CDATA[<h1 id="基本介紹"><a class="markdownIt-Anchor" href="#基本介紹"></a> 基本介紹</h1>
-<p>當我們需要存取一堆數據或資料時，總不能直接建立千個或上萬個變數吧！若這些數據具有相關性、型態一樣，可以使用 <code>Array</code> 來存取。陣列具有連續的記憶體位址，所以我們可以從頭走到尾來讀取 <code>Array</code> 中的數據。既可以減少變數的命名，還可以讓程式變得精簡、提高可讀性。</p>
-<h1 id="如何宣告"><a class="markdownIt-Anchor" href="#如何宣告"></a> 如何宣告</h1>
-<p>先引入標頭檔 <code>#include &lt;array&gt;</code></p>
-<h2 id="基礎宣告"><a class="markdownIt-Anchor" href="#基礎宣告"></a> 基礎宣告</h2>
-<figure class="highlight cpp"><figcaption><span>基礎宣告範例</span></figcaption><table><tr><td class="code"><pre><span class="line">array&lt;<span class="type">int</span>, 10&gt; arr;</span><br></pre></td></tr></table></figure>
-<p>從上方範例可知 <code>arr</code> 是一個長度為 10 的整數陣列</p>
-<div class="note info"><p>在任何程式語言裡，陣列的第一項編號必為 <code>0</code>（編號我們通常稱之 index 索引）。所以若有一個長度為 <code>10</code> 的陣列，內容物的索引範圍為 <code>0~9</code>。</p>
-</div>
-<h2 id="設定初始值"><a class="markdownIt-Anchor" href="#設定初始值"></a> 設定初始值</h2>
-<figure class="highlight cpp"><figcaption><span>設定初始值範例</span></figcaption><table><tr><td class="code"><pre><span class="line">arr&lt;<span class="type">int</span>, <span class="number">5</span>&gt; arr_A&#123;<span class="number">2</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">3</span>, <span class="number">1</span>&#125;;</span><br><span class="line">arr&lt;<span class="type">int</span>, <span class="number">5</span>&gt; arr_B&#123;&#125;;  <span class="comment">// 表示初始化 arr_B 元素皆為 0</span></span><br></pre></td></tr></table></figure>
-<div class="note danger"><p>注意！若陣列未做初始值，其中元素可能為亂數。</p>
-</div>
-<h1 id="基礎使用"><a class="markdownIt-Anchor" href="#基礎使用"></a> 基礎使用</h1>
-<table>
-<thead>
-<tr>
-<th>array 函式</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>begin()</code>, <code>end()</code>, <code>cbegin()</code>, <code>cend()</code></td>
-<td>提供正向跌代器</td>
-</tr>
-<tr>
-<td><code>rbegin()</code>, <code>rend()</code>, <code>crbegin()</code>, <code>crend()</code></td>
-<td>提供反向跌代器</td>
-</tr>
-<tr>
-<td><code>size()</code></td>
-<td>返回陣列大小</td>
-</tr>
-<tr>
-<td><code>max_size()</code></td>
-<td>返回陣列最大大小（由於 <code>array</code> 為固定序列，故返回值與 <code>size()</code> 一樣）</td>
-</tr>
-<tr>
-<td><code>at()</code>, <code>operator[]</code></td>
-<td>取得元素</td>
-</tr>
-<tr>
-<td><code>front()</code></td>
-<td>返回第一個元素</td>
-</tr>
-<tr>
-<td><code>back()</code></td>
-<td>返回最後一個元素</td>
-</tr>
-<tr>
-<td><code>data()</code></td>
-<td>返回元素的指標</td>
-</tr>
-<tr>
-<td><code>fill()</code></td>
-<td>填滿陣列</td>
-</tr>
-<tr>
-<td><code>swap()</code></td>
-<td>交換兩個陣列元素</td>
-</tr>
-</tbody>
-</table>
-<p><span class="exturl" data-url="aHR0cHM6Ly9jcGx1c3BsdXMuY29tL3JlZmVyZW5jZS9hcnJheS9hcnJheS8=">查看更多可參考 cplusplus 官網<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="各種遍歷"><a class="markdownIt-Anchor" href="#各種遍歷"></a> 各種遍歷</h1>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 正向遍歷</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    cout &lt;&lt; data[i] &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> i : data) &#123;</span><br><span class="line">    cout &lt;&lt; i &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> iter = data.<span class="built_in">begin</span>(); iter != data.<span class="built_in">end</span>(); ++iter) &#123;</span><br><span class="line">    cout &lt;&lt; *iter &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 反向遍歷</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">9</span>; i &lt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    cout &lt;&lt; data[i] &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> iter = data.<span class="built_in">rbegin</span>(); iter != data.<span class="built_in">rend</span>(); ++iter) &#123;</span><br><span class="line">    cout &lt;&lt; *iter &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>計算機科學</category>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>筆記</tag>
-        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -1446,6 +1306,146 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
+    <title>【筆記】Array 陣列</title>
+    <url>/computer-science/cpp/array/</url>
+    <content><![CDATA[<h1 id="基本介紹"><a class="markdownIt-Anchor" href="#基本介紹"></a> 基本介紹</h1>
+<p>當我們需要存取一堆數據或資料時，總不能直接建立千個或上萬個變數吧！若這些數據具有相關性、型態一樣，可以使用 <code>Array</code> 來存取。陣列具有連續的記憶體位址，所以我們可以從頭走到尾來讀取 <code>Array</code> 中的數據。既可以減少變數的命名，還可以讓程式變得精簡、提高可讀性。</p>
+<h1 id="如何宣告"><a class="markdownIt-Anchor" href="#如何宣告"></a> 如何宣告</h1>
+<p>先引入標頭檔 <code>#include &lt;array&gt;</code></p>
+<h2 id="基礎宣告"><a class="markdownIt-Anchor" href="#基礎宣告"></a> 基礎宣告</h2>
+<figure class="highlight cpp"><figcaption><span>基礎宣告範例</span></figcaption><table><tr><td class="code"><pre><span class="line">array&lt;<span class="type">int</span>, 10&gt; arr;</span><br></pre></td></tr></table></figure>
+<p>從上方範例可知 <code>arr</code> 是一個長度為 10 的整數陣列</p>
+<div class="note info"><p>在任何程式語言裡，陣列的第一項編號必為 <code>0</code>（編號我們通常稱之 index 索引）。所以若有一個長度為 <code>10</code> 的陣列，內容物的索引範圍為 <code>0~9</code>。</p>
+</div>
+<h2 id="設定初始值"><a class="markdownIt-Anchor" href="#設定初始值"></a> 設定初始值</h2>
+<figure class="highlight cpp"><figcaption><span>設定初始值範例</span></figcaption><table><tr><td class="code"><pre><span class="line">arr&lt;<span class="type">int</span>, <span class="number">5</span>&gt; arr_A&#123;<span class="number">2</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">3</span>, <span class="number">1</span>&#125;;</span><br><span class="line">arr&lt;<span class="type">int</span>, <span class="number">5</span>&gt; arr_B&#123;&#125;;  <span class="comment">// 表示初始化 arr_B 元素皆為 0</span></span><br></pre></td></tr></table></figure>
+<div class="note danger"><p>注意！若陣列未做初始值，其中元素可能為亂數。</p>
+</div>
+<h1 id="基礎使用"><a class="markdownIt-Anchor" href="#基礎使用"></a> 基礎使用</h1>
+<table>
+<thead>
+<tr>
+<th>array 函式</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>begin()</code>, <code>end()</code>, <code>cbegin()</code>, <code>cend()</code></td>
+<td>提供正向跌代器</td>
+</tr>
+<tr>
+<td><code>rbegin()</code>, <code>rend()</code>, <code>crbegin()</code>, <code>crend()</code></td>
+<td>提供反向跌代器</td>
+</tr>
+<tr>
+<td><code>size()</code></td>
+<td>返回陣列大小</td>
+</tr>
+<tr>
+<td><code>max_size()</code></td>
+<td>返回陣列最大大小（由於 <code>array</code> 為固定序列，故返回值與 <code>size()</code> 一樣）</td>
+</tr>
+<tr>
+<td><code>at()</code>, <code>operator[]</code></td>
+<td>取得元素</td>
+</tr>
+<tr>
+<td><code>front()</code></td>
+<td>返回第一個元素</td>
+</tr>
+<tr>
+<td><code>back()</code></td>
+<td>返回最後一個元素</td>
+</tr>
+<tr>
+<td><code>data()</code></td>
+<td>返回元素的指標</td>
+</tr>
+<tr>
+<td><code>fill()</code></td>
+<td>填滿陣列</td>
+</tr>
+<tr>
+<td><code>swap()</code></td>
+<td>交換兩個陣列元素</td>
+</tr>
+</tbody>
+</table>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jcGx1c3BsdXMuY29tL3JlZmVyZW5jZS9hcnJheS9hcnJheS8=">查看更多可參考 cplusplus 官網<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="各種遍歷"><a class="markdownIt-Anchor" href="#各種遍歷"></a> 各種遍歷</h1>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 正向遍歷</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    cout &lt;&lt; data[i] &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> i : data) &#123;</span><br><span class="line">    cout &lt;&lt; i &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> iter = data.<span class="built_in">begin</span>(); iter != data.<span class="built_in">end</span>(); ++iter) &#123;</span><br><span class="line">    cout &lt;&lt; *iter &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 反向遍歷</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">9</span>; i &lt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    cout &lt;&lt; data[i] &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> iter = data.<span class="built_in">rbegin</span>(); iter != data.<span class="built_in">rend</span>(); ++iter) &#123;</span><br><span class="line">    cout &lt;&lt; *iter &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>計算機科學</category>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>筆記</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【筆記】二分搜尋樹（Binary Search Tree）</title>
+    <url>/computer-science/cpp/binary-search-tree/</url>
+    <content><![CDATA[<h1 id="基本介紹"><a class="markdownIt-Anchor" href="#基本介紹"></a> 基本介紹</h1>
+<h2 id="定義"><a class="markdownIt-Anchor" href="#定義"></a> 定義</h2>
+<ul>
+<li>父節點的左子節點（left node）皆小於父節點。</li>
+<li>父節點的右子節點（right node）皆大於父節點。</li>
+<li>任意節點的左右子樹都符合 BST 的定義。</li>
+<li>不存在等值的資料。</li>
+</ul>
+<p>圖例：</p>
+<p><img src="https://i.imgur.com/cTf49p0.png" alt="Imgur" /></p>
+<h2 id="時間複雜度"><a class="markdownIt-Anchor" href="#時間複雜度"></a> 時間複雜度</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">演算法</th>
+<th style="text-align:center">平均</th>
+<th style="text-align:center">最差</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>空間</strong></td>
+<td style="text-align:center">O(n)</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>搜尋</strong></td>
+<td style="text-align:center">O(log n)</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>插入</strong></td>
+<td style="text-align:center">O(log n)</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>刪除</strong></td>
+<td style="text-align:center">O(log n)</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+</tbody>
+</table>
+<p><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU0JUJBJThDJUU1JTg1JTgzJUU2JTkwJTlDJUU1JUIwJThCJUU2JUE4JUI5">了解更多點我<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="實作"><a class="markdownIt-Anchor" href="#實作"></a> 實作</h1>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span> &#123;</span><br><span class="line">    <span class="type">int</span> data;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Node</span>* left;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Node</span>* right;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 中序</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">inorder</span><span class="params">(Node* root)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root != <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="built_in">inorder</span>(root-&gt;left);</span><br><span class="line">        cout &lt;&lt; root-&gt;data &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        <span class="built_in">inorder</span>(root-&gt;right);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Node* <span class="title">add_node</span><span class="params">(Node* new_node, <span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (new_node == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        new_node = <span class="keyword">new</span> Node;</span><br><span class="line">        new_node-&gt;data = n;</span><br><span class="line">        new_node-&gt;left = <span class="literal">NULL</span>;</span><br><span class="line">        new_node-&gt;right = <span class="literal">NULL</span>;</span><br><span class="line">        <span class="keyword">return</span> new_node;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> new_node;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// BST 的遞迴</span></span><br><span class="line"><span class="function">Node* <span class="title">input_data</span><span class="params">(Node* btree, <span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (btree == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        btree = <span class="built_in">add_node</span>(btree, n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (n &lt; btree-&gt;data) &#123;</span><br><span class="line">        btree-&gt;left = <span class="built_in">input_data</span>(btree-&gt;left, n);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (n &gt; btree-&gt;data) &#123;</span><br><span class="line">        btree-&gt;right = <span class="built_in">input_data</span>(btree-&gt;right, n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> btree;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Node* binary_tree = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; n) &#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">-1</span>) <span class="keyword">break</span>;</span><br><span class="line">        binary_tree = <span class="built_in">input_data</span>(binary_tree, n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">inorder</span>(binary_tree);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>計算機科學</category>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>筆記</tag>
+        <tag>C++</tag>
+        <tag>BST</tag>
+        <tag>資料結構</tag>
+        <tag>進階資料結構</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【筆記】set</title>
     <url>/computer-science/cpp/set/</url>
     <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
@@ -1810,6 +1810,25 @@ E. Run Time Error</p>
       </tags>
   </entry>
   <entry>
+    <title>【解題】a290: 新手訓練系列 ~ 圖論</title>
+    <url>/solved/ZeroJudge/a290/</url>
+    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWEyOTA=">a290: 新手訓練系列 ~ 圖論<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
+<p>先將圖建好，再用 BFS 慢慢走訪，從訪問的起點開始，走過的地方都標記為 true ，若最後終點是 true，輸出 Yes!!!，否則 No!!!</p>
+<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
+<figure class="highlight cpp"><figcaption><span>a290</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> N, M;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; N &gt;&gt; M) &#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; d[N];</span><br><span class="line">        queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">        <span class="type">bool</span> check[<span class="number">800</span>] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; M; i++) &#123;</span><br><span class="line">            <span class="type">int</span> a, b;</span><br><span class="line">            cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">            a--;</span><br><span class="line">            b--;</span><br><span class="line">            d[a].<span class="built_in">push_back</span>(b);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 將能走的路徑都設為 true</span></span><br><span class="line">        <span class="type">int</span> A, B;</span><br><span class="line">        cin &gt;&gt; A &gt;&gt; B;</span><br><span class="line">        A--;</span><br><span class="line">        B--;</span><br><span class="line">        q.<span class="built_in">push</span>(A);</span><br><span class="line">        check[A] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="type">int</span> temp = q.<span class="built_in">front</span>();</span><br><span class="line">            q.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;i : d[temp]) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!check[i]) &#123;</span><br><span class="line">                    check[i] = <span class="literal">true</span>;</span><br><span class="line">                    q.<span class="built_in">push</span>(i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 訪問 B 點是否能走到</span></span><br><span class="line">        <span class="keyword">if</span> (check[B]) &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Yes!!!\n&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;No!!!\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>解題</category>
+        <category>ZeroJudge</category>
+      </categories>
+      <tags>
+        <tag>解題</tag>
+        <tag>Zerojudge</tag>
+        <tag>Graph</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【解題】d732: 二分搜尋法</title>
     <url>/solved/ZeroJudge/d732/</url>
     <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
@@ -1894,25 +1913,6 @@ E. Run Time Error</p>
         <tag>解題</tag>
         <tag>Zerojudge</tag>
         <tag>後序式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【解題】a290: 新手訓練系列 ~ 圖論</title>
-    <url>/solved/ZeroJudge/a290/</url>
-    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWEyOTA=">a290: 新手訓練系列 ~ 圖論<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
-<p>先將圖建好，再用 BFS 慢慢走訪，從訪問的起點開始，走過的地方都標記為 true ，若最後終點是 true，輸出 Yes!!!，否則 No!!!</p>
-<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
-<figure class="highlight cpp"><figcaption><span>a290</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> N, M;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; N &gt;&gt; M) &#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; d[N];</span><br><span class="line">        queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">        <span class="type">bool</span> check[<span class="number">800</span>] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; M; i++) &#123;</span><br><span class="line">            <span class="type">int</span> a, b;</span><br><span class="line">            cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">            a--;</span><br><span class="line">            b--;</span><br><span class="line">            d[a].<span class="built_in">push_back</span>(b);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 將能走的路徑都設為 true</span></span><br><span class="line">        <span class="type">int</span> A, B;</span><br><span class="line">        cin &gt;&gt; A &gt;&gt; B;</span><br><span class="line">        A--;</span><br><span class="line">        B--;</span><br><span class="line">        q.<span class="built_in">push</span>(A);</span><br><span class="line">        check[A] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="type">int</span> temp = q.<span class="built_in">front</span>();</span><br><span class="line">            q.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;i : d[temp]) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!check[i]) &#123;</span><br><span class="line">                    check[i] = <span class="literal">true</span>;</span><br><span class="line">                    q.<span class="built_in">push</span>(i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 訪問 B 點是否能走到</span></span><br><span class="line">        <span class="keyword">if</span> (check[B]) &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Yes!!!\n&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;No!!!\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>解題</category>
-        <category>ZeroJudge</category>
-      </categories>
-      <tags>
-        <tag>解題</tag>
-        <tag>Zerojudge</tag>
-        <tag>Graph</tag>
       </tags>
   </entry>
   <entry>
