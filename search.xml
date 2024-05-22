@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>【筆記】APCS 2022 年 6 月場</title>
-    <url>/APCS-2022-01/</url>
-    <content><![CDATA[<p>這是我第一次去考 APCS（誰叫你之前都忘記報），當天考觀念時肚子真的痛得要命，直到中午才去宣洩…我的考場在台北大學三峽校區，令我意外的是男女比沒有到很重，但是大佬倒是挺多的。考實作題時，不知道是不是緊張，就是一直在 debug…最後是寫到第三題寫了一點就結束了。我那天超孤單😢，我朋友給我請假…說他抽考沒讀，我也沒讀啊🤬。反正最後考了 4 / 3 還蠻理想的。</p>
-<h2 id="數字遊戲易"><a class="markdownIt-Anchor" href="#數字遊戲易"></a> 數字遊戲（易）</h2>
-<p>ZJ 連結：<span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWkzOTk=">https://zerojudge.tw/ShowProblem?problemid=i399<i class="fa fa-external-link-alt"></i></span></p>
-<p>輸入：3 個 1 ~ 9 的數字</p>
-<p>輸出：先輸出數值出現最多的次數，再輸出三個數，且去除重複，由大到小。</p>
-<p>想法：既要去掉重複又要排序，我的第一想法就是使用 set。set 是一個容器，它具有資料的唯一性，也就是不可重複，且容器內也會排序，跟 map 一樣。第一筆輸出我會用 4 - set 長度，這樣恰好是重複的個數，再用反向迭代器輸出 set 容器即可。</p>
-<p>實作：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> data[<span class="number">3</span>];</span><br><span class="line">    cin &gt;&gt; data[<span class="number">0</span>] &gt;&gt; data[<span class="number">1</span>] &gt;&gt; data[<span class="number">2</span>];</span><br><span class="line">    <span class="function">set&lt;<span class="type">int</span>&gt; <span class="title">myset</span><span class="params">(data, data + <span class="number">3</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="number">4</span> - myset.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> it = myset.<span class="built_in">rbegin</span>(); it != myset.<span class="built_in">rend</span>(); ++it) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; *it;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="字串解碼中"><a class="markdownIt-Anchor" href="#字串解碼中"></a> 字串解碼（中）</h2>
-<p>想法：就…純粹的暴力解吧…，還有注意題目需求，這題要你解密，不是加密（我朋友不小心…）</p>
-<p>實作：未更新（懶）</p>
-]]></content>
-      <tags>
-        <tag>APCS</tag>
-        <tag>筆記</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>APCS 2024 1 月場</title>
     <url>/APCS-2024-01/</url>
     <content><![CDATA[<h1 id="說明"><a class="markdownIt-Anchor" href="#說明"></a> 說明</h1>
@@ -52,71 +32,23 @@
       </tags>
   </entry>
   <entry>
-    <title>【經驗】逢甲資工系 APCS 組面試經驗</title>
-    <url>/FCU-CSIE-APCS-interview/</url>
-    <content><![CDATA[<h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
-<p>其實面試不用緊張，照你們平常跟老師的講話方式就好。目前我面的學校，教授們都很 Nice，我本人就慢熟，但我的高中有模擬面試，有模擬面試就去試試看，體驗一下那種感覺，然後說實話不用太壓抑自己，把想說的說出來即可，教授特喜歡這種有想法的人。</p>
-<span id="more"></span>
-<h1 id="面試過程"><a class="markdownIt-Anchor" href="#面試過程"></a> 面試過程</h1>
-<p>以下是大致過程，可能有漏問題，但是應該不會影響到整體面試內容。</p>
-<p>三對一個人面試，從左至右，教授編號為（A）到（C）用英文字母表示表示</p>
-<hr />
-<ol>
-<li>B 教授：請自我介紹 1 分鐘（自介後就輕鬆聊）</li>
-</ol>
-<hr />
-<ol start="2">
-<li>B 教授：我從學習歷程問我你有一點很特別，就是可以選了一個 C 語言，你可以說一下為什麼選擇 C 嗎？</li>
-</ol>
-<ul>
-<li>我：因為 APCS 的觀念題是用 C 語言，我希望可以藉由多元選修來增強 APCS 的觀念題。</li>
-<li>B 教授：那有沒有覺得 C 比較難寫？</li>
-<li>我：有，但主要是 C 跟 C++ 的寫法都蠻像的，只差在輸出寫法不同。</li>
-<li>全部：然後就大家就 Blablabla 嘻嘻哈哈</li>
-</ul>
-<hr />
-<ol start="3">
-<li>C 教授：可以說明一下工程應用這門課在幹嘛嗎？</li>
-</ol>
-<ul>
-<li>我：（我沒聽清楚）可以請教授在問一次問題嗎</li>
-<li>C 教授：就是你有一個工程課在幹嘛，因為你拿了 99 分，可以說明一下嗎？</li>
-<li>我：（前面有點吱吱嗚嗚然後才想到 -_-）喔！在那門課主要是在畫草圖，學習如何建模，然後</li>
-<li>A or B 教授：那是用什麼軟體呢？</li>
-<li>我：是用網頁上的 Onshape</li>
-<li>教授：嗯~（各教授點頭）</li>
-</ul>
-<hr />
-<ol start="4">
-<li>B 教授：從這邊的資料，我看到你都是填 APCS 組想元智、淡江等等，想問你如果都上的話你會想進哪間？</li>
-</ol>
-<ul>
-<li>我：我會選擇逢甲，因為在 SITCON 計算機年會中，我有看到逢甲學長在上面演講，也想加入逢甲的黑客社學習以及交流技術。</li>
-<li>B 教授：那那入取你的時候，其他的學校就不用考慮了</li>
-<li>教授：依舊嘻嘻哈哈</li>
-</ul>
-<hr />
-<ol start="5">
-<li>A 教授：那你有什麼想問的問題嗎？</li>
-</ol>
-<ul>
-<li>我：因為我希望可以成為網頁工程師，目前只接觸過 HTML、CSS 和 JavaScript，想問教授我可以往哪個方面學習？</li>
-<li>A 教授：其實如果會寫網頁的話，就要注意資安，要確保你的網頁是沒有漏洞的，BlaBlaBla</li>
-<li>C 教授：還要看你的網頁的內容阿，架構阿等等等，BlaBlaBla。</li>
-</ul>
-<hr />
-<ol start="6">
-<li>A 教授：那還有什麼問題嗎？</li>
-</ol>
-<ul>
-<li>我：嗯…沒有了</li>
-<li>B 教授：好，那就到這邊吧，可以請同學出去了。</li>
-<li>我：嗯好，謝謝教授們。（走出會議廳點頭示意並關門）</li>
-</ul>
+    <title>【筆記】APCS 2022 年 6 月場</title>
+    <url>/APCS-2022-01/</url>
+    <content><![CDATA[<p>這是我第一次去考 APCS（誰叫你之前都忘記報），當天考觀念時肚子真的痛得要命，直到中午才去宣洩…我的考場在台北大學三峽校區，令我意外的是男女比沒有到很重，但是大佬倒是挺多的。考實作題時，不知道是不是緊張，就是一直在 debug…最後是寫到第三題寫了一點就結束了。我那天超孤單😢，我朋友給我請假…說他抽考沒讀，我也沒讀啊🤬。反正最後考了 4 / 3 還蠻理想的。</p>
+<h2 id="數字遊戲易"><a class="markdownIt-Anchor" href="#數字遊戲易"></a> 數字遊戲（易）</h2>
+<p>ZJ 連結：<span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWkzOTk=">https://zerojudge.tw/ShowProblem?problemid=i399<i class="fa fa-external-link-alt"></i></span></p>
+<p>輸入：3 個 1 ~ 9 的數字</p>
+<p>輸出：先輸出數值出現最多的次數，再輸出三個數，且去除重複，由大到小。</p>
+<p>想法：既要去掉重複又要排序，我的第一想法就是使用 set。set 是一個容器，它具有資料的唯一性，也就是不可重複，且容器內也會排序，跟 map 一樣。第一筆輸出我會用 4 - set 長度，這樣恰好是重複的個數，再用反向迭代器輸出 set 容器即可。</p>
+<p>實作：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;set&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> data[<span class="number">3</span>];</span><br><span class="line">    cin &gt;&gt; data[<span class="number">0</span>] &gt;&gt; data[<span class="number">1</span>] &gt;&gt; data[<span class="number">2</span>];</span><br><span class="line">    <span class="function">set&lt;<span class="type">int</span>&gt; <span class="title">myset</span><span class="params">(data, data + <span class="number">3</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="number">4</span> - myset.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> it = myset.<span class="built_in">rbegin</span>(); it != myset.<span class="built_in">rend</span>(); ++it) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; *it;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="字串解碼中"><a class="markdownIt-Anchor" href="#字串解碼中"></a> 字串解碼（中）</h2>
+<p>想法：就…純粹的暴力解吧…，還有注意題目需求，這題要你解密，不是加密（我朋友不小心…）</p>
+<p>實作：未更新（懶）</p>
 ]]></content>
       <tags>
-        <tag>逢甲</tag>
-        <tag>資工</tag>
+        <tag>APCS</tag>
+        <tag>筆記</tag>
       </tags>
   </entry>
   <entry>
@@ -217,6 +149,93 @@
       </tags>
   </entry>
   <entry>
+    <title>【經驗】逢甲資工系 APCS 組面試經驗</title>
+    <url>/FCU-CSIE-APCS-interview/</url>
+    <content><![CDATA[<h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>其實面試不用緊張，照你們平常跟老師的講話方式就好。目前我面的學校，教授們都很 Nice，我本人就慢熟，但我的高中有模擬面試，有模擬面試就去試試看，體驗一下那種感覺，然後說實話不用太壓抑自己，把想說的說出來即可，教授特喜歡這種有想法的人。</p>
+<span id="more"></span>
+<h1 id="面試過程"><a class="markdownIt-Anchor" href="#面試過程"></a> 面試過程</h1>
+<p>以下是大致過程，可能有漏問題，但是應該不會影響到整體面試內容。</p>
+<p>三對一個人面試，從左至右，教授編號為（A）到（C）用英文字母表示表示</p>
+<hr />
+<ol>
+<li>B 教授：請自我介紹 1 分鐘（自介後就輕鬆聊）</li>
+</ol>
+<hr />
+<ol start="2">
+<li>B 教授：我從學習歷程問我你有一點很特別，就是可以選了一個 C 語言，你可以說一下為什麼選擇 C 嗎？</li>
+</ol>
+<ul>
+<li>我：因為 APCS 的觀念題是用 C 語言，我希望可以藉由多元選修來增強 APCS 的觀念題。</li>
+<li>B 教授：那有沒有覺得 C 比較難寫？</li>
+<li>我：有，但主要是 C 跟 C++ 的寫法都蠻像的，只差在輸出寫法不同。</li>
+<li>全部：然後就大家就 Blablabla 嘻嘻哈哈</li>
+</ul>
+<hr />
+<ol start="3">
+<li>C 教授：可以說明一下工程應用這門課在幹嘛嗎？</li>
+</ol>
+<ul>
+<li>我：（我沒聽清楚）可以請教授在問一次問題嗎</li>
+<li>C 教授：就是你有一個工程課在幹嘛，因為你拿了 99 分，可以說明一下嗎？</li>
+<li>我：（前面有點吱吱嗚嗚然後才想到 -_-）喔！在那門課主要是在畫草圖，學習如何建模，然後</li>
+<li>A or B 教授：那是用什麼軟體呢？</li>
+<li>我：是用網頁上的 Onshape</li>
+<li>教授：嗯~（各教授點頭）</li>
+</ul>
+<hr />
+<ol start="4">
+<li>B 教授：從這邊的資料，我看到你都是填 APCS 組想元智、淡江等等，想問你如果都上的話你會想進哪間？</li>
+</ol>
+<ul>
+<li>我：我會選擇逢甲，因為在 SITCON 計算機年會中，我有看到逢甲學長在上面演講，也想加入逢甲的黑客社學習以及交流技術。</li>
+<li>B 教授：那那入取你的時候，其他的學校就不用考慮了</li>
+<li>教授：依舊嘻嘻哈哈</li>
+</ul>
+<hr />
+<ol start="5">
+<li>A 教授：那你有什麼想問的問題嗎？</li>
+</ol>
+<ul>
+<li>我：因為我希望可以成為網頁工程師，目前只接觸過 HTML、CSS 和 JavaScript，想問教授我可以往哪個方面學習？</li>
+<li>A 教授：其實如果會寫網頁的話，就要注意資安，要確保你的網頁是沒有漏洞的，BlaBlaBla</li>
+<li>C 教授：還要看你的網頁的內容阿，架構阿等等等，BlaBlaBla。</li>
+</ul>
+<hr />
+<ol start="6">
+<li>A 教授：那還有什麼問題嗎？</li>
+</ol>
+<ul>
+<li>我：嗯…沒有了</li>
+<li>B 教授：好，那就到這邊吧，可以請同學出去了。</li>
+<li>我：嗯好，謝謝教授們。（走出會議廳點頭示意並關門）</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>逢甲</tag>
+        <tag>資工</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【測試】需密碼文章</title>
+    <url>/hexo-encrypt-test/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="c5f962a59016e1a6ecfe828b27d27df2e5f89b624e75c40addf0dd3622642acb">bd25ed9264b080267271e137e33d0ce1276c06c30ad3349bc1fd0ac9ef1064dce1362436ca4a0a173a8501aa56c1212bbb76dd99a1a7ec98efdab7ba17bd4d9a</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">密碼是 test</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>作者使用的 C++ 編譯器</title>
     <url>/cpp-compiler/</url>
     <content><![CDATA[<h2 id="線上"><a class="markdownIt-Anchor" href="#線上"></a> 線上</h2>
@@ -251,25 +270,6 @@
       <tags>
         <tag>C/C++</tag>
         <tag>編譯器/編輯器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【測試】需密碼文章</title>
-    <url>/hexo-encrypt-test/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="c5f962a59016e1a6ecfe828b27d27df2e5f89b624e75c40addf0dd3622642acb">bd25ed9264b080267271e137e33d0ce1276c06c30ad3349bc1fd0ac9ef1064dce1362436ca4a0a173a8501aa56c1212bbb76dd99a1a7ec98efdab7ba17bd4d9a</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">密碼是 test</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <tags>
-        <tag>test</tag>
       </tags>
   </entry>
   <entry>
@@ -526,61 +526,6 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>tag plugins 測試文章</title>
-    <url>/tag-plugins-test/</url>
-    <content><![CDATA[<div class="note "><h4 id="header"><a class="markdownIt-Anchor" href="#header"></a> Header</h4>
-<p>(without define class style)</p>
-</div>
-<div class="note default"><h4 id="default-header"><a class="markdownIt-Anchor" href="#default-header"></a> Default Header</h4>
-<p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
-</div>
-<div class="note primary"><h4 id="primary-header"><a class="markdownIt-Anchor" href="#primary-header"></a> Primary Header</h4>
-<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
-</div>
-<div class="note info"><h4 id="info-header"><a class="markdownIt-Anchor" href="#info-header"></a> Info Header</h4>
-<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
-</div>
-<div class="note success"><h4 id="success-header"><a class="markdownIt-Anchor" href="#success-header"></a> Success Header</h4>
-<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
-</div>
-<div class="note warning"><h4 id="warning-header"><a class="markdownIt-Anchor" href="#warning-header"></a> Warning Header</h4>
-<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
-</div>
-<div class="note danger"><h4 id="danger-header"><a class="markdownIt-Anchor" href="#danger-header"></a> Danger Header</h4>
-<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
-</div>
-<div class="note info no-icon"><h4 id="no-icon-note"><a class="markdownIt-Anchor" href="#no-icon-note"></a> No icon note</h4>
-<p>Note <strong>without</strong> icon: <code>note info no-icon</code></p>
-</div>
-<details class="note primary"><summary><p>This is a summary</p>
-</summary>
-<h4 id="details-and-summary"><a class="markdownIt-Anchor" href="#details-and-summary"></a> Details and summary</h4>
-<p>Note with summary: <code>note primary This is a summary</code></p>
-
-</details>
-]]></content>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>這是我的第一篇文章</title>
-    <url>/test-artical/</url>
-    <content><![CDATA[<p>hi~ 我是國國，身為高一的我想要深入探索程式世界，也歡迎大家與我分享、交流。</p>
-<p>以下是 2022-4-29 更新的測試內容</p>
-<h2 id="標題二"><a class="markdownIt-Anchor" href="#標題二"></a> 標題二</h2>
-<h3 id="標題三"><a class="markdownIt-Anchor" href="#標題三"></a> 標題三</h3>
-<h4 id="標題四"><a class="markdownIt-Anchor" href="#標題四"></a> 標題四</h4>
-<h5 id="標題五"><a class="markdownIt-Anchor" href="#標題五"></a> 標題五</h5>
-<h6 id="標題六"><a class="markdownIt-Anchor" href="#標題六"></a> 標題六</h6>
-<hr />
-<h2 id="渲染器的各種操作"><a class="markdownIt-Anchor" href="#渲染器的各種操作"></a> 渲染器的各種操作</h2>
-]]></content>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【心得】被討厭的勇氣</title>
     <url>/the-Courage-to-Be-Disliked/</url>
     <content><![CDATA[]]></content>
@@ -637,25 +582,41 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【日常】5 月 10 日 小雨</title>
-    <url>/life/20220510/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="865d69b420b60fa41ad859d77e662a4902f8acbba84a77d066f95f7a64d8505d">c4379dbc51520bb23a681c5b597ae53a1869955313f65a29abd12e88faa2d4aa923b96bcaea208789f9d7c66f64cbcd8dd88157bfaaa17266ef48cb0fe008e2ea95e1f579ca8704608b6a868ec00be564167b080c787864c9b759cd716c43a63952246f471a30134b8b6d422b5b6dba3e0ff29c00d1c0d63f028b3b0f7fd95707fceaa8ba43ce757c7cecccc6c9848a3abab425754a1c7af5cd04b0371eb1c2b</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
-      </label>
-    </div>
-  </div>
+    <title>tag plugins 測試文章</title>
+    <url>/tag-plugins-test/</url>
+    <content><![CDATA[<div class="note "><h4 id="header"><a class="markdownIt-Anchor" href="#header"></a> Header</h4>
+<p>(without define class style)</p>
 </div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>生活點滴</category>
-      </categories>
+<div class="note default"><h4 id="default-header"><a class="markdownIt-Anchor" href="#default-header"></a> Default Header</h4>
+<p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note primary"><h4 id="primary-header"><a class="markdownIt-Anchor" href="#primary-header"></a> Primary Header</h4>
+<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note info"><h4 id="info-header"><a class="markdownIt-Anchor" href="#info-header"></a> Info Header</h4>
+<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note success"><h4 id="success-header"><a class="markdownIt-Anchor" href="#success-header"></a> Success Header</h4>
+<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note warning"><h4 id="warning-header"><a class="markdownIt-Anchor" href="#warning-header"></a> Warning Header</h4>
+<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note danger"><h4 id="danger-header"><a class="markdownIt-Anchor" href="#danger-header"></a> Danger Header</h4>
+<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note info no-icon"><h4 id="no-icon-note"><a class="markdownIt-Anchor" href="#no-icon-note"></a> No icon note</h4>
+<p>Note <strong>without</strong> icon: <code>note info no-icon</code></p>
+</div>
+<details class="note primary"><summary><p>This is a summary</p>
+</summary>
+<h4 id="details-and-summary"><a class="markdownIt-Anchor" href="#details-and-summary"></a> Details and summary</h4>
+<p>Note with summary: <code>note primary This is a summary</code></p>
+
+</details>
+]]></content>
       <tags>
-        <tag>日常</tag>
+        <tag>test</tag>
       </tags>
   </entry>
   <entry>
@@ -678,6 +639,45 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </categories>
       <tags>
         <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【日常】5 月 10 日 小雨</title>
+    <url>/life/20220510/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="865d69b420b60fa41ad859d77e662a4902f8acbba84a77d066f95f7a64d8505d">c4379dbc51520bb23a681c5b597ae53a1869955313f65a29abd12e88faa2d4aa923b96bcaea208789f9d7c66f64cbcd8dd88157bfaaa17266ef48cb0fe008e2ea95e1f579ca8704608b6a868ec00be564167b080c787864c9b759cd716c43a63952246f471a30134b8b6d422b5b6dba3e0ff29c00d1c0d63f028b3b0f7fd95707fceaa8ba43ce757c7cecccc6c9848a3abab425754a1c7af5cd04b0371eb1c2b</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>生活點滴</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>這是我的第一篇文章</title>
+    <url>/test-artical/</url>
+    <content><![CDATA[<p>hi~ 我是國國，身為高一的我想要深入探索程式世界，也歡迎大家與我分享、交流。</p>
+<p>以下是 2022-4-29 更新的測試內容</p>
+<h2 id="標題二"><a class="markdownIt-Anchor" href="#標題二"></a> 標題二</h2>
+<h3 id="標題三"><a class="markdownIt-Anchor" href="#標題三"></a> 標題三</h3>
+<h4 id="標題四"><a class="markdownIt-Anchor" href="#標題四"></a> 標題四</h4>
+<h5 id="標題五"><a class="markdownIt-Anchor" href="#標題五"></a> 標題五</h5>
+<h6 id="標題六"><a class="markdownIt-Anchor" href="#標題六"></a> 標題六</h6>
+<hr />
+<h2 id="渲染器的各種操作"><a class="markdownIt-Anchor" href="#渲染器的各種操作"></a> 渲染器的各種操作</h2>
+]]></content>
+      <tags>
+        <tag>test</tag>
       </tags>
   </entry>
   <entry>
@@ -1672,6 +1672,36 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
+    <title>【演算法】最大連續子序列和（Max Subarray Sum）</title>
+    <url>/cs/algo/max-subarray-sum/</url>
+    <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
+<p>題目要求我們從 <code>[1, 2, -4, 5 -2, 6, 2]</code> 數列中找出最大的子序列和為 11</p>
+<h2 id="解法-1暴力解"><a class="markdownIt-Anchor" href="#解法-1暴力解"></a> 解法 1：暴力解</h2>
+<p>時間複雜度為：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
+<p>真的太大了，可以忽略不記這種解。</p>
+<span id="more"></span>
+<h2 id="解法-2卡丹算法kadanes-algorithm"><a class="markdownIt-Anchor" href="#解法-2卡丹算法kadanes-algorithm"></a> 解法 2：卡丹算法（Kadane’s Algorithm）</h2>
+<p>時間複雜度為：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
+<p>簡單說明就是決定子序列是否要加上當前值，或是重新開始一個子序列。</p>
+<p>基本上，一邊輸入一邊判斷是否加起來就可以直接用一個一層 for 迴圈解決。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    ll arr[n], sum = <span class="number">0</span>, mx = LONG_LONG_MIN;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; arr[i];</span><br><span class="line">        (i == <span class="number">0</span>) ? sum = arr[i] : sum = <span class="built_in">max</span>(arr[i], sum + arr[i]);</span><br><span class="line">        mx = <span class="built_in">max</span>(mx, sum);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; mx &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="題目"><a class="markdownIt-Anchor" href="#題目"></a> 題目</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9jc2VzLmZpL3Byb2JsZW1zZXQvdGFzay8xNjQz">CSES Maximum Subarray Sum<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+]]></content>
+      <categories>
+        <category>計算機科學</category>
+        <category>演算法</category>
+      </categories>
+      <tags>
+        <tag>筆記</tag>
+        <tag>基礎演算法</tag>
+        <tag>Max Subarray Sum</tag>
+        <tag>最大連續子序列和</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【筆記】Array 陣列</title>
     <url>/cs/cpp/array/</url>
     <content><![CDATA[<h1 id="基本介紹"><a class="markdownIt-Anchor" href="#基本介紹"></a> 基本介紹</h1>
@@ -2139,6 +2169,21 @@ E. Run Time Error</p>
       </tags>
   </entry>
   <entry>
+    <title>【解題】d001: 例題 P-1-1. 合成函數(1)</title>
+    <url>/solved/TCFSH_CIRC_Judge/d001/</url>
+    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly9qdWRnZS50Y2lyYy50dy9TaG93UHJvYmxlbT9wcm9ibGVtaWQ9ZDAwMQ==">d001: 例題 P-1-1. 合成函數(1)<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
+<p>利用遞迴做函數的輸入及計算</p>
+<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
+<figure class="highlight cpp"><figcaption><span>d001</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">eval</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> val, x, y;</span><br><span class="line">    <span class="type">char</span> token[<span class="number">5</span>];</span><br><span class="line">    cin &gt;&gt; token;</span><br><span class="line">    <span class="keyword">if</span> (token[<span class="number">0</span>] == <span class="string">&#x27;f&#x27;</span>) &#123;</span><br><span class="line">        x = <span class="built_in">eval</span>();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span> * x - <span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (token[<span class="number">0</span>] == <span class="string">&#x27;g&#x27;</span>) &#123;</span><br><span class="line">        x = <span class="built_in">eval</span>();</span><br><span class="line">        y = <span class="built_in">eval</span>();</span><br><span class="line">        <span class="keyword">return</span> x + <span class="number">2</span> * y - <span class="number">3</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">atoi</span>(token);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> ans = <span class="built_in">eval</span>();</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>解題</category>
+        <category>CIRC_Judge</category>
+      </categories>
+  </entry>
+  <entry>
     <title>【解題】d002: 習題 Q-1-2. 合成函數(2) (APCS201902)</title>
     <url>/solved/TCFSH_CIRC_Judge/d002/</url>
     <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
@@ -2155,21 +2200,6 @@ E. Run Time Error</p>
       <tags>
         <tag>APCS</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>【解題】d001: 例題 P-1-1. 合成函數(1)</title>
-    <url>/solved/TCFSH_CIRC_Judge/d001/</url>
-    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly9qdWRnZS50Y2lyYy50dy9TaG93UHJvYmxlbT9wcm9ibGVtaWQ9ZDAwMQ==">d001: 例題 P-1-1. 合成函數(1)<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
-<p>利用遞迴做函數的輸入及計算</p>
-<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
-<figure class="highlight cpp"><figcaption><span>d001</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">eval</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> val, x, y;</span><br><span class="line">    <span class="type">char</span> token[<span class="number">5</span>];</span><br><span class="line">    cin &gt;&gt; token;</span><br><span class="line">    <span class="keyword">if</span> (token[<span class="number">0</span>] == <span class="string">&#x27;f&#x27;</span>) &#123;</span><br><span class="line">        x = <span class="built_in">eval</span>();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span> * x - <span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (token[<span class="number">0</span>] == <span class="string">&#x27;g&#x27;</span>) &#123;</span><br><span class="line">        x = <span class="built_in">eval</span>();</span><br><span class="line">        y = <span class="built_in">eval</span>();</span><br><span class="line">        <span class="keyword">return</span> x + <span class="number">2</span> * y - <span class="number">3</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">atoi</span>(token);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> ans = <span class="built_in">eval</span>();</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>解題</category>
-        <category>CIRC_Judge</category>
-      </categories>
   </entry>
   <entry>
     <title>【解題】d075: Q-6-10. 置物櫃出租</title>
@@ -2209,32 +2239,6 @@ E. Run Time Error</p>
         <tag>解題</tag>
         <tag>Zerojudge</tag>
         <tag>進位制</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【解題】Zerojudge d732: 二分搜尋法</title>
-    <url>/solved/ZeroJudge/d732/</url>
-    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWQ3MzI=">d732: 二分搜尋法<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
-<p>純純的二分搜尋</p>
-<p>範例：找 <code>8</code></p>
-<figure class="highlight tap"><table><tr><td class="code"><pre><span class="line">1<span class="number"> 2 </span>3<span class="number"> 4 </span>5<span class="number"> 6 </span>7<span class="number"> 8 </span>9</span><br><span class="line">↑       ↑       ↑</span><br><span class="line">l       m       r</span><br></pre></td></tr></table></figure>
-<p><code>5 &lt; 8</code> 所以左邊往中點 +1 移動</p>
-<figure class="highlight tap"><table><tr><td class="code"><pre><span class="line">1<span class="number"> 2 </span>3<span class="number"> 4 </span>5<span class="number"> 6 </span>7<span class="number"> 8 </span>9</span><br><span class="line">          ↑ ↑   ↑</span><br><span class="line">          l m   r</span><br></pre></td></tr></table></figure>
-<p><code>7 &lt; 8</code> 所以左邊往中點 +1 移動</p>
-<figure class="highlight tap"><table><tr><td class="code"><pre><span class="line">1<span class="number"> 2 </span>3<span class="number"> 4 </span>5<span class="number"> 6 </span>7<span class="number"> 8 </span>9</span><br><span class="line">              ↑ ↑</span><br><span class="line">              l r</span><br><span class="line">             (m)</span><br></pre></td></tr></table></figure>
-<p><code>8 = 8</code> 所以結束二分搜</p>
-<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
-<figure class="highlight cpp"><figcaption><span>d732</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">(<span class="type">int</span> *data, <span class="type">int</span> n, <span class="type">int</span> qq)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> left = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> right = n;</span><br><span class="line">    <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">        <span class="type">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (data[mid] &lt; qq) &#123;</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (data[mid] &gt; qq) &#123;</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cout &lt;&lt; mid + <span class="number">1</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="number">0</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n, k;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    <span class="type">int</span> data[n], q[k];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; data[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        cin &gt;&gt; q[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        <span class="built_in">solve</span>(data, n, q[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>解題</category>
-        <category>ZeroJudge</category>
-      </categories>
-      <tags>
-        <tag>解題</tag>
-        <tag>Zerojudge</tag>
-        <tag>二分搜</tag>
       </tags>
   </entry>
   <entry>
@@ -2318,6 +2322,69 @@ E. Run Time Error</p>
       </tags>
   </entry>
   <entry>
+    <title>【解題】Zerojudge d732: 二分搜尋法</title>
+    <url>/solved/ZeroJudge/d732/</url>
+    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWQ3MzI=">d732: 二分搜尋法<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
+<p>純純的二分搜尋</p>
+<p>範例：找 <code>8</code></p>
+<figure class="highlight tap"><table><tr><td class="code"><pre><span class="line">1<span class="number"> 2 </span>3<span class="number"> 4 </span>5<span class="number"> 6 </span>7<span class="number"> 8 </span>9</span><br><span class="line">↑       ↑       ↑</span><br><span class="line">l       m       r</span><br></pre></td></tr></table></figure>
+<p><code>5 &lt; 8</code> 所以左邊往中點 +1 移動</p>
+<figure class="highlight tap"><table><tr><td class="code"><pre><span class="line">1<span class="number"> 2 </span>3<span class="number"> 4 </span>5<span class="number"> 6 </span>7<span class="number"> 8 </span>9</span><br><span class="line">          ↑ ↑   ↑</span><br><span class="line">          l m   r</span><br></pre></td></tr></table></figure>
+<p><code>7 &lt; 8</code> 所以左邊往中點 +1 移動</p>
+<figure class="highlight tap"><table><tr><td class="code"><pre><span class="line">1<span class="number"> 2 </span>3<span class="number"> 4 </span>5<span class="number"> 6 </span>7<span class="number"> 8 </span>9</span><br><span class="line">              ↑ ↑</span><br><span class="line">              l r</span><br><span class="line">             (m)</span><br></pre></td></tr></table></figure>
+<p><code>8 = 8</code> 所以結束二分搜</p>
+<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
+<figure class="highlight cpp"><figcaption><span>d732</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">(<span class="type">int</span> *data, <span class="type">int</span> n, <span class="type">int</span> qq)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> left = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> right = n;</span><br><span class="line">    <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">        <span class="type">int</span> mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> (data[mid] &lt; qq) &#123;</span><br><span class="line">            left = mid + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (data[mid] &gt; qq) &#123;</span><br><span class="line">            right = mid - <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cout &lt;&lt; mid + <span class="number">1</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="number">0</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n, k;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    <span class="type">int</span> data[n], q[k];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; data[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        cin &gt;&gt; q[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        <span class="built_in">solve</span>(data, n, q[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>解題</category>
+        <category>ZeroJudge</category>
+      </categories>
+      <tags>
+        <tag>解題</tag>
+        <tag>Zerojudge</tag>
+        <tag>二分搜</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【解題】Zerojudge j125. 4. 蓋步道</title>
+    <url>/solved/ZeroJudge/j125/</url>
+    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWoxMjU=">j125. 4. 蓋步道<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
+<p>尋找高度差的最小值，但線性搜尋會爆，所以用二分搜，找到此最大高度的最小值後再跑一次 BFS 算路徑長度。</p>
+<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
+<figure class="highlight cpp"><figcaption><span>j125</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> high = <span class="number">-1</span>, low = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> g[<span class="number">305</span>][<span class="number">305</span>];</span><br><span class="line"><span class="type">int</span> viewed[<span class="number">305</span>][<span class="number">305</span>];</span><br><span class="line">queue&lt;pair&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;, <span class="type">int</span>&gt;&gt; todo;</span><br><span class="line"><span class="type">int</span> dir[<span class="number">4</span>][<span class="number">2</span>] = &#123;</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">1</span>&#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">-1</span>&#125;,</span><br><span class="line">    &#123;<span class="number">1</span>, <span class="number">0</span>&#125;,</span><br><span class="line">    &#123;<span class="number">-1</span>, <span class="number">0</span>&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bin_s</span><span class="params">(<span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">    todo.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(<span class="built_in">make_pair</span>(<span class="number">0</span>, <span class="number">0</span>), <span class="number">0</span>));</span><br><span class="line">    viewed[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (!todo.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        <span class="type">int</span> x = todo.<span class="built_in">front</span>().first.first;</span><br><span class="line">        <span class="type">int</span> y = todo.<span class="built_in">front</span>().first.second;</span><br><span class="line">        <span class="type">int</span> cnt = todo.<span class="built_in">front</span>().second;</span><br><span class="line">        viewed[x][y] = <span class="number">1</span>;</span><br><span class="line">        todo.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">if</span> (x == n - <span class="number">1</span> &amp;&amp; y == n - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> cnt;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">            <span class="type">int</span> nx = x + dir[i][<span class="number">0</span>];</span><br><span class="line">            <span class="type">int</span> ny = y + dir[i][<span class="number">1</span>];</span><br><span class="line">            <span class="keyword">if</span> (nx &gt;= <span class="number">0</span> &amp;&amp; nx &lt;= n - <span class="number">1</span> &amp;&amp; ny &gt;= <span class="number">0</span> &amp;&amp; ny &lt;= n - <span class="number">1</span> &amp;&amp; viewed[nx][ny] == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="type">int</span> h = <span class="built_in">abs</span>(g[x][y] - g[nx][ny]);</span><br><span class="line">                <span class="keyword">if</span> (h &lt;= m) &#123;</span><br><span class="line">                    viewed[nx][ny] = <span class="number">1</span>;</span><br><span class="line">                    todo.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(<span class="built_in">make_pair</span>(nx, ny), cnt + <span class="number">1</span>));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            cin &gt;&gt; g[i][j];</span><br><span class="line">            high = <span class="built_in">max</span>(g[i][j], high);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// find h</span></span><br><span class="line">    <span class="keyword">while</span> (high - low &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="comment">// queue.clear()</span></span><br><span class="line">        <span class="keyword">while</span> (!todo.<span class="built_in">empty</span>()) todo.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="comment">// viewed init</span></span><br><span class="line">        <span class="built_in">memset</span>(viewed, <span class="number">0</span>, <span class="built_in">sizeof</span>(viewed));</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> m = low + (high - low) / <span class="number">2</span>;</span><br><span class="line">        <span class="type">int</span> check = <span class="built_in">bin_s</span>(m);</span><br><span class="line">        <span class="keyword">if</span> (check == <span class="number">-1</span>) &#123;</span><br><span class="line">            low = m;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            high = m;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; high &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// print step</span></span><br><span class="line">    <span class="comment">// queue.clear()</span></span><br><span class="line">    <span class="keyword">while</span> (!todo.<span class="built_in">empty</span>()) todo.<span class="built_in">pop</span>();</span><br><span class="line">    <span class="comment">// viewed init</span></span><br><span class="line">    <span class="built_in">memset</span>(viewed, <span class="number">0</span>, <span class="built_in">sizeof</span>(viewed));</span><br><span class="line">    cout &lt;&lt; <span class="built_in">bin_s</span>(high);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>解題</category>
+        <category>ZeroJudge</category>
+      </categories>
+      <tags>
+        <tag>APCS</tag>
+        <tag>解題</tag>
+        <tag>Zerojudge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【解題】Zerojudge j178: 手遊廣告 (Advertisement)</title>
+    <url>/solved/ZeroJudge/j178/</url>
+    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWoxNzg=">j178: 手遊廣告 (Advertisement)<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
+<p>水題。</p>
+<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
+<figure class="highlight cpp"><figcaption><span>j178</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> m, a;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; a;</span><br><span class="line">    <span class="type">int</span> T[m];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        cin &gt;&gt; T[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (a &lt;= T[i]) <span class="keyword">break</span>;</span><br><span class="line">        a += T[i];</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; a &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>解題</category>
+        <category>ZeroJudge</category>
+      </categories>
+      <tags>
+        <tag>TOI</tag>
+        <tag>解題</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【解題】Zerojudge f832: 隕石 (Meteorite)</title>
     <url>/solved/ZeroJudge/f832/</url>
     <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
@@ -2348,43 +2415,6 @@ E. Run Time Error</p>
       </tags>
   </entry>
   <entry>
-    <title>【解題】Zerojudge j178: 手遊廣告 (Advertisement)</title>
-    <url>/solved/ZeroJudge/j178/</url>
-    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWoxNzg=">j178: 手遊廣告 (Advertisement)<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
-<p>水題。</p>
-<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
-<figure class="highlight cpp"><figcaption><span>j178</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> m, a;</span><br><span class="line">    cin &gt;&gt; m &gt;&gt; a;</span><br><span class="line">    <span class="type">int</span> T[m];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        cin &gt;&gt; T[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (a &lt;= T[i]) <span class="keyword">break</span>;</span><br><span class="line">        a += T[i];</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; a &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>解題</category>
-        <category>ZeroJudge</category>
-      </categories>
-      <tags>
-        <tag>TOI</tag>
-        <tag>解題</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【解題】Zerojudge j125. 4. 蓋步道</title>
-    <url>/solved/ZeroJudge/j125/</url>
-    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWoxMjU=">j125. 4. 蓋步道<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
-<p>尋找高度差的最小值，但線性搜尋會爆，所以用二分搜，找到此最大高度的最小值後再跑一次 BFS 算路徑長度。</p>
-<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
-<figure class="highlight cpp"><figcaption><span>j125</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> high = <span class="number">-1</span>, low = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> g[<span class="number">305</span>][<span class="number">305</span>];</span><br><span class="line"><span class="type">int</span> viewed[<span class="number">305</span>][<span class="number">305</span>];</span><br><span class="line">queue&lt;pair&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;, <span class="type">int</span>&gt;&gt; todo;</span><br><span class="line"><span class="type">int</span> dir[<span class="number">4</span>][<span class="number">2</span>] = &#123;</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">1</span>&#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">-1</span>&#125;,</span><br><span class="line">    &#123;<span class="number">1</span>, <span class="number">0</span>&#125;,</span><br><span class="line">    &#123;<span class="number">-1</span>, <span class="number">0</span>&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">bin_s</span><span class="params">(<span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">    todo.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(<span class="built_in">make_pair</span>(<span class="number">0</span>, <span class="number">0</span>), <span class="number">0</span>));</span><br><span class="line">    viewed[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (!todo.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">        <span class="type">int</span> x = todo.<span class="built_in">front</span>().first.first;</span><br><span class="line">        <span class="type">int</span> y = todo.<span class="built_in">front</span>().first.second;</span><br><span class="line">        <span class="type">int</span> cnt = todo.<span class="built_in">front</span>().second;</span><br><span class="line">        viewed[x][y] = <span class="number">1</span>;</span><br><span class="line">        todo.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">if</span> (x == n - <span class="number">1</span> &amp;&amp; y == n - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> cnt;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</span><br><span class="line">            <span class="type">int</span> nx = x + dir[i][<span class="number">0</span>];</span><br><span class="line">            <span class="type">int</span> ny = y + dir[i][<span class="number">1</span>];</span><br><span class="line">            <span class="keyword">if</span> (nx &gt;= <span class="number">0</span> &amp;&amp; nx &lt;= n - <span class="number">1</span> &amp;&amp; ny &gt;= <span class="number">0</span> &amp;&amp; ny &lt;= n - <span class="number">1</span> &amp;&amp; viewed[nx][ny] == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="type">int</span> h = <span class="built_in">abs</span>(g[x][y] - g[nx][ny]);</span><br><span class="line">                <span class="keyword">if</span> (h &lt;= m) &#123;</span><br><span class="line">                    viewed[nx][ny] = <span class="number">1</span>;</span><br><span class="line">                    todo.<span class="built_in">push</span>(<span class="built_in">make_pair</span>(<span class="built_in">make_pair</span>(nx, ny), cnt + <span class="number">1</span>));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            cin &gt;&gt; g[i][j];</span><br><span class="line">            high = <span class="built_in">max</span>(g[i][j], high);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// find h</span></span><br><span class="line">    <span class="keyword">while</span> (high - low &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="comment">// queue.clear()</span></span><br><span class="line">        <span class="keyword">while</span> (!todo.<span class="built_in">empty</span>()) todo.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="comment">// viewed init</span></span><br><span class="line">        <span class="built_in">memset</span>(viewed, <span class="number">0</span>, <span class="built_in">sizeof</span>(viewed));</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> m = low + (high - low) / <span class="number">2</span>;</span><br><span class="line">        <span class="type">int</span> check = <span class="built_in">bin_s</span>(m);</span><br><span class="line">        <span class="keyword">if</span> (check == <span class="number">-1</span>) &#123;</span><br><span class="line">            low = m;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            high = m;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; high &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// print step</span></span><br><span class="line">    <span class="comment">// queue.clear()</span></span><br><span class="line">    <span class="keyword">while</span> (!todo.<span class="built_in">empty</span>()) todo.<span class="built_in">pop</span>();</span><br><span class="line">    <span class="comment">// viewed init</span></span><br><span class="line">    <span class="built_in">memset</span>(viewed, <span class="number">0</span>, <span class="built_in">sizeof</span>(viewed));</span><br><span class="line">    cout &lt;&lt; <span class="built_in">bin_s</span>(high);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>解題</category>
-        <category>ZeroJudge</category>
-      </categories>
-      <tags>
-        <tag>APCS</tag>
-        <tag>解題</tag>
-        <tag>Zerojudge</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【解題】Zerojudge j179: 資料分類 (Classification)</title>
     <url>/solved/ZeroJudge/j179/</url>
     <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
@@ -2407,25 +2437,6 @@ E. Run Time Error</p>
       </categories>
       <tags>
         <tag>TOI</tag>
-        <tag>解題</tag>
-        <tag>Zerojudge</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【解題】Zerojudge j605. 1. 程式考試</title>
-    <url>/solved/ZeroJudge/j605/</url>
-    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWo2MDU=">j605. 1. 程式考試<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
-<p>APCS 第一題純水題</p>
-<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
-<figure class="highlight cpp"><figcaption><span>j605</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> data[n][<span class="number">2</span>];</span><br><span class="line">    <span class="type">int</span> max_num = <span class="number">-1</span>;</span><br><span class="line">    <span class="type">int</span> max_num_time = <span class="number">-1</span>;</span><br><span class="line">    <span class="type">int</span> error_times = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; data[i][<span class="number">0</span>] &gt;&gt; data[i][<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span> (data[i][<span class="number">1</span>] &gt; max_num) &#123;</span><br><span class="line">            max_num_time = data[i][<span class="number">0</span>];</span><br><span class="line">            max_num = data[i][<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (data[i][<span class="number">1</span>] == <span class="number">-1</span>) &#123;</span><br><span class="line">            error_times++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> total = max_num - n - (error_times * <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; ((total &lt; <span class="number">0</span>) ? <span class="number">0</span> : total) &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; max_num_time &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>解題</category>
-        <category>ZeroJudge</category>
-      </categories>
-      <tags>
-        <tag>APCS</tag>
         <tag>解題</tag>
         <tag>Zerojudge</tag>
       </tags>
@@ -2459,6 +2470,25 @@ E. Run Time Error</p>
       </categories>
       <tags>
         <tag>TOI</tag>
+        <tag>解題</tag>
+        <tag>Zerojudge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【解題】Zerojudge j605. 1. 程式考試</title>
+    <url>/solved/ZeroJudge/j605/</url>
+    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWo2MDU=">j605. 1. 程式考試<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
+<p>APCS 第一題純水題</p>
+<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
+<figure class="highlight cpp"><figcaption><span>j605</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> data[n][<span class="number">2</span>];</span><br><span class="line">    <span class="type">int</span> max_num = <span class="number">-1</span>;</span><br><span class="line">    <span class="type">int</span> max_num_time = <span class="number">-1</span>;</span><br><span class="line">    <span class="type">int</span> error_times = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; data[i][<span class="number">0</span>] &gt;&gt; data[i][<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span> (data[i][<span class="number">1</span>] &gt; max_num) &#123;</span><br><span class="line">            max_num_time = data[i][<span class="number">0</span>];</span><br><span class="line">            max_num = data[i][<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (data[i][<span class="number">1</span>] == <span class="number">-1</span>) &#123;</span><br><span class="line">            error_times++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> total = max_num - n - (error_times * <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; ((total &lt; <span class="number">0</span>) ? <span class="number">0</span> : total) &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; max_num_time &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>解題</category>
+        <category>ZeroJudge</category>
+      </categories>
+      <tags>
+        <tag>APCS</tag>
         <tag>解題</tag>
         <tag>Zerojudge</tag>
       </tags>
