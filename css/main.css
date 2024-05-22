@@ -782,7 +782,7 @@ pre code {
   background: #f0f0f0;
 }
 .post-body .label.primary {
-  background: #f8f0ff;
+  background: #efe6f7;
 }
 .post-body .label.info {
   background: #e5f2f8;
@@ -890,7 +890,7 @@ pre code {
   }
 }
 .post-body .note {
-  border-radius: 5px;
+  border-radius: 3px;
   margin-bottom: 20px;
   padding: 1em;
   position: relative;
@@ -935,7 +935,7 @@ pre code {
 }
 @media (prefers-color-scheme: dark) {
   .post-body .note.default {
-    background: #515151;
+    background: #3c3c3c;
   }
 }
 .post-body .note.default h2,
@@ -952,12 +952,12 @@ pre code {
   color: #777;
 }
 .post-body .note.primary {
-  background: #faf5ff;
-  border-left-color: #b288ff;
+  background: #f5f0fa;
+  border-left-color: #6f42c1;
 }
 @media (prefers-color-scheme: dark) {
   .post-body .note.primary {
-    background: #525153;
+    background: #3c3b3c;
   }
 }
 .post-body .note.primary h2,
@@ -965,13 +965,13 @@ pre code {
 .post-body .note.primary h4,
 .post-body .note.primary h5,
 .post-body .note.primary h6 {
-  color: #b288ff;
+  color: #6f42c1;
 }
 .post-body .note.primary:not(.no-icon)::before {
   content: '\f055';
   font-family: 'Font Awesome 6 Free';
   font-weight: 900;
-  color: #b288ff;
+  color: #6f42c1;
 }
 .post-body .note.info {
   background: #eef7fa;
@@ -979,7 +979,7 @@ pre code {
 }
 @media (prefers-color-scheme: dark) {
   .post-body .note.info {
-    background: #4f5152;
+    background: #3b3c3c;
   }
 }
 .post-body .note.info h2,
@@ -1001,7 +1001,7 @@ pre code {
 }
 @media (prefers-color-scheme: dark) {
   .post-body .note.success {
-    background: #4f5150;
+    background: #3b3c3b;
   }
 }
 .post-body .note.success h2,
@@ -1023,7 +1023,7 @@ pre code {
 }
 @media (prefers-color-scheme: dark) {
   .post-body .note.warning {
-    background: #52514e;
+    background: #3d3c3b;
   }
 }
 .post-body .note.warning h2,
@@ -1045,7 +1045,7 @@ pre code {
 }
 @media (prefers-color-scheme: dark) {
   .post-body .note.danger {
-    background: #525050;
+    background: #3d3c3c;
   }
 }
 .post-body .note.danger h2,
@@ -1447,7 +1447,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #fadaaf;
+    background: #9fff57;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
