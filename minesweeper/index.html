@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-K.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-K.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-K.ico">
+  <link rel="mask-icon" href="/images/logo-K.svg" color="#222">
+  <meta name="google-site-verification" content="AaEkoAT3i0UsXWrh4ue4tbkDSIPbitczMwTw376jzb4">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Traditional+Chinese:300,300italic,400,400italic,700,700italic%7CFira+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huangmayor0905.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="簡述 高中生涯就快告一段落了，在畢業前一週閒閒沒事，一直在想除了解題還可以幹嘛，所以更早之前做了一個地震報告的靜態網頁，現在又搞了一個踩地雷╰(*°▽°*)╯ 主要會練習到：  圖論的 BFS or DFS C++ 時間戳轉當地時間 讀檔、寫檔（iofstream）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【小作品】Minesweeper">
+<meta property="og:url" content="https://huangmayor0905.github.io/minesweeper/index.html">
+<meta property="og:site_name" content="Kuo&#39;s Blog">
+<meta property="og:description" content="簡述 高中生涯就快告一段落了，在畢業前一週閒閒沒事，一直在想除了解題還可以幹嘛，所以更早之前做了一個地震報告的靜態網頁，現在又搞了一個踩地雷╰(*°▽°*)╯ 主要會練習到：  圖論的 BFS or DFS C++ 時間戳轉當地時間 讀檔、寫檔（iofstream）">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2024-05-27T03:02:50.000Z">
+<meta property="article:modified_time" content="2024-05-27T03:31:05.508Z">
+<meta property="article:author" content="Eric Huang">
+<meta property="article:tag" content="小作品">
+<meta property="article:tag" content="踩地雷">
+<meta property="article:tag" content="Minesweeper">
+<meta property="article:tag" content="BFS">
+<meta property="article:tag" content="檔案讀寫">
+<meta property="article:tag" content="時間戳">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://huangmayor0905.github.io/minesweeper/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://huangmayor0905.github.io/minesweeper/","path":"minesweeper/","title":"【小作品】Minesweeper"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【小作品】Minesweeper | Kuo's Blog</title>
+  
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-H75BZLED7F","only_pageview":true,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+
+<meta name="google-site-verification" content="AOnrBmQ6QhS1CQWvl1Cw5aKbZ9JsDkj4p-W1Nw6gBsA" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6440102652783062"
+     crossorigin="anonymous"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Kuo's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">競程筆記｜個人網站</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">55</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">14</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">56</span></a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>時間表</a></li><li class="menu-item menu-item-note"><a href="/cplusplus/" rel="section"><i class="fa-solid fa-note-sticky fa-fw"></i>C++ 筆記</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜尋..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B0%A1%E8%BF%B0"><span class="nav-text"> 簡述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E8%AA%AA"><span class="nav-text"> 解說</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="nav-text"> 程式碼</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Eric Huang"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Eric Huang</p>
+  <div class="site-description" itemprop="description">個人網站</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">56</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">55</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2h1YW5nbWF5b3IwOTA1" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huangmayor0905"><i class="fab fa-github fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmxpb25odWFuZzkxNDkwM0BnbWFpbC5jb20=" title="E-Mail → mailto:lionhuang914903@gmail.com"><i class="fa fa-envelope fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9rdW9rdW9tYXlvcg==" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;kuokuomayor"><i class="fa-brands fa-x-twitter fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3Byb2ZpbGUucGhwP2lkPTEwMDAwODc0NDI4MDA1Nw==" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;profile.php?id&#x3D;100008744280057"><i class="fab fa-facebook fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zbGp3aGpzLw==" title="Instagram → https:&#x2F;&#x2F;www.instagram.com&#x2F;sljwhjs&#x2F;"><i class="fab fa-instagram fa-fw"></i></span>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="回到頂端">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://huangmayor0905.github.io/minesweeper/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Eric Huang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuo's Blog">
+      <meta itemprop="description" content="個人網站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【小作品】Minesweeper | Kuo's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【小作品】Minesweeper
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發布於</span>
+      
+
+      <time title="創建時間：2024-05-27 11:02:50 / 修改時間：11:31:05" itemprop="dateCreated datePublished" datetime="2024-05-27T11:02:50+08:00">2024-05-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B0%8F%E4%BD%9C%E5%93%81/" itemprop="url" rel="index"><span itemprop="name">小作品</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">閱讀次數：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>4 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="簡述"><a class="markdownIt-Anchor" href="#簡述"></a> 簡述</h2>
+<p>高中生涯就快告一段落了，在畢業前一週閒閒沒事，一直在想除了解題還可以幹嘛，所以更早之前做了一個地震報告的靜態網頁，現在又搞了一個踩地雷╰(*°▽°*)╯</p>
+<p>主要會練習到：</p>
+<ol>
+<li>圖論的 <a href="https://huangmayor0905.github.io/cs/graph/bfs/">BFS</a> or DFS</li>
+<li>C++ 時間戳轉當地時間</li>
+<li>讀檔、寫檔（iofstream）</li>
+</ol>
+<span id="more"></span>
+<h2 id="解說"><a class="markdownIt-Anchor" href="#解說"></a> 解說</h2>
+<p>好，其實我覺得我的程式碼沒有很乾淨，都是為了分區塊才寫成函式，然後我也不太會寫 class 物件，所以就硬寫。目前比較不人性化的一點就是它是用終端機在玩，所以只能輸入座標來開格子，而且如果要插旗子的話又要叫使用者調模式，變得很難玩，所以我只讓使用者開格子。啊也建議只玩簡單，因為困難的格子有 16*30 格 (?</p>
+<p>還有一點不好的地方是，如過第一手就是炸彈，我沒有做重新洗炸彈位置的機制。</p>
+<div class="tabs" id="程式碼主要區塊解說"><ul class="nav-tabs"><li class="tab active"><a href="#程式碼主要區塊解說-1">difficalty</a></li><li class="tab"><a href="#程式碼主要區塊解說-2">playingGame</a></li><li class="tab"><a href="#程式碼主要區塊解說-3">writeFile</a></li><li class="tab"><a href="#程式碼主要區塊解說-4">showHistory</a></li></ul><div class="tab-content"><div class="tab-pane active" id="程式碼主要區塊解說-1"><p>控制遊戲難度，在個別遊戲難度上將地圖大小和炸彈數做調整。（其實不是，就是呼叫 playingGame 這個 function 而已）</p></div><div class="tab-pane" id="程式碼主要區塊解說-2"><p>這段在寫遊戲階段，我是用 BFS 來開格子，遇到周圍有炸彈就停止往下搜尋。</p></div><div class="tab-pane" id="程式碼主要區塊解說-3"><p>這裡用到寫檔的技巧，將耗時、遊戲時間、難度都寫進去，這樣就可以記錄歷史遊戲。</p></div><div class="tab-pane" id="程式碼主要區塊解說-4"><p>這裡用到讀檔，還有轉換時間戳的方式。將獨到的數字放進結構是 history 的 vector 容器裡並排序排名，cmp 也是為此排序所寫的。</p></div></div></div>
+<p>剩下的變數就隨便啦，就是一些地圖大小、炸彈數和搜尋方向的變數。</p>
+<h2 id="程式碼"><a class="markdownIt-Anchor" href="#程式碼"></a> 程式碼</h2>
+<p>給大家看又臭又長的程式碼</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">history</span> &#123;</span><br><span class="line">    <span class="type">int</span> t;</span><br><span class="line">    <span class="type">int</span> mode;</span><br><span class="line">    ll date;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">timeFormater</span> &#123;</span><br><span class="line">    <span class="type">int</span> y;</span><br><span class="line">    <span class="type">int</span> m;</span><br><span class="line">    <span class="type">int</span> d;</span><br><span class="line">    <span class="type">int</span> hour;</span><br><span class="line">    <span class="type">int</span> min;</span><br><span class="line">    <span class="type">int</span> sec;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> dir[<span class="number">8</span>][<span class="number">2</span>] = &#123;</span><br><span class="line">    &#123;<span class="number">-1</span>, <span class="number">-1</span>&#125;,</span><br><span class="line">    &#123;<span class="number">-1</span>, <span class="number">0</span>&#125;,</span><br><span class="line">    &#123;<span class="number">-1</span>, <span class="number">1</span>&#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">-1</span>&#125;,</span><br><span class="line">    &#123;<span class="number">0</span>, <span class="number">1</span>&#125;,</span><br><span class="line">    &#123;<span class="number">1</span>, <span class="number">-1</span>&#125;,</span><br><span class="line">    &#123;<span class="number">1</span>, <span class="number">0</span>&#125;,</span><br><span class="line">    &#123;<span class="number">1</span>, <span class="number">1</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> r = <span class="number">8</span>;</span><br><span class="line"><span class="type">int</span> c = <span class="number">8</span>;</span><br><span class="line"><span class="type">int</span> cntMine = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(history a, history b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (a.mode == b.mode) <span class="keyword">return</span> a.t &lt; b.t;</span><br><span class="line">    <span class="keyword">return</span> a.mode &lt; b.mode;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">clearScreen</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">printMenu</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">difficalty</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">playingGame</span><span class="params">(<span class="type">int</span> row, <span class="type">int</span> col, <span class="type">int</span> mine, <span class="type">int</span> mode)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">writeFile</span><span class="params">(<span class="type">int</span> st, <span class="type">int</span> et, <span class="type">int</span> m)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">showHistory</span><span class="params">()</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">printArray</span><span class="params">(vector&lt;vector&lt;<span class="type">char</span>&gt;&gt; arr)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">srand</span>(<span class="built_in">time</span>(<span class="literal">NULL</span>));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">        <span class="built_in">printMenu</span>();</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> option;</span><br><span class="line">        cin &gt;&gt; option;</span><br><span class="line">        <span class="keyword">if</span> (option == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="built_in">difficalty</span>();</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (option == <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="built_in">showHistory</span>();</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (option == <span class="number">3</span>) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">clearScreen</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">printMenu</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">clearScreen</span>();</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;\n\n\n&quot;</span></span><br><span class="line">         &lt;&lt; <span class="string">&quot;    1. Play    &quot;</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span></span><br><span class="line">         &lt;&lt; <span class="string">&quot;   2. History  &quot;</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span></span><br><span class="line">         &lt;&lt; <span class="string">&quot;    3. Exit    &quot;</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span></span><br><span class="line">         &lt;&lt; <span class="string">&quot;\n\n\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">difficalty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">clearScreen</span>();</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;\n\n\n&quot;</span></span><br><span class="line">         &lt;&lt; <span class="string">&quot;     1. Eazy     &quot;</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span></span><br><span class="line">         &lt;&lt; <span class="string">&quot;    2. Normal    &quot;</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span></span><br><span class="line">         &lt;&lt; <span class="string">&quot;     3. Hard     &quot;</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span></span><br><span class="line">         &lt;&lt; <span class="string">&quot;\n\n\n&quot;</span>;</span><br><span class="line">    <span class="type">int</span> option;</span><br><span class="line">    cin &gt;&gt; option;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (option == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="built_in">playingGame</span>(<span class="number">8</span>, <span class="number">8</span>, <span class="number">10</span>, <span class="number">1</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (option == <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="built_in">playingGame</span>(<span class="number">16</span>, <span class="number">16</span>, <span class="number">40</span>, <span class="number">2</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (option == <span class="number">3</span>) &#123;</span><br><span class="line">        <span class="built_in">playingGame</span>(<span class="number">16</span>, <span class="number">30</span>, <span class="number">99</span>, <span class="number">3</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">playingGame</span><span class="params">(<span class="type">int</span> row, <span class="type">int</span> col, <span class="type">int</span> mine, <span class="type">int</span> mode)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// init</span></span><br><span class="line">    <span class="built_in">clearScreen</span>();</span><br><span class="line"></span><br><span class="line">    r = row;</span><br><span class="line">    c = col;</span><br><span class="line">    cntMine = mine;</span><br><span class="line"></span><br><span class="line">    vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; grid;</span><br><span class="line">    vector&lt;vector&lt;<span class="type">char</span>&gt;&gt; gameMap;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; r; i++) &#123;</span><br><span class="line">        grid.<span class="built_in">push_back</span>(&#123;&#125;);</span><br><span class="line">        gameMap.<span class="built_in">push_back</span>(&#123;&#125;);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; c; j++) &#123;</span><br><span class="line">            grid[i].<span class="built_in">push_back</span>(<span class="number">0</span>);</span><br><span class="line">            gameMap[i].<span class="built_in">push_back</span>(<span class="string">&#x27;#&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    set&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt; Mine;</span><br><span class="line">    <span class="keyword">while</span> (Mine.<span class="built_in">size</span>() != cntMine) &#123;</span><br><span class="line">        <span class="type">int</span> x = <span class="built_in">rand</span>() % r;</span><br><span class="line">        <span class="type">int</span> y = <span class="built_in">rand</span>() % c;</span><br><span class="line">        <span class="keyword">if</span> (Mine.<span class="built_in">find</span>(&#123;x, y&#125;) == Mine.<span class="built_in">end</span>()) &#123;</span><br><span class="line">            Mine.<span class="built_in">insert</span>(&#123;x, y&#125;);</span><br><span class="line">            grid[x][y] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> x, y;</span><br><span class="line">    <span class="type">int</span> cntUnopened = r * c - cntMine;</span><br><span class="line">    <span class="type">time_t</span> startTime = <span class="built_in">time</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (cntUnopened != <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">clearScreen</span>();</span><br><span class="line">        <span class="built_in">printArray</span>(gameMap);</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Input the coordinate (e.g. 3 5): &quot;</span>;</span><br><span class="line">        cin &gt;&gt; x &gt;&gt; y;</span><br><span class="line">        <span class="keyword">if</span> (x &lt; <span class="number">1</span> || x &gt; r || y &lt; <span class="number">1</span> || y &gt; c) &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;超過範圍，請重新輸入\n&quot;</span>;</span><br><span class="line">            <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        queue&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt; que;</span><br><span class="line">        que.<span class="built_in">push</span>(&#123;x - <span class="number">1</span>, y - <span class="number">1</span>&#125;);</span><br><span class="line">        <span class="keyword">while</span> (!que.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="keyword">auto</span> now = que.<span class="built_in">front</span>();</span><br><span class="line">            que.<span class="built_in">pop</span>();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (grid[now.first][now.second] == <span class="number">1</span>) &#123;</span><br><span class="line">                cout &lt;&lt; <span class="string">&quot;BOOM!\n&quot;</span>;</span><br><span class="line">                <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (grid[now.first][now.second] == <span class="number">-1</span>) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">            grid[now.first][now.second] = <span class="number">-1</span>;</span><br><span class="line">            cntUnopened--;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// check for mine;</span></span><br><span class="line">            <span class="type">int</span> cntNearMine = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; <span class="number">8</span>; k++) &#123;</span><br><span class="line">                <span class="type">int</span> nx = now.first + dir[k][<span class="number">0</span>];</span><br><span class="line">                <span class="type">int</span> ny = now.second + dir[k][<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (nx &gt;= <span class="number">0</span> &amp;&amp; nx &lt; r &amp;&amp; ny &gt;= <span class="number">0</span> &amp;&amp; ny &lt; c) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (grid[nx][ny] == <span class="number">1</span>) cntNearMine++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (cntNearMine != <span class="number">0</span>) &#123;</span><br><span class="line">                gameMap[now.first][now.second] = <span class="string">&#x27;0&#x27;</span> + cntNearMine;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                gameMap[now.first][now.second] = <span class="string">&#x27;_&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; <span class="number">8</span>; k++) &#123;</span><br><span class="line">                <span class="type">int</span> nx = now.first + dir[k][<span class="number">0</span>];</span><br><span class="line">                <span class="type">int</span> ny = now.second + dir[k][<span class="number">1</span>];</span><br><span class="line">                <span class="keyword">if</span> (nx &gt;= <span class="number">0</span> &amp;&amp; nx &lt; r &amp;&amp; ny &gt;= <span class="number">0</span> &amp;&amp; ny &lt; c) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (grid[nx][ny] == <span class="number">0</span>) &#123;</span><br><span class="line">                        que.<span class="built_in">push</span>(&#123;nx, ny&#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">time_t</span> endTime = <span class="built_in">time</span>(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">writeFile</span>(startTime, endTime, mode);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;You win!\n&quot;</span>;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">writeFile</span><span class="params">(<span class="type">int</span> st, <span class="type">int</span> et, <span class="type">int</span> m)</span> </span>&#123;</span><br><span class="line">    ofstream out;</span><br><span class="line">    out.<span class="built_in">open</span>(<span class="string">&quot;history.txt&quot;</span>, ios::app);</span><br><span class="line">    <span class="keyword">if</span> (out.<span class="built_in">fail</span>()) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;output file opening failed\n&quot;</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    out &lt;&lt; et - st &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; st &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; m &lt;&lt; endl;</span><br><span class="line">    out.<span class="built_in">close</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">showHistory</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">clearScreen</span>();</span><br><span class="line">    ifstream in;</span><br><span class="line">    in.<span class="built_in">open</span>(<span class="string">&quot;history.txt&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (in.<span class="built_in">fail</span>()) &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;input file opening failed\n&quot;</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    string str;</span><br><span class="line">    vector&lt;history&gt; rank;</span><br><span class="line">    history tmp;</span><br><span class="line">    <span class="keyword">while</span> (in &gt;&gt; tmp.t &gt;&gt; tmp.date &gt;&gt; tmp.mode) rank.<span class="built_in">push_back</span>(tmp);</span><br><span class="line">    <span class="built_in">sort</span>(rank.<span class="built_in">begin</span>(), rank.<span class="built_in">end</span>(), cmp);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; rank.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        <span class="comment">// mode</span></span><br><span class="line">        <span class="keyword">switch</span> (rank[i].mode) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">                cout &lt;&lt; <span class="string">&quot; 模式：簡單 \n&quot;</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                cout &lt;&lt; <span class="string">&quot; 模式：普通 \n&quot;</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                cout &lt;&lt; <span class="string">&quot; 模式：困難 \n&quot;</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// time</span></span><br><span class="line">        cout &lt;&lt; <span class="string">&quot; 耗時：&quot;</span> &lt;&lt; rank[i].t &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// date</span></span><br><span class="line">        <span class="type">time_t</span> gameTime = rank[i].date;</span><br><span class="line">        tm* t = <span class="built_in">localtime</span>(&amp;gameTime);</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot; 時間：&quot;</span>;</span><br><span class="line">        cout &lt;&lt; t-&gt;tm_year + <span class="number">1900</span> &lt;&lt; <span class="string">&#x27;/&#x27;</span></span><br><span class="line">             &lt;&lt; t-&gt;tm_mon + <span class="number">1</span> &lt;&lt; <span class="string">&#x27;/&#x27;</span></span><br><span class="line">             &lt;&lt; t-&gt;tm_mday &lt;&lt; <span class="string">&#x27; &#x27;</span></span><br><span class="line">             &lt;&lt; t-&gt;tm_hour &lt;&lt; <span class="string">&#x27;:&#x27;</span></span><br><span class="line">             &lt;&lt; t-&gt;tm_min &lt;&lt; <span class="string">&#x27;:&#x27;</span></span><br><span class="line">             &lt;&lt; t-&gt;tm_sec &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;------------------------------\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    in.<span class="built_in">close</span>();</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">printArray</span><span class="params">(vector&lt;vector&lt;<span class="type">char</span>&gt;&gt; arr)</span> </span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;  &quot;</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; arr[<span class="number">0</span>].<span class="built_in">size</span>(); j++) cout &lt;&lt; (j + <span class="number">1</span>) % <span class="number">10</span> &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; arr.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        cout &lt;&lt; (i + <span class="number">1</span>) % <span class="number">10</span> &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; arr[i].<span class="built_in">size</span>(); j++) &#123;</span><br><span class="line">            cout &lt;&lt; arr[i][j] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>作者： </strong>Eric Huang
+  </li>
+  <li class="post-copyright-link">
+      <strong>文章連結：</strong>
+      <a href="https://huangmayor0905.github.io/minesweeper/" title="【小作品】Minesweeper">https://huangmayor0905.github.io/minesweeper/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1UVw=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%B0%8F%E4%BD%9C%E5%93%81/" rel="tag"># 小作品</a>
+              <a href="/tags/%E8%B8%A9%E5%9C%B0%E9%9B%B7/" rel="tag"># 踩地雷</a>
+              <a href="/tags/Minesweeper/" rel="tag"># Minesweeper</a>
+              <a href="/tags/BFS/" rel="tag"># BFS</a>
+              <a href="/tags/%E6%AA%94%E6%A1%88%E8%AE%80%E5%AF%AB/" rel="tag"># 檔案讀寫</a>
+              <a href="/tags/%E6%99%82%E9%96%93%E6%88%B3/" rel="tag"># 時間戳</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/cs/cpp/stringstream/" rel="prev" title="【筆記】stringstream 字串流">
+                  <i class="fa fa-angle-left"></i> 【筆記】stringstream 字串流
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">若要轉載文章，麻煩請保留原作者名稱與原始連結。</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>總字數：</span>
+    <span title="總字數">22k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">1:19</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://huangmayor0905.github.io/minesweeper/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"huangmayor0905","repo":"huangmayor0905.github.io","client_id":"2edf56fae528fa5e1662","client_secret":"b9d5dcfcb3733c370d2e9b6688fc5c2576469520","admin_user":"huangmayor0905","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"f699acfb60d252c6550758d34814307a"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
