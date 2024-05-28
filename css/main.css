@@ -811,19 +811,19 @@ pre code {
 }
 .post-body .link-grid .link-grid-container {
   border: solid #ddd;
-  box-shadow: 1rem 1rem 0.5rem rgba(0,0,0,0.5);
+  border-radius: 6px;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0,0,0,0.5);
   min-height: 5rem;
   min-width: 0;
-  padding: 0.5rem;
+  padding: 1rem;
   position: relative;
   transition: background 0.3s;
 }
 .post-body .link-grid .link-grid-container:hover {
-  animation: next-shake 0.5s;
   background: var(--card-bg-color);
 }
 .post-body .link-grid .link-grid-container:active {
-  box-shadow: 0.5rem 0.5rem 0.25rem rgba(0,0,0,0.5);
+  box-shadow: 0.3rem 0.3rem 0.25rem rgba(0,0,0,0.5);
   transform: translate(0.2rem, 0.2rem);
 }
 .post-body .link-grid .link-grid-container .link-grid-image {
@@ -1447,7 +1447,7 @@ pre code {
     transition: all 0.2s ease-in-out;
   }
   .links-of-author a::before {
-    background: #ff1275;
+    background: #ffff45;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
