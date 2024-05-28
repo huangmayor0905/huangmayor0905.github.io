@@ -120,43 +120,6 @@
       </tags>
   </entry>
   <entry>
-    <title>作者使用的 C++ 編譯器</title>
-    <url>/cpp-compiler/</url>
-    <content><![CDATA[<h2 id="線上"><a class="markdownIt-Anchor" href="#線上"></a> 線上</h2>
-<ol>
-<li><span class="exturl" data-url="aHR0cHM6Ly9yZXBsaXQuY29tL34=">Repl.it<i class="fa fa-external-link-alt"></i></span><br />
-<strong>優點</strong>：線上編譯，可以在不同地方不同電腦上寫 code ，可隨時新增不同程式語言的專案。打好的 code 可以直接複製網址給其他人（放心，其他人更改不了你的 code ）。<br />
-<strong>缺點</strong>：帳號的存放大小有限，不過對方變性就已經不錯了。以及部分功能需付費。<em>雖不用按下你的 ctrl + s ，但是如果網站剛好卡住就沒辦法隨時存檔。 （作者曾經歷過…）</em></li>
-</ol>
-<h2 id="應用程式"><a class="markdownIt-Anchor" href="#應用程式"></a> 應用程式</h2>
-<ol>
-<li>
-<p><span class="exturl" data-url="aHR0cHM6Ly9jb2RlLnZpc3VhbHN0dWRpby5jb20v">Visual Studio Code<i class="fa fa-external-link-alt"></i></span><br />
-<strong>優點</strong>：可自行下載延伸模組，自由度較高<br />
-<strong>缺點</strong>：也許是作者還不夠理解，新手可能對這個有點難因為還有環境的配置，作者的同學也編譯不了 C++，不過作者本人有成功，但就是在這上面研究許久…</p>
-</li>
-<li>
-<p><span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvbWluZ3ctdzY0L2ZpbGVzL21pbmd3LXc2NC9taW5ndy13NjQtcmVsZWFzZS8=">MinGW<i class="fa fa-external-link-alt"></i></span><br />
-<strong>特點</strong>：提供一個可執行 gcc 程式開發環境，整合了許多 windows 下可運行的標頭檔案和檔案庫，為 c++ 的開發提供了良好基礎支援，他不是一種編輯器，是一個提供環境做編譯的程式，非常重要。</p>
-</li>
-<li>
-<p><span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvb3J3ZWxsZGV2Y3BwLw==">Dev-C++<i class="fa fa-external-link-alt"></i></span><br />
-<strong>特點</strong>：使用 MinGW32/gcc 編譯器，可高亮度語法顯示，以減少編輯錯誤。</p>
-</li>
-<li>
-<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY29kZWJsb2Nrcy5vcmcvZG93bmxvYWRzL2JpbmFyaWVzLw==">Code Blocks<i class="fa fa-external-link-alt"></i></span><br />
-<strong>特點</strong>：也是使用 MinGW 做編譯的，擴充性強大，也適合開發應用程式。</p>
-</li>
-</ol>
-<h2 id="結語"><a class="markdownIt-Anchor" href="#結語"></a> 結語</h2>
-<p>作者目前使用的是 <span class="exturl" data-url="aHR0cDovL1JlcGwuaXQ=">Repl.it<i class="fa fa-external-link-alt"></i></span> 和 VScode，其他編輯器我也只有在學校電腦上使用，所以還不知道他們的特性。線上的編譯器和延伸模組多到用不完的編輯器真的很好用，包括我撰寫的這篇文章也是用 VScode 編輯出來的，他的延伸模組之後也會出一篇來推薦幾個好用的，提供大家使用。</p>
-]]></content>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>編譯器/編輯器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>TOI 練習賽 202404 新手組</title>
     <url>/TOIP-202404-beginner/</url>
     <content><![CDATA[<h1 id="說明"><a class="markdownIt-Anchor" href="#說明"></a> 說明</h1>
@@ -214,6 +177,80 @@
         <tag>TOIP</tag>
         <tag>潛力組</tag>
         <tag>差分</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【心得】少有人走的路：心智成熟的旅程</title>
+    <url>/The-Road-Less-Traveled/</url>
+    <content><![CDATA[<p>這本書在講的是自律、愛、心智成長、信仰、恩典等各個問題。主要在於心智的成長</p>
+<h3 id="自律"><a class="markdownIt-Anchor" href="#自律"></a> 自律</h3>
+<p>作者要求我們要做到 推遲滿足感、承擔責任、忠於事實、保持平衡 並細心理解其中道理。</p>
+<p>我們其實早已得知何為推遲滿足感，又或稱延遲享受。最早可推至小時候，那時的我們總能聽到大人說：「去寫完功課再去玩手機」「完成家事後，才能看電視」「被完單字才能睡覺」這都是先苦後樂的道理，而自律就是基於這個道理去執行的。我很常聽到：「要怎麼自律？」其實我也不清楚，我只知道，自律使人充滿幹勁，他會義無反顧的完成他的任務。自從我有了平板、手機的四年級起，我就開始每天玩著諸如此類的 3C 產品，甚至連電視也不跟爸媽搶著看了。說實話，這樣的行為，早已打破了自律。自律是從小就該培養的東西，而父母正是傳遞自律的途徑。在出生不到一歲嬰兒的意識裡，不存在爸媽的形象，只知道這兩個人會不斷的出現在自己眼中，然後供給自己生活所需。因此父母是我們一生的依賴，我們從小就在他們身上學到所有行為，包含吵架方式、打掃方式、溝通方式等處理事務的能力。所以自律也不例外，它是需要被培養的，它能使我們面對問題。</p>
+<blockquote>
+<p>解決人生問題的首要方案，乃是自律，缺少了這一環，你不可能解決任何麻煩和困難。局部的自律只能解決局部的問題，完整的自律才能解決所有的問題。<br />
+《少有人走的路》Page 18</p>
+</blockquote>
+<p>而它關聯性較強的無非是爸媽的愛，爸媽的愛告訴我們：有他們在，我可以不怕前方恐懼，進而得到勇氣，因為我們知道我們是被愛的，所以不怕被拋棄、遺棄，充滿著安全感。這安全感能讓我們面對問題、正視問題。</p>
+<p>倘若沒有了愛，那我們面對世界會變得恐懼、不敢面對，導致常常逃避問題，把問題把在一旁，時常提醒自己要解決它，但都是以不想弄、懶得弄、今天好累不想做、之後有時間再弄作為結尾。</p>
+<blockquote>
+<p>美國開國先哲本傑明．富蘭克林說過：「惟有痛苦才會帶來教益。」面對問題，聰明者不因害怕痛苦而選擇逃避，而是迎上前去，直至將其戰勝為止。<br />
+《少有人走的路》Page 19</p>
+</blockquote>
+<p>作者還提到人生的意義是甚麼，也正如他所說：許多人應該都答不太出來。或許人生的意義就是遇到問題，然後解決問題，再遇到新的問題，繼續解決它，反覆無常，使我們意識裡得到了許多感悟並從問題中成長，或許這就是人生的意義吧。</p>
+<p>而作者特別將沒辦法自律多推究給父母親。通常爸媽面對孩子的不斷詢問後的反應總是不耐煩的說：「你再吵，我就不要你了」這種威脅會不斷出現在孩子的回憶裡，不斷重演，也包括我的過去，爸媽的責怪、罵聲，總能讓我重回當下的陰影裡揮之不去。但幸虧於那些慘不忍睹的記憶，我告誡自己：我不要成為和自己父母一樣的大人。至此之後，我總是一個人在房間度過自己和自己相處的時光，作業、課本似乎一動也沒動，因為我腦中出現太多畫面，根本沒有機會去想我還有甚麼事情沒做，就算想起自己還有一堆課業要顧，但每每還是沒辦法有那動力去學習，不斷的困住自己。</p>
+<blockquote>
+<p>父母同樣是指揮官，其使命和管理企業一樣複雜。正像軍隊指揮官那樣，大多數父母面對孩子的問題束手無策，連續數月乃至數年都無任何舉措，只可一味拖延。<br />
+《少有人走的路》Page 37</p>
+</blockquote>
+<p>我不怪罪於父母，他們的養育我感恩在心。若父母都不自律，我為甚麼還要與父母親計較，我若有能力自律，我大可不必大吵一架之後，委屈自己還打破家庭的平靜，說實話我不知道甚麼是錯甚麼是對，所謂的叛逆又是什麼，是我們的頂嘴還是與大人之間的爭吵，難道大人都是對的，我們都是錯的，或許並非如此。所以我再次告訴自己：要學會與自己和解，才能與家人和解，到現在我仍過意不去，明明是因為幫你抬瓶汽水，我覺得重所以才嘆口氣，你卻要說我：「你這甚麼態度！」現在才覺得我父親挺可笑的…未釐清事實真相，就血口噴人，我為何要受這委屈呢？我當時若有我現在的想法那有多好啊！我多恨我父親啊！所以即使爸媽沒有自律，我也要變的自律，才有辦法洗掉那些慘痛的經歷。這不是說大話，這位心理學作者接觸過的病人，即變成年了，也沒有能力自律，我同意它所說的。</p>
+<p>所以作者希望我們能學會的四個要素</p>
+<ol>
+<li>推遲滿足感</li>
+<li>承擔責任</li>
+<li>忠於事實</li>
+<li>保持平衡</li>
+</ol>
+<p>我也大都能理解了。</p>
+]]></content>
+      <tags>
+        <tag>心得</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>作者使用的 C++ 編譯器</title>
+    <url>/cpp-compiler/</url>
+    <content><![CDATA[<h2 id="線上"><a class="markdownIt-Anchor" href="#線上"></a> 線上</h2>
+<ol>
+<li><span class="exturl" data-url="aHR0cHM6Ly9yZXBsaXQuY29tL34=">Repl.it<i class="fa fa-external-link-alt"></i></span><br />
+<strong>優點</strong>：線上編譯，可以在不同地方不同電腦上寫 code ，可隨時新增不同程式語言的專案。打好的 code 可以直接複製網址給其他人（放心，其他人更改不了你的 code ）。<br />
+<strong>缺點</strong>：帳號的存放大小有限，不過對方變性就已經不錯了。以及部分功能需付費。<em>雖不用按下你的 ctrl + s ，但是如果網站剛好卡住就沒辦法隨時存檔。 （作者曾經歷過…）</em></li>
+</ol>
+<h2 id="應用程式"><a class="markdownIt-Anchor" href="#應用程式"></a> 應用程式</h2>
+<ol>
+<li>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jb2RlLnZpc3VhbHN0dWRpby5jb20v">Visual Studio Code<i class="fa fa-external-link-alt"></i></span><br />
+<strong>優點</strong>：可自行下載延伸模組，自由度較高<br />
+<strong>缺點</strong>：也許是作者還不夠理解，新手可能對這個有點難因為還有環境的配置，作者的同學也編譯不了 C++，不過作者本人有成功，但就是在這上面研究許久…</p>
+</li>
+<li>
+<p><span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvbWluZ3ctdzY0L2ZpbGVzL21pbmd3LXc2NC9taW5ndy13NjQtcmVsZWFzZS8=">MinGW<i class="fa fa-external-link-alt"></i></span><br />
+<strong>特點</strong>：提供一個可執行 gcc 程式開發環境，整合了許多 windows 下可運行的標頭檔案和檔案庫，為 c++ 的開發提供了良好基礎支援，他不是一種編輯器，是一個提供環境做編譯的程式，非常重要。</p>
+</li>
+<li>
+<p><span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvb3J3ZWxsZGV2Y3BwLw==">Dev-C++<i class="fa fa-external-link-alt"></i></span><br />
+<strong>特點</strong>：使用 MinGW32/gcc 編譯器，可高亮度語法顯示，以減少編輯錯誤。</p>
+</li>
+<li>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY29kZWJsb2Nrcy5vcmcvZG93bmxvYWRzL2JpbmFyaWVzLw==">Code Blocks<i class="fa fa-external-link-alt"></i></span><br />
+<strong>特點</strong>：也是使用 MinGW 做編譯的，擴充性強大，也適合開發應用程式。</p>
+</li>
+</ol>
+<h2 id="結語"><a class="markdownIt-Anchor" href="#結語"></a> 結語</h2>
+<p>作者目前使用的是 <span class="exturl" data-url="aHR0cDovL1JlcGwuaXQ=">Repl.it<i class="fa fa-external-link-alt"></i></span> 和 VScode，其他編輯器我也只有在學校電腦上使用，所以還不知道他們的特性。線上的編譯器和延伸模組多到用不完的編輯器真的很好用，包括我撰寫的這篇文章也是用 VScode 編輯出來的，他的延伸模組之後也會出一篇來推薦幾個好用的，提供大家使用。</p>
+]]></content>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>編譯器/編輯器</tag>
       </tags>
   </entry>
   <entry>
@@ -337,86 +374,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【心得】少有人走的路：心智成熟的旅程</title>
-    <url>/The-Road-Less-Traveled/</url>
-    <content><![CDATA[<p>這本書在講的是自律、愛、心智成長、信仰、恩典等各個問題。主要在於心智的成長</p>
-<h3 id="自律"><a class="markdownIt-Anchor" href="#自律"></a> 自律</h3>
-<p>作者要求我們要做到 推遲滿足感、承擔責任、忠於事實、保持平衡 並細心理解其中道理。</p>
-<p>我們其實早已得知何為推遲滿足感，又或稱延遲享受。最早可推至小時候，那時的我們總能聽到大人說：「去寫完功課再去玩手機」「完成家事後，才能看電視」「被完單字才能睡覺」這都是先苦後樂的道理，而自律就是基於這個道理去執行的。我很常聽到：「要怎麼自律？」其實我也不清楚，我只知道，自律使人充滿幹勁，他會義無反顧的完成他的任務。自從我有了平板、手機的四年級起，我就開始每天玩著諸如此類的 3C 產品，甚至連電視也不跟爸媽搶著看了。說實話，這樣的行為，早已打破了自律。自律是從小就該培養的東西，而父母正是傳遞自律的途徑。在出生不到一歲嬰兒的意識裡，不存在爸媽的形象，只知道這兩個人會不斷的出現在自己眼中，然後供給自己生活所需。因此父母是我們一生的依賴，我們從小就在他們身上學到所有行為，包含吵架方式、打掃方式、溝通方式等處理事務的能力。所以自律也不例外，它是需要被培養的，它能使我們面對問題。</p>
-<blockquote>
-<p>解決人生問題的首要方案，乃是自律，缺少了這一環，你不可能解決任何麻煩和困難。局部的自律只能解決局部的問題，完整的自律才能解決所有的問題。<br />
-《少有人走的路》Page 18</p>
-</blockquote>
-<p>而它關聯性較強的無非是爸媽的愛，爸媽的愛告訴我們：有他們在，我可以不怕前方恐懼，進而得到勇氣，因為我們知道我們是被愛的，所以不怕被拋棄、遺棄，充滿著安全感。這安全感能讓我們面對問題、正視問題。</p>
-<p>倘若沒有了愛，那我們面對世界會變得恐懼、不敢面對，導致常常逃避問題，把問題把在一旁，時常提醒自己要解決它，但都是以不想弄、懶得弄、今天好累不想做、之後有時間再弄作為結尾。</p>
-<blockquote>
-<p>美國開國先哲本傑明．富蘭克林說過：「惟有痛苦才會帶來教益。」面對問題，聰明者不因害怕痛苦而選擇逃避，而是迎上前去，直至將其戰勝為止。<br />
-《少有人走的路》Page 19</p>
-</blockquote>
-<p>作者還提到人生的意義是甚麼，也正如他所說：許多人應該都答不太出來。或許人生的意義就是遇到問題，然後解決問題，再遇到新的問題，繼續解決它，反覆無常，使我們意識裡得到了許多感悟並從問題中成長，或許這就是人生的意義吧。</p>
-<p>而作者特別將沒辦法自律多推究給父母親。通常爸媽面對孩子的不斷詢問後的反應總是不耐煩的說：「你再吵，我就不要你了」這種威脅會不斷出現在孩子的回憶裡，不斷重演，也包括我的過去，爸媽的責怪、罵聲，總能讓我重回當下的陰影裡揮之不去。但幸虧於那些慘不忍睹的記憶，我告誡自己：我不要成為和自己父母一樣的大人。至此之後，我總是一個人在房間度過自己和自己相處的時光，作業、課本似乎一動也沒動，因為我腦中出現太多畫面，根本沒有機會去想我還有甚麼事情沒做，就算想起自己還有一堆課業要顧，但每每還是沒辦法有那動力去學習，不斷的困住自己。</p>
-<blockquote>
-<p>父母同樣是指揮官，其使命和管理企業一樣複雜。正像軍隊指揮官那樣，大多數父母面對孩子的問題束手無策，連續數月乃至數年都無任何舉措，只可一味拖延。<br />
-《少有人走的路》Page 37</p>
-</blockquote>
-<p>我不怪罪於父母，他們的養育我感恩在心。若父母都不自律，我為甚麼還要與父母親計較，我若有能力自律，我大可不必大吵一架之後，委屈自己還打破家庭的平靜，說實話我不知道甚麼是錯甚麼是對，所謂的叛逆又是什麼，是我們的頂嘴還是與大人之間的爭吵，難道大人都是對的，我們都是錯的，或許並非如此。所以我再次告訴自己：要學會與自己和解，才能與家人和解，到現在我仍過意不去，明明是因為幫你抬瓶汽水，我覺得重所以才嘆口氣，你卻要說我：「你這甚麼態度！」現在才覺得我父親挺可笑的…未釐清事實真相，就血口噴人，我為何要受這委屈呢？我當時若有我現在的想法那有多好啊！我多恨我父親啊！所以即使爸媽沒有自律，我也要變的自律，才有辦法洗掉那些慘痛的經歷。這不是說大話，這位心理學作者接觸過的病人，即變成年了，也沒有能力自律，我同意它所說的。</p>
-<p>所以作者希望我們能學會的四個要素</p>
-<ol>
-<li>推遲滿足感</li>
-<li>承擔責任</li>
-<li>忠於事實</li>
-<li>保持平衡</li>
-</ol>
-<p>我也大都能理解了。</p>
-]]></content>
-      <tags>
-        <tag>心得</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【C++】 認識 Hello World</title>
-    <url>/meeting-hello-world/</url>
-    <content><![CDATA[<h1 id="第一個程式認識-hello-world"><a class="markdownIt-Anchor" href="#第一個程式認識-hello-world"></a> 第一個程式，認識 Hello world</h1>
-<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>說到程式語言，Hello World 想必是程式入門時最常見的詞，它是什麼時候出現的，那為甚麼會被廣泛流傳呢？</p>
-<p>首先，大部分人認為是《C 程序設計語言》此書作者之一，Brian Kernighan 在 1973 年出版的《程式語言 B 教程導論》裡首次提到。以下是當時首次提到 Hello World 的程式碼：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">main</span>(<span class="params"></span>)&#123;</span><br><span class="line">  extrn a,b,c;</span><br><span class="line">  <span class="title function_">putchar</span>(a); <span class="title function_">putchar</span>(b); <span class="title function_">putchar</span>(c); <span class="title function_">putchar</span>(<span class="string">&#x27;!*n&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">a <span class="string">&#x27;hell&#x27;</span>;</span><br><span class="line">b <span class="string">&#x27;o, w&#x27;</span>;</span><br><span class="line">c <span class="string">&#x27;orld&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<p>但不幸的是他受訪時，他無法準確的講述原因跟時間。「我只記得，我好像看過一幅漫畫，講述一枚雞蛋和一隻小雞的故事，在那副漫畫中，小雞說了一句：『Hello World』。」他是這樣說的。</p>
-<p>結論，Hello World 的起源應該是 Brian Kernighan 小時候曾看過的漫畫。</p>
-<hr />
-<h2 id="用-c-實作吧"><a class="markdownIt-Anchor" href="#用-c-實作吧"></a> 用 C++ 實作吧！</h2>
-<p>說了這小小的故事，其實 Hello World 也代表著程式的運行無礙，那我們也可以開始動手做看看 C++ 世界裡的 Hello World 啦！</p>
-<ol>
-<li>你可以使用 <span class="exturl" data-url="aHR0cHM6Ly9yZXBsaXQuY29tLw==">Repl<i class="fa fa-external-link-alt"></i></span> 線上的編譯器，註冊後，按下右上角的加號，在 Template 那一欄打上 C++，並選擇好 C++ 的環境模板。</li>
-<li>在右邊 Title 欄打上這個程式專案的名稱，若是練習通常我會打上今天的日期，如：20220326，除非是特別的專案才會特別取名，如果不取名，你的專案會在左邊的側邊欄 My Repls 的 Unnamed。</li>
-</ol>
-<figure class="highlight cpp"><figcaption><span>程式範例</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;hello world!&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>首先我們可以觀察看看，C++ 有人麼特別之處？如：句尾的共同處、有大括弧、小括弧等。那作者我就開始一一介紹吧！</p>
-<ol>
-<li>
-<p>標頭檔：程式裡 <code>#include &lt;iostream&gt;</code> 就像是工具箱，它可以叫出你想用的工具，在這裡，我們使用 <code>cout</code> ，所以每當我們使用輸出時，就會使用到這個 <code>&lt;iostream&gt;</code> 標頭檔。</p>
-</li>
-<li>
-<p>命名空間： <code>using namespace std;</code> 叫做命名空間，它的用處就像是你在學校裡，可能會有同名的人，所以我們會叫「某班的」誰誰誰，這個「某班的」，就是我們的 std 。若我們不先在程式裡輸入這行，程式碼就要在 cout 前面多打 std:: ，這樣就會變得更複雜。所以為了方便，我們習慣在程式一開始就先打 <code>using namespace std;</code> 。簡單來說，工具也會被重複命名到，然而我們只需要用到其中一個，所以直接在程式上打 <code>using namespace std;</code> 可以免去不斷撰寫的麻煩。</p>
-</li>
-<li>
-<p>main 函式：我們也可以說它是主程式，用來執行你撰寫的程式。我們會在一對大括號內撰寫。int 是變數型態，表整數（integer）之意，在函式前的變數型態與回傳值有關，如下兩行的 <code>return 0;</code> 。</p>
-</li>
-<li>
-<p>輸出 cout：用來輸出箭頭後方箭頭後的字串、變數和值。</p>
-</li>
-<li>
-<p>return 0：表示回傳值為 0，也就是程式正常結束，但現在的編譯器都會在編譯時偷偷幫你補上這行，不過！還是要多多保持多打這行的習慣會比較好。</p>
-</li>
-</ol>
-<h2 id="參考資料"><a class="markdownIt-Anchor" href="#參考資料"></a> 參考資料：</h2>
-<p><span class="exturl" data-url="aHR0cDovL2Jsb2cuZnVqaWppLmNvbS90aGUtaGlzdG9yeS1vZi1oZWxsby13b3JsZC8=">Hello World 程序的起源与历史<i class="fa fa-external-link-alt"></i></span></p>
-]]></content>
-      <tags>
-        <tag>C/C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>用 Hexo 在 GitHub 架站吧</title>
     <url>/make-a-blog-with-hexo/</url>
     <content><![CDATA[<h1 id="blog-是什麼"><a class="markdownIt-Anchor" href="#blog-是什麼"></a> Blog 是什麼？</h1>
@@ -526,6 +483,49 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
+    <title>【C++】 認識 Hello World</title>
+    <url>/meeting-hello-world/</url>
+    <content><![CDATA[<h1 id="第一個程式認識-hello-world"><a class="markdownIt-Anchor" href="#第一個程式認識-hello-world"></a> 第一個程式，認識 Hello world</h1>
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>說到程式語言，Hello World 想必是程式入門時最常見的詞，它是什麼時候出現的，那為甚麼會被廣泛流傳呢？</p>
+<p>首先，大部分人認為是《C 程序設計語言》此書作者之一，Brian Kernighan 在 1973 年出版的《程式語言 B 教程導論》裡首次提到。以下是當時首次提到 Hello World 的程式碼：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">main</span>(<span class="params"></span>)&#123;</span><br><span class="line">  extrn a,b,c;</span><br><span class="line">  <span class="title function_">putchar</span>(a); <span class="title function_">putchar</span>(b); <span class="title function_">putchar</span>(c); <span class="title function_">putchar</span>(<span class="string">&#x27;!*n&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">a <span class="string">&#x27;hell&#x27;</span>;</span><br><span class="line">b <span class="string">&#x27;o, w&#x27;</span>;</span><br><span class="line">c <span class="string">&#x27;orld&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>但不幸的是他受訪時，他無法準確的講述原因跟時間。「我只記得，我好像看過一幅漫畫，講述一枚雞蛋和一隻小雞的故事，在那副漫畫中，小雞說了一句：『Hello World』。」他是這樣說的。</p>
+<p>結論，Hello World 的起源應該是 Brian Kernighan 小時候曾看過的漫畫。</p>
+<hr />
+<h2 id="用-c-實作吧"><a class="markdownIt-Anchor" href="#用-c-實作吧"></a> 用 C++ 實作吧！</h2>
+<p>說了這小小的故事，其實 Hello World 也代表著程式的運行無礙，那我們也可以開始動手做看看 C++ 世界裡的 Hello World 啦！</p>
+<ol>
+<li>你可以使用 <span class="exturl" data-url="aHR0cHM6Ly9yZXBsaXQuY29tLw==">Repl<i class="fa fa-external-link-alt"></i></span> 線上的編譯器，註冊後，按下右上角的加號，在 Template 那一欄打上 C++，並選擇好 C++ 的環境模板。</li>
+<li>在右邊 Title 欄打上這個程式專案的名稱，若是練習通常我會打上今天的日期，如：20220326，除非是特別的專案才會特別取名，如果不取名，你的專案會在左邊的側邊欄 My Repls 的 Unnamed。</li>
+</ol>
+<figure class="highlight cpp"><figcaption><span>程式範例</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;hello world!&quot;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>首先我們可以觀察看看，C++ 有人麼特別之處？如：句尾的共同處、有大括弧、小括弧等。那作者我就開始一一介紹吧！</p>
+<ol>
+<li>
+<p>標頭檔：程式裡 <code>#include &lt;iostream&gt;</code> 就像是工具箱，它可以叫出你想用的工具，在這裡，我們使用 <code>cout</code> ，所以每當我們使用輸出時，就會使用到這個 <code>&lt;iostream&gt;</code> 標頭檔。</p>
+</li>
+<li>
+<p>命名空間： <code>using namespace std;</code> 叫做命名空間，它的用處就像是你在學校裡，可能會有同名的人，所以我們會叫「某班的」誰誰誰，這個「某班的」，就是我們的 std 。若我們不先在程式裡輸入這行，程式碼就要在 cout 前面多打 std:: ，這樣就會變得更複雜。所以為了方便，我們習慣在程式一開始就先打 <code>using namespace std;</code> 。簡單來說，工具也會被重複命名到，然而我們只需要用到其中一個，所以直接在程式上打 <code>using namespace std;</code> 可以免去不斷撰寫的麻煩。</p>
+</li>
+<li>
+<p>main 函式：我們也可以說它是主程式，用來執行你撰寫的程式。我們會在一對大括號內撰寫。int 是變數型態，表整數（integer）之意，在函式前的變數型態與回傳值有關，如下兩行的 <code>return 0;</code> 。</p>
+</li>
+<li>
+<p>輸出 cout：用來輸出箭頭後方箭頭後的字串、變數和值。</p>
+</li>
+<li>
+<p>return 0：表示回傳值為 0，也就是程式正常結束，但現在的編譯器都會在編譯時偷偷幫你補上這行，不過！還是要多多保持多打這行的習慣會比較好。</p>
+</li>
+</ol>
+<h2 id="參考資料"><a class="markdownIt-Anchor" href="#參考資料"></a> 參考資料：</h2>
+<p><span class="exturl" data-url="aHR0cDovL2Jsb2cuZnVqaWppLmNvbS90aGUtaGlzdG9yeS1vZi1oZWxsby13b3JsZC8=">Hello World 程序的起源与历史<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <tags>
+        <tag>C/C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【小作品】Minesweeper</title>
     <url>/minesweeper/</url>
     <content><![CDATA[<h2 id="簡述"><a class="markdownIt-Anchor" href="#簡述"></a> 簡述</h2>
@@ -597,6 +597,18 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
+    <title>【心得】被討厭的勇氣</title>
+    <url>/the-Courage-to-Be-Disliked/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>心得</category>
+      </categories>
+      <tags>
+        <tag>心得</tag>
+        <tag>被討厭的勇氣</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>這是我的第一篇文章</title>
     <url>/test-artical/</url>
     <content><![CDATA[<p>hi~ 我是國國，身為高一的我想要深入探索程式世界，也歡迎大家與我分享、交流。</p>
@@ -614,22 +626,10 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【心得】被討厭的勇氣</title>
-    <url>/the-Courage-to-Be-Disliked/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>心得</category>
-      </categories>
-      <tags>
-        <tag>心得</tag>
-        <tag>被討厭的勇氣</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【日常】5 月 9 日 陰</title>
-    <url>/life/20220509/</url>
+    <title>【日常】5 月 8 日 雲</title>
+    <url>/life/20220508/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="24a135a126b0aa980c65a778d8b7c9b7918d09997388b6eefc1c54e404cda3e9">c4379dbc51520bb23a681c5b597ae53a5071089899c950bb8cc7414f7845b427bdf2c9ce0465a0e0d08ac59a646fe6d0b0461646f505ef7e6bd27b2b5d6a0209a22203efd990c603e974289d119755f46e163f885943a6179496140a08a8a1dbe5c16ff83c50f433bb9c09bbddf99c62decc6509e83da090a97743f1f3328f500be60130f478125a7c3d765f34f34e61b8cf9780798d50da9d32c9f14cd7f841f7ac4d9b3b1e354ede1c3a98886aff91c2c6eafaa4bfffd405b5613558e3acc07579aa8bde3aab6bb693657edbd3db502f7aa5b05bad253c3a1451887ff27773b96f04756d2857eab26bd068dbb9d27e70ae3a39ee6a12151bd82eb765c603e64a4dc8379c4ab49d4f44ff9808f7ef67c0889a125d6ed8a00382da1b2c7ed8a654d27924a84f08874bf16272acd1dfdfae068efdaf900927577c701d9dffaed73cbc2018c009808fa878bf9fc886cfc281c779d0a02514848b8aff7d8e41b009a14b99d1fbcab73fe8d828c7341462b2fb1ff35b5cbdc66b6638f7852f1af8c2c0f2a3d8ebbe3be9df4e98271141d0dc17959f839b681afc1ecc0eeef09b9bb9b5b2001beb68bd1d4101049f269c76dfca3879cf3aaccab863c1c775d81c0362b1673933c50c47bc5e745757be67213041e0d51ae4ad3540ba416511a8b5b96274ba20431e8ae17aa1dc41806b393bbd2c386d5263820a12612cdf4d6ab29c648c6f0cdee729725c305f02fe28615bc9d0f86e33d66c3041e119f5bdc46e7c36a6b1e823c4b015e0daad02163b85a9bc7a4ddace7c991cea3fda0b09a8bff14c4ab9873c93526cf6af5da6d15074b91695fac06156693347e437af419c65d6339936191b49ea1debf03f1190a3dab90b17e3f668d7ee044019244805507bfc042ba38656daff44d6c7d694523d10dadd31469bf9c25d4cefaf5fbe2a68b06e431109bf91ff8506829908a5f8f24d58a3b3921e5568c4d1c64e52edba220f90f25f01653454fe466f88694be6886a0304bb86774b8b027a3c707360cfaefa63dff3367cca38545626740778b378ab593769ff809bec5187a98b4eadaa1af2d60bdf872031887aee243d4ce420c03d52f185c1c6b6195e9f6405a7c5459eb482181bee17594120b71b187f593b0e956eb0209b393cbcede6e9927223a2ea951ebd1b8b4d14bd37ba82efdf34aecf120d876f5982708ef791f01f1279bd4399b8b2f6131d77c9633ce411685d2ac2b26985fda21b02429aa409e5b74b8748285d5bbc74f15ae07a0e5721ede45971cbcd9f</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="5a3bc0bb87b7cd173a62eac50cf9f24e84a963095c948cfe4a496d262902b237">c4379dbc51520bb23a681c5b597ae53adf5b796ff3f8f773567ca1a18ef872955e626612fc462808cc63d71fd09b0396e096bc063e6acba7da8cf950b803d8554c780627c47bd313414aca95532ff03524cbe72333f4ac687c45accd0fef347865564c1fb1b20c6b7a3087847bea88ec818ae85b6f2f1b6fdc2ef02ef9604dc27d3cd271849359facfe6be875c9ee93b3d2364e2c95f501999469d104290dea44b76df872633b763a5575fb281a55b5b1d2f3fe658614a4d99c6a29be700d071ae6cfc3b31475373f7bfa3add8d0fb9a1e91dad745257a2e9bc3fd17552f5411bf8255e5c6f879088c8608f9e2b3895bdcc18d70c228b99fc20b32a4054b2cdfacef3f860017f5f42dd745b5efa62800422fa8c92cd54fdd620feb45460e7243aafc708e9716800df8b2c31d2b03abaf291cedcd71d59e060b8c7c05ac58f1cde2ca51c920eaf15ebadb36d997f7bf912b348eae31c21f16a071bcba411556d70c71abf2c38769d9bdd6e7dc6b4b19cd8d7903610e8953520f6571e3438ba6c44439813f95963183e3792409987783eaf2afb7fe8d8365492b6718e98393b785bbe60ceefbbbb2aa3410840e26683e942ae2c1c5d89c4effad1415370a6b3129a4544be439398c804d6e530d1eed528d27b2bf1536ac63076e504274e3000c3298fe83970547440428b637611bd5a1c665f7c60a4af2325e3147a5d1f694f3a09eb46f414db934d7492247a3c49acfa0fc1f92501272bd2f214275ae9e9e5f638022d44df8315d84797cd9d6dc73a4f31731bf2cc8f680f5ba1357ae1f59ee24f0dacc9113bb63f7bf9cd288252c3866d5ce6d4786c9ab68e929e20adba8f53cc45df7535ed7f9a73923a0438deb49e33fa6b56e50d7b9358c4904f3ae2fc66b236639b642ea49dfe004601ad32b1a4df839a4c81131a2c0f240744e88ad01bd5476986bbc1e63084ebd0a88ea96bd8d8940110caf98886994cd571632ea5cce5a1304539d3ab76f566f494ee9e413984daac38b50dd64c08ff5bfb864e61a19c27f012b447bc9baacbdca6974b47a3547ecfb8a677a1208fdbba13ccee22822b65dcab73c98ac27671bc3fc02f605515c96eaaf9e581bfa33ff2abf2a2a457f1d6a56c8429701e2b3dc2bb2c34ccb3434977ff5b61484e1d0327c8d1e649b4dcd658391e1abfad9728bde16090c09bf3bcd1f63cfd6e14dd5a426842c34acb70c4c1d8a0992e513d99f1fc6247d74ceb9787011d9d63b4ad776a48dfb695ea2a6cb681780361447404e01465add191ff0303372dabb88764a533934714df09c8531ce40c069a6068a7ce8eccce407766bbd97cfaba84fd6e968c8a7ff910333f97d0fd90ae69f67fcf5a02846bab7276b4d0c92845a4c962cca309e51ac0af6a7f205be2ccbcca1e799b6f7bfb837a6ece0c9cb8a68b1ac610abb85612828a9a0baafa821a9587477128112fc2a835814424bf80e85a1569ad09b87c4a1ba1d286e304e2c0eea52242289f96802961e1831b3a5563fd9ba5a029d5ec77119ac4be712345b4083c19f348f3ad8f2d9870da5457174e7d09258ded466ec5fbd25efe1b3e13dde5dbcd43333478b87d519775ed0a9dc96d247654f3e442b2624398f93ab717139ec1e9ca43c711f3d37f6316cc9dcb162c6a39026464e7b5d899189fcb4700805ea7e2b59194b5ae551197455e5406797a3af658f42e738f3217c0fd10ed91c8165ba9c3cda41bd36410be9e32b5f90900413ed85dca1d6296934a71dc56e6996038b3d551d5cdded6f3464ac8d59eb1a543a96524b86d6fbb8f0a831f98b37577d200e97ca48719d0dd34a34746e421499724c46d7fad65c7f57dd7b50a7a5be66714f6854a8e6cbbae3c409ac3a4d8487a5b87b90a66b4db9acffcd0cb1c89d094252f728f5deb4416515161a39851fcf11e43e82b7f78086882aeb47969948d253d90e9c48a552063debc8d15afabf702aa56ba8b24149c636638a5b49485db2f362a04d6943591f7b31da7b76a7014440c3796bfaf405e86d9cfe1dca6e9f867f22f0b2c564f06313ffe1dda008bb5cd188f76791ddb714a3b89daa3ec2c58901d9a5da4628cceaae7e8c8c3d00ea2b0dbfeb94e064515961520cfa4ab32e2fc27bc28fdc05e1d95c66c830b9323cd0efd4ca7722398cb656cf864c2ae70bff1e0ad791a438fb9c3809ea603cdef1fb7e2806e3d671230723acd74f3b4ff486ea5153aa22953e3a39dab0901616fbe897b4fa11c37ce8ece2f838f478bcb162d0d22674cc48a8c7fcbed0f7b0e99c7a3ba13f71e0f558bcccb2ce4388187c058143f1144e9f626104feb80754aafb83978804b799d6c6bee0db0472bd65ef4565fd9f8e7f91ad3aa9f2b77b801451cc3a85f7e7d9851281c0bdb97dac3ee5a303ca30d471ee0cf42f41c8e76e63183576e8cb95b7ae6fe8135c84e5f09760776d72eaad3b1f81465796c4cf819d7eb901015560a3f51c474833b0f644cf2a5b6177b48a8033eee4a58ccad90c0506a111bdcf33248c69fd5801f2640853d6e0ac0a454ddc196821a4790c49b1178badffd049f1e1fc2c1ba44871a20647c09da281add8a5caa7ed65a1ddac995455202dc80308c7a282681d859abef549eb2324dbd8a94ce11caea948e9f37807281d183a56b4ced250d5ab0cf049d40b71109b86e01d9b89ceb1467c2c6dabd3a7ab114d7e3bb74a865a3595bf0b7c732d28c2ba8697bdcd036a2134ac6ad875fe5db5afe735ee5a038cb7b1e31a46f02b20f9209eb5ea30691904dbd806edf4bc702e784bcc92982450b9e3a262e501ff086ab228581373bbd2e3592eee2901a4b631b1f7ac28df50a465df53fb93ab0e91397b1bef4c287efc67620361c82de876de4bde53376088c6377233068d7b2d7c30b0117a382bb204846174b7ec76280ef1eb95aa443cfc2546bfe27e2101ea493fb6dd5ffe2a25362aa14033c67b115862c5827fe4fc5ff656ee59b1286254a803eea969f1478f01bad791c49cc6d03a509e978fb8a4b22da5a8c29cac3849e388f7217a74eca5d8b981e84b1a1f7160404906bfbcfe285d7d5ff592588f88b4d3754a1e1a01562b85ca479fd10a9485a2bd81e1efdf6ee3ab42ec1b50aedc88a396f2c2200de42989ae1e7b8eb328d84df699cb8f42cd3ba7b906b2ab6750a063dff4c824cb20938e6a2719ad99d8a2a04e73f60d5cd5521e1bcf76068f31ff0980e39fcd068b063ef772ce069adff6bb0c1a75cedbd166b8b51f7014ada5a77ed783133c169b01f81019af47e3515cfc2510a51b450b9895780a1a8a3a9f809f7a969db9f3e5fc68ab8b10680ba12cb7b76ab014ded5103c32a3ea3b4092e12daa25be52887462b77c6f19702f46c9def8ead98c5dc6442a33a2c5050fbfa61ec25a882b41b96611a65307cee432502eb69f90103b0201da17a3288c4650a5c2da70785411499afc5dd579dfe8970e76da8e38857ffc532b4da33f4519b4685f9b0cae1a654df59f71d1ba4a3ddae3edc76d8f39bfef57a7e6ef2e2b66f4d026a3986034e5668e7aae1bb05621871f9b71816f30a7a71fcf</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -648,10 +648,10 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【日常】5 月 8 日 雲</title>
-    <url>/life/20220508/</url>
+    <title>【日常】5 月 9 日 陰</title>
+    <url>/life/20220509/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="5a3bc0bb87b7cd173a62eac50cf9f24e84a963095c948cfe4a496d262902b237">c4379dbc51520bb23a681c5b597ae53adf5b796ff3f8f773567ca1a18ef872955e626612fc462808cc63d71fd09b0396e096bc063e6acba7da8cf950b803d8554c780627c47bd313414aca95532ff03524cbe72333f4ac687c45accd0fef347865564c1fb1b20c6b7a3087847bea88ec818ae85b6f2f1b6fdc2ef02ef9604dc27d3cd271849359facfe6be875c9ee93b3d2364e2c95f501999469d104290dea44b76df872633b763a5575fb281a55b5b1d2f3fe658614a4d99c6a29be700d071ae6cfc3b31475373f7bfa3add8d0fb9a1e91dad745257a2e9bc3fd17552f5411bf8255e5c6f879088c8608f9e2b3895bdcc18d70c228b99fc20b32a4054b2cdfacef3f860017f5f42dd745b5efa62800422fa8c92cd54fdd620feb45460e7243aafc708e9716800df8b2c31d2b03abaf291cedcd71d59e060b8c7c05ac58f1cde2ca51c920eaf15ebadb36d997f7bf912b348eae31c21f16a071bcba411556d70c71abf2c38769d9bdd6e7dc6b4b19cd8d7903610e8953520f6571e3438ba6c44439813f95963183e3792409987783eaf2afb7fe8d8365492b6718e98393b785bbe60ceefbbbb2aa3410840e26683e942ae2c1c5d89c4effad1415370a6b3129a4544be439398c804d6e530d1eed528d27b2bf1536ac63076e504274e3000c3298fe83970547440428b637611bd5a1c665f7c60a4af2325e3147a5d1f694f3a09eb46f414db934d7492247a3c49acfa0fc1f92501272bd2f214275ae9e9e5f638022d44df8315d84797cd9d6dc73a4f31731bf2cc8f680f5ba1357ae1f59ee24f0dacc9113bb63f7bf9cd288252c3866d5ce6d4786c9ab68e929e20adba8f53cc45df7535ed7f9a73923a0438deb49e33fa6b56e50d7b9358c4904f3ae2fc66b236639b642ea49dfe004601ad32b1a4df839a4c81131a2c0f240744e88ad01bd5476986bbc1e63084ebd0a88ea96bd8d8940110caf98886994cd571632ea5cce5a1304539d3ab76f566f494ee9e413984daac38b50dd64c08ff5bfb864e61a19c27f012b447bc9baacbdca6974b47a3547ecfb8a677a1208fdbba13ccee22822b65dcab73c98ac27671bc3fc02f605515c96eaaf9e581bfa33ff2abf2a2a457f1d6a56c8429701e2b3dc2bb2c34ccb3434977ff5b61484e1d0327c8d1e649b4dcd658391e1abfad9728bde16090c09bf3bcd1f63cfd6e14dd5a426842c34acb70c4c1d8a0992e513d99f1fc6247d74ceb9787011d9d63b4ad776a48dfb695ea2a6cb681780361447404e01465add191ff0303372dabb88764a533934714df09c8531ce40c069a6068a7ce8eccce407766bbd97cfaba84fd6e968c8a7ff910333f97d0fd90ae69f67fcf5a02846bab7276b4d0c92845a4c962cca309e51ac0af6a7f205be2ccbcca1e799b6f7bfb837a6ece0c9cb8a68b1ac610abb85612828a9a0baafa821a9587477128112fc2a835814424bf80e85a1569ad09b87c4a1ba1d286e304e2c0eea52242289f96802961e1831b3a5563fd9ba5a029d5ec77119ac4be712345b4083c19f348f3ad8f2d9870da5457174e7d09258ded466ec5fbd25efe1b3e13dde5dbcd43333478b87d519775ed0a9dc96d247654f3e442b2624398f93ab717139ec1e9ca43c711f3d37f6316cc9dcb162c6a39026464e7b5d899189fcb4700805ea7e2b59194b5ae551197455e5406797a3af658f42e738f3217c0fd10ed91c8165ba9c3cda41bd36410be9e32b5f90900413ed85dca1d6296934a71dc56e6996038b3d551d5cdded6f3464ac8d59eb1a543a96524b86d6fbb8f0a831f98b37577d200e97ca48719d0dd34a34746e421499724c46d7fad65c7f57dd7b50a7a5be66714f6854a8e6cbbae3c409ac3a4d8487a5b87b90a66b4db9acffcd0cb1c89d094252f728f5deb4416515161a39851fcf11e43e82b7f78086882aeb47969948d253d90e9c48a552063debc8d15afabf702aa56ba8b24149c636638a5b49485db2f362a04d6943591f7b31da7b76a7014440c3796bfaf405e86d9cfe1dca6e9f867f22f0b2c564f06313ffe1dda008bb5cd188f76791ddb714a3b89daa3ec2c58901d9a5da4628cceaae7e8c8c3d00ea2b0dbfeb94e064515961520cfa4ab32e2fc27bc28fdc05e1d95c66c830b9323cd0efd4ca7722398cb656cf864c2ae70bff1e0ad791a438fb9c3809ea603cdef1fb7e2806e3d671230723acd74f3b4ff486ea5153aa22953e3a39dab0901616fbe897b4fa11c37ce8ece2f838f478bcb162d0d22674cc48a8c7fcbed0f7b0e99c7a3ba13f71e0f558bcccb2ce4388187c058143f1144e9f626104feb80754aafb83978804b799d6c6bee0db0472bd65ef4565fd9f8e7f91ad3aa9f2b77b801451cc3a85f7e7d9851281c0bdb97dac3ee5a303ca30d471ee0cf42f41c8e76e63183576e8cb95b7ae6fe8135c84e5f09760776d72eaad3b1f81465796c4cf819d7eb901015560a3f51c474833b0f644cf2a5b6177b48a8033eee4a58ccad90c0506a111bdcf33248c69fd5801f2640853d6e0ac0a454ddc196821a4790c49b1178badffd049f1e1fc2c1ba44871a20647c09da281add8a5caa7ed65a1ddac995455202dc80308c7a282681d859abef549eb2324dbd8a94ce11caea948e9f37807281d183a56b4ced250d5ab0cf049d40b71109b86e01d9b89ceb1467c2c6dabd3a7ab114d7e3bb74a865a3595bf0b7c732d28c2ba8697bdcd036a2134ac6ad875fe5db5afe735ee5a038cb7b1e31a46f02b20f9209eb5ea30691904dbd806edf4bc702e784bcc92982450b9e3a262e501ff086ab228581373bbd2e3592eee2901a4b631b1f7ac28df50a465df53fb93ab0e91397b1bef4c287efc67620361c82de876de4bde53376088c6377233068d7b2d7c30b0117a382bb204846174b7ec76280ef1eb95aa443cfc2546bfe27e2101ea493fb6dd5ffe2a25362aa14033c67b115862c5827fe4fc5ff656ee59b1286254a803eea969f1478f01bad791c49cc6d03a509e978fb8a4b22da5a8c29cac3849e388f7217a74eca5d8b981e84b1a1f7160404906bfbcfe285d7d5ff592588f88b4d3754a1e1a01562b85ca479fd10a9485a2bd81e1efdf6ee3ab42ec1b50aedc88a396f2c2200de42989ae1e7b8eb328d84df699cb8f42cd3ba7b906b2ab6750a063dff4c824cb20938e6a2719ad99d8a2a04e73f60d5cd5521e1bcf76068f31ff0980e39fcd068b063ef772ce069adff6bb0c1a75cedbd166b8b51f7014ada5a77ed783133c169b01f81019af47e3515cfc2510a51b450b9895780a1a8a3a9f809f7a969db9f3e5fc68ab8b10680ba12cb7b76ab014ded5103c32a3ea3b4092e12daa25be52887462b77c6f19702f46c9def8ead98c5dc6442a33a2c5050fbfa61ec25a882b41b96611a65307cee432502eb69f90103b0201da17a3288c4650a5c2da70785411499afc5dd579dfe8970e76da8e38857ffc532b4da33f4519b4685f9b0cae1a654df59f71d1ba4a3ddae3edc76d8f39bfef57a7e6ef2e2b66f4d026a3986034e5668e7aae1bb05621871f9b71816f30a7a71fcf</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="24a135a126b0aa980c65a778d8b7c9b7918d09997388b6eefc1c54e404cda3e9">c4379dbc51520bb23a681c5b597ae53a5071089899c950bb8cc7414f7845b427bdf2c9ce0465a0e0d08ac59a646fe6d0b0461646f505ef7e6bd27b2b5d6a0209a22203efd990c603e974289d119755f46e163f885943a6179496140a08a8a1dbe5c16ff83c50f433bb9c09bbddf99c62decc6509e83da090a97743f1f3328f500be60130f478125a7c3d765f34f34e61b8cf9780798d50da9d32c9f14cd7f841f7ac4d9b3b1e354ede1c3a98886aff91c2c6eafaa4bfffd405b5613558e3acc07579aa8bde3aab6bb693657edbd3db502f7aa5b05bad253c3a1451887ff27773b96f04756d2857eab26bd068dbb9d27e70ae3a39ee6a12151bd82eb765c603e64a4dc8379c4ab49d4f44ff9808f7ef67c0889a125d6ed8a00382da1b2c7ed8a654d27924a84f08874bf16272acd1dfdfae068efdaf900927577c701d9dffaed73cbc2018c009808fa878bf9fc886cfc281c779d0a02514848b8aff7d8e41b009a14b99d1fbcab73fe8d828c7341462b2fb1ff35b5cbdc66b6638f7852f1af8c2c0f2a3d8ebbe3be9df4e98271141d0dc17959f839b681afc1ecc0eeef09b9bb9b5b2001beb68bd1d4101049f269c76dfca3879cf3aaccab863c1c775d81c0362b1673933c50c47bc5e745757be67213041e0d51ae4ad3540ba416511a8b5b96274ba20431e8ae17aa1dc41806b393bbd2c386d5263820a12612cdf4d6ab29c648c6f0cdee729725c305f02fe28615bc9d0f86e33d66c3041e119f5bdc46e7c36a6b1e823c4b015e0daad02163b85a9bc7a4ddace7c991cea3fda0b09a8bff14c4ab9873c93526cf6af5da6d15074b91695fac06156693347e437af419c65d6339936191b49ea1debf03f1190a3dab90b17e3f668d7ee044019244805507bfc042ba38656daff44d6c7d694523d10dadd31469bf9c25d4cefaf5fbe2a68b06e431109bf91ff8506829908a5f8f24d58a3b3921e5568c4d1c64e52edba220f90f25f01653454fe466f88694be6886a0304bb86774b8b027a3c707360cfaefa63dff3367cca38545626740778b378ab593769ff809bec5187a98b4eadaa1af2d60bdf872031887aee243d4ce420c03d52f185c1c6b6195e9f6405a7c5459eb482181bee17594120b71b187f593b0e956eb0209b393cbcede6e9927223a2ea951ebd1b8b4d14bd37ba82efdf34aecf120d876f5982708ef791f01f1279bd4399b8b2f6131d77c9633ce411685d2ac2b26985fda21b02429aa409e5b74b8748285d5bbc74f15ae07a0e5721ede45971cbcd9f</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -814,28 +814,6 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【日常】我看了一些演算法 :D</title>
-    <url>/life/20221121/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="6f62a175075fb13790f9fe2076775c91726c42ff17d918051886b5dd3c1613ee">c4379dbc51520bb23a681c5b597ae53ae83953acc4205c882fe5f1b87eb724f0b8abc3f3f00c593a16026af5f9250fa5ef0ab89d750bdefd56b82ec9924125980621ad98e8b699657784ed2753ef49c4a33b882e94bb5099a9e952330639dbeff498b515e55f974438e5829045eea9b25740bf76a585586f14657611f0e24338f970be5eef24cd6eee3433c4bdbf9e8eccf7d7414a221a08f682b5ac3a9640943e81c0b0fc2cd1032a2b1a4d5516a35c1ac4ce28b5d02d317ba8214159cda47b57602c2aff22695d2efdc398da5ff3f90efca9aa141860f4e279e44e700242b2f2031a2037eb8d6b57d4aef3f356cc20a5cd1194fe6d247064558054aff4bb61d7ad69193f399f4e66d8fb27581b29854c765e2ad73322fc6b1e23a82552ea1a8b56c37e36e848e055101d73f85e0b297e1ef3e520108edfb93b1088944ff20938c0fbb57a17810375ad575f1811db2168c5db6475fbff70bb34b8519fc393dc9c57c593f5823a765c2e4e10dbfa010da83d15e2c2addd5d53a96781058eb465072f4a4114868875d637608d97b0dd3e1618cad7c142c5ab25e5889b8e0c6e839e509084b83c10507d626dd9bbc10ca04f2f684ba160b9396426980b190ea7209a8b1c9b5b5d43ec8f427d6f8958af948ec69d53a77e981070ca2fac54daa1fe9494b84f9a8a1e82cff7afa9e2e091344dd7a451507ac14629c5cf0abb3578d959eec563b0ee7a416d0bc53628ed1dda17a68ea34f37d077bf5d5bf972f6134dd24aec5899eb73efd9968fc9a43863e0</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>生活點滴</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【日常】20221130</title>
     <url>/life/20221130/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
@@ -858,10 +836,10 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【日常】我確診了</title>
-    <url>/life/20221210/</url>
+    <title>【日常】我看了一些演算法 :D</title>
+    <url>/life/20221121/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="5eb92c2da69cb823e7bf0e67348de6d5760e2f4d9f5b8877979faebd742164ce">be2ff43f5a505a2494fffb6aa39cbe27b7cadae70a3c0c0413bbbf23fd16904a3ddad33867a27e35b21e3e93aa8e3cbad157b49485ceeb546c744e21ba0d0a9478f0708fd64fa8951cfb622146932deae536d3234e68203c5572506118b444153ddcb86bb4c354125d1493c72fc2004cdf190f58589aa104e7792930944d3c2c361da5d20de37543a32507f249e1943364908b5560943dea5ebea3d3442c08966c54db9e22c548bc99e14162af74fcb1e353435435ff8d3d4dc44846c470ae2566d34152d931a6dc858ed971d0b4046019f7e57b7ce1ae9a24f1a93d6b79c28695ce53f9728e749ec33b8bdc9bf67d434dcc0339261ce1d384231e22413d05838c7358051aefddbe435799b3cbe83fb32bb3cca3e607bb832e88475b27393550713a8b0cb323c7b2a3ecc77f42f23d6145903d89cd237a766b227e375a99ed2b0837ac2aeaa811e1191aa6e2c8d5f66cd52748fed47cc2a360e8db9772bfc1e6110cff6f868efbe4e8fa348f3dcabdbaebee8e49772f2816587690f8827185f82de5fde72d568a5b75338a6011f6d7617be5847f58d03d7ae58b9c76ab3fe352fede6f0c8af235ebca5a004ddb3a10615e8f7ecd6bd26f07ecbc3bd7e95d51cb1d404a96707fbacff116ec01796e762d8fae0b618a2d0e636c197e277c77998ef8aaf84b2824790791cd3f6e8a94a2c3437ba0b3eebe32d1203414813cd001f2e30a8a7615a911c11118fec2d301e23b9c2de276290e6138b1c1aed5a9c620e5d6e6cafd59d23803761b265c9b57f2e37926cb61496113926c4085f8580b435266cb6754ff860d76e38b2fb1801fe2d2251cd044488676af0fe68a3aa64d95d5435dae06a0e21855873cb4230834f1a2efc9b35c730adb1e1a2ac4870d3213aaf615537846cb57b478ece0018e1b221c0e118db06437569f181ab1c628d158504e83b462b785cca8b05a8938f2d971a5c386eefd67ec08926e792f4d8a5853c76cdacad55c70eb960cb0fa94e1aaa8a0f18f6715eb0f7a433af951504e5fb34e6256ed0f70b3320632f86bcb0776b363c0b5f8b90009ee79ef779a4289145cf64dec16f0487bf392a0d2cf04c41840e3999c6c8a7452b95be83b3a00fd3ef1314fd3fe400399f83fc7cd6dccf472b382b5426457d6a2616e4ce5fbf1588da2a099104003388082c7a77db8d5d951cafd89a2519d604eba6bd58f88711f02266c1ea96f2c69fe6a528844cac6c06b6fc5dc03656e558ba1c4894185afce9ba1bf511200a7d685d7e8433ff00197c2c2734e71caa27981743838e1e614b7b89ec1f08b7dff0c90d26cad809073c0262410acb9348c11632c0935f1951da0c64e02795a0d17df2823053aa07c1db461f6614eebb4af3570cf16efe964724fbcc769a88f52ae673b3e972188b22408190b0686e5f7c12c960fc8cc97758af3cce31b3faa75fb972ff3455284230f1905cd67cdbd283df469f4901bd53ee7a8d6ca6682197c7bf611937fb85557ca364d6fd401b85cebf61044b842f7f9118ad85602f7035e09555e90e1e4eb84660c4dc2b687540a4565e652b21fd19fd1e188a3c093c7ab3301c8793dde23c050d0456b98f21018834e6bb2ff8568a27d54543fc624fed560a593ff7c202ce5fcce326f52a2998f0298b5503da1ebbb1741c1bed88d1b5700e8858bc38d022c5bf0bcee5cafdc82ef2ece94a5d1ace9fe4a98f8b0d12829f952f2f0be7a9eed754bb88e0bffa2f92b0d19b5f2fb2914e4eff0404e1e109d5d11646043c363d535a844d46a8345b0eef1b80479b13f63d07e2ef3133f6b126c343e4bc3cdf1100764610dae0af711a8bb705607820c6cd1f4645f69ec3f51025c6e03dae77f784df85c16a790220b72b44991911a44a2864ec940b8be46ec024a57825c171b1dcca5a3e5ba3adf1f81d4c5da5a1c87fff6f67cb6adf1f5ee7ea822ad28847ecce0e5beebdc1f8e66f5a12a384529e377b271dfd09d93c4ef7e45a837ebb7730aa62b2e03c1049ad92c6c1c1a8d974739a9451a8278b3953e78a63b5933953b75fb4f68d0d649696817999e9a70cb3d67c233d34f8a513d764bc9bc03898d571bb9bf80db30e9977982bfe814c61851b8c96b6d9e723da8d9d813963f142d78e77b93c3d17bf9a2918b561ae3f6837981a363de2ada85ae89d0684cf94cd95703af4916c831d5598e5164213c6cde276aafde38465f5b0a2ea5aa5d05b4745fb467007d744ba778fbb5f9f7f262b4bde3499abf512f656dba57e42cb706e0db57535228b3188040830c254f3401a4babb062ce980db3754cc77bb9bd2a5485fd702b4650cfc413b17eb4300bb1d48fb295766a4c3f09595a1b0172f81f0d7c90da8c60cc4572ee351a17bac9ab96d677b9d876b449dced3444615efb2ef666b9ff8f8a31bab5be62fcbdeebe54b13607e0083af54492ec682222d5f47fa816eeebed6d9b93638978318e489b49c1b34e5fe966de2413a38ffab6a7f01da1d38ad70d2c2fd32bd3960bda26e01c534b0c8e9938e56803e9212aa7a2ceaed28a8208fc456f7678ae22ef27b72de270352625a7c5c60f2c0dc04cd35a5e0c0d256d540fad4f6e981049294f1612438d347c89595e826f1e4a086b5ee3509c4aa7c7cc6718bdb4124f0fdf76ed000b21a06b92de1983e2c831a80aec3b8e8495ceb117f5a515244ab5c758653040658263ddc248086009d082b40679552ac60546ffe2c9c9b7e210392a4e67d6fddbba436d2cc802324ab67e6bca5f8e5bc252991edff6ed5b5cb37d4ff3c760028728d915ac1d851885185a94c099c1add0527695d45c169af6427818fc18b2d16b0497b393dc8f379a84a1ca22818e6d3ef32dcb708ddd00d13a473ea335988c8c60079cc8a2da1259fd48a6e28028537db37322a0930d595efdacdddc27994c59b1949e8c49b42ac155842eed29dd7b3ae63acf5769fc9b8f49f96d9abd081fe944bdb31dde592985227ca661f4a70d31053d011ea545c0865ea92dcdb0101298557f61d32e58f3606826ca044220550c5e67b991f673951a7d4e4965899c458e2c65600003d5069ad</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="6f62a175075fb13790f9fe2076775c91726c42ff17d918051886b5dd3c1613ee">c4379dbc51520bb23a681c5b597ae53ae83953acc4205c882fe5f1b87eb724f0b8abc3f3f00c593a16026af5f9250fa5ef0ab89d750bdefd56b82ec9924125980621ad98e8b699657784ed2753ef49c4a33b882e94bb5099a9e952330639dbeff498b515e55f974438e5829045eea9b25740bf76a585586f14657611f0e24338f970be5eef24cd6eee3433c4bdbf9e8eccf7d7414a221a08f682b5ac3a9640943e81c0b0fc2cd1032a2b1a4d5516a35c1ac4ce28b5d02d317ba8214159cda47b57602c2aff22695d2efdc398da5ff3f90efca9aa141860f4e279e44e700242b2f2031a2037eb8d6b57d4aef3f356cc20a5cd1194fe6d247064558054aff4bb61d7ad69193f399f4e66d8fb27581b29854c765e2ad73322fc6b1e23a82552ea1a8b56c37e36e848e055101d73f85e0b297e1ef3e520108edfb93b1088944ff20938c0fbb57a17810375ad575f1811db2168c5db6475fbff70bb34b8519fc393dc9c57c593f5823a765c2e4e10dbfa010da83d15e2c2addd5d53a96781058eb465072f4a4114868875d637608d97b0dd3e1618cad7c142c5ab25e5889b8e0c6e839e509084b83c10507d626dd9bbc10ca04f2f684ba160b9396426980b190ea7209a8b1c9b5b5d43ec8f427d6f8958af948ec69d53a77e981070ca2fac54daa1fe9494b84f9a8a1e82cff7afa9e2e091344dd7a451507ac14629c5cf0abb3578d959eec563b0ee7a416d0bc53628ed1dda17a68ea34f37d077bf5d5bf972f6134dd24aec5899eb73efd9968fc9a43863e0</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -962,6 +940,365 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </categories>
       <tags>
         <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【日常】我確診了</title>
+    <url>/life/20221210/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="5eb92c2da69cb823e7bf0e67348de6d5760e2f4d9f5b8877979faebd742164ce">be2ff43f5a505a2494fffb6aa39cbe27b7cadae70a3c0c0413bbbf23fd16904a3ddad33867a27e35b21e3e93aa8e3cbad157b49485ceeb546c744e21ba0d0a9478f0708fd64fa8951cfb622146932deae536d3234e68203c5572506118b444153ddcb86bb4c354125d1493c72fc2004cdf190f58589aa104e7792930944d3c2c361da5d20de37543a32507f249e1943364908b5560943dea5ebea3d3442c08966c54db9e22c548bc99e14162af74fcb1e353435435ff8d3d4dc44846c470ae2566d34152d931a6dc858ed971d0b4046019f7e57b7ce1ae9a24f1a93d6b79c28695ce53f9728e749ec33b8bdc9bf67d434dcc0339261ce1d384231e22413d05838c7358051aefddbe435799b3cbe83fb32bb3cca3e607bb832e88475b27393550713a8b0cb323c7b2a3ecc77f42f23d6145903d89cd237a766b227e375a99ed2b0837ac2aeaa811e1191aa6e2c8d5f66cd52748fed47cc2a360e8db9772bfc1e6110cff6f868efbe4e8fa348f3dcabdbaebee8e49772f2816587690f8827185f82de5fde72d568a5b75338a6011f6d7617be5847f58d03d7ae58b9c76ab3fe352fede6f0c8af235ebca5a004ddb3a10615e8f7ecd6bd26f07ecbc3bd7e95d51cb1d404a96707fbacff116ec01796e762d8fae0b618a2d0e636c197e277c77998ef8aaf84b2824790791cd3f6e8a94a2c3437ba0b3eebe32d1203414813cd001f2e30a8a7615a911c11118fec2d301e23b9c2de276290e6138b1c1aed5a9c620e5d6e6cafd59d23803761b265c9b57f2e37926cb61496113926c4085f8580b435266cb6754ff860d76e38b2fb1801fe2d2251cd044488676af0fe68a3aa64d95d5435dae06a0e21855873cb4230834f1a2efc9b35c730adb1e1a2ac4870d3213aaf615537846cb57b478ece0018e1b221c0e118db06437569f181ab1c628d158504e83b462b785cca8b05a8938f2d971a5c386eefd67ec08926e792f4d8a5853c76cdacad55c70eb960cb0fa94e1aaa8a0f18f6715eb0f7a433af951504e5fb34e6256ed0f70b3320632f86bcb0776b363c0b5f8b90009ee79ef779a4289145cf64dec16f0487bf392a0d2cf04c41840e3999c6c8a7452b95be83b3a00fd3ef1314fd3fe400399f83fc7cd6dccf472b382b5426457d6a2616e4ce5fbf1588da2a099104003388082c7a77db8d5d951cafd89a2519d604eba6bd58f88711f02266c1ea96f2c69fe6a528844cac6c06b6fc5dc03656e558ba1c4894185afce9ba1bf511200a7d685d7e8433ff00197c2c2734e71caa27981743838e1e614b7b89ec1f08b7dff0c90d26cad809073c0262410acb9348c11632c0935f1951da0c64e02795a0d17df2823053aa07c1db461f6614eebb4af3570cf16efe964724fbcc769a88f52ae673b3e972188b22408190b0686e5f7c12c960fc8cc97758af3cce31b3faa75fb972ff3455284230f1905cd67cdbd283df469f4901bd53ee7a8d6ca6682197c7bf611937fb85557ca364d6fd401b85cebf61044b842f7f9118ad85602f7035e09555e90e1e4eb84660c4dc2b687540a4565e652b21fd19fd1e188a3c093c7ab3301c8793dde23c050d0456b98f21018834e6bb2ff8568a27d54543fc624fed560a593ff7c202ce5fcce326f52a2998f0298b5503da1ebbb1741c1bed88d1b5700e8858bc38d022c5bf0bcee5cafdc82ef2ece94a5d1ace9fe4a98f8b0d12829f952f2f0be7a9eed754bb88e0bffa2f92b0d19b5f2fb2914e4eff0404e1e109d5d11646043c363d535a844d46a8345b0eef1b80479b13f63d07e2ef3133f6b126c343e4bc3cdf1100764610dae0af711a8bb705607820c6cd1f4645f69ec3f51025c6e03dae77f784df85c16a790220b72b44991911a44a2864ec940b8be46ec024a57825c171b1dcca5a3e5ba3adf1f81d4c5da5a1c87fff6f67cb6adf1f5ee7ea822ad28847ecce0e5beebdc1f8e66f5a12a384529e377b271dfd09d93c4ef7e45a837ebb7730aa62b2e03c1049ad92c6c1c1a8d974739a9451a8278b3953e78a63b5933953b75fb4f68d0d649696817999e9a70cb3d67c233d34f8a513d764bc9bc03898d571bb9bf80db30e9977982bfe814c61851b8c96b6d9e723da8d9d813963f142d78e77b93c3d17bf9a2918b561ae3f6837981a363de2ada85ae89d0684cf94cd95703af4916c831d5598e5164213c6cde276aafde38465f5b0a2ea5aa5d05b4745fb467007d744ba778fbb5f9f7f262b4bde3499abf512f656dba57e42cb706e0db57535228b3188040830c254f3401a4babb062ce980db3754cc77bb9bd2a5485fd702b4650cfc413b17eb4300bb1d48fb295766a4c3f09595a1b0172f81f0d7c90da8c60cc4572ee351a17bac9ab96d677b9d876b449dced3444615efb2ef666b9ff8f8a31bab5be62fcbdeebe54b13607e0083af54492ec682222d5f47fa816eeebed6d9b93638978318e489b49c1b34e5fe966de2413a38ffab6a7f01da1d38ad70d2c2fd32bd3960bda26e01c534b0c8e9938e56803e9212aa7a2ceaed28a8208fc456f7678ae22ef27b72de270352625a7c5c60f2c0dc04cd35a5e0c0d256d540fad4f6e981049294f1612438d347c89595e826f1e4a086b5ee3509c4aa7c7cc6718bdb4124f0fdf76ed000b21a06b92de1983e2c831a80aec3b8e8495ceb117f5a515244ab5c758653040658263ddc248086009d082b40679552ac60546ffe2c9c9b7e210392a4e67d6fddbba436d2cc802324ab67e6bca5f8e5bc252991edff6ed5b5cb37d4ff3c760028728d915ac1d851885185a94c099c1add0527695d45c169af6427818fc18b2d16b0497b393dc8f379a84a1ca22818e6d3ef32dcb708ddd00d13a473ea335988c8c60079cc8a2da1259fd48a6e28028537db37322a0930d595efdacdddc27994c59b1949e8c49b42ac155842eed29dd7b3ae63acf5769fc9b8f49f96d9abd081fe944bdb31dde592985227ca661f4a70d31053d011ea545c0865ea92dcdb0101298557f61d32e58f3606826ca044220550c5e67b991f673951a7d4e4965899c458e2c65600003d5069ad</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>生活點滴</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【演算法】差分（Differential Evolution）</title>
+    <url>/cs/algo/differential-evolution/</url>
+    <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
+<p>陣列相鄰兩項的差值。時間複雜度從 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 降到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span>，好像也可以算是一種動態規劃。</p>
+<h2 id="用途"><a class="markdownIt-Anchor" href="#用途"></a> 用途</h2>
+<p>「快速」在區間 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[l, r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span> 加上 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 值。</p>
+<span id="more"></span>
+<h3 id="例-1一維陣列"><a class="markdownIt-Anchor" href="#例-1一維陣列"></a> 例 1（一維陣列）</h3>
+<p>假設我們要將一個一維陣列某段（index = 3~）都增加 5，也就是從這樣</p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+</tr>
+</thead>
+</table>
+<p>變這樣</p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>5</th>
+<th>5</th>
+<th>5</th>
+<th>5</th>
+<th>5</th>
+<th>5</th>
+<th>5</th>
+</tr>
+</thead>
+</table>
+<p>在差分的用法上這個陣列會變成這樣</p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>5</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+</tr>
+</thead>
+</table>
+<p>好處非常明顯就是不用修改區間內全部的值，也就是不用做 n 次。<br />
+只需要改一個值，也就是只要做 1 次。</p>
+<hr />
+<p>那假設我們只要 index = 3~6 改為 5，我們只要這樣做</p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>5</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>-5</th>
+<th>0</th>
+<th>0</th>
+</tr>
+</thead>
+</table>
+<h3 id="例-2二為陣列"><a class="markdownIt-Anchor" href="#例-2二為陣列"></a> 例 2（二為陣列）</h3>
+<p>原陣列：</p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>差分陣列：</p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>-5</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>-5</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>其原理為：</p>
+<p>差分</p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>d</td>
+<td>0</td>
+<td>0</td>
+<td>-d</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>-d</td>
+<td>0</td>
+<td>0</td>
+<td>d</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>實際數值</p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>+d</td>
+<td>+d</td>
+<td>+d</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>+d</td>
+<td>+d</td>
+<td>+d</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>+d</td>
+<td>+d</td>
+<td>+d</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="差分-vs-前綴和"><a class="markdownIt-Anchor" href="#差分-vs-前綴和"></a> 差分 vs 前綴和</h2>
+<p>差分與前綴和的關係其實很微妙，它們互為反運算的關係。</p>
+<p>就以 [0, 5, 5, 5, 0, 0] 為例</p>
+<p>差分陣列：</p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>5</th>
+<th>0</th>
+<th>0</th>
+<th>-5</th>
+<th>0</th>
+</tr>
+</thead>
+</table>
+<p>原陣列：</p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>5</th>
+<th>5</th>
+<th>5</th>
+<th>0</th>
+<th>0</th>
+</tr>
+</thead>
+</table>
+<p>前綴和：</p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>5</th>
+<th>10</th>
+<th>15</th>
+<th>15</th>
+<th>15</th>
+</tr>
+</thead>
+</table>
+<p>可以發現它們的關係是：</p>
+<p>差分陣列的前綴 = 原陣列<br />
+原陣列的前綴 = 前綴和</p>
+<p>前綴和的差分 = 原陣列<br />
+原陣列的差分 = 差分矩陣</p>
+<h2 id="題目"><a class="markdownIt-Anchor" href="#題目"></a> 題目</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPW41NjU=">ZeroJudge n565. 降雨量統計 (Rainfall)<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<h2 id="參考資料"><a class="markdownIt-Anchor" href="#參考資料"></a> 參考資料</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly90cG1zby5vcmcvdG9pL2luZGV4LnBocC90YXNrcy8=">TOI推廣線上練習賽歷屆試題<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+]]></content>
+      <categories>
+        <category>計算機科學</category>
+        <category>演算法</category>
+      </categories>
+      <tags>
+        <tag>筆記</tag>
+        <tag>差分</tag>
+        <tag>Differential Evolution</tag>
+        <tag>基礎演算法</tag>
       </tags>
   </entry>
   <entry>
@@ -1362,9 +1699,9 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </categories>
       <tags>
         <tag>筆記</tag>
+        <tag>基礎演算法</tag>
         <tag>Knapsack Problem</tag>
         <tag>DP</tag>
-        <tag>基礎演算法</tag>
       </tags>
   </entry>
   <entry>
@@ -1398,340 +1735,83 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【演算法】差分（Differential Evolution）</title>
-    <url>/cs/algo/differential-evolution/</url>
-    <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
-<p>陣列相鄰兩項的差值。時間複雜度從 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span> 降到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span>，好像也可以算是一種動態規劃。</p>
-<h2 id="用途"><a class="markdownIt-Anchor" href="#用途"></a> 用途</h2>
-<p>「快速」在區間 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[l, r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span> 加上 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi></mrow><annotation encoding="application/x-tex">X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> 值。</p>
-<span id="more"></span>
-<h3 id="例-1一維陣列"><a class="markdownIt-Anchor" href="#例-1一維陣列"></a> 例 1（一維陣列）</h3>
-<p>假設我們要將一個一維陣列某段（index = 3~）都增加 5，也就是從這樣</p>
+    <title>【筆記】array 陣列</title>
+    <url>/cs/cpp/array/</url>
+    <content><![CDATA[<h1 id="基本介紹"><a class="markdownIt-Anchor" href="#基本介紹"></a> 基本介紹</h1>
+<p>當我們需要存取一堆數據或資料時，總不能直接建立千個或上萬個變數吧！若這些數據具有相關性、型態一樣，可以使用 <code>Array</code> 來存取。陣列具有連續的記憶體位址，所以我們可以從頭走到尾來讀取 <code>Array</code> 中的數據。既可以減少變數的命名，還可以讓程式變得精簡、提高可讀性。</p>
+<h1 id="如何宣告"><a class="markdownIt-Anchor" href="#如何宣告"></a> 如何宣告</h1>
+<p>先引入標頭檔 <code>#include &lt;array&gt;</code></p>
+<h2 id="基礎宣告"><a class="markdownIt-Anchor" href="#基礎宣告"></a> 基礎宣告</h2>
+<figure class="highlight cpp"><figcaption><span>基礎宣告範例</span></figcaption><table><tr><td class="code"><pre><span class="line">array&lt;<span class="type">int</span>, 10&gt; arr;</span><br></pre></td></tr></table></figure>
+<p>從上方範例可知 <code>arr</code> 是一個長度為 10 的整數陣列</p>
+<div class="note info"><p>在任何程式語言裡，陣列的第一項編號必為 <code>0</code>（編號我們通常稱之 index 索引）。所以若有一個長度為 <code>10</code> 的陣列，內容物的索引範圍為 <code>0~9</code>。</p>
+</div>
+<h2 id="設定初始值"><a class="markdownIt-Anchor" href="#設定初始值"></a> 設定初始值</h2>
+<figure class="highlight cpp"><figcaption><span>設定初始值範例</span></figcaption><table><tr><td class="code"><pre><span class="line">arr&lt;<span class="type">int</span>, <span class="number">5</span>&gt; arr_A&#123;<span class="number">2</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">3</span>, <span class="number">1</span>&#125;;</span><br><span class="line">arr&lt;<span class="type">int</span>, <span class="number">5</span>&gt; arr_B&#123;&#125;;  <span class="comment">// 表示初始化 arr_B 元素皆為 0</span></span><br></pre></td></tr></table></figure>
+<div class="note danger"><p>注意！若陣列未做初始值，其中元素可能為亂數。</p>
+</div>
+<h1 id="基礎使用"><a class="markdownIt-Anchor" href="#基礎使用"></a> 基礎使用</h1>
 <table>
 <thead>
 <tr>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-</tr>
-</thead>
-</table>
-<p>變這樣</p>
-<table>
-<thead>
-<tr>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>5</th>
-<th>5</th>
-<th>5</th>
-<th>5</th>
-<th>5</th>
-<th>5</th>
-<th>5</th>
-</tr>
-</thead>
-</table>
-<p>在差分的用法上這個陣列會變成這樣</p>
-<table>
-<thead>
-<tr>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>5</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-</tr>
-</thead>
-</table>
-<p>好處非常明顯就是不用修改區間內全部的值，也就是不用做 n 次。<br />
-只需要改一個值，也就是只要做 1 次。</p>
-<hr />
-<p>那假設我們只要 index = 3~6 改為 5，我們只要這樣做</p>
-<table>
-<thead>
-<tr>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>5</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>-5</th>
-<th>0</th>
-<th>0</th>
-</tr>
-</thead>
-</table>
-<h3 id="例-2二為陣列"><a class="markdownIt-Anchor" href="#例-2二為陣列"></a> 例 2（二為陣列）</h3>
-<p>原陣列：</p>
-<table>
-<thead>
-<tr>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
+<th>array 函式</th>
+<th>功能</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>0</td>
-<td>5</td>
-<td>5</td>
-<td>5</td>
-<td>0</td>
-<td>0</td>
+<td><code>begin()</code>, <code>end()</code>, <code>cbegin()</code>, <code>cend()</code></td>
+<td>提供正向跌代器</td>
 </tr>
 <tr>
-<td>0</td>
-<td>5</td>
-<td>5</td>
-<td>5</td>
-<td>0</td>
-<td>0</td>
+<td><code>rbegin()</code>, <code>rend()</code>, <code>crbegin()</code>, <code>crend()</code></td>
+<td>提供反向跌代器</td>
 </tr>
 <tr>
-<td>0</td>
-<td>5</td>
-<td>5</td>
-<td>5</td>
-<td>0</td>
-<td>0</td>
+<td><code>size()</code></td>
+<td>返回陣列大小</td>
 </tr>
 <tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
+<td><code>max_size()</code></td>
+<td>返回陣列最大大小（由於 <code>array</code> 為固定序列，故返回值與 <code>size()</code> 一樣）</td>
+</tr>
+<tr>
+<td><code>at()</code>, <code>operator[]</code></td>
+<td>取得元素</td>
+</tr>
+<tr>
+<td><code>front()</code></td>
+<td>返回第一個元素</td>
+</tr>
+<tr>
+<td><code>back()</code></td>
+<td>返回最後一個元素</td>
+</tr>
+<tr>
+<td><code>data()</code></td>
+<td>返回元素的指標</td>
+</tr>
+<tr>
+<td><code>fill()</code></td>
+<td>填滿陣列</td>
+</tr>
+<tr>
+<td><code>swap()</code></td>
+<td>交換兩個陣列元素</td>
 </tr>
 </tbody>
 </table>
-<p>差分陣列：</p>
-<table>
-<thead>
-<tr>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>5</td>
-<td>0</td>
-<td>0</td>
-<td>-5</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>-5</td>
-<td>0</td>
-<td>0</td>
-<td>5</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-<p>其原理為：</p>
-<p>差分</p>
-<table>
-<thead>
-<tr>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>d</td>
-<td>0</td>
-<td>0</td>
-<td>-d</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>-d</td>
-<td>0</td>
-<td>0</td>
-<td>d</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-<p>實際數值</p>
-<table>
-<thead>
-<tr>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-<th>0</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>+d</td>
-<td>+d</td>
-<td>+d</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>+d</td>
-<td>+d</td>
-<td>+d</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>+d</td>
-<td>+d</td>
-<td>+d</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-<h2 id="差分-vs-前綴和"><a class="markdownIt-Anchor" href="#差分-vs-前綴和"></a> 差分 vs 前綴和</h2>
-<p>差分與前綴和的關係其實很微妙，它們互為反運算的關係。</p>
-<p>就以 [0, 5, 5, 5, 0, 0] 為例</p>
-<p>差分陣列：</p>
-<table>
-<thead>
-<tr>
-<th>0</th>
-<th>5</th>
-<th>0</th>
-<th>0</th>
-<th>-5</th>
-<th>0</th>
-</tr>
-</thead>
-</table>
-<p>原陣列：</p>
-<table>
-<thead>
-<tr>
-<th>0</th>
-<th>5</th>
-<th>5</th>
-<th>5</th>
-<th>0</th>
-<th>0</th>
-</tr>
-</thead>
-</table>
-<p>前綴和：</p>
-<table>
-<thead>
-<tr>
-<th>0</th>
-<th>5</th>
-<th>10</th>
-<th>15</th>
-<th>15</th>
-<th>15</th>
-</tr>
-</thead>
-</table>
-<p>可以發現它們的關係是：</p>
-<p>差分陣列的前綴 = 原陣列<br />
-原陣列的前綴 = 前綴和</p>
-<p>前綴和的差分 = 原陣列<br />
-原陣列的差分 = 差分矩陣</p>
-<h2 id="題目"><a class="markdownIt-Anchor" href="#題目"></a> 題目</h2>
-<ul>
-<li><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPW41NjU=">ZeroJudge n565. 降雨量統計 (Rainfall)<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-<h2 id="參考資料"><a class="markdownIt-Anchor" href="#參考資料"></a> 參考資料</h2>
-<ul>
-<li><span class="exturl" data-url="aHR0cHM6Ly90cG1zby5vcmcvdG9pL2luZGV4LnBocC90YXNrcy8=">TOI推廣線上練習賽歷屆試題<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jcGx1c3BsdXMuY29tL3JlZmVyZW5jZS9hcnJheS9hcnJheS8=">查看更多可參考 cplusplus 官網<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="各種遍歷"><a class="markdownIt-Anchor" href="#各種遍歷"></a> 各種遍歷</h1>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 正向遍歷</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    cout &lt;&lt; data[i] &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> i : data) &#123;</span><br><span class="line">    cout &lt;&lt; i &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> iter = data.<span class="built_in">begin</span>(); iter != data.<span class="built_in">end</span>(); ++iter) &#123;</span><br><span class="line">    cout &lt;&lt; *iter &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 反向遍歷</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">9</span>; i &lt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    cout &lt;&lt; data[i] &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> iter = data.<span class="built_in">rbegin</span>(); iter != data.<span class="built_in">rend</span>(); ++iter) &#123;</span><br><span class="line">    cout &lt;&lt; *iter &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>計算機科學</category>
-        <category>演算法</category>
+        <category>C++</category>
       </categories>
       <tags>
         <tag>筆記</tag>
-        <tag>差分</tag>
-        <tag>基礎演算法</tag>
-        <tag>Differential Evolution</tag>
+        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
@@ -1838,86 +1918,6 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【筆記】array 陣列</title>
-    <url>/cs/cpp/array/</url>
-    <content><![CDATA[<h1 id="基本介紹"><a class="markdownIt-Anchor" href="#基本介紹"></a> 基本介紹</h1>
-<p>當我們需要存取一堆數據或資料時，總不能直接建立千個或上萬個變數吧！若這些數據具有相關性、型態一樣，可以使用 <code>Array</code> 來存取。陣列具有連續的記憶體位址，所以我們可以從頭走到尾來讀取 <code>Array</code> 中的數據。既可以減少變數的命名，還可以讓程式變得精簡、提高可讀性。</p>
-<h1 id="如何宣告"><a class="markdownIt-Anchor" href="#如何宣告"></a> 如何宣告</h1>
-<p>先引入標頭檔 <code>#include &lt;array&gt;</code></p>
-<h2 id="基礎宣告"><a class="markdownIt-Anchor" href="#基礎宣告"></a> 基礎宣告</h2>
-<figure class="highlight cpp"><figcaption><span>基礎宣告範例</span></figcaption><table><tr><td class="code"><pre><span class="line">array&lt;<span class="type">int</span>, 10&gt; arr;</span><br></pre></td></tr></table></figure>
-<p>從上方範例可知 <code>arr</code> 是一個長度為 10 的整數陣列</p>
-<div class="note info"><p>在任何程式語言裡，陣列的第一項編號必為 <code>0</code>（編號我們通常稱之 index 索引）。所以若有一個長度為 <code>10</code> 的陣列，內容物的索引範圍為 <code>0~9</code>。</p>
-</div>
-<h2 id="設定初始值"><a class="markdownIt-Anchor" href="#設定初始值"></a> 設定初始值</h2>
-<figure class="highlight cpp"><figcaption><span>設定初始值範例</span></figcaption><table><tr><td class="code"><pre><span class="line">arr&lt;<span class="type">int</span>, <span class="number">5</span>&gt; arr_A&#123;<span class="number">2</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">3</span>, <span class="number">1</span>&#125;;</span><br><span class="line">arr&lt;<span class="type">int</span>, <span class="number">5</span>&gt; arr_B&#123;&#125;;  <span class="comment">// 表示初始化 arr_B 元素皆為 0</span></span><br></pre></td></tr></table></figure>
-<div class="note danger"><p>注意！若陣列未做初始值，其中元素可能為亂數。</p>
-</div>
-<h1 id="基礎使用"><a class="markdownIt-Anchor" href="#基礎使用"></a> 基礎使用</h1>
-<table>
-<thead>
-<tr>
-<th>array 函式</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>begin()</code>, <code>end()</code>, <code>cbegin()</code>, <code>cend()</code></td>
-<td>提供正向跌代器</td>
-</tr>
-<tr>
-<td><code>rbegin()</code>, <code>rend()</code>, <code>crbegin()</code>, <code>crend()</code></td>
-<td>提供反向跌代器</td>
-</tr>
-<tr>
-<td><code>size()</code></td>
-<td>返回陣列大小</td>
-</tr>
-<tr>
-<td><code>max_size()</code></td>
-<td>返回陣列最大大小（由於 <code>array</code> 為固定序列，故返回值與 <code>size()</code> 一樣）</td>
-</tr>
-<tr>
-<td><code>at()</code>, <code>operator[]</code></td>
-<td>取得元素</td>
-</tr>
-<tr>
-<td><code>front()</code></td>
-<td>返回第一個元素</td>
-</tr>
-<tr>
-<td><code>back()</code></td>
-<td>返回最後一個元素</td>
-</tr>
-<tr>
-<td><code>data()</code></td>
-<td>返回元素的指標</td>
-</tr>
-<tr>
-<td><code>fill()</code></td>
-<td>填滿陣列</td>
-</tr>
-<tr>
-<td><code>swap()</code></td>
-<td>交換兩個陣列元素</td>
-</tr>
-</tbody>
-</table>
-<p><span class="exturl" data-url="aHR0cHM6Ly9jcGx1c3BsdXMuY29tL3JlZmVyZW5jZS9hcnJheS9hcnJheS8=">查看更多可參考 cplusplus 官網<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="各種遍歷"><a class="markdownIt-Anchor" href="#各種遍歷"></a> 各種遍歷</h1>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 正向遍歷</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    cout &lt;&lt; data[i] &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> i : data) &#123;</span><br><span class="line">    cout &lt;&lt; i &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> iter = data.<span class="built_in">begin</span>(); iter != data.<span class="built_in">end</span>(); ++iter) &#123;</span><br><span class="line">    cout &lt;&lt; *iter &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 反向遍歷</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">9</span>; i &lt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    cout &lt;&lt; data[i] &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> iter = data.<span class="built_in">rbegin</span>(); iter != data.<span class="built_in">rend</span>(); ++iter) &#123;</span><br><span class="line">    cout &lt;&lt; *iter &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>計算機科學</category>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>筆記</tag>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【筆記】二分搜尋樹（Binary Search Tree）</title>
     <url>/cs/cpp/binary-search-tree/</url>
     <content><![CDATA[<h1 id="基本介紹"><a class="markdownIt-Anchor" href="#基本介紹"></a> 基本介紹</h1>
@@ -1988,8 +1988,23 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
 <h2 id="檔案寫入"><a class="markdownIt-Anchor" href="#檔案寫入"></a> 檔案寫入</h2>
 <figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line">ofstream ofs;  <span class="comment">// Output File Stream</span></span><br><span class="line">ofs.<span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>);  <span class="comment">// Open the file u want to write in</span></span><br><span class="line"><span class="keyword">if</span> (ofs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">ofs &lt;&lt; <span class="string">&quot;Hi! World&quot;</span>;</span><br></pre></td></tr></table></figure>
 <figure class="highlight txt"><figcaption><span>test.txt</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
-<p>那如果多次輸出到檔案呢？</p>
-<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line">ofstream ofs;  <span class="comment">// Output File Stream</span></span><br><span class="line">ofs.<span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>);  <span class="comment">// Open the file u want to write in</span></span><br><span class="line"><span class="keyword">if</span> (ofs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">ofs &lt;&lt; <span class="string">&quot;Hi! World&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>那如果在執行一次程式呢？</p>
+<figure class="highlight txt"><figcaption><span>test.txt</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
+<p>結果還是一樣。如果我們要添加內容，而不是覆蓋內容，可以將 <code>ofs.open(&quot;test.txt&quot;);</code> 改成 <code>ofs.open(&quot;test.txt&quot;, ios::app);</code> 這個 app 推測是 append 也就是附加、添加內容。所以我們將下方的程式碼執行 2 次，原本 txt 檔裡的內容就不會被覆蓋。</p>
+<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line">ofstream ofs;  <span class="comment">// Output File Stream</span></span><br><span class="line">ofs.<span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>, ios::app);  <span class="comment">// Open the file u want to write in</span></span><br><span class="line"><span class="keyword">if</span> (ofs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">ofs &lt;&lt; <span class="string">&quot;Hi! World&quot;</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><figcaption><span>test.txt</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi! WorldHi! World</span><br></pre></td></tr></table></figure>
+<h2 id="檔案讀取"><a class="markdownIt-Anchor" href="#檔案讀取"></a> 檔案讀取</h2>
+<p>使用方式與檔案寫入相似。</p>
+<figure class="highlight txt"><figcaption><span>text.txt</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line">ifstream ifs;  <span class="comment">// Input File stream</span></span><br><span class="line">ifs.<span class="built_in">open</span>(<span class="string">&quot;text.txt&quot;</span>);  <span class="comment">// Open the file u want to read</span></span><br><span class="line"><span class="keyword">if</span> (ifs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">string str;</span><br><span class="line">ifs &gt;&gt; str;</span><br><span class="line">cout &lt;&lt; str &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><figcaption><span>Output Result</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi!</span><br></pre></td></tr></table></figure>
+<p>為什麼只有 <code>Hi!</code> 呢？其實就跟 cin 一樣，遇到空白就是為輸入完了，所以只擷取到 <code>Hi!</code> 的部分，那要一直重複寫 <code>ifs &gt;&gt; str;</code> 這行？不用，可以用 EoF 的方式做讀取。</p>
+<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line">ifstream ifs;  <span class="comment">// Input File stream</span></span><br><span class="line">ifs.<span class="built_in">open</span>(<span class="string">&quot;text.txt&quot;</span>);  <span class="comment">// Open the file u want to read</span></span><br><span class="line"><span class="keyword">if</span> (ifs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">string str;</span><br><span class="line"><span class="keyword">while</span> (ifs &gt;&gt; str) &#123;</span><br><span class="line">    cout &lt;&lt; str &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><figcaption><span>Output Result</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi!</span><br><span class="line">World</span><br></pre></td></tr></table></figure>
+<p>或是用 <code>getline()</code> 直接讀取整行，忽略空白字元</p>
+<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line">ifstream ifs;  <span class="comment">// Input File stream</span></span><br><span class="line">ifs.<span class="built_in">open</span>(<span class="string">&quot;text.txt&quot;</span>);  <span class="comment">// Open the file u want to read</span></span><br><span class="line"><span class="keyword">if</span> (ifs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">string str;</span><br><span class="line"><span class="keyword">while</span> (<span class="built_in">getline</span>(ifs, str)) &#123;</span><br><span class="line">    cout &lt;&lt; str &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><figcaption><span>Output Result</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
+<p>資料型態一定要用字串存取嗎？不用，看你的檔案放什麼，你就可以用什麼存，整數就用 int，小數點就用 float，都是可以的。</p>
 <h2 id="參考資料"><a class="markdownIt-Anchor" href="#參考資料"></a> 參考資料</h2>
 <ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9oYWNrbWQuaW8vQG5kaHUtcHJvZ3JhbW1pbmctMjAyMS9Ca1p1a0c0aks=">C++ 檔案讀寫函式庫 fstream - 上<i class="fa fa-external-link-alt"></i></span></li>
@@ -2133,37 +2148,6 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【筆記】字串 string</title>
-    <url>/cs/cpp/string/</url>
-    <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
-<p>字串顧名思義就是字元的陣列，我們通常可以用 index 找字串中的某個字元，然後做處理或判斷。</p>
-<span id="more"></span>
-<h2 id="結構"><a class="markdownIt-Anchor" href="#結構"></a> 結構</h2>
-<h3 id="宣告變數"><a class="markdownIt-Anchor" href="#宣告變數"></a> 宣告變數</h3>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string str = <span class="string">&quot;Hello World!&quot;</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="基本操作"><a class="markdownIt-Anchor" href="#基本操作"></a> 基本操作</h3>
-<p><code>Hello World!</code> 的各個字元可以用 index 找到每個字。</p>
-<p>例如：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; str[<span class="number">1</span>] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;  <span class="comment">// e</span></span><br><span class="line">cout &lt;&lt; str[<span class="number">6</span>] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;  <span class="comment">// W</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-<h3 id="字串尾端"><a class="markdownIt-Anchor" href="#字串尾端"></a> 字串尾端</h3>
-<p>字串尾端其實還包含了一個字元，但其值為：‘\0’。</p>
-<p>‘\0’（反斜線 0）表示空字元（NULL）也就是告訴電腦該字串已經結束了。</p>
-<p>我們也可以用這個性質來遍歷整個字串</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; str[i] != <span class="string">&#x27;\0&#x27;</span>; i++) cout &lt;&lt; str[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="練習題"><a class="markdownIt-Anchor" href="#練習題"></a> 練習題</h2>
-]]></content>
-      <categories>
-        <category>計算機科學</category>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>筆記</tag>
-        <tag>C++</tag>
-        <tag>string</tag>
-        <tag>字串</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【筆記】字串流 stringstream</title>
     <url>/cs/cpp/stringstream/</url>
     <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
@@ -2215,8 +2199,8 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
         <tag>筆記</tag>
         <tag>C++</tag>
         <tag>string</tag>
-        <tag>字串</tag>
         <tag>strigstream</tag>
+        <tag>字串</tag>
         <tag>字串流</tag>
         <tag>字串切割</tag>
       </tags>
@@ -2388,6 +2372,37 @@ E. Run Time Error</p>
       </tags>
   </entry>
   <entry>
+    <title>【筆記】字串 string</title>
+    <url>/cs/cpp/string/</url>
+    <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
+<p>字串顧名思義就是字元的陣列，我們通常可以用 index 找字串中的某個字元，然後做處理或判斷。</p>
+<span id="more"></span>
+<h2 id="結構"><a class="markdownIt-Anchor" href="#結構"></a> 結構</h2>
+<h3 id="宣告變數"><a class="markdownIt-Anchor" href="#宣告變數"></a> 宣告變數</h3>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string str = <span class="string">&quot;Hello World!&quot;</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="基本操作"><a class="markdownIt-Anchor" href="#基本操作"></a> 基本操作</h3>
+<p><code>Hello World!</code> 的各個字元可以用 index 找到每個字。</p>
+<p>例如：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; str[<span class="number">1</span>] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;  <span class="comment">// e</span></span><br><span class="line">cout &lt;&lt; str[<span class="number">6</span>] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;  <span class="comment">// W</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h3 id="字串尾端"><a class="markdownIt-Anchor" href="#字串尾端"></a> 字串尾端</h3>
+<p>字串尾端其實還包含了一個字元，但其值為：‘\0’。</p>
+<p>‘\0’（反斜線 0）表示空字元（NULL）也就是告訴電腦該字串已經結束了。</p>
+<p>我們也可以用這個性質來遍歷整個字串</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; str[i] != <span class="string">&#x27;\0&#x27;</span>; i++) cout &lt;&lt; str[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="練習題"><a class="markdownIt-Anchor" href="#練習題"></a> 練習題</h2>
+]]></content>
+      <categories>
+        <category>計算機科學</category>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>筆記</tag>
+        <tag>C++</tag>
+        <tag>string</tag>
+        <tag>字串</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【解題】d001: 例題 P-1-1. 合成函數(1)</title>
     <url>/solved/TCFSH_CIRC_Judge/d001/</url>
     <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
@@ -2547,6 +2562,26 @@ E. Run Time Error</p>
       </tags>
   </entry>
   <entry>
+    <title>【解題】Zerojudge f377. 運算式轉換</title>
+    <url>/solved/ZeroJudge/f377/</url>
+    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWYzNzc=">f377. 運算式轉換<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
+<p>中序式轉後序式的基本題目，概念詳見：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nZ2Vya3VvLmdhLzAxMi1pbmZpeC1wb3N0Zml4Lw==">【筆記】前序式、中序式與後序式<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
+<figure class="highlight cpp"><figcaption><span>f377</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">order</span><span class="params">(<span class="type">char</span> cr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (cr == <span class="string">&#x27;+&#x27;</span> || cr == <span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (cr == <span class="string">&#x27;*&#x27;</span> || cr == <span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ouo;</span><br><span class="line">    string str;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">getline</span>(cin, str)) &#123;</span><br><span class="line">        stack&lt;<span class="type">char</span>&gt; symbol;</span><br><span class="line">        string ans = <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; str.<span class="built_in">length</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (str[i] == <span class="string">&#x27;(&#x27;</span>) &#123;</span><br><span class="line">                symbol.<span class="built_in">push</span>(<span class="string">&#x27;(&#x27;</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (str[i] == <span class="string">&#x27;+&#x27;</span> || str[i] == <span class="string">&#x27;-&#x27;</span> || str[i] == <span class="string">&#x27;*&#x27;</span> || str[i] == <span class="string">&#x27;/&#x27;</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (symbol.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">                    symbol.<span class="built_in">push</span>(str[i]);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">while</span> (<span class="built_in">order</span>(str[i]) &lt;= <span class="built_in">order</span>(symbol.<span class="built_in">top</span>())) &#123;</span><br><span class="line">                        ans += symbol.<span class="built_in">top</span>();</span><br><span class="line">                        symbol.<span class="built_in">pop</span>();</span><br><span class="line">                        <span class="keyword">if</span> (symbol.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">                            <span class="keyword">break</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    symbol.<span class="built_in">push</span>(str[i]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (str[i] == <span class="string">&#x27;)&#x27;</span>) &#123;</span><br><span class="line">                <span class="keyword">while</span> (symbol.<span class="built_in">top</span>() != <span class="string">&#x27;(&#x27;</span>) &#123;</span><br><span class="line">                    ans.<span class="built_in">push_back</span>(symbol.<span class="built_in">top</span>());</span><br><span class="line">                    symbol.<span class="built_in">pop</span>();</span><br><span class="line">                &#125;</span><br><span class="line">                symbol.<span class="built_in">pop</span>();</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">isalpha</span>(str[i])) &#123;</span><br><span class="line">                ans.<span class="built_in">push_back</span>(str[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (!symbol.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            ans.<span class="built_in">push_back</span>(symbol.<span class="built_in">top</span>());</span><br><span class="line">            symbol.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; ans.<span class="built_in">length</span>(); i++) &#123;</span><br><span class="line">            cout &lt;&lt; ans[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>解題</category>
+        <category>ZeroJudge</category>
+      </categories>
+      <tags>
+        <tag>解題</tag>
+        <tag>Zerojudge</tag>
+        <tag>後序式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【解題】Zerojudge f832: 隕石 (Meteorite)</title>
     <url>/solved/ZeroJudge/f832/</url>
     <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
@@ -2638,26 +2673,6 @@ E. Run Time Error</p>
         <tag>TOI</tag>
         <tag>解題</tag>
         <tag>Zerojudge</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【解題】Zerojudge f377. 運算式轉換</title>
-    <url>/solved/ZeroJudge/f377/</url>
-    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWYzNzc=">f377. 運算式轉換<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
-<p>中序式轉後序式的基本題目，概念詳見：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nZ2Vya3VvLmdhLzAxMi1pbmZpeC1wb3N0Zml4Lw==">【筆記】前序式、中序式與後序式<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
-<figure class="highlight cpp"><figcaption><span>f377</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">order</span><span class="params">(<span class="type">char</span> cr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (cr == <span class="string">&#x27;+&#x27;</span> || cr == <span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (cr == <span class="string">&#x27;*&#x27;</span> || cr == <span class="string">&#x27;/&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ouo;</span><br><span class="line">    string str;</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">getline</span>(cin, str)) &#123;</span><br><span class="line">        stack&lt;<span class="type">char</span>&gt; symbol;</span><br><span class="line">        string ans = <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; str.<span class="built_in">length</span>(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (str[i] == <span class="string">&#x27;(&#x27;</span>) &#123;</span><br><span class="line">                symbol.<span class="built_in">push</span>(<span class="string">&#x27;(&#x27;</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (str[i] == <span class="string">&#x27;+&#x27;</span> || str[i] == <span class="string">&#x27;-&#x27;</span> || str[i] == <span class="string">&#x27;*&#x27;</span> || str[i] == <span class="string">&#x27;/&#x27;</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (symbol.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">                    symbol.<span class="built_in">push</span>(str[i]);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">while</span> (<span class="built_in">order</span>(str[i]) &lt;= <span class="built_in">order</span>(symbol.<span class="built_in">top</span>())) &#123;</span><br><span class="line">                        ans += symbol.<span class="built_in">top</span>();</span><br><span class="line">                        symbol.<span class="built_in">pop</span>();</span><br><span class="line">                        <span class="keyword">if</span> (symbol.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">                            <span class="keyword">break</span>;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    symbol.<span class="built_in">push</span>(str[i]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (str[i] == <span class="string">&#x27;)&#x27;</span>) &#123;</span><br><span class="line">                <span class="keyword">while</span> (symbol.<span class="built_in">top</span>() != <span class="string">&#x27;(&#x27;</span>) &#123;</span><br><span class="line">                    ans.<span class="built_in">push_back</span>(symbol.<span class="built_in">top</span>());</span><br><span class="line">                    symbol.<span class="built_in">pop</span>();</span><br><span class="line">                &#125;</span><br><span class="line">                symbol.<span class="built_in">pop</span>();</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">isalpha</span>(str[i])) &#123;</span><br><span class="line">                ans.<span class="built_in">push_back</span>(str[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (!symbol.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            ans.<span class="built_in">push_back</span>(symbol.<span class="built_in">top</span>());</span><br><span class="line">            symbol.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; ans.<span class="built_in">length</span>(); i++) &#123;</span><br><span class="line">            cout &lt;&lt; ans[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>解題</category>
-        <category>ZeroJudge</category>
-      </categories>
-      <tags>
-        <tag>解題</tag>
-        <tag>Zerojudge</tag>
-        <tag>後序式</tag>
       </tags>
   </entry>
   <entry>

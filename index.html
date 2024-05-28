@@ -366,7 +366,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新於</span>
-      <time title="修改時間：2024-05-28 08:18:49" itemprop="dateModified" datetime="2024-05-28T08:18:49+08:00">2024-05-28</time>
+      <time title="修改時間：2024-05-28 08:56:12" itemprop="dateModified" datetime="2024-05-28T08:56:12+08:00">2024-05-28</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -389,14 +389,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>208</span>
+      <span>559</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-      <span>1 分鐘</span>
+      <span>2 分鐘</span>
     </span>
 </div>
 
@@ -415,8 +415,23 @@
 <h2 id="檔案寫入"><a class="markdownIt-Anchor" href="#檔案寫入"></a> 檔案寫入</h2>
 <figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ofstream ofs;  <span class="comment">// Output File Stream</span></span><br><span class="line">ofs.<span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>);  <span class="comment">// Open the file u want to write in</span></span><br><span class="line"><span class="keyword">if</span> (ofs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">ofs &lt;&lt; <span class="string">&quot;Hi! World&quot;</span>;</span><br></pre></td></tr></table></figure>
 <figure class="highlight txt"><figcaption><span>test.txt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
-<p>那如果多次輸出到檔案呢？</p>
-<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ofstream ofs;  <span class="comment">// Output File Stream</span></span><br><span class="line">ofs.<span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>);  <span class="comment">// Open the file u want to write in</span></span><br><span class="line"><span class="keyword">if</span> (ofs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">ofs &lt;&lt; <span class="string">&quot;Hi! World&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>那如果在執行一次程式呢？</p>
+<figure class="highlight txt"><figcaption><span>test.txt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
+<p>結果還是一樣。如果我們要添加內容，而不是覆蓋內容，可以將 <code>ofs.open(&quot;test.txt&quot;);</code> 改成 <code>ofs.open(&quot;test.txt&quot;, ios::app);</code> 這個 app 推測是 append 也就是附加、添加內容。所以我們將下方的程式碼執行 2 次，原本 txt 檔裡的內容就不會被覆蓋。</p>
+<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ofstream ofs;  <span class="comment">// Output File Stream</span></span><br><span class="line">ofs.<span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>, ios::app);  <span class="comment">// Open the file u want to write in</span></span><br><span class="line"><span class="keyword">if</span> (ofs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">ofs &lt;&lt; <span class="string">&quot;Hi! World&quot;</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><figcaption><span>test.txt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi! WorldHi! World</span><br></pre></td></tr></table></figure>
+<h2 id="檔案讀取"><a class="markdownIt-Anchor" href="#檔案讀取"></a> 檔案讀取</h2>
+<p>使用方式與檔案寫入相似。</p>
+<figure class="highlight txt"><figcaption><span>text.txt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ifstream ifs;  <span class="comment">// Input File stream</span></span><br><span class="line">ifs.<span class="built_in">open</span>(<span class="string">&quot;text.txt&quot;</span>);  <span class="comment">// Open the file u want to read</span></span><br><span class="line"><span class="keyword">if</span> (ifs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">string str;</span><br><span class="line">ifs &gt;&gt; str;</span><br><span class="line">cout &lt;&lt; str &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><figcaption><span>Output Result</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi!</span><br></pre></td></tr></table></figure>
+<p>為什麼只有 <code>Hi!</code> 呢？其實就跟 cin 一樣，遇到空白就是為輸入完了，所以只擷取到 <code>Hi!</code> 的部分，那要一直重複寫 <code>ifs &gt;&gt; str;</code> 這行？不用，可以用 EoF 的方式做讀取。</p>
+<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ifstream ifs;  <span class="comment">// Input File stream</span></span><br><span class="line">ifs.<span class="built_in">open</span>(<span class="string">&quot;text.txt&quot;</span>);  <span class="comment">// Open the file u want to read</span></span><br><span class="line"><span class="keyword">if</span> (ifs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">string str;</span><br><span class="line"><span class="keyword">while</span> (ifs &gt;&gt; str) &#123;</span><br><span class="line">    cout &lt;&lt; str &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><figcaption><span>Output Result</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hi!</span><br><span class="line">World</span><br></pre></td></tr></table></figure>
+<p>或是用 <code>getline()</code> 直接讀取整行，忽略空白字元</p>
+<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ifstream ifs;  <span class="comment">// Input File stream</span></span><br><span class="line">ifs.<span class="built_in">open</span>(<span class="string">&quot;text.txt&quot;</span>);  <span class="comment">// Open the file u want to read</span></span><br><span class="line"><span class="keyword">if</span> (ifs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">string str;</span><br><span class="line"><span class="keyword">while</span> (<span class="built_in">getline</span>(ifs, str)) &#123;</span><br><span class="line">    cout &lt;&lt; str &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><figcaption><span>Output Result</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
+<p>資料型態一定要用字串存取嗎？不用，看你的檔案放什麼，你就可以用什麼存，整數就用 int，小數點就用 float，都是可以的。</p>
 <h2 id="參考資料"><a class="markdownIt-Anchor" href="#參考資料"></a> 參考資料</h2>
 <ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9oYWNrbWQuaW8vQG5kaHUtcHJvZ3JhbW1pbmctMjAyMS9Ca1p1a0c0aks=">C++ 檔案讀寫函式庫 fstream - 上<i class="fa fa-external-link-alt"></i></span></li>
@@ -1352,7 +1367,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span>所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">1:20</span>
+    <span title="所需總閱讀時間">1:21</span>
   </span>
 </div>
 <div class="busuanzi-count">
