@@ -95,7 +95,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">55</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">14</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">56</span></a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>時間表</a></li><li class="menu-item menu-item-note"><a href="/cplusplus/" rel="section"><i class="fa-solid fa-note-sticky fa-fw"></i>C++ 筆記</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">56</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">14</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">57</span></a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>時間表</a></li><li class="menu-item menu-item-note"><a href="/cplusplus/" rel="section"><i class="fa-solid fa-note-sticky fa-fw"></i>C++ 筆記</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
         </a>
@@ -160,7 +160,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">56</span>
+          <span class="site-state-item-count">57</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -171,7 +171,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">55</span>
+        <span class="site-state-item-count">56</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -330,6 +330,123 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://huangmayor0905.github.io/cs/cpp/iofstream/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Eric Huang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuo's Blog">
+      <meta itemprop="description" content="個人網站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kuo's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/cs/cpp/iofstream/" class="post-title-link" itemprop="url">【筆記】C++ 檔案讀寫 iofstream</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發布於</span>
+
+      <time title="創建時間：2024-05-27 11:35:43" itemprop="dateCreated datePublished" datetime="2024-05-27T11:35:43+08:00">2024-05-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-05-28 08:18:49" itemprop="dateModified" datetime="2024-05-28T08:18:49+08:00">2024-05-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/" itemprop="url" rel="index"><span itemprop="name">計算機科學</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cs/cpp/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>208</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="簡述"><a class="markdownIt-Anchor" href="#簡述"></a> 簡述</h2>
+<p>檔案讀寫的用途以小作品來說是常常會用到的，像是遊戲的歷史紀錄、模擬貼文等等，想用 txt 檔存資料的時候都很常使用。</p>
+<p>使用檔案讀寫功能請先引入 <code>&lt;fstream&gt;</code> 標頭檔。</p>
+<p><code>ofstream</code> 表示要輸出到某文件的類別，而不是要輸出到程式。<br />
+<code>ifstream</code> 同理，只是這是輸入到程式中，而不是輸入到檔案。</p>
+<h2 id="檔案寫入"><a class="markdownIt-Anchor" href="#檔案寫入"></a> 檔案寫入</h2>
+<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ofstream ofs;  <span class="comment">// Output File Stream</span></span><br><span class="line">ofs.<span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>);  <span class="comment">// Open the file u want to write in</span></span><br><span class="line"><span class="keyword">if</span> (ofs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">ofs &lt;&lt; <span class="string">&quot;Hi! World&quot;</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><figcaption><span>test.txt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
+<p>那如果多次輸出到檔案呢？</p>
+<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ofstream ofs;  <span class="comment">// Output File Stream</span></span><br><span class="line">ofs.<span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>);  <span class="comment">// Open the file u want to write in</span></span><br><span class="line"><span class="keyword">if</span> (ofs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">ofs &lt;&lt; <span class="string">&quot;Hi! World&quot;</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="參考資料"><a class="markdownIt-Anchor" href="#參考資料"></a> 參考資料</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9oYWNrbWQuaW8vQG5kaHUtcHJvZ3JhbW1pbmctMjAyMS9Ca1p1a0c0aks=">C++ 檔案讀寫函式庫 fstream - 上<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://huangmayor0905.github.io/minesweeper/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -360,7 +477,7 @@
       <span class="post-meta-item-text">發布於</span>
       
 
-      <time title="創建時間：2024-05-27 11:02:50 / 修改時間：11:31:05" itemprop="dateCreated datePublished" datetime="2024-05-27T11:02:50+08:00">2024-05-27</time>
+      <time title="創建時間：2024-05-27 11:02:50 / 修改時間：11:34:43" itemprop="dateCreated datePublished" datetime="2024-05-27T11:02:50+08:00">2024-05-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -379,7 +496,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">文章字數：</span>
-      <span>1.1k</span>
+      <span>1.2k</span>
     </span>
     <span class="post-meta-item" title="所需閱讀時間">
       <span class="post-meta-item-icon">
@@ -456,7 +573,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/cs/cpp/stringstream/" class="post-title-link" itemprop="url">【筆記】stringstream 字串流</a>
+          <a href="/cs/cpp/stringstream/" class="post-title-link" itemprop="url">【筆記】字串流 stringstream</a>
         </h2>
 
         <div class="post-meta-container">
@@ -466,9 +583,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發布於</span>
-      
 
-      <time title="創建時間：2024-05-24 10:53:01 / 修改時間：15:49:11" itemprop="dateCreated datePublished" datetime="2024-05-24T10:53:01+08:00">2024-05-24</time>
+      <time title="創建時間：2024-05-24 10:53:01" itemprop="dateCreated datePublished" datetime="2024-05-24T10:53:01+08:00">2024-05-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-05-27 11:36:51" itemprop="dateModified" datetime="2024-05-27T11:36:51+08:00">2024-05-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -571,7 +694,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/cs/cpp/string/" class="post-title-link" itemprop="url">【筆記】string 字串</a>
+          <a href="/cs/cpp/string/" class="post-title-link" itemprop="url">【筆記】字串 string</a>
         </h2>
 
         <div class="post-meta-container">
@@ -581,9 +704,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">發布於</span>
-      
 
-      <time title="創建時間：2024-05-24 10:19:50 / 修改時間：10:54:49" itemprop="dateCreated datePublished" datetime="2024-05-24T10:19:50+08:00">2024-05-24</time>
+      <time title="創建時間：2024-05-24 10:19:50" itemprop="dateCreated datePublished" datetime="2024-05-24T10:19:50+08:00">2024-05-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-05-27 11:37:00" itemprop="dateModified" datetime="2024-05-27T11:37:00+08:00">2024-05-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1192,99 +1321,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://huangmayor0905.github.io/FCU-CSIE-APCS-interview/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Eric Huang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Kuo's Blog">
-      <meta itemprop="description" content="個人網站">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Kuo's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/FCU-CSIE-APCS-interview/" class="post-title-link" itemprop="url">【經驗】逢甲資工系 APCS 組面試經驗</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">發布於</span>
-      
-
-      <time title="創建時間：2024-05-20 08:13:43 / 修改時間：15:52:18" itemprop="dateCreated datePublished" datetime="2024-05-20T08:13:43+08:00">2024-05-20</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="文章字數">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">文章字數：</span>
-      <span>725</span>
-    </span>
-    <span class="post-meta-item" title="所需閱讀時間">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-      <span>3 分鐘</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
-<p>其實面試不用緊張，照你們平常跟老師的講話方式就好。目前我面的學校，教授們都很 Nice，我本人就慢熟，但我的高中有模擬面試，有模擬面試就去試試看，體驗一下那種感覺，然後說實話不用太壓抑自己，把想說的說出來即可，教授特喜歡這種有想法的人。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/FCU-CSIE-APCS-interview/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" title="下一頁" aria-label="下一頁" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
@@ -1316,7 +1352,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span>所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">1:19</span>
+    <span title="所需總閱讀時間">1:20</span>
   </span>
 </div>
 <div class="busuanzi-count">
