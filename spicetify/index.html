@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-K.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-K.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-K.ico">
+  <link rel="mask-icon" href="/images/logo-K.svg" color="#222">
+  <meta name="google-site-verification" content="AaEkoAT3i0UsXWrh4ue4tbkDSIPbitczMwTw376jzb4">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Traditional+Chinese:300,300italic,400,400italic,700,700italic%7CFira+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huangmayor0905.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="為什麼要自訂主題？ 你是否厭倦了醜到不行的電腦版 Spotify（？）還有醜到不行的動態字幕（？）那你應該來嘗試自己自訂　Spotify。  什麼是 Spicetify？ 辣辣的 Spotify（？） Spicetify 是一款多功能開源軟體。透過指令或者他們提供的 Spicetify Marketplace 來使用。主要功能有：  Extensions（擴充功能） Themes（主題） Sni">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【工具】用 Spicetify 自訂自己的 Spotify 吧！">
+<meta property="og:url" content="https://huangmayor0905.github.io/spicetify/index.html">
+<meta property="og:site_name" content="Kuo&#39;s Blog">
+<meta property="og:description" content="為什麼要自訂主題？ 你是否厭倦了醜到不行的電腦版 Spotify（？）還有醜到不行的動態字幕（？）那你應該來嘗試自己自訂　Spotify。  什麼是 Spicetify？ 辣辣的 Spotify（？） Spicetify 是一款多功能開源軟體。透過指令或者他們提供的 Spicetify Marketplace 來使用。主要功能有：  Extensions（擴充功能） Themes（主題） Sni">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://raw.githubusercontent.com/huangmayor0905/image-hosting/main/img/Spicetify-theme.png">
+<meta property="article:published_time" content="2024-06-05T04:07:50.000Z">
+<meta property="article:modified_time" content="2024-06-05T05:28:37.983Z">
+<meta property="article:author" content="Eric Huang">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="Spicetify">
+<meta property="article:tag" content="Spotify">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/huangmayor0905/image-hosting/main/img/Spicetify-theme.png">
+
+
+<link rel="canonical" href="https://huangmayor0905.github.io/spicetify/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://huangmayor0905.github.io/spicetify/","path":"spicetify/","title":"【工具】用 Spicetify 自訂自己的 Spotify 吧！"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【工具】用 Spicetify 自訂自己的 Spotify 吧！ | Kuo's Blog</title>
+  
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-H75BZLED7F","only_pageview":true,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+
+<meta name="google-site-verification" content="AOnrBmQ6QhS1CQWvl1Cw5aKbZ9JsDkj4p-W1Nw6gBsA" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6440102652783062"
+     crossorigin="anonymous"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Kuo's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">競程筆記｜個人網站</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">58</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">15</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">59</span></a></li><li class="menu-item menu-item-note"><a href="/cplusplus/" rel="section"><i class="fa-solid fa-note-sticky fa-fw"></i>C++ 筆記</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜尋..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%BA%E4%BB%80%E9%BA%BC%E8%A6%81%E8%87%AA%E8%A8%82%E4%B8%BB%E9%A1%8C"><span class="nav-text"> 為什麼要自訂主題？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AF-spicetify"><span class="nav-text"> 什麼是 Spicetify？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%9D-spicetify"><span class="nav-text"> 如何安裝 Spicetify</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#step-1-%E5%AE%89%E8%A3%9D%E5%8E%9F%E7%89%88-spotify"><span class="nav-text"> Step 1. 安裝原版 Spotify</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#step-2-%E5%AE%89%E8%A3%9D-spicetify"><span class="nav-text"> Step 2. 安裝 Spicetify</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#spicetify-%E6%8E%A8%E8%96%A6%E6%93%B4%E5%85%85%E5%92%8C%E4%B8%BB%E9%A1%8C"><span class="nav-text"> Spicetify 推薦擴充和主題</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%B4%E5%85%85%E6%8E%A8%E8%96%A6"><span class="nav-text"> 擴充推薦</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#adblock"><span class="nav-text"> Adblock</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#playbar-clock"><span class="nav-text"> Playbar Clock</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#auto-skip-videos"><span class="nav-text"> Auto Skip Videos</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#full-screen"><span class="nav-text"> Full Screen</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E9%A1%8C%E6%8E%A8%E8%96%A6"><span class="nav-text"> 主題推薦</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sleek"><span class="nav-text"> Sleek</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%87%E6%AE%B5%E5%BE%AE%E8%AA%BF%E6%8E%A8%E8%96%A6"><span class="nav-text"> 片段微調推薦</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pointers"><span class="nav-text"> Pointers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hide-lyrics-button"><span class="nav-text"> Hide lyrics button</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%8D%E5%A4%96%E9%85%8D%E7%BD%AE%E5%8F%AF%E9%81%B8"><span class="nav-text"> 額外配置（可選）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#lyrics-plus"><span class="nav-text"> Lyrics Plus</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Eric Huang"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Eric Huang</p>
+  <div class="site-description" itemprop="description">個人網站</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2h1YW5nbWF5b3IwOTA1" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huangmayor0905"><i class="fab fa-github fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmxpb25odWFuZzkxNDkwM0BnbWFpbC5jb20=" title="E-Mail → mailto:lionhuang914903@gmail.com"><i class="fa fa-envelope fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9rdW9rdW9tYXlvcg==" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;kuokuomayor"><i class="fa-brands fa-x-twitter fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3Byb2ZpbGUucGhwP2lkPTEwMDAwODc0NDI4MDA1Nw==" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;profile.php?id&#x3D;100008744280057"><i class="fab fa-facebook fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zbGp3aGpzLw==" title="Instagram → https:&#x2F;&#x2F;www.instagram.com&#x2F;sljwhjs&#x2F;"><i class="fab fa-instagram fa-fw"></i></span>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="回到頂端">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://huangmayor0905.github.io/spicetify/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Eric Huang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuo's Blog">
+      <meta itemprop="description" content="個人網站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【工具】用 Spicetify 自訂自己的 Spotify 吧！ | Kuo's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【工具】用 Spicetify 自訂自己的 Spotify 吧！
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發布於</span>
+      
+
+      <time title="創建時間：2024-06-05 12:07:50 / 修改時間：13:28:37" itemprop="dateCreated datePublished" datetime="2024-06-05T12:07:50+08:00">2024-06-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">閱讀次數：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>826</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>3 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="為什麼要自訂主題"><a class="markdownIt-Anchor" href="#為什麼要自訂主題"></a> 為什麼要自訂主題？</h2>
+<p>你是否厭倦了醜到不行的電腦版 Spotify（？）還有醜到不行的動態字幕（？）那你應該來嘗試自己自訂　Spotify。</p>
+<h2 id="什麼是-spicetify"><a class="markdownIt-Anchor" href="#什麼是-spicetify"></a> 什麼是 Spicetify？</h2>
+<p><s>辣辣的 Spotify（？）</s></p>
+<p>Spicetify 是一款多功能開源軟體。透過指令或者他們提供的 Spicetify Marketplace 來使用。主要功能有：</p>
+<ol>
+<li>Extensions（擴充功能）</li>
+<li>Themes（主題）</li>
+<li>Snippets（片段微調）</li>
+<li>Apps（額外的應用程式）</li>
+</ol>
+<p>熟悉的話，你只能嘗試跟著他們 GitHub 寫的配置訊息來做安裝或者修改。但若你已經對於網頁開發有一定理解的話（那你應該不用看我文章（沒）），那你可以嘗試製作自己的主題，或者擴充功能。</p>
+<p>以下將介紹如何安裝 Spicetify。</p>
+<h2 id="如何安裝-spicetify"><a class="markdownIt-Anchor" href="#如何安裝-spicetify"></a> 如何安裝 Spicetify</h2>
+<p>Spicetify 可適用於 Windows、macOS 和 Linux。以下介紹 Windows 的安裝方式。其餘二者可以參考 <span class="exturl" data-url="aHR0cHM6Ly9zcGljZXRpZnkuYXBwL2RvY3MvZ2V0dGluZy1zdGFydGVkLw==">Spicetify Docs<i class="fa fa-external-link-alt"></i></span> 。</p>
+<h3 id="step-1-安裝原版-spotify"><a class="markdownIt-Anchor" href="#step-1-安裝原版-spotify"></a> Step 1. 安裝原版 Spotify</h3>
+<p>若你已安裝，請忽略此步驟。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuc3BvdGlmeS5jb20vdHcvZG93bmxvYWQvd2luZG93cy8=">Spotify 下載頁面<i class="fa fa-external-link-alt"></i></span></p>
+<p>請按「直接從 Spotify 下載」若使用從 Microsoft Store 下載我不知道會怎樣（應該是不行），而且「直接從 Spotify 下載」會比較快。</p>
+<p>然後記得登入自己的帳號。</p>
+<h3 id="step-2-安裝-spicetify"><a class="markdownIt-Anchor" href="#step-2-安裝-spicetify"></a> Step 2. 安裝 Spicetify</h3>
+<p>請使用 PowerShell 以系統管理員身分執行以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iwr -useb https://raw.githubusercontent.com/spicetify/cli/main/install.ps1 | iex</span><br></pre></td></tr></table></figure>
+<p>不知道 PowerShell 怎麼開，可以在「搜尋」搜 PowerShell 找到。</p>
+<p>安裝過程中可能會詢問你是否要安裝 Spicetify Marketplace 請輸入 Y 或者 Enter 繼續安裝，安裝 Spicetify Marketplace 可以很方便地去安裝你想要的擴充功能和主題。</p>
+<p>接著為確保 Spicetify 已經安裝成功，請在 PowerShell 嘗試輸入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spicetify -v</span><br></pre></td></tr></table></figure>
+<p>若有出現版本號，就代表你安裝成功了。</p>
+<p>再輸入以下命令以套用 Spicetify</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spicetify apply</span><br></pre></td></tr></table></figure>
+<p>稍等過後，就會看見你的 Spotify 左上角有個購物車，那個就是剛剛下載的 Marketplace，點開來後你會看見許多的擴充功能、主題等等。以下推薦幾個不錯的擴充和主題。</p>
+<h2 id="spicetify-推薦擴充和主題"><a class="markdownIt-Anchor" href="#spicetify-推薦擴充和主題"></a> Spicetify 推薦擴充和主題</h2>
+<h3 id="擴充推薦"><a class="markdownIt-Anchor" href="#擴充推薦"></a> 擴充推薦</h3>
+<h4 id="adblock"><a class="markdownIt-Anchor" href="#adblock"></a> Adblock</h4>
+<p>擋廣告用的，如果你沒有 Premium 這個必裝。</p>
+<h4 id="playbar-clock"><a class="markdownIt-Anchor" href="#playbar-clock"></a> Playbar Clock</h4>
+<p>提供了時間在播放時間軸下方，當你的電腦工具列是隱藏的時候很好用。</p>
+<h4 id="auto-skip-videos"><a class="markdownIt-Anchor" href="#auto-skip-videos"></a> Auto Skip Videos</h4>
+<p>可以避免遇到播放不了的音樂（可能是地區或著 Spotify’s policy）直接跳過，不過我記得好像本來就會跳過。</p>
+<h4 id="full-screen"><a class="markdownIt-Anchor" href="#full-screen"></a> Full Screen</h4>
+<p>如果你不喜歡原版的全螢幕模式，可以試試看這個，但是要記得額外裝 <code>lyrics-plus</code> 才可以看到動態字幕喔。</p>
+<h3 id="主題推薦"><a class="markdownIt-Anchor" href="#主題推薦"></a> 主題推薦</h3>
+<h4 id="sleek"><a class="markdownIt-Anchor" href="#sleek"></a> Sleek</h4>
+<p>Sleek 主題內包含了許多的顏色配置，看你喜歡哪個就使用它。目前我推 Nord。</p>
+<p><img src="https://raw.githubusercontent.com/huangmayor0905/image-hosting/main/img/Spicetify-theme.png" alt="" /></p>
+<h3 id="片段微調推薦"><a class="markdownIt-Anchor" href="#片段微調推薦"></a> 片段微調推薦</h3>
+<h4 id="pointers"><a class="markdownIt-Anchor" href="#pointers"></a> Pointers</h4>
+<p>對，原版的 Spotify 很多地方的滑鼠游標沒有做好，所以裝上它有助於整體體驗。</p>
+<h4 id="hide-lyrics-button"><a class="markdownIt-Anchor" href="#hide-lyrics-button"></a> Hide lyrics button</h4>
+<p>之所以要隱藏，是因為原版字幕很醜，下面會介紹安裝好看的字幕。若你想保留原版字幕就不要使用這個片段微調。</p>
+<h3 id="額外配置可選"><a class="markdownIt-Anchor" href="#額外配置可選"></a> 額外配置（可選）</h3>
+<h4 id="lyrics-plus"><a class="markdownIt-Anchor" href="#lyrics-plus"></a> Lyrics Plus</h4>
+<p>再次在 PowerShell 輸入以下指令，重啟 Spotify 就會在左上角看見它了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">spicetify config custom_apps lyrics-plus</span><br><span class="line">spicetify apply</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>作者： </strong>Eric Huang
+  </li>
+  <li class="post-copyright-link">
+      <strong>文章連結：</strong>
+      <a href="https://huangmayor0905.github.io/spicetify/" title="【工具】用 Spicetify 自訂自己的 Spotify 吧！">https://huangmayor0905.github.io/spicetify/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1UVw=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"># 工具</a>
+              <a href="/tags/Spicetify/" rel="tag"># Spicetify</a>
+              <a href="/tags/Spotify/" rel="tag"># Spotify</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/cs/cpp/iofstream/" rel="prev" title="【筆記】C++ 檔案讀寫 iofstream">
+                  <i class="fa fa-angle-left"></i> 【筆記】C++ 檔案讀寫 iofstream
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">若要轉載文章，麻煩請保留原作者名稱與原始連結。</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>總字數：</span>
+    <span title="總字數">23k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">1:24</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://huangmayor0905.github.io/spicetify/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"huangmayor0905","repo":"huangmayor0905.github.io","client_id":"2edf56fae528fa5e1662","client_secret":"b9d5dcfcb3733c370d2e9b6688fc5c2576469520","admin_user":"huangmayor0905","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"b39296d787277eb4bc7a64a37cda098e"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
