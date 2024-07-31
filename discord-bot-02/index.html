@@ -31,13 +31,15 @@
 <meta property="og:description" content="在閱讀此篇文章前，作者建議：您已有程式的基礎底子，並且此篇著重於程式碼的部分，其餘皆為概略步驟。  請注意文章日期的時效性   為何要使用 Cog 寫法 在使用這種寫法前，我是既不熟悉 Python 語法，以及其特色（其實是忘記了），所以好一段時間放棄了用 Python 寫。但現在稍微略懂之後，才發現這種寫法有很多好處：  好維護 事件函式與前綴指令不會衝突 前綴指令不用一直重新啟動 Bot 指令">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-07-31T08:21:13.000Z">
-<meta property="article:modified_time" content="2024-07-31T09:31:22.706Z">
+<meta property="article:modified_time" content="2024-07-31T09:35:20.754Z">
 <meta property="article:author" content="Eric Huang">
 <meta property="article:tag" content="教學">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="Disocrd">
 <meta property="article:tag" content="Bot">
 <meta property="article:tag" content="discord.py">
+<meta property="article:tag" content="Cogs">
+<meta property="article:tag" content="Class">
 <meta name="twitter:card" content="summary">
 
 
@@ -101,7 +103,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">60</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">15</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">64</span></a></li><li class="menu-item menu-item-note"><a href="/cplusplus/" rel="section"><i class="fa-solid fa-note-sticky fa-fw"></i>C++ 筆記</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">60</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">15</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">66</span></a></li><li class="menu-item menu-item-note"><a href="/cplusplus/" rel="section"><i class="fa-solid fa-note-sticky fa-fw"></i>C++ 筆記</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
         </a>
@@ -152,7 +154,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%BA%E4%BD%95%E8%A6%81%E4%BD%BF%E7%94%A8-cog-%E5%AF%AB%E6%B3%95"><span class="nav-text"> 為何要使用 Cog 寫法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cog-%E6%9E%B6%E6%A7%8B"><span class="nav-text"> Cog 架構</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cog-%E5%AF%A6%E4%BD%9C"><span class="nav-text"> Cog 實作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#bot-%E6%AA%94%E5%85%A7%E5%AE%B9"><span class="nav-text"> Bot 檔內容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#load-%E8%BC%89%E5%85%A5"><span class="nav-text"> Load 載入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#unload-%E5%8D%B8%E8%BC%89"><span class="nav-text"> Unload 卸載</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#reload-%E9%87%8D%E6%96%B0%E8%BC%89%E5%85%A5"><span class="nav-text"> Reload 重新載入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="nav-text"> 完整程式碼</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#main-%E6%AA%94%E5%85%A7%E5%AE%B9"><span class="nav-text"> Main 檔內容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85"><span class="nav-text"> 注意事項</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%A7%8B"><span class="nav-text"> 基本架構</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-text"> 範例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#event-%E6%AA%94%E5%85%A7%E5%AE%B9"><span class="nav-text"> Event 檔內容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B-2"><span class="nav-text"> 範例</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%BA%E4%BD%95%E8%A6%81%E4%BD%BF%E7%94%A8-cog-%E5%AF%AB%E6%B3%95"><span class="nav-text"> 為何要使用 Cog 寫法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cog-%E6%9E%B6%E6%A7%8B"><span class="nav-text"> Cog 架構</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cog-%E5%AF%A6%E4%BD%9C"><span class="nav-text"> Cog 實作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#bot-%E6%AA%94%E5%85%A7%E5%AE%B9"><span class="nav-text"> Bot 檔內容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#load-%E8%BC%89%E5%85%A5"><span class="nav-text"> Load 載入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#unload-%E5%8D%B8%E8%BC%89"><span class="nav-text"> Unload 卸載</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#reload-%E9%87%8D%E6%96%B0%E8%BC%89%E5%85%A5"><span class="nav-text"> Reload 重新載入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%8C%E6%95%B4%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="nav-text"> 完整程式碼</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#main-%E6%AA%94%E5%85%A7%E5%AE%B9"><span class="nav-text"> Main 檔內容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85"><span class="nav-text"> 注意事項</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%A7%8B"><span class="nav-text"> 基本架構</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B"><span class="nav-text"> 範例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#event-%E6%AA%94%E5%85%A7%E5%AE%B9"><span class="nav-text"> Event 檔內容</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B-2"><span class="nav-text"> 範例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%83%E8%80%83%E7%B6%B2%E7%AB%99"><span class="nav-text"> 參考網站</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -178,7 +180,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">64</span>
+        <span class="site-state-item-count">66</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -258,7 +260,7 @@
       <span class="post-meta-item-text">發布於</span>
       
 
-      <time title="創建時間：2024-07-31 16:21:13 / 修改時間：17:31:22" itemprop="dateCreated datePublished" datetime="2024-07-31T16:21:13+08:00">2024-07-31</time>
+      <time title="創建時間：2024-07-31 16:21:13 / 修改時間：17:35:20" itemprop="dateCreated datePublished" datetime="2024-07-31T16:21:13+08:00">2024-07-31</time>
     </span>
 
   
@@ -305,6 +307,7 @@
 <li>指令可分類</li>
 </ol>
 <p>總之，其實只需要修改幾行程式碼，就可以讓你的整體結構更清晰易懂，還不快點使用這種寫法。你可以在 <span class="exturl" data-url="aHR0cHM6Ly9kaXNjb3JkcHkucmVhZHRoZWRvY3MuaW8vZW4vc3RhYmxlL2V4dC9jb21tYW5kcy9jb2dzLmh0bWw=">discord.py Cogs 官方文檔<i class="fa fa-external-link-alt"></i></span> 中找到更多詳細解說。</p>
+<span id="more"></span>
 <h2 id="cog-架構"><a class="markdownIt-Anchor" href="#cog-架構"></a> Cog 架構</h2>
 <p>請將你的檔案目錄修改成如下：</p>
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">DiscordBot</span><br><span class="line">|  bot.py</span><br><span class="line">|</span><br><span class="line">└─cogs</span><br><span class="line">      event.py</span><br><span class="line">      main.py</span><br></pre></td></tr></table></figure>
@@ -352,6 +355,12 @@
 <p>這裡其實就跟 <span class="exturl" data-url="aHR0cDovL21haW4ucHk=">main.py<i class="fa fa-external-link-alt"></i></span> 的寫法一樣，所以就不多加贅述直接寫範例。</p>
 <h4 id="範例-2"><a class="markdownIt-Anchor" href="#範例-2"></a> 範例</h4>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> discord</span><br><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Event</span>(commands.Cog):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, bot: commands.Bot</span>):</span><br><span class="line">        self.bot = bot</span><br><span class="line">        </span><br><span class="line">    <span class="comment"># welcome guild</span></span><br><span class="line"><span class="meta">    @commands.Cog.listener()</span></span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_member_join</span>(<span class="params">self, member</span>):</span><br><span class="line">        wel_channel = self.bot.get_channel(你的歡迎頻道 ID)  <span class="comment"># 將字串修改為歡迎頻道 ID（整數型態）</span></span><br><span class="line">        <span class="keyword">await</span> wel_channel.send(<span class="string">f&quot;歡迎 <span class="subst">&#123;member.mention&#125;</span> 加入！&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># leave guild</span></span><br><span class="line"><span class="meta">    @commands.Cog.listener()</span></span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_member_remove</span>(<span class="params">self, member</span>):</span><br><span class="line">        leave_channel = self.bot.get_channel(你的離開頻道 ID)  <span class="comment"># 將字串修改為離開頻道 ID（整數型態）</span></span><br><span class="line">        <span class="keyword">await</span> leave_channel.send(<span class="string">f&quot;<span class="subst">&#123;member.mention&#125;</span> 期待我們再次相遇&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># message listener</span></span><br><span class="line"><span class="meta">    @commands.Cog.listener()</span></span><br><span class="line">    <span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_message</span>(<span class="params">self, msg</span>):</span><br><span class="line">        <span class="comment"># 防止機器人自己觸發</span></span><br><span class="line">        <span class="keyword">if</span> msg.author == self.bot.user:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        <span class="keyword">if</span> msg.content == <span class="string">&quot;qq&quot;</span> <span class="keyword">or</span> msg.content == <span class="string">&quot;QQ&quot;</span>:</span><br><span class="line">            <span class="keyword">await</span> msg.channel.send(<span class="string">&quot;幫 QQ&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">setup</span>(<span class="params">bot</span>):</span><br><span class="line">    <span class="keyword">await</span> bot.add_cog(Event(bot))</span><br></pre></td></tr></table></figure>
+<h2 id="參考網站"><a class="markdownIt-Anchor" href="#參考網站"></a> 參考網站</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9kaXNjb3JkcHkucmVhZHRoZWRvY3MuaW8vZW4vc3RhYmxlL2V4dC9jb21tYW5kcy9jb2dzLmh0bWw=">discord.py Cogs 官方文檔<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9oYWNrbWQuaW8vQHNtYWxsc2hhd245NS9weXRob25fZGlzY29yZF9ib3RfY29n">Python Discord Bot 進階教學 — Cog 篇<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cueW91dHViZS5jb20vQFByb2xhZG9u">YouTube 頻道 Proladon<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
 
     </div>
 
@@ -383,6 +392,8 @@
               <a href="/tags/Disocrd/" rel="tag"># Disocrd</a>
               <a href="/tags/Bot/" rel="tag"># Bot</a>
               <a href="/tags/discord-py/" rel="tag"># discord.py</a>
+              <a href="/tags/Cogs/" rel="tag"># Cogs</a>
+              <a href="/tags/Class/" rel="tag"># Class</a>
           </div>
 
         
@@ -433,7 +444,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span>所需總閱讀時間 &asymp;</span>
-    <span title="所需總閱讀時間">1:31</span>
+    <span title="所需總閱讀時間">1:32</span>
   </span>
 </div>
 <div class="busuanzi-count">
