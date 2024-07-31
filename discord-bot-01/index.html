@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.2.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-K.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-K.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-K.ico">
+  <link rel="mask-icon" href="/images/logo-K.svg" color="#222">
+  <meta name="google-site-verification" content="AaEkoAT3i0UsXWrh4ue4tbkDSIPbitczMwTw376jzb4">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Traditional+Chinese:300,300italic,400,400italic,700,700italic%7CFira+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huangmayor0905.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="你也應該擁有一個屬於自己的 Discord 機器人，它可以為你解決伺服器的管理，並有效解決伺服器的瑣事（動態語音頻道、ban 指令、kick 指令等等）。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【教學】EP 1 - 用 Python 架自己的 Discord Bot 吧">
+<meta property="og:url" content="https://huangmayor0905.github.io/discord-bot-01/index.html">
+<meta property="og:site_name" content="Kuo&#39;s Blog">
+<meta property="og:description" content="你也應該擁有一個屬於自己的 Discord 機器人，它可以為你解決伺服器的管理，並有效解決伺服器的瑣事（動態語音頻道、ban 指令、kick 指令等等）。">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2024-07-28T19:59:37.000Z">
+<meta property="article:modified_time" content="2024-07-31T08:12:38.265Z">
+<meta property="article:author" content="Eric Huang">
+<meta property="article:tag" content="教學">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Disocrd">
+<meta property="article:tag" content="Bot">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://huangmayor0905.github.io/discord-bot-01/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://huangmayor0905.github.io/discord-bot-01/","path":"discord-bot-01/","title":"【教學】EP 1 - 用 Python 架自己的 Discord Bot 吧"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【教學】EP 1 - 用 Python 架自己的 Discord Bot 吧 | Kuo's Blog</title>
+  
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-H75BZLED7F","only_pageview":true,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+
+<meta name="google-site-verification" content="AOnrBmQ6QhS1CQWvl1Cw5aKbZ9JsDkj4p-W1Nw6gBsA" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6440102652783062"
+     crossorigin="anonymous"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Kuo's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">競程筆記｜個人網站</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">59</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">15</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">63</span></a></li><li class="menu-item menu-item-note"><a href="/cplusplus/" rel="section"><i class="fa-solid fa-note-sticky fa-fw"></i>C++ 筆記</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜尋..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%BA%E4%BD%95%E8%87%AA%E6%9E%B6"><span class="nav-text"> 為何自架？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%9E%E4%BD%95%E9%96%8B%E5%A7%8B"><span class="nav-text"> 從何開始？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-python"><span class="nav-text"> 安裝 Python</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-visual-studio-code"><span class="nav-text"> 安裝 Visual Studio Code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A9%9F%E5%99%A8%E4%BA%BA"><span class="nav-text"> 建立自己的機器人</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%96%8B%E5%A7%8B%E5%AF%AB%E8%87%AA%E5%B7%B1%E7%9A%84%E6%A9%9F%E5%99%A8%E4%BA%BA%E5%90%A7"><span class="nav-text"> 開始寫自己的機器人吧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%83%E8%80%83%E7%B6%B2%E7%AB%99"><span class="nav-text"> 參考網站</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Eric Huang"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Eric Huang</p>
+  <div class="site-description" itemprop="description">個人網站</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">59</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">63</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2h1YW5nbWF5b3IwOTA1" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huangmayor0905"><i class="fab fa-github fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmxpb25odWFuZzkxNDkwM0BnbWFpbC5jb20=" title="E-Mail → mailto:lionhuang914903@gmail.com"><i class="fa fa-envelope fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9rdW9rdW9tYXlvcg==" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;kuokuomayor"><i class="fa-brands fa-x-twitter fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3Byb2ZpbGUucGhwP2lkPTEwMDAwODc0NDI4MDA1Nw==" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;profile.php?id&#x3D;100008744280057"><i class="fab fa-facebook fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zbGp3aGpzLw==" title="Instagram → https:&#x2F;&#x2F;www.instagram.com&#x2F;sljwhjs&#x2F;"><i class="fab fa-instagram fa-fw"></i></span>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="回到頂端">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://huangmayor0905.github.io/discord-bot-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Eric Huang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuo's Blog">
+      <meta itemprop="description" content="個人網站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【教學】EP 1 - 用 Python 架自己的 Discord Bot 吧 | Kuo's Blog">
+      <meta itemprop="description" content="你也應該擁有一個屬於自己的 Discord 機器人，它可以為你解決伺服器的管理，並有效解決伺服器的瑣事（動態語音頻道、ban 指令、kick 指令等等）。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【教學】EP 1 - 用 Python 架自己的 Discord Bot 吧
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發布於</span>
+
+      <time title="創建時間：2024-07-29 03:59:37" itemprop="dateCreated datePublished" datetime="2024-07-29T03:59:37+08:00">2024-07-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新於</span>
+      <time title="修改時間：2024-07-31 16:12:38" itemprop="dateModified" datetime="2024-07-31T16:12:38+08:00">2024-07-31</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">閱讀次數：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>941</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>3 分鐘</span>
+    </span>
+</div>
+
+            <div class="post-description">你也應該擁有一個屬於自己的 Discord 機器人，它可以為你解決伺服器的管理，並有效解決伺服器的瑣事（動態語音頻道、ban 指令、kick 指令等等）。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><div class="note info"><p>在閱讀此篇文章前，作者建議：您已有程式的基礎底子，並且此篇著重於程式碼的部分，其餘皆為概略步驟。</p>
+</div>
+<div class="note warning"><p>請注意文章日期的時效性</p>
+</div>
+<h2 id="為何自架"><a class="markdownIt-Anchor" href="#為何自架"></a> 為何自架？</h2>
+<ol>
+<li>因為興趣（？</li>
+<li>市面上太多太多需要付費使用的 Discord Bot</li>
+<li>自架的可調性高</li>
+<li>可以順便當作自己的小作品</li>
+</ol>
+<h2 id="從何開始"><a class="markdownIt-Anchor" href="#從何開始"></a> 從何開始？</h2>
+<p>這邊建議尋找 YouTube 影片學著做或其他文章。</p>
+<h3 id="安裝-python"><a class="markdownIt-Anchor" href="#安裝-python"></a> 安裝 Python</h3>
+<ol>
+<li>你得先安裝好 <span class="exturl" data-url="aHR0cHM6Ly93d3cucHl0aG9uLm9yZy9kb3dubG9hZHMv">Python<i class="fa fa-external-link-alt"></i></span> 的環境，安裝時，記得 PyPI 也要勾選到，它可以提供許多 Python 實用的套件。</li>
+<li>安裝完後，請先新建一份資料夾，這個就是你的專案，我命名：<code>DiscordBot</code>。</li>
+</ol>
+<h3 id="安裝-visual-studio-code"><a class="markdownIt-Anchor" href="#安裝-visual-studio-code"></a> 安裝 Visual Studio Code</h3>
+<p>這是一個文字編輯器，用來編輯檔案。也可以使用其他文字編輯器，但我推薦使用 VS Code。</p>
+<ol>
+<li>安裝後，請在 Marketplace（延伸模組）中，再搜尋：<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZXRwbGFjZS52aXN1YWxzdHVkaW8uY29tL2l0ZW1zP2l0ZW1OYW1lPW1zLXB5dGhvbi5weXRob24=">Python<i class="fa fa-external-link-alt"></i></span> 和其他你想裝的延伸模組。</li>
+</ol>
+<h2 id="建立自己的機器人"><a class="markdownIt-Anchor" href="#建立自己的機器人"></a> 建立自己的機器人</h2>
+<ol>
+<li>請到 <span class="exturl" data-url="aHR0cHM6Ly9kaXNjb3JkLmNvbS9kZXZlbG9wZXJzL2FwcGxpY2F0aW9ucw==">Discord Developer Portal<i class="fa fa-external-link-alt"></i></span> 建立機器人，也就是按下【New Application】。</li>
+<li>接著你可以開始先對它做基本的修飾：Name（剛才命名過了）、Description、App Icon（就是頭像）</li>
+<li>在左側導覽列進入【Bot】，找尋細項：【TOKEN】，並把它複製起來（記著它）。</li>
+</ol>
+<div class="note warning"><p>請勿把機器人的 TOKEN 洩漏在其他地方，例如：你可能會想部署到你的 GitHub Repo，或者其他地方。<br />
+因為當你洩漏了，其他人就有可能操控它。</p>
+<p>當然，你也可以試看看會發生什麼事（其實就只是 DC 會通知你 TOKEN 外洩，請重新生成一個 TOKEN）</p>
+</div>
+<ol>
+<li>接著在左側導覽列進入【OAuth2】，找尋：【OAuth2 URL Generator】，勾選【SCOPES】中的 bot 和【BOT PERMISSIONS】中的 Administrator。</li>
+<li>接著進入下方所生成的連結，邀請到你的伺服器就可以看到你的機器人已加入你的伺服器啦！</li>
+</ol>
+<h2 id="開始寫自己的機器人吧"><a class="markdownIt-Anchor" href="#開始寫自己的機器人吧"></a> 開始寫自己的機器人吧</h2>
+<ol>
+<li>
+<p>先在終端機安裝 Python 的 <span class="exturl" data-url="aHR0cDovL0Rpc2NvcmQucHk=">Discord.py<i class="fa fa-external-link-alt"></i></span> 套件，輸入：<code>pip install discord.py</code></p>
+</li>
+<li>
+<p>在你的資料夾中創建一個 <code>bot.py</code>，內容如下，也歡迎去參考<span class="exturl" data-url="aHR0cHM6Ly9kaXNjb3JkcHkucmVhZHRoZWRvY3MuaW8vZW4vc3RhYmxlL3F1aWNrc3RhcnQuaHRtbA==">官方文檔<i class="fa fa-external-link-alt"></i></span></p>
+ <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> discord  <span class="comment"># 導入discord</span></span><br><span class="line"></span><br><span class="line">intents = discord.Intents.default()</span><br><span class="line">intents.message_content = <span class="literal">True</span></span><br><span class="line">client = discord.Client(intents = intents)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 調用 event 函式庫 -&gt; 也就是事件</span></span><br><span class="line"><span class="meta">@client.event</span></span><br><span class="line"><span class="comment"># on_ready 表示啟動成功時</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_ready</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;目前登入身份 --&gt; <span class="subst">&#123;client.user&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@client.event</span></span><br><span class="line"><span class="comment"># 當頻道有新訊息</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_message</span>(<span class="params">message</span>):</span><br><span class="line">    <span class="comment"># 排除機器人本身的訊息，避免無限循環</span></span><br><span class="line">    <span class="keyword">if</span> message.author == client.user:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    <span class="comment"># 新訊息包含 Hello，回覆 Hello, world!</span></span><br><span class="line">    <span class="keyword">if</span> message.content == <span class="string">&quot;Hello&quot;</span>:</span><br><span class="line">        <span class="keyword">await</span> message.channel.send(<span class="string">&quot;Hello, world!&quot;</span>)</span><br><span class="line"></span><br><span class="line">client.run(<span class="string">&quot;機器人的TOKEN&quot;</span>)  <span class="comment"># 請把字串改成機器人的 TOKEN</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>存好檔後，就可以執行它啦。可以測試在頻道打出 Hello，它就會回應你 Hello, world!</p>
+</li>
+</ol>
+<p>這部分是透過事件偵測，來觸發機器人的回應。如果要讓機器人使用前綴指令，可以參考下方程式碼。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 導入 Discord.py 模組</span></span><br><span class="line"><span class="keyword">import</span> discord</span><br><span class="line"><span class="comment"># 導入 commands 指令模組</span></span><br><span class="line"><span class="keyword">from</span> discord.ext <span class="keyword">import</span> commands</span><br><span class="line"></span><br><span class="line"><span class="comment"># intents是要求機器人的權限</span></span><br><span class="line">intents = discord.Intents.<span class="built_in">all</span>()</span><br><span class="line">bot = commands.Bot(command_prefix = <span class="string">&quot;$&quot;</span>, intents = intents)</span><br><span class="line"></span><br><span class="line"><span class="meta">@bot.event</span></span><br><span class="line"><span class="comment"># 當機器人完成啟動</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">on_ready</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;目前登入身份 --&gt; <span class="subst">&#123;bot.user&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@bot.command()</span></span><br><span class="line"><span class="comment"># 輸入 $Hello 呼叫指令</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">def</span> <span class="title function_">Hello</span>(<span class="params">ctx</span>):</span><br><span class="line">    <span class="comment"># 回覆 Hello, world!</span></span><br><span class="line">    <span class="keyword">await</span> ctx.send(<span class="string">&quot;Hello, world!&quot;</span>)</span><br><span class="line"></span><br><span class="line">bot.run(<span class="string">&quot;機器人的TOKEN&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>接著試著打 <code>$Hello</code>，它就會回應 Hello, world!</p>
+<p>但如果你想讓這兩段程式碼合併，你會發現它無法正常執行，這是因為 on_message 與 command 相互牴觸，所以之後將再額外講解 Cog 寫法，它可以有效的解決前綴指令與事件觸發的牴觸問題，並且在維護上將會變得更容易維護。</p>
+<h2 id="參考網站"><a class="markdownIt-Anchor" href="#參考網站"></a> 參考網站</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9kaXNjb3JkcHkucmVhZHRoZWRvY3MuaW8vZW4vc3RhYmxlL2luZGV4Lmh0bWw=">discord.py 官方文檔<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9oYWNrbWQuaW8vQHNtYWxsc2hhd245NS9weXRob25fZGlzY29yZF9ib3RfYmFzZQ==">Python Discord Bot 基礎教學<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cueW91dHViZS5jb20vQFByb2xhZG9u">YouTube 頻道 Proladon<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>作者： </strong>Eric Huang
+  </li>
+  <li class="post-copyright-link">
+      <strong>文章連結：</strong>
+      <a href="https://huangmayor0905.github.io/discord-bot-01/" title="【教學】EP 1 - 用 Python 架自己的 Discord Bot 吧">https://huangmayor0905.github.io/discord-bot-01/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1UVw=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%95%99%E5%AD%B8/" rel="tag"># 教學</a>
+              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/Disocrd/" rel="tag"># Disocrd</a>
+              <a href="/tags/Bot/" rel="tag"># Bot</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/spicetify/" rel="prev" title="【工具】用 Spicetify 自訂自己的 Spotify 吧！">
+                  <i class="fa fa-angle-left"></i> 【工具】用 Spicetify 自訂自己的 Spotify 吧！
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">若要轉載文章，麻煩請保留原作者名稱與原始連結。</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>總字數：</span>
+    <span title="總字數">24k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">1:28</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://huangmayor0905.github.io/discord-bot-01/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"huangmayor0905","repo":"huangmayor0905.github.io","client_id":"2edf56fae528fa5e1662","client_secret":"b9d5dcfcb3733c370d2e9b6688fc5c2576469520","admin_user":"huangmayor0905","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"44198eccd8ce267bab172bd2b7038a76"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
