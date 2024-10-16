@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://huangmayor0905.github.io/tag-plugins-test/</loc>
+    
+    <lastmod>2024-10-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://huangmayor0905.github.io/cplusplus/index.html</loc>
     
     <lastmod>2024-10-16</lastmod>
@@ -491,15 +500,6 @@
     <loc>https://huangmayor0905.github.io/solved/TCFSH_CIRC_Judge/d075/</loc>
     
     <lastmod>2023-05-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://huangmayor0905.github.io/tag-plugins-test/</loc>
-    
-    <lastmod>2023-05-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
