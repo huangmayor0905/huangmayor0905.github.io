@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-K.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-K.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-K.ico">
+  <link rel="mask-icon" href="/images/logo-K.svg" color="#222">
+  <meta name="google-site-verification" content="AaEkoAT3i0UsXWrh4ue4tbkDSIPbitczMwTw376jzb4">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Traditional+Chinese:300,300italic,400,400italic,700,700italic%7CFira+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huangmayor0905.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Linux 指令不完全筆記，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【筆記】Linux 指令">
+<meta property="og:url" content="https://huangmayor0905.github.io/learning-linux-command/index.html">
+<meta property="og:site_name" content="Kuo&#39;s Blog">
+<meta property="og:description" content="Linux 指令不完全筆記，">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2024-10-16T11:20:17.000Z">
+<meta property="article:modified_time" content="2024-10-16T11:29:02.498Z">
+<meta property="article:author" content="Eric Huang">
+<meta property="article:tag" content="筆記">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="指令">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://huangmayor0905.github.io/learning-linux-command/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://huangmayor0905.github.io/learning-linux-command/","path":"learning-linux-command/","title":"【筆記】Linux 指令"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【筆記】Linux 指令 | Kuo's Blog</title>
+  
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-H75BZLED7F","only_pageview":true,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+
+<meta name="google-site-verification" content="AOnrBmQ6QhS1CQWvl1Cw5aKbZ9JsDkj4p-W1Nw6gBsA" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6440102652783062"
+     crossorigin="anonymous"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Kuo's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">競程筆記｜個人網站</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">62</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">15</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">70</span></a></li><li class="menu-item menu-item-note"><a href="/cplusplus/" rel="section"><i class="fa-solid fa-note-sticky fa-fw"></i>C++ 筆記</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜尋..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#linux-%E6%8C%87%E4%BB%A4"><span class="nav-text"> Linux 指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#base64-%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86"><span class="nav-text"> base64 – 加密&#x2F;解密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#binwalk-%E5%88%86%E6%9E%90%E6%AA%94%E6%A1%88"><span class="nav-text"> binwalk – 分析檔案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bvi"><span class="nav-text"> bvi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cat-%E4%B8%B2%E6%8E%A5%E6%88%96%E8%BC%B8%E5%87%BA%E6%AA%94%E6%A1%88%E5%85%A7%E5%AE%B9"><span class="nav-text"> cat – 串接或輸出檔案內容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chmod-%E6%8E%A7%E5%88%B6%E4%BD%BF%E7%94%A8%E8%80%85%E5%B0%8D%E6%AA%94%E6%A1%88%E7%9A%84%E6%AC%8A%E9%99%90"><span class="nav-text"> chmod – 控制使用者對檔案的權限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cp-%E8%A4%87%E8%A3%BD%E7%9B%AE%E9%8C%84%E8%A4%87%E8%A3%BD%E6%AA%94%E6%A1%88"><span class="nav-text"> cp – 複製目錄&#x2F;複製檔案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#curl-%E7%94%A8%E4%BE%86%E5%88%86%E6%9E%90%E7%B6%B2%E9%A0%81%E8%A1%8C%E7%82%BA%E5%8F%8A%E7%A0%94%E7%A9%B6%E8%B7%B3%E8%BD%89%E5%92%8C%E5%8F%83%E6%95%B8%E7%AD%89%E7%AD%89"><span class="nav-text"> curl – 用來分析網頁行為及研究跳轉和參數等等</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exiftool"><span class="nav-text"> exiftool</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#file"><span class="nav-text"> file</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#find-%E6%89%BE%E6%AA%94%E6%A1%88-%E7%9B%AE%E9%8C%84-%E5%90%8D%E7%A8%B1-%E5%A4%A9%E6%95%B8"><span class="nav-text"> find – 找檔案、目錄、名稱、天數</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#grep"><span class="nav-text"> grep</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ln"><span class="nav-text"> ln</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#man"><span class="nav-text"> man</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mkdir-%E5%BB%BA%E7%AB%8B%E7%9B%AE%E9%8C%84"><span class="nav-text"> mkdir – 建立目錄</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mv"><span class="nav-text"> mv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ncnetcat%E6%8C%87%E4%BB%A4"><span class="nav-text"> nc（Netcat）指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm-%E5%88%AA%E9%99%A4%E6%AA%94%E6%A1%88"><span class="nav-text"> rm – 刪除檔案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rmdir-%E5%88%AA%E9%99%A4%E7%9B%AE%E9%8C%84"><span class="nav-text"> rmdir – 刪除目錄</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#screen"><span class="nav-text"> screen</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#stat-%E6%AA%94%E6%A1%88%E8%B3%87%E8%A8%8A"><span class="nav-text"> stat – 檔案資訊</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#strings"><span class="nav-text"> strings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#touch-%E5%BB%BA%E7%AB%8B%E6%AA%94%E6%A1%88"><span class="nav-text"> touch – 建立檔案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unzip-%E8%A7%A3%E5%A3%93%E7%B8%AE%E6%8C%87%E4%BB%A4"><span class="nav-text"> unzip – 解壓縮指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim"><span class="nav-text"> vim</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wget-%E5%BE%9E%E7%B6%B2%E8%B7%AF%E4%B8%8A%E6%AA%94%E6%A1%88%E4%B8%8B%E8%BC%89%E6%AA%94%E6%A1%88%E5%88%B0-linux"><span class="nav-text"> wget – 從網路上檔案下載檔案到 Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BC%89%E6%95%B4%E5%80%8B%E7%B6%B2%E7%AB%99%E7%A0%8D%E7%AB%99offline-browsing"><span class="nav-text"> 下載整個網站（砍站）（Offline Browsing）</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Eric Huang"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Eric Huang</p>
+  <div class="site-description" itemprop="description">個人網站</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">70</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2h1YW5nbWF5b3IwOTA1" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huangmayor0905"><i class="fab fa-github fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmxpb25odWFuZzkxNDkwM0BnbWFpbC5jb20=" title="E-Mail → mailto:lionhuang914903@gmail.com"><i class="fa fa-envelope fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9rdW9rdW9tYXlvcg==" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;kuokuomayor"><i class="fa-brands fa-x-twitter fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3Byb2ZpbGUucGhwP2lkPTEwMDAwODc0NDI4MDA1Nw==" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;profile.php?id&#x3D;100008744280057"><i class="fab fa-facebook fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zbGp3aGpzLw==" title="Instagram → https:&#x2F;&#x2F;www.instagram.com&#x2F;sljwhjs&#x2F;"><i class="fab fa-instagram fa-fw"></i></span>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="回到頂端">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://huangmayor0905.github.io/learning-linux-command/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Eric Huang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kuo's Blog">
+      <meta itemprop="description" content="個人網站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【筆記】Linux 指令 | Kuo's Blog">
+      <meta itemprop="description" content="Linux 指令不完全筆記，">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【筆記】Linux 指令
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發布於</span>
+      
+
+      <time title="創建時間：2024-10-16 19:20:17 / 修改時間：19:29:02" itemprop="dateCreated datePublished" datetime="2024-10-16T19:20:17+08:00">2024-10-16</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">閱讀次數：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>1k</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>4 分鐘</span>
+    </span>
+</div>
+
+            <div class="post-description">Linux 指令不完全筆記，</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="linux-指令"><a class="markdownIt-Anchor" href="#linux-指令"></a> Linux 指令</h1>
+<h3 id="base64-加密解密"><a class="markdownIt-Anchor" href="#base64-加密解密"></a> base64 – 加密/解密</h3>
+<p>可配合回傳來解 base64 過的字串</p>
+<details class="note info"><summary><p>選項</p>
+</summary>
+<ul>
+<li><code>-d</code>：解密（Decode）</li>
+<li><code>-e</code>：加密（Encode）</li>
+</ul>
+
+</details>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;cGljb0NURntNRTc0RDQ3QV9ISUREM05fZDhjMzgxZmR9Cg==&quot;</span> | <span class="built_in">base64</span> -d</span><br></pre></td></tr></table></figure>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">picoCTF&#123;ME74D47<span class="built_in">A_HIDD3N</span>_d8c381fd&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="binwalk-分析檔案"><a class="markdownIt-Anchor" href="#binwalk-分析檔案"></a> binwalk – 分析檔案</h3>
+<h3 id="bvi"><a class="markdownIt-Anchor" href="#bvi"></a> bvi</h3>
+<p>輸入 <code>:q</code> 退出 bvi</p>
+<h3 id="cat-串接或輸出檔案內容"><a class="markdownIt-Anchor" href="#cat-串接或輸出檔案內容"></a> cat – 串接或輸出檔案內容</h3>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cat</span> [選項] &lt;<span class="keyword">file</span>&gt;</span><br></pre></td></tr></table></figure>
+<details class="note info"><summary><p>選項</p>
+</summary>
+<ul>
+<li><code>-n</code>：編號行數</li>
+<li><code>-E</code>：行尾輸出錢字號</li>
+</ul>
+
+</details>
+<h3 id="chmod-控制使用者對檔案的權限"><a class="markdownIt-Anchor" href="#chmod-控制使用者對檔案的權限"></a> chmod – 控制使用者對檔案的權限</h3>
+<p>權限數字</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rwxrwxr-<span class="attribute">x</span></span><br></pre></td></tr></table></figure>
+<p>以三個三個為一組，每個字代表二進制，並相加就是數字了</p>
+<p><code>rwx</code>, <code>rwx</code>, <code>r-x</code></p>
+<p><code>4+2+1</code>, <code>4+2+1</code>, <code>4+0+1</code></p>
+<p>代表著 775</p>
+<h3 id="cp-複製目錄複製檔案"><a class="markdownIt-Anchor" href="#cp-複製目錄複製檔案"></a> cp – 複製目錄/複製檔案</h3>
+<h3 id="curl-用來分析網頁行為及研究跳轉和參數等等"><a class="markdownIt-Anchor" href="#curl-用來分析網頁行為及研究跳轉和參數等等"></a> curl – 用來分析網頁行為及研究跳轉和參數等等</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl [選項] &lt;URL&gt;</span><br></pre></td></tr></table></figure>
+<details class="note info"><summary><p>選項</p>
+</summary>
+<ul>
+<li><code>-I</code>：僅查看 Header 內容</li>
+</ul>
+
+</details>
+<h3 id="exiftool"><a class="markdownIt-Anchor" href="#exiftool"></a> exiftool</h3>
+<p>Linux 的 ExifTool 是一個功能強大的命令列工具，用於 讀取、寫入和編輯圖像和音訊檔案中的元數據。它支援非常廣泛的檔案格式，包括：</p>
+<ul>
+<li>圖像格式：JPEG、TIFF、PNG、GIF、BMP、PSD、RAW 等</li>
+<li>音訊格式：MP3、WAV、FLAC、M4A、OGG 等</li>
+<li>其他格式：PDF、HTML、Word 文檔、Excel 文件等</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exiftool &lt;file&gt;</span><br></pre></td></tr></table></figure>
+<details class="note info"><summary><p>範例輸出</p>
+</summary>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ExifTool</span> Version Number         : <span class="number">12</span>.<span class="number">40</span></span><br><span class="line"><span class="attribute">File</span> Name                       : ukn_reality.jpg</span><br><span class="line"><span class="attribute">Directory</span>                       : .</span><br><span class="line"><span class="attribute">File</span> Size                       : <span class="number">2</span>.<span class="number">2</span> MiB</span><br><span class="line"><span class="attribute">File</span> Modification Date/Time     : <span class="number">2024</span>:<span class="number">03</span>:<span class="number">12</span> <span class="number">00</span>:<span class="number">05</span>:<span class="number">57</span>+<span class="number">00</span>:<span class="number">00</span></span><br><span class="line"><span class="attribute">File</span> Access Date/Time           : <span class="number">2024</span>:<span class="number">03</span>:<span class="number">12</span> <span class="number">00</span>:<span class="number">05</span>:<span class="number">57</span>+<span class="number">00</span>:<span class="number">00</span></span><br><span class="line"><span class="attribute">File</span> Inode Change Date/Time     : <span class="number">2024</span>:<span class="number">09</span>:<span class="number">17</span> <span class="number">14</span>:<span class="number">29</span>:<span class="number">19</span>+<span class="number">00</span>:<span class="number">00</span></span><br><span class="line"><span class="attribute">File</span> Permissions                : -rw-r--r--</span><br><span class="line"><span class="attribute">File</span> Type                       : JPEG</span><br><span class="line"><span class="attribute">File</span> Type Extension             : jpg</span><br><span class="line"><span class="attribute">MIME</span> Type                       : image/jpeg</span><br><span class="line"><span class="attribute">JFIF</span> Version                    : <span class="number">1</span>.<span class="number">01</span></span><br><span class="line"><span class="attribute">Resolution</span> Unit                 : inches</span><br><span class="line"><span class="attribute">X</span> Resolution                    : <span class="number">72</span></span><br><span class="line"><span class="attribute">Y</span> Resolution                    : <span class="number">72</span></span><br><span class="line"><span class="attribute">XMP</span> Toolkit                     : Image::ExifTool <span class="number">11</span>.<span class="number">88</span></span><br><span class="line"><span class="attribute">Attribution</span> URL                 : cGljb0NURntNRTc0RDQ3QV9ISUREM05fZDhjMzgxZmR9Cg==</span><br><span class="line"><span class="attribute">Image</span> Width                     : <span class="number">4308</span></span><br><span class="line"><span class="attribute">Image</span> Height                    : <span class="number">2875</span></span><br><span class="line"><span class="attribute">Encoding</span> Process                : Baseline DCT, Huffman coding</span><br><span class="line"><span class="attribute">Bits</span> Per Sample                 : <span class="number">8</span></span><br><span class="line"><span class="attribute">Color</span> Components                : <span class="number">3</span></span><br><span class="line"><span class="attribute">Y</span> Cb Cr Sub Sampling            : YCbCr4:<span class="number">2</span>:<span class="number">0</span> (<span class="number">2</span> <span class="number">2</span>)</span><br><span class="line"><span class="attribute">Image</span> Size                      : <span class="number">4308</span>x2875</span><br><span class="line"><span class="attribute">Megapixels</span>                      : <span class="number">12</span>.<span class="number">4</span></span><br></pre></td></tr></table></figure>
+
+</details>
+<h3 id="file"><a class="markdownIt-Anchor" href="#file"></a> file</h3>
+<h3 id="find-找檔案-目錄-名稱-天數"><a class="markdownIt-Anchor" href="#find-找檔案-目錄-名稱-天數"></a> find – 找檔案、目錄、名稱、天數</h3>
+<blockquote>
+<p>find找檔案、目錄、名稱、天數…<span class="exturl" data-url="aHR0cHM6Ly9tZWRpdW0uY29tL0BEeWxhbi5XYW5nL2xpbnV4JUU0JUI4JThCZmluZCVFNiU4QyU4NyVFNCVCQiVBNCVFNyU5QSU4NCVFNyVBRCU4NiVFOCVBOCU5OC1hYTczM2ZkZjY0ZWU=">參考<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<details class="note info"><summary><p>選項</p>
+</summary>
+<ul>
+<li><code>-mtime</code> : 搜尋檔案的修改時間(天)</li>
+<li><code>-mmin</code> : 搜尋檔案的修改時間(分鐘)</li>
+<li><code>-ctime</code> : 搜尋檔案的建立時間(天)</li>
+<li><code>-cmin</code> : 搜尋檔案的建立時間(分鐘)</li>
+<li><code>-atime</code> : 搜尋檔案的最後開啟時間(天)</li>
+<li><code>-amin</code> : 搜尋檔案的最後開啟時間(分鐘)</li>
+<li><code>-size</code> : 搜尋檔案的大小</li>
+<li><code>-name</code> : 搜尋檔案名稱(有分大小寫)</li>
+<li><code>-iname</code> : 搜尋檔案名稱(不分大小寫)</li>
+<li><code>-type f</code> : 只搜尋“檔案”</li>
+<li><code>-type d</code> : 只搜尋“目錄”</li>
+<li><code>-exec &lt;cmd&gt; {} \;</code> : 把搜尋結果導向指令來執行</li>
+<li><code>-user</code> : 搜尋特定使用者的檔案或目錄</li>
+<li><code>-o</code> : 邏輯運算為「或」的意思</li>
+<li><code>-print</code> : 將結果印出於螢幕</li>
+</ul>
+
+</details>
+<p>配合 grep 就可以查找某個檔案裡的內容</p>
+<p>Example:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ./ | grep -rIl <span class="string">&quot;picoCTF&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="grep"><a class="markdownIt-Anchor" href="#grep"></a> grep</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep [選項] <span class="string">&quot;搜尋字串&quot;</span> 檔案</span><br></pre></td></tr></table></figure>
+<details class="note info"><summary><p>選項</p>
+</summary>
+<ul>
+<li><code>-i</code>：忽略大小寫進行搜尋。</li>
+<li><code>-v</code>：反向搜尋，顯示不包含字串的行。</li>
+<li><code>-r</code>：遞迴搜尋目錄中的所有文件。</li>
+<li><code>-n</code>：顯示匹配行的行號。</li>
+<li><code>-l</code>：只顯示包含匹配字串的文件名稱。</li>
+<li><code>-C [數字]</code>：顯示上下文，包含匹配行之前和之後的數行。</li>
+</ul>
+
+</details>
+<h3 id="ln"><a class="markdownIt-Anchor" href="#ln"></a> ln</h3>
+<h3 id="man"><a class="markdownIt-Anchor" href="#man"></a> man</h3>
+<h3 id="mkdir-建立目錄"><a class="markdownIt-Anchor" href="#mkdir-建立目錄"></a> mkdir – 建立目錄</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> &lt;folder_name&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="mv"><a class="markdownIt-Anchor" href="#mv"></a> mv</h3>
+<h3 id="ncnetcat指令"><a class="markdownIt-Anchor" href="#ncnetcat指令"></a> nc（Netcat）指令</h3>
+<h3 id="rm-刪除檔案"><a class="markdownIt-Anchor" href="#rm-刪除檔案"></a> rm – 刪除檔案</h3>
+<p>刪除該目錄下的所有檔案</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -r *</span><br></pre></td></tr></table></figure>
+<h3 id="rmdir-刪除目錄"><a class="markdownIt-Anchor" href="#rmdir-刪除目錄"></a> rmdir – 刪除目錄</h3>
+<h3 id="screen"><a class="markdownIt-Anchor" href="#screen"></a> screen</h3>
+<p>進入 screen shell</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">screen</span><br></pre></td></tr></table></figure>
+<p>刪除 screen</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">screen -S &quot;ID/名稱&quot; -X quit</span><br></pre></td></tr></table></figure>
+<p>卸離目前 screen</p>
+<p><code>ctrl</code> + <code>a</code> + <code>d</code></p>
+<h3 id="stat-檔案資訊"><a class="markdownIt-Anchor" href="#stat-檔案資訊"></a> stat – 檔案資訊</h3>
+<h3 id="strings"><a class="markdownIt-Anchor" href="#strings"></a> strings</h3>
+<blockquote>
+<p>主要用來從二進制文件或非純文字檔案中提取出可讀的文字 [name=ChatGPT]</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strings &lt;file_name&gt;</span><br></pre></td></tr></table></figure>
+<p>可搭配 <code>grep</code> 指令，來尋找特定字串</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strings &lt;file_name&gt; | grep <span class="string">&quot;特定字串&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="touch-建立檔案"><a class="markdownIt-Anchor" href="#touch-建立檔案"></a> touch – 建立檔案</h3>
+<h3 id="unzip-解壓縮指令"><a class="markdownIt-Anchor" href="#unzip-解壓縮指令"></a> unzip – 解壓縮指令</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip &lt;.zip&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="vim"><a class="markdownIt-Anchor" href="#vim"></a> vim</h3>
+<ul>
+<li>按 <code>i</code> 進入編輯模式，在案 <code>ESC</code> 退出編輯模式</li>
+<li>輸入 <code>:wq</code> 退出 vim</li>
+</ul>
+<h3 id="wget-從網路上檔案下載檔案到-linux"><a class="markdownIt-Anchor" href="#wget-從網路上檔案下載檔案到-linux"></a> wget – 從網路上檔案下載檔案到 Linux</h3>
+<details class="note info"><summary><p>選項</p>
+</summary>
+<ul>
+<li><code>-n</code>：在每一行之前加上檔案中的相對行號。</li>
+<li><code>-r</code>：遞迴地搜尋目錄。</li>
+</ul>
+
+</details>
+<ul>
+<li><code>--user-agent</code>：修改 UA 以達到模仿瀏覽器瀏覽效果</li>
+</ul>
+<h4 id="下載整個網站砍站offline-browsing"><a class="markdownIt-Anchor" href="#下載整個網站砍站offline-browsing"></a> 下載整個網站（砍站）（Offline Browsing）</h4>
+<p>使用選項 <code>--mirror</code> 範例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --mirror -p --convert-links -P ./my_folder http://edition.cnn.com/</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>--mirror</code>：下載整個網站。</li>
+<li><code>-p</code>：自動下載顯示網頁所需要的所有相關檔案。</li>
+<li><code>--convert-links</code>：自動將下載網頁中的超連結，轉換為本地的連結。</li>
+<li><code>-P ./my_folder</code>：將下載的檔案放在 ./my_folder 目錄下。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>作者： </strong>Eric Huang
+  </li>
+  <li class="post-copyright-link">
+      <strong>文章連結：</strong>
+      <a href="https://huangmayor0905.github.io/learning-linux-command/" title="【筆記】Linux 指令">https://huangmayor0905.github.io/learning-linux-command/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1UVw=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%AD%86%E8%A8%98/" rel="tag"># 筆記</a>
+              <a href="/tags/Linux/" rel="tag"># Linux</a>
+              <a href="/tags/%E6%8C%87%E4%BB%A4/" rel="tag"># 指令</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/life/20240925-learning-CTF/" rel="prev" title="【日常】我入門 CTF 了？">
+                  <i class="fa fa-angle-left"></i> 【日常】我入門 CTF 了？
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">若要轉載文章，麻煩請保留原作者名稱與原始連結。</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>總字數：</span>
+    <span title="總字數">27k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">1:38</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://huangmayor0905.github.io/learning-linux-command/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"huangmayor0905","repo":"huangmayor0905.github.io","client_id":"2edf56fae528fa5e1662","client_secret":"b9d5dcfcb3733c370d2e9b6688fc5c2576469520","admin_user":"huangmayor0905","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"81432165e7d14eb703fa940b52cbdade"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
