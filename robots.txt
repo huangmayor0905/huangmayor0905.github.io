@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /images/
+Disallow: /ads.txt
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+Allow: /about/
