@@ -120,28 +120,21 @@
       </tags>
   </entry>
   <entry>
-    <title>TOI 練習賽 202404 新手組</title>
-    <url>/TOIP-202404-beginner/</url>
-    <content><![CDATA[<h1 id="說明"><a class="markdownIt-Anchor" href="#說明"></a> 說明</h1>
-<p>這次 TOIP 只涉及到一維陣列，暴力解就行了。</p>
-<h1 id="解題"><a class="markdownIt-Anchor" href="#解題"></a> 解題</h1>
-<h2 id="1-電影院cinema"><a class="markdownIt-Anchor" href="#1-電影院cinema"></a> 1. 電影院（Cinema）</h2>
+    <title>TOI 練習賽 202404 潛力組</title>
+    <url>/TOIP-202404-pro/</url>
+    <content><![CDATA[<h2 id="說明"><a class="markdownIt-Anchor" href="#說明"></a> 說明</h2>
+<p>這次 TOIP 第一題考到了<a href="https://huangmayor0905.github.io/cs/algo/differential-evolution/">差分</a>的概念，並運用在二維陣列裡。第二、三題都在考 DP 的運用。</p>
+<span id="more"></span>
+<h2 id="解題"><a class="markdownIt-Anchor" href="#解題"></a> 解題</h2>
+<h3 id="1-降雨量統計rainfall"><a class="markdownIt-Anchor" href="#1-降雨量統計rainfall"></a> 1. 降雨量統計（Rainfall）</h3>
 <details class="note default"><summary><p>展開程式碼</p>
 </summary>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> arr[n];</span><br><span class="line">    <span class="type">int</span> hr, min;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; hr &gt;&gt; min;</span><br><span class="line">        arr[i] = hr * <span class="number">60</span> + min;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(arr, arr + n);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; hr &gt;&gt; min;</span><br><span class="line">    <span class="type">int</span> now = hr * <span class="number">60</span> + min;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[i] &gt;= now + <span class="number">20</span>) &#123;</span><br><span class="line">            cout &lt;&lt; ((arr[i] / <span class="number">60</span> / <span class="number">10</span> == <span class="number">0</span>) ? <span class="string">&quot;0&quot;</span> : <span class="string">&quot;&quot;</span>) </span><br><span class="line">                 &lt;&lt; arr[i] / <span class="number">60</span> &lt;&lt; <span class="string">&quot; &quot;</span> </span><br><span class="line">                 &lt;&lt; ((arr[i] % <span class="number">60</span> / <span class="number">10</span> == <span class="number">0</span>) ? <span class="string">&quot;0&quot;</span> : <span class="string">&quot;&quot;</span>)</span><br><span class="line">                 &lt;&lt; arr[i] % <span class="number">60</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Too Late\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ouo;</span><br><span class="line">    <span class="type">int</span> r, c;</span><br><span class="line">    cin &gt;&gt; r &gt;&gt; c;</span><br><span class="line">    <span class="type">int</span> g[r + <span class="number">1</span>][c + <span class="number">1</span>];</span><br><span class="line">    <span class="built_in">memset</span>(g, <span class="number">0</span>, <span class="built_in">sizeof</span>(g));</span><br><span class="line">    <span class="type">int</span> q;</span><br><span class="line">    cin &gt;&gt; q;</span><br><span class="line">    <span class="type">int</span> arr[<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 做差分陣列</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; q; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++) cin &gt;&gt; arr[j];</span><br><span class="line"></span><br><span class="line">        g[arr[<span class="number">0</span>]][arr[<span class="number">1</span>]] += arr[<span class="number">4</span>];</span><br><span class="line">        g[arr[<span class="number">0</span>]][arr[<span class="number">3</span>]] -= arr[<span class="number">4</span>];</span><br><span class="line">        g[arr[<span class="number">2</span>]][arr[<span class="number">1</span>]] -= arr[<span class="number">4</span>];</span><br><span class="line">        g[arr[<span class="number">2</span>]][arr[<span class="number">3</span>]] += arr[<span class="number">4</span>];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 先輸出第一行</span></span><br><span class="line">    <span class="type">int</span> presum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; c; i++) &#123;</span><br><span class="line">        presum += g[<span class="number">0</span>][i];</span><br><span class="line">        g[<span class="number">0</span>][i] = presum;</span><br><span class="line">        cout &lt;&lt; g[<span class="number">0</span>][i] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 處理後續前綴</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; r; i++) &#123;</span><br><span class="line">        presum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; c; j++) &#123;</span><br><span class="line">            presum += g[i][j];</span><br><span class="line">            g[i][j] = presum + g[i - <span class="number">1</span>][j];</span><br><span class="line">            cout &lt;&lt; g[i][j] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </details>
-<h2 id="2-撲克poker"><a class="markdownIt-Anchor" href="#2-撲克poker"></a> 2. 撲克（Poker）</h2>
-<details class="note default"><summary><p>展開程式碼</p>
-</summary>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n, mx = <span class="number">-1</span>;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> arr[<span class="number">52</span> + <span class="number">1</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="type">int</span> tmp;</span><br><span class="line">        cin &gt;&gt; tmp;</span><br><span class="line">        arr[tmp]++;</span><br><span class="line">        mx = <span class="built_in">max</span>(mx, arr[tmp]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> mn = INT_MAX;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">52</span>; i++) mn = <span class="built_in">min</span>(mn, arr[i]);</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; mn &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; (mx - mn) * <span class="number">52</span> - (n - mn * <span class="number">52</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</details>
-<h2 id="3-熱門商品commodity"><a class="markdownIt-Anchor" href="#3-熱門商品commodity"></a> 3. 熱門商品（Commodity）</h2>
-<details class="note default"><summary><p>展開程式碼</p>
-</summary>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> k, n;</span><br><span class="line">    cin &gt;&gt; k &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> arr[k];</span><br><span class="line">    <span class="type">int</span> goods[<span class="number">1005</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        cin &gt;&gt; arr[i];</span><br><span class="line">        goods[arr[i]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> mx = <span class="number">0</span>, favorite = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (goods[arr[i]] &gt; mx) &#123;</span><br><span class="line">            mx = goods[arr[i]];</span><br><span class="line">            favorite = arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> shop[n];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) cin &gt;&gt; shop[i];</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> mn = INT_MAX, flag = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="type">int</span> val = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> q = <span class="number">0</span>; q &lt; shop[i]; q++) &#123;</span><br><span class="line">            <span class="type">int</span> quetion;</span><br><span class="line">            cin &gt;&gt; quetion;</span><br><span class="line">            val += goods[quetion];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (val &lt; mn) &#123;</span><br><span class="line">            mn = val;</span><br><span class="line">            flag = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ans</span></span><br><span class="line">    cout &lt;&lt; favorite &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; flag + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</details>
+<h3 id="2-切割板材plate"><a class="markdownIt-Anchor" href="#2-切割板材plate"></a> 2. 切割板材（Plate）</h3>
+<p>尚未解題</p>
+<h3 id="3-搭船渡河-boat"><a class="markdownIt-Anchor" href="#3-搭船渡河-boat"></a> 3. 搭船渡河 （Boat）</h3>
+<p>尚未解題</p>
 ]]></content>
       <categories>
         <category>TOIP</category>
@@ -149,7 +142,8 @@
       <tags>
         <tag>TOI</tag>
         <tag>TOIP</tag>
-        <tag>新手組</tag>
+        <tag>潛力組</tag>
+        <tag>差分</tag>
       </tags>
   </entry>
   <entry>
@@ -190,21 +184,28 @@
       </tags>
   </entry>
   <entry>
-    <title>TOI 練習賽 202404 潛力組</title>
-    <url>/TOIP-202404-pro/</url>
-    <content><![CDATA[<h2 id="說明"><a class="markdownIt-Anchor" href="#說明"></a> 說明</h2>
-<p>這次 TOIP 第一題考到了<a href="https://huangmayor0905.github.io/cs/algo/differential-evolution/">差分</a>的概念，並運用在二維陣列裡。第二、三題都在考 DP 的運用。</p>
-<span id="more"></span>
-<h2 id="解題"><a class="markdownIt-Anchor" href="#解題"></a> 解題</h2>
-<h3 id="1-降雨量統計rainfall"><a class="markdownIt-Anchor" href="#1-降雨量統計rainfall"></a> 1. 降雨量統計（Rainfall）</h3>
+    <title>TOI 練習賽 202404 新手組</title>
+    <url>/TOIP-202404-beginner/</url>
+    <content><![CDATA[<h1 id="說明"><a class="markdownIt-Anchor" href="#說明"></a> 說明</h1>
+<p>這次 TOIP 只涉及到一維陣列，暴力解就行了。</p>
+<h1 id="解題"><a class="markdownIt-Anchor" href="#解題"></a> 解題</h1>
+<h2 id="1-電影院cinema"><a class="markdownIt-Anchor" href="#1-電影院cinema"></a> 1. 電影院（Cinema）</h2>
 <details class="note default"><summary><p>展開程式碼</p>
 </summary>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ouo;</span><br><span class="line">    <span class="type">int</span> r, c;</span><br><span class="line">    cin &gt;&gt; r &gt;&gt; c;</span><br><span class="line">    <span class="type">int</span> g[r + <span class="number">1</span>][c + <span class="number">1</span>];</span><br><span class="line">    <span class="built_in">memset</span>(g, <span class="number">0</span>, <span class="built_in">sizeof</span>(g));</span><br><span class="line">    <span class="type">int</span> q;</span><br><span class="line">    cin &gt;&gt; q;</span><br><span class="line">    <span class="type">int</span> arr[<span class="number">5</span>];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 做差分陣列</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; q; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++) cin &gt;&gt; arr[j];</span><br><span class="line"></span><br><span class="line">        g[arr[<span class="number">0</span>]][arr[<span class="number">1</span>]] += arr[<span class="number">4</span>];</span><br><span class="line">        g[arr[<span class="number">0</span>]][arr[<span class="number">3</span>]] -= arr[<span class="number">4</span>];</span><br><span class="line">        g[arr[<span class="number">2</span>]][arr[<span class="number">1</span>]] -= arr[<span class="number">4</span>];</span><br><span class="line">        g[arr[<span class="number">2</span>]][arr[<span class="number">3</span>]] += arr[<span class="number">4</span>];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 先輸出第一行</span></span><br><span class="line">    <span class="type">int</span> presum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; c; i++) &#123;</span><br><span class="line">        presum += g[<span class="number">0</span>][i];</span><br><span class="line">        g[<span class="number">0</span>][i] = presum;</span><br><span class="line">        cout &lt;&lt; g[<span class="number">0</span>][i] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 處理後續前綴</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; r; i++) &#123;</span><br><span class="line">        presum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; c; j++) &#123;</span><br><span class="line">            presum += g[i][j];</span><br><span class="line">            g[i][j] = presum + g[i - <span class="number">1</span>][j];</span><br><span class="line">            cout &lt;&lt; g[i][j] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        cout &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> arr[n];</span><br><span class="line">    <span class="type">int</span> hr, min;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; hr &gt;&gt; min;</span><br><span class="line">        arr[i] = hr * <span class="number">60</span> + min;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(arr, arr + n);</span><br><span class="line"></span><br><span class="line">    cin &gt;&gt; hr &gt;&gt; min;</span><br><span class="line">    <span class="type">int</span> now = hr * <span class="number">60</span> + min;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[i] &gt;= now + <span class="number">20</span>) &#123;</span><br><span class="line">            cout &lt;&lt; ((arr[i] / <span class="number">60</span> / <span class="number">10</span> == <span class="number">0</span>) ? <span class="string">&quot;0&quot;</span> : <span class="string">&quot;&quot;</span>) </span><br><span class="line">                 &lt;&lt; arr[i] / <span class="number">60</span> &lt;&lt; <span class="string">&quot; &quot;</span> </span><br><span class="line">                 &lt;&lt; ((arr[i] % <span class="number">60</span> / <span class="number">10</span> == <span class="number">0</span>) ? <span class="string">&quot;0&quot;</span> : <span class="string">&quot;&quot;</span>)</span><br><span class="line">                 &lt;&lt; arr[i] % <span class="number">60</span> &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Too Late\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 </details>
-<h3 id="2-切割板材plate"><a class="markdownIt-Anchor" href="#2-切割板材plate"></a> 2. 切割板材（Plate）</h3>
-<p>尚未解題</p>
-<h3 id="3-搭船渡河-boat"><a class="markdownIt-Anchor" href="#3-搭船渡河-boat"></a> 3. 搭船渡河 （Boat）</h3>
-<p>尚未解題</p>
+<h2 id="2-撲克poker"><a class="markdownIt-Anchor" href="#2-撲克poker"></a> 2. 撲克（Poker）</h2>
+<details class="note default"><summary><p>展開程式碼</p>
+</summary>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n, mx = <span class="number">-1</span>;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> arr[<span class="number">52</span> + <span class="number">1</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="type">int</span> tmp;</span><br><span class="line">        cin &gt;&gt; tmp;</span><br><span class="line">        arr[tmp]++;</span><br><span class="line">        mx = <span class="built_in">max</span>(mx, arr[tmp]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> mn = INT_MAX;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">52</span>; i++) mn = <span class="built_in">min</span>(mn, arr[i]);</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; mn &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; (mx - mn) * <span class="number">52</span> - (n - mn * <span class="number">52</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</details>
+<h2 id="3-熱門商品commodity"><a class="markdownIt-Anchor" href="#3-熱門商品commodity"></a> 3. 熱門商品（Commodity）</h2>
+<details class="note default"><summary><p>展開程式碼</p>
+</summary>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> k, n;</span><br><span class="line">    cin &gt;&gt; k &gt;&gt; n;</span><br><span class="line">    <span class="type">int</span> arr[k];</span><br><span class="line">    <span class="type">int</span> goods[<span class="number">1005</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        cin &gt;&gt; arr[i];</span><br><span class="line">        goods[arr[i]]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> mx = <span class="number">0</span>, favorite = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (goods[arr[i]] &gt; mx) &#123;</span><br><span class="line">            mx = goods[arr[i]];</span><br><span class="line">            favorite = arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> shop[n];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) cin &gt;&gt; shop[i];</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> mn = INT_MAX, flag = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="type">int</span> val = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> q = <span class="number">0</span>; q &lt; shop[i]; q++) &#123;</span><br><span class="line">            <span class="type">int</span> quetion;</span><br><span class="line">            cin &gt;&gt; quetion;</span><br><span class="line">            val += goods[quetion];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (val &lt; mn) &#123;</span><br><span class="line">            mn = val;</span><br><span class="line">            flag = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ans</span></span><br><span class="line">    cout &lt;&lt; favorite &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; flag + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
 ]]></content>
       <categories>
         <category>TOIP</category>
@@ -212,45 +213,7 @@
       <tags>
         <tag>TOI</tag>
         <tag>TOIP</tag>
-        <tag>潛力組</tag>
-        <tag>差分</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>作者使用的 C++ 編譯器</title>
-    <url>/cpp-compiler/</url>
-    <content><![CDATA[<h2 id="線上"><a class="markdownIt-Anchor" href="#線上"></a> 線上</h2>
-<ol>
-<li><span class="exturl" data-url="aHR0cHM6Ly9yZXBsaXQuY29tL34=">Repl.it<i class="fa fa-external-link-alt"></i></span><br />
-<strong>優點</strong>：線上編譯，可以在不同地方不同電腦上寫 code ，可隨時新增不同程式語言的專案。打好的 code 可以直接複製網址給其他人（放心，其他人更改不了你的 code ）。<br />
-<strong>缺點</strong>：帳號的存放大小有限，不過對方變性就已經不錯了。以及部分功能需付費。<em>雖不用按下你的 ctrl + s ，但是如果網站剛好卡住就沒辦法隨時存檔。 （作者曾經歷過…）</em></li>
-</ol>
-<h2 id="應用程式"><a class="markdownIt-Anchor" href="#應用程式"></a> 應用程式</h2>
-<ol>
-<li>
-<p><span class="exturl" data-url="aHR0cHM6Ly9jb2RlLnZpc3VhbHN0dWRpby5jb20v">Visual Studio Code<i class="fa fa-external-link-alt"></i></span><br />
-<strong>優點</strong>：可自行下載延伸模組，自由度較高<br />
-<strong>缺點</strong>：也許是作者還不夠理解，新手可能對這個有點難因為還有環境的配置，作者的同學也編譯不了 C++，不過作者本人有成功，但就是在這上面研究許久…</p>
-</li>
-<li>
-<p><span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvbWluZ3ctdzY0L2ZpbGVzL21pbmd3LXc2NC9taW5ndy13NjQtcmVsZWFzZS8=">MinGW<i class="fa fa-external-link-alt"></i></span><br />
-<strong>特點</strong>：提供一個可執行 gcc 程式開發環境，整合了許多 windows 下可運行的標頭檔案和檔案庫，為 c++ 的開發提供了良好基礎支援，他不是一種編輯器，是一個提供環境做編譯的程式，非常重要。</p>
-</li>
-<li>
-<p><span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvb3J3ZWxsZGV2Y3BwLw==">Dev-C++<i class="fa fa-external-link-alt"></i></span><br />
-<strong>特點</strong>：使用 MinGW32/gcc 編譯器，可高亮度語法顯示，以減少編輯錯誤。</p>
-</li>
-<li>
-<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY29kZWJsb2Nrcy5vcmcvZG93bmxvYWRzL2JpbmFyaWVzLw==">Code Blocks<i class="fa fa-external-link-alt"></i></span><br />
-<strong>特點</strong>：也是使用 MinGW 做編譯的，擴充性強大，也適合開發應用程式。</p>
-</li>
-</ol>
-<h2 id="結語"><a class="markdownIt-Anchor" href="#結語"></a> 結語</h2>
-<p>作者目前使用的是 <span class="exturl" data-url="aHR0cDovL1JlcGwuaXQ=">Repl.it<i class="fa fa-external-link-alt"></i></span> 和 VScode，其他編輯器我也只有在學校電腦上使用，所以還不知道他們的特性。線上的編譯器和延伸模組多到用不完的編輯器真的很好用，包括我撰寫的這篇文章也是用 VScode 編輯出來的，他的延伸模組之後也會出一篇來推薦幾個好用的，提供大家使用。</p>
-]]></content>
-      <tags>
-        <tag>C/C++</tag>
-        <tag>編譯器/編輯器</tag>
+        <tag>新手組</tag>
       </tags>
   </entry>
   <entry>
@@ -323,6 +286,62 @@
         <tag>Disocrd</tag>
         <tag>Bot</tag>
         <tag>discord.py</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>作者使用的 C++ 編譯器</title>
+    <url>/cpp-compiler/</url>
+    <content><![CDATA[<h2 id="線上"><a class="markdownIt-Anchor" href="#線上"></a> 線上</h2>
+<ol>
+<li><span class="exturl" data-url="aHR0cHM6Ly9yZXBsaXQuY29tL34=">Repl.it<i class="fa fa-external-link-alt"></i></span><br />
+<strong>優點</strong>：線上編譯，可以在不同地方不同電腦上寫 code ，可隨時新增不同程式語言的專案。打好的 code 可以直接複製網址給其他人（放心，其他人更改不了你的 code ）。<br />
+<strong>缺點</strong>：帳號的存放大小有限，不過對方變性就已經不錯了。以及部分功能需付費。<em>雖不用按下你的 ctrl + s ，但是如果網站剛好卡住就沒辦法隨時存檔。 （作者曾經歷過…）</em></li>
+</ol>
+<h2 id="應用程式"><a class="markdownIt-Anchor" href="#應用程式"></a> 應用程式</h2>
+<ol>
+<li>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jb2RlLnZpc3VhbHN0dWRpby5jb20v">Visual Studio Code<i class="fa fa-external-link-alt"></i></span><br />
+<strong>優點</strong>：可自行下載延伸模組，自由度較高<br />
+<strong>缺點</strong>：也許是作者還不夠理解，新手可能對這個有點難因為還有環境的配置，作者的同學也編譯不了 C++，不過作者本人有成功，但就是在這上面研究許久…</p>
+</li>
+<li>
+<p><span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvbWluZ3ctdzY0L2ZpbGVzL21pbmd3LXc2NC9taW5ndy13NjQtcmVsZWFzZS8=">MinGW<i class="fa fa-external-link-alt"></i></span><br />
+<strong>特點</strong>：提供一個可執行 gcc 程式開發環境，整合了許多 windows 下可運行的標頭檔案和檔案庫，為 c++ 的開發提供了良好基礎支援，他不是一種編輯器，是一個提供環境做編譯的程式，非常重要。</p>
+</li>
+<li>
+<p><span class="exturl" data-url="aHR0cHM6Ly9zb3VyY2Vmb3JnZS5uZXQvcHJvamVjdHMvb3J3ZWxsZGV2Y3BwLw==">Dev-C++<i class="fa fa-external-link-alt"></i></span><br />
+<strong>特點</strong>：使用 MinGW32/gcc 編譯器，可高亮度語法顯示，以減少編輯錯誤。</p>
+</li>
+<li>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuY29kZWJsb2Nrcy5vcmcvZG93bmxvYWRzL2JpbmFyaWVzLw==">Code Blocks<i class="fa fa-external-link-alt"></i></span><br />
+<strong>特點</strong>：也是使用 MinGW 做編譯的，擴充性強大，也適合開發應用程式。</p>
+</li>
+</ol>
+<h2 id="結語"><a class="markdownIt-Anchor" href="#結語"></a> 結語</h2>
+<p>作者目前使用的是 <span class="exturl" data-url="aHR0cDovL1JlcGwuaXQ=">Repl.it<i class="fa fa-external-link-alt"></i></span> 和 VScode，其他編輯器我也只有在學校電腦上使用，所以還不知道他們的特性。線上的編譯器和延伸模組多到用不完的編輯器真的很好用，包括我撰寫的這篇文章也是用 VScode 編輯出來的，他的延伸模組之後也會出一篇來推薦幾個好用的，提供大家使用。</p>
+]]></content>
+      <tags>
+        <tag>C/C++</tag>
+        <tag>編譯器/編輯器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【測試】需密碼文章</title>
+    <url>/hexo-encrypt-test/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="c5f962a59016e1a6ecfe828b27d27df2e5f89b624e75c40addf0dd3622642acb">bd25ed9264b080267271e137e33d0ce1276c06c30ad3349bc1fd0ac9ef1064dce1362436ca4a0a173a8501aa56c1212bbb76dd99a1a7ec98efdab7ba17bd4d9a</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">密碼是 test</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>test</tag>
       </tags>
   </entry>
   <entry>
@@ -404,25 +423,6 @@
         <tag>discord.py</tag>
         <tag>Cogs</tag>
         <tag>Class</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【測試】需密碼文章</title>
-    <url>/hexo-encrypt-test/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="c5f962a59016e1a6ecfe828b27d27df2e5f89b624e75c40addf0dd3622642acb">bd25ed9264b080267271e137e33d0ce1276c06c30ad3349bc1fd0ac9ef1064dce1362436ca4a0a173a8501aa56c1212bbb76dd99a1a7ec98efdab7ba17bd4d9a</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">密碼是 test</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <tags>
-        <tag>test</tag>
       </tags>
   </entry>
   <entry>
@@ -1266,28 +1266,6 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【日常】想死，不是一天兩天的事了</title>
-    <url>/life/20221216/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="1ba52068d08f7d9f63673890078eb7937c282ebf6d79cde3f81b886b2e9b7f3b">c4379dbc51520bb23a681c5b597ae53ae83953acc4205c882fe5f1b87eb724f09c4dbcb9f84f0f5f61ddebc937605f4bd3fad3cc756d428960ad1618ae05d696bfb0a7dc5ea9cefe71f1e70ec309c7396bb95849d2150ba8abe4e25a8eadbc1f00c91f898ba3ef105189f8a4e4ebd83b642b66b4afd22674d25f347adf5c64370d66c7caf1a1d2798acbc98605b416e94e19aebd80d4b585e21431a785b08ceedd3bf9b6513c3c278403b136d7455216ee990c3720d4b871a56133f9a6a8aafb4146691603b3721be103af19cd3e5e31b1e66af7aad0fde20160411dfe80392a05201b022d3afa68c454d84459696f4edfeb9d00cf01867223638a74883054056642c3d03eb38f36cd2480d44f677f379cc55a25b0a9d472425b9173f8780c2813c60bdbf885da64ad85f50c2004f593b9a2f48d7d40d8ee8230cf77dd734a5f3fd675e502cdb106e59bdef3db231aa8f109ecf54d24a8d1cbee7337834b121dbcebe70d307be6d3b674966b788ee3c2397be18198db24c77338df06423dda23da169374ac61848dd8219ffbf77d7f774f63d5eb0760eab42602f3b1574e24a7598e2d85ed1a4f0401a2f7d0699ffce9397730256d04239fee08d62bb7fbdf2e2268da244f3549510f245098a6ff7d6ba820f4908955f41c90485e355864a470414cbf13eaffa75e35f2bfc236a71ce34aa398d3d9fa328ffd98161e51640fe9ea705a9df6e83c935b0467c3a1d6e2262012166507ababa9bc1a8f0d90a8c6079cfd90eff260117a38120ed20e22bbea5cf8e59c8b58629d0592e3de2d432b7c26df2d0d9a8b46ba0090c523b0883abeb8a6f6ebd9d6beda7ffc2c93b19f63cde28a3aa04caf5d6cc24ffc3776923acb72dbf725c29ea1e850547e9ac72aa0cb797efe91b89eddc4dda0ecf72476cbe8511d5d91929774a08360d35df2398df3cde67cf278a6e156511783c4ac638460341c18ac92fc0ff104e49f71b673de3c0746fc4c6846964e08515217e49fd8bacb691ca16f8ec773e5064815a78d55c53f8b6fb2317f42269456577fd1d5e54fbb642ab7e0458525fe2e66967d6fd49d9d6176d53e70ab71de5e53ad82a5d0a26cd0bc0ee936358732f2ac92a70cd4c9654172741bfd9a1c3c3e8ac746fb0d1657a5c991bcfe376c540f847e73c5f5c4bf15c3f5bb809dc0d7c2974f0dac13cb7a466cb47618633065941903f114a6e1adc1063e8e223f7bef96e7e9da8e5642529fd0158532fc3785114eb0a27c076922bf0f11e60c6da1c18c024ae7ea8d59c8bbc642c07aa39ec90b1591010058ff2261e199edb20135cb676602c6f8ea00d8559b84ad5cfd389612207ea8f78d7eb3d3c0ea560d9d17857994060ef1b8cabab4963588a2d2cfcbe4b7557735ccad5bfe028ce6dc7f516575680857290c6b195c99685fa543e00b34b1f3d1448b410e983ffbe043dc92ae82f6c99e341f7cd4c8499d7eb50a1300e17bad5af1ef2c15ca157882bd403c49f8e0f8fc92a5634d510b857a1dbd4f016181e9b53a34f4abe7bafafa03fed06f50bc9fdbe92928920639757d45da705bda86cb1a25adf75946e6b45e4a850a055b834e89050ddfd108981ed59b2183b296d6f36a31be115064965e3c6088837d7952fa0704872581785cdcf4ed404a96d361213745d2f2ffe9cece7b9cac3d4ee2316473d4dbe576218931dbc981afd5c6388d25f336a8e89bb1b3b1756bb69d0ace3edd891b975b45bbe012de2efe24c9b697df62af2c121b1826d211d133eb87c9a8535f687fe04c65602a7cf91d2dcbb48eadd9c913694421b5b3d6c19405c9566f49d6efa563aac9e5eb7aeb61c788735257f2048986cd81f2519f2bdc3a1eeffac6080b068abc55c5aabee31349b6c79ba1846df56b553fd5abd4bbcbc50111244d0d01932c7d74dd9fc97b6b6a8ac92e4860a9b7dd0865b70bf27173606f4b92d953e1a17d55101c25df3104317e9691768197d8f49d2bad407def109e3c926a70ad911576587df1977416e166d8a845f69880b7bf9daa4cfce68621d8ed5f5d5cc469811dbf8213d032f418257bbad434ad6d040ed0535fb16a08007f9f96645ea92a02e2f2872d2b588b32b0c907fd14f8e614dd152ea21575808c3475641859346badb5b03fbcefaba9ab1fecf73b49afdbe19d5cc3796de963b67aeaf2baa32afccc8f7039b04f2949be47b88edf13d4f297c6963cf0a749cf79d4e52682802f93ccbe08723b11bc14aac87ca349c005be02629ea1860ae72baf9bb8e9877bb7ccb93662490e6d0a3a3ccab8b6f6d3c380e2e21525178d7474a1dfe6c322ccd361e1e735c85c5c00d3f0be736c43c5754cbd979e18d9a46904f793f245b0f9f6bc8b1282ae1143e4c39f2dcda10f6fd5d05b93a3c84b46a31e48800c20b7550a1bf741061c973e0add048f596198fb5d0019394ea296e445903bc92821e9edb4c2a81092dd23b6a6ff0bd20f5c7d4a41f328c58aeb5134d2deed1ee80b7705889c322f0b763e6815aadacf532d33c76d0589cb4d3c5184b7a23ad0ff5948ef8faa1e89dc5caa771627b19eea11effc53cb650715d05edfe5724a31ec80bbb9bb20e844bdc2615a249a06274308e62d409852bae52a0101f53e59790fa0b3edd79529aa085daf203ada00789cf57e88b731a7cc95d2f29ead7e62f74ec2780ab2caf8bea7039e1d5108ee89f85f9c8e9c6c6b1ce8136abad59604f105969a4db0738aae9197c447155d4dd2364d33e7bcfbd4b1810bfb85fd21b00105de0b73c642cf62d0456056b6dc58882c18b1907327efde5b19393141b1b249ff8d61fcc58a51e5c1af354319ba98061af7ac5d95543b658d3ad0c4b04b59f3eafdfcd4e1bec6ff3509f306492b5f2f96d073a66247e31fe64e54e1889c42f3b266b6338ba40a7f25829aa99320cc0c0c906b9ec21d1a38e0e56d3bf533e8d02cf5b60d98d93504375926ced4ef0270a91b0da2af8146306a738bec6922cf8a45fc7f4e476b591b76b9c7b8bcbb814d93ce08a3306c6d41885cb20603261d0e9559c20b7688854cc9f28a9fa3bd962c093a0af1794979f8e3d3493713705eac397a06c1db2788b6935edc6a5cbbac6bebd8de388280f9f55aec3efa9410189dc277da08289f0e00fa52e4101dd08610cc6cd8099a678912a215251657b329bf1049ae357f46cbccc0ce50da7c0522e3b4e172521aa296e353e49b2311f4151ae78062dd2d2129c935192e2ff93353aed5bb860d11a7d1bd0056c403e67035ef0743c7c631bf3f6ed71815d6d70e63998d8d487cec5ae105f243467968e6c1cab03e0cbb987d75f8e653afaf63d047890b30f46335ac572cf37aeb9ca99e83b9ef29ea34818f37fee2925ed030fcaea5c7b3255d95f2de1ce032844418d7dadf299ac09415ad09cfcb1ccc33824c98939d8ac7df1314b79386ee85a8e01abbe4fecd7f895eab58eb13f2f268f0f80cb84754d3661200f6b8ee87416cf4adff9862a0dbd92d3bfbb0e92b1727453abfdfadbad2c65e28139c467a8204659f2acb3c01bbfa9e159304de9367223a53aeb5ab228831ca9ff17260427780c72edb2afbfec1ee401ba7c24494e221c0f10b2b0e66884abf59f206c57660f3c17ac0965d12404d5f16b252bd7c74df15b8ae3fbba88fb4b9c0e43a0a9cd0010298c5f963f56f093f939c6b8757588d90150fa7424c2fd6b1ec0aa3baa03a894564136903c95e75de702b3653617f6f6408929c799fb74fd3124653f68ab462add93fa1cc1363056e39437bb51a50f1f3c98e13063a33bdf27d64114656160bd440fef6bffce9240b6e6cfdf5ca5b9be441734c33e66ecceb8682915588fa339673685cf2c0cb431846766581fd3c3fa851790871623a87a276b67f6be80df2646070e11ad3ca9147db5cebfd9dd70fed059224b91e2c6e6627b4aa76d1c232c3cba43faa31469ede645594a5d7eaee8ebf222b1d663d632987ab640500a1cd2bcd50fa7b5eafb47c9b217c2b68b4a671400aca5fb961a81397fa687ea0c645fda8e70ee31bca6a05fef6a695c7da3e91fad99d626538d8d7fc89906347e13eebe3f1b52665b4b4ec80e94a07bd6af6d8625c9884b37ea2fdd8fb0103f83434c4c06ea982f5cbc25c6d440b22713360e690e4724b0079f0e98340edd25b2cba42289b9ad20766f83a15623c22532f848e685a8cd546884654faa1fdd74c25e3464ff18f9ef0eedafc05416877eed72c4d574ed181484e1c84357716a809775cd367a7d616e3ad9584cbb8586d95a83395ba9621261b1621e3167f010e2bbd883addbf8344eaa61606174c4fda843e5ef6b7e6bdba0681f493490dc6730399ef55e3a7602e51dadfb0effafb2abf0f298441c66e8d190b4e7a96b54ace0014352da71cc3fc65d546d6c130</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>生活點滴</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【日常】給一整年的自己</title>
     <url>/life/20221218/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
@@ -1329,28 +1307,6 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【日常】給高中畢業的自己</title>
-    <url>/life/20240517/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="4680dcf7043dff28513791783010fcabb75781938f278bf997729af952c3f17a">c4379dbc51520bb23a681c5b597ae53ae83953acc4205c882fe5f1b87eb724f0f8620ca600657f823e85ec4fc3bef1c840bdba6b7d94f8a06eff21ed1b2dd9e50743b4e245664f24b363a8b85d381a582f81d2b23f850913519e2aeff978c716f22d5632078caff1c0257f960fbd8d628d6dea6604ef31339c6b6f504728ce8e8e6787d1b6b1a5572e9b5dc44fbabf9e5559b1e55fc956cebf7199f428466c9e6e696c5d1684d012496fc9581cec3bbf483cb0692b1117994c8da3bc51f26a1b884268fda99e04bc27d20dd2983915b235c4957bc127f74c4f629ed2a18a80e4ed67ccee61b011cb6c12f9ccb23e07ad86e127213978dbde27cc0c989f4e8185855055f2af431ef10288400a1f546dbbf2f62f6659d61a9cd3ecab15f9d2a36cac5953f82c9795b1d843f1a7a41db95598712506e6ccbcc7ba98f0485c63948f8df54a0b2303d4e60ab9c3c9a79c14f9ec3386eb05f0f804bdf5cbe29acdf0a298b4744cb3485340f46d662da333f0b55215ffc7a8ac20e9161226a251619da26e6774b5f7ab46475d6ecb2288430725771e1565b95777fc923221e163b8a65d56469e7699610653c4e399d95233941f824e816f842bd9d1ee21d1e0abe6cb5b08e4564906c4516eecef6d7b5f5561a5024238d8f6fd826aa78344965063999a90e0021dc6bd9f8cd08c347e7329289c74e7e3f8d51b2e04cb84f02f4098ba3b246387bed10e70ddb2ce756cafafc73eb6ddb7dd35a4eaacb79125b1a1b52153c7f82ee726cdadb612e78db3b5f8a9714ebf8f74a61dd35f87e5cad73cb3a5716fff98e95b6dbe20660e4a8770e011ac45f6f22910505c2a2cb5a52823281c4689fbd2773faeddb8874c4aa96af57a8dc9242d7ffc1b39a2d5da093af224956d9d7c7c69fd48f1f1d8176c9dc01c06e1a4fe0b83bc26934ffea8088f51dff69586030398853cb6dc1b243260f2529bd3ab67df6435fec33eaac5e055729568b9324a22217099c2083328f4b8bdabedad07ad4350fb408b8b57ac9e49c3b6106891c7fc5c5a3d3b62c63b6d2115682314133d9f034fe9097c2b5ec9ac01d975b15e58631acb708c765e2341e313eb5b3723b066997ff74b25367c550c439182776e0b7b48d367434ea4f510446be42ad670f3be84d0f562a2296b66c27ed93c021a187868fdd3c9c0d23c5e0849aa3e5247accba45b9d2cd421a758e50302b8936bfa0363ba5638f634a8c576b3ecffa01fb1ea6af6672900ecfd86a91ece75fb662d1f0d4ad83281c742046a659ff74b3a5484184cb35955febd25d430dfec810438c47e71c8eb98732e593796f3e1ef</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>生活點滴</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【日常】我入門 CTF 了？</title>
     <url>/life/20240925-learning-CTF/</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
@@ -1384,6 +1340,50 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       <tags>
         <tag>CTF</tag>
         <tag>picoCTF</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【日常】給高中畢業的自己</title>
+    <url>/life/20240517/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="4680dcf7043dff28513791783010fcabb75781938f278bf997729af952c3f17a">c4379dbc51520bb23a681c5b597ae53ae83953acc4205c882fe5f1b87eb724f0f8620ca600657f823e85ec4fc3bef1c840bdba6b7d94f8a06eff21ed1b2dd9e50743b4e245664f24b363a8b85d381a582f81d2b23f850913519e2aeff978c716f22d5632078caff1c0257f960fbd8d628d6dea6604ef31339c6b6f504728ce8e8e6787d1b6b1a5572e9b5dc44fbabf9e5559b1e55fc956cebf7199f428466c9e6e696c5d1684d012496fc9581cec3bbf483cb0692b1117994c8da3bc51f26a1b884268fda99e04bc27d20dd2983915b235c4957bc127f74c4f629ed2a18a80e4ed67ccee61b011cb6c12f9ccb23e07ad86e127213978dbde27cc0c989f4e8185855055f2af431ef10288400a1f546dbbf2f62f6659d61a9cd3ecab15f9d2a36cac5953f82c9795b1d843f1a7a41db95598712506e6ccbcc7ba98f0485c63948f8df54a0b2303d4e60ab9c3c9a79c14f9ec3386eb05f0f804bdf5cbe29acdf0a298b4744cb3485340f46d662da333f0b55215ffc7a8ac20e9161226a251619da26e6774b5f7ab46475d6ecb2288430725771e1565b95777fc923221e163b8a65d56469e7699610653c4e399d95233941f824e816f842bd9d1ee21d1e0abe6cb5b08e4564906c4516eecef6d7b5f5561a5024238d8f6fd826aa78344965063999a90e0021dc6bd9f8cd08c347e7329289c74e7e3f8d51b2e04cb84f02f4098ba3b246387bed10e70ddb2ce756cafafc73eb6ddb7dd35a4eaacb79125b1a1b52153c7f82ee726cdadb612e78db3b5f8a9714ebf8f74a61dd35f87e5cad73cb3a5716fff98e95b6dbe20660e4a8770e011ac45f6f22910505c2a2cb5a52823281c4689fbd2773faeddb8874c4aa96af57a8dc9242d7ffc1b39a2d5da093af224956d9d7c7c69fd48f1f1d8176c9dc01c06e1a4fe0b83bc26934ffea8088f51dff69586030398853cb6dc1b243260f2529bd3ab67df6435fec33eaac5e055729568b9324a22217099c2083328f4b8bdabedad07ad4350fb408b8b57ac9e49c3b6106891c7fc5c5a3d3b62c63b6d2115682314133d9f034fe9097c2b5ec9ac01d975b15e58631acb708c765e2341e313eb5b3723b066997ff74b25367c550c439182776e0b7b48d367434ea4f510446be42ad670f3be84d0f562a2296b66c27ed93c021a187868fdd3c9c0d23c5e0849aa3e5247accba45b9d2cd421a758e50302b8936bfa0363ba5638f634a8c576b3ecffa01fb1ea6af6672900ecfd86a91ece75fb662d1f0d4ad83281c742046a659ff74b3a5484184cb35955febd25d430dfec810438c47e71c8eb98732e593796f3e1ef</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>生活點滴</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【日常】想死，不是一天兩天的事了</title>
+    <url>/life/20221216/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="1ba52068d08f7d9f63673890078eb7937c282ebf6d79cde3f81b886b2e9b7f3b">c4379dbc51520bb23a681c5b597ae53ae83953acc4205c882fe5f1b87eb724f09c4dbcb9f84f0f5f61ddebc937605f4bd3fad3cc756d428960ad1618ae05d696bfb0a7dc5ea9cefe71f1e70ec309c7396bb95849d2150ba8abe4e25a8eadbc1f00c91f898ba3ef105189f8a4e4ebd83b642b66b4afd22674d25f347adf5c64370d66c7caf1a1d2798acbc98605b416e94e19aebd80d4b585e21431a785b08ceedd3bf9b6513c3c278403b136d7455216ee990c3720d4b871a56133f9a6a8aafb4146691603b3721be103af19cd3e5e31b1e66af7aad0fde20160411dfe80392a05201b022d3afa68c454d84459696f4edfeb9d00cf01867223638a74883054056642c3d03eb38f36cd2480d44f677f379cc55a25b0a9d472425b9173f8780c2813c60bdbf885da64ad85f50c2004f593b9a2f48d7d40d8ee8230cf77dd734a5f3fd675e502cdb106e59bdef3db231aa8f109ecf54d24a8d1cbee7337834b121dbcebe70d307be6d3b674966b788ee3c2397be18198db24c77338df06423dda23da169374ac61848dd8219ffbf77d7f774f63d5eb0760eab42602f3b1574e24a7598e2d85ed1a4f0401a2f7d0699ffce9397730256d04239fee08d62bb7fbdf2e2268da244f3549510f245098a6ff7d6ba820f4908955f41c90485e355864a470414cbf13eaffa75e35f2bfc236a71ce34aa398d3d9fa328ffd98161e51640fe9ea705a9df6e83c935b0467c3a1d6e2262012166507ababa9bc1a8f0d90a8c6079cfd90eff260117a38120ed20e22bbea5cf8e59c8b58629d0592e3de2d432b7c26df2d0d9a8b46ba0090c523b0883abeb8a6f6ebd9d6beda7ffc2c93b19f63cde28a3aa04caf5d6cc24ffc3776923acb72dbf725c29ea1e850547e9ac72aa0cb797efe91b89eddc4dda0ecf72476cbe8511d5d91929774a08360d35df2398df3cde67cf278a6e156511783c4ac638460341c18ac92fc0ff104e49f71b673de3c0746fc4c6846964e08515217e49fd8bacb691ca16f8ec773e5064815a78d55c53f8b6fb2317f42269456577fd1d5e54fbb642ab7e0458525fe2e66967d6fd49d9d6176d53e70ab71de5e53ad82a5d0a26cd0bc0ee936358732f2ac92a70cd4c9654172741bfd9a1c3c3e8ac746fb0d1657a5c991bcfe376c540f847e73c5f5c4bf15c3f5bb809dc0d7c2974f0dac13cb7a466cb47618633065941903f114a6e1adc1063e8e223f7bef96e7e9da8e5642529fd0158532fc3785114eb0a27c076922bf0f11e60c6da1c18c024ae7ea8d59c8bbc642c07aa39ec90b1591010058ff2261e199edb20135cb676602c6f8ea00d8559b84ad5cfd389612207ea8f78d7eb3d3c0ea560d9d17857994060ef1b8cabab4963588a2d2cfcbe4b7557735ccad5bfe028ce6dc7f516575680857290c6b195c99685fa543e00b34b1f3d1448b410e983ffbe043dc92ae82f6c99e341f7cd4c8499d7eb50a1300e17bad5af1ef2c15ca157882bd403c49f8e0f8fc92a5634d510b857a1dbd4f016181e9b53a34f4abe7bafafa03fed06f50bc9fdbe92928920639757d45da705bda86cb1a25adf75946e6b45e4a850a055b834e89050ddfd108981ed59b2183b296d6f36a31be115064965e3c6088837d7952fa0704872581785cdcf4ed404a96d361213745d2f2ffe9cece7b9cac3d4ee2316473d4dbe576218931dbc981afd5c6388d25f336a8e89bb1b3b1756bb69d0ace3edd891b975b45bbe012de2efe24c9b697df62af2c121b1826d211d133eb87c9a8535f687fe04c65602a7cf91d2dcbb48eadd9c913694421b5b3d6c19405c9566f49d6efa563aac9e5eb7aeb61c788735257f2048986cd81f2519f2bdc3a1eeffac6080b068abc55c5aabee31349b6c79ba1846df56b553fd5abd4bbcbc50111244d0d01932c7d74dd9fc97b6b6a8ac92e4860a9b7dd0865b70bf27173606f4b92d953e1a17d55101c25df3104317e9691768197d8f49d2bad407def109e3c926a70ad911576587df1977416e166d8a845f69880b7bf9daa4cfce68621d8ed5f5d5cc469811dbf8213d032f418257bbad434ad6d040ed0535fb16a08007f9f96645ea92a02e2f2872d2b588b32b0c907fd14f8e614dd152ea21575808c3475641859346badb5b03fbcefaba9ab1fecf73b49afdbe19d5cc3796de963b67aeaf2baa32afccc8f7039b04f2949be47b88edf13d4f297c6963cf0a749cf79d4e52682802f93ccbe08723b11bc14aac87ca349c005be02629ea1860ae72baf9bb8e9877bb7ccb93662490e6d0a3a3ccab8b6f6d3c380e2e21525178d7474a1dfe6c322ccd361e1e735c85c5c00d3f0be736c43c5754cbd979e18d9a46904f793f245b0f9f6bc8b1282ae1143e4c39f2dcda10f6fd5d05b93a3c84b46a31e48800c20b7550a1bf741061c973e0add048f596198fb5d0019394ea296e445903bc92821e9edb4c2a81092dd23b6a6ff0bd20f5c7d4a41f328c58aeb5134d2deed1ee80b7705889c322f0b763e6815aadacf532d33c76d0589cb4d3c5184b7a23ad0ff5948ef8faa1e89dc5caa771627b19eea11effc53cb650715d05edfe5724a31ec80bbb9bb20e844bdc2615a249a06274308e62d409852bae52a0101f53e59790fa0b3edd79529aa085daf203ada00789cf57e88b731a7cc95d2f29ead7e62f74ec2780ab2caf8bea7039e1d5108ee89f85f9c8e9c6c6b1ce8136abad59604f105969a4db0738aae9197c447155d4dd2364d33e7bcfbd4b1810bfb85fd21b00105de0b73c642cf62d0456056b6dc58882c18b1907327efde5b19393141b1b249ff8d61fcc58a51e5c1af354319ba98061af7ac5d95543b658d3ad0c4b04b59f3eafdfcd4e1bec6ff3509f306492b5f2f96d073a66247e31fe64e54e1889c42f3b266b6338ba40a7f25829aa99320cc0c0c906b9ec21d1a38e0e56d3bf533e8d02cf5b60d98d93504375926ced4ef0270a91b0da2af8146306a738bec6922cf8a45fc7f4e476b591b76b9c7b8bcbb814d93ce08a3306c6d41885cb20603261d0e9559c20b7688854cc9f28a9fa3bd962c093a0af1794979f8e3d3493713705eac397a06c1db2788b6935edc6a5cbbac6bebd8de388280f9f55aec3efa9410189dc277da08289f0e00fa52e4101dd08610cc6cd8099a678912a215251657b329bf1049ae357f46cbccc0ce50da7c0522e3b4e172521aa296e353e49b2311f4151ae78062dd2d2129c935192e2ff93353aed5bb860d11a7d1bd0056c403e67035ef0743c7c631bf3f6ed71815d6d70e63998d8d487cec5ae105f243467968e6c1cab03e0cbb987d75f8e653afaf63d047890b30f46335ac572cf37aeb9ca99e83b9ef29ea34818f37fee2925ed030fcaea5c7b3255d95f2de1ce032844418d7dadf299ac09415ad09cfcb1ccc33824c98939d8ac7df1314b79386ee85a8e01abbe4fecd7f895eab58eb13f2f268f0f80cb84754d3661200f6b8ee87416cf4adff9862a0dbd92d3bfbb0e92b1727453abfdfadbad2c65e28139c467a8204659f2acb3c01bbfa9e159304de9367223a53aeb5ab228831ca9ff17260427780c72edb2afbfec1ee401ba7c24494e221c0f10b2b0e66884abf59f206c57660f3c17ac0965d12404d5f16b252bd7c74df15b8ae3fbba88fb4b9c0e43a0a9cd0010298c5f963f56f093f939c6b8757588d90150fa7424c2fd6b1ec0aa3baa03a894564136903c95e75de702b3653617f6f6408929c799fb74fd3124653f68ab462add93fa1cc1363056e39437bb51a50f1f3c98e13063a33bdf27d64114656160bd440fef6bffce9240b6e6cfdf5ca5b9be441734c33e66ecceb8682915588fa339673685cf2c0cb431846766581fd3c3fa851790871623a87a276b67f6be80df2646070e11ad3ca9147db5cebfd9dd70fed059224b91e2c6e6627b4aa76d1c232c3cba43faa31469ede645594a5d7eaee8ebf222b1d663d632987ab640500a1cd2bcd50fa7b5eafb47c9b217c2b68b4a671400aca5fb961a81397fa687ea0c645fda8e70ee31bca6a05fef6a695c7da3e91fad99d626538d8d7fc89906347e13eebe3f1b52665b4b4ec80e94a07bd6af6d8625c9884b37ea2fdd8fb0103f83434c4c06ea982f5cbc25c6d440b22713360e690e4724b0079f0e98340edd25b2cba42289b9ad20766f83a15623c22532f848e685a8cd546884654faa1fdd74c25e3464ff18f9ef0eedafc05416877eed72c4d574ed181484e1c84357716a809775cd367a7d616e3ad9584cbb8586d95a83395ba9621261b1621e3167f010e2bbd883addbf8344eaa61606174c4fda843e5ef6b7e6bdba0681f493490dc6730399ef55e3a7602e51dadfb0effafb2abf0f298441c66e8d190b4e7a96b54ace0014352da71cc3fc65d546d6c130</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>生活點滴</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
       </tags>
   </entry>
   <entry>
@@ -1790,6 +1790,101 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
+    <title>【演算法】最大連續子序列和（Max Subarray Sum）</title>
+    <url>/cs/algo/max-subarray-sum/</url>
+    <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
+<p>題目要求我們從 <code>[1, 2, -4, 5 -2, 6, 2]</code> 數列中找出最大的子序列和為 11</p>
+<h2 id="解法-1暴力解"><a class="markdownIt-Anchor" href="#解法-1暴力解"></a> 解法 1：暴力解</h2>
+<p>時間複雜度為：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
+<p>真的太大了，可以忽略不記這種解。</p>
+<span id="more"></span>
+<h2 id="解法-2卡丹算法kadanes-algorithm"><a class="markdownIt-Anchor" href="#解法-2卡丹算法kadanes-algorithm"></a> 解法 2：卡丹算法（Kadane’s Algorithm）</h2>
+<p>時間複雜度為：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
+<p>簡單說明就是決定子序列是否要加上當前值，或是重新開始一個子序列。</p>
+<p>基本上，一邊輸入一邊判斷是否加起來就可以直接用一個一層 for 迴圈解決。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    ll arr[n], sum = <span class="number">0</span>, mx = LONG_LONG_MIN;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; arr[i];</span><br><span class="line">        (i == <span class="number">0</span>) ? sum = arr[i] : sum = <span class="built_in">max</span>(arr[i], sum + arr[i]);</span><br><span class="line">        mx = <span class="built_in">max</span>(mx, sum);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; mx &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="題目"><a class="markdownIt-Anchor" href="#題目"></a> 題目</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9jc2VzLmZpL3Byb2JsZW1zZXQvdGFzay8xNjQz">CSES Maximum Subarray Sum<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+]]></content>
+      <categories>
+        <category>計算機科學</category>
+        <category>演算法</category>
+      </categories>
+      <tags>
+        <tag>筆記</tag>
+        <tag>基礎演算法</tag>
+        <tag>Max Subarray Sum</tag>
+        <tag>最大連續子序列和</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【演算法】前綴和（Prefix Sum）</title>
+    <url>/cs/algo/prefix-sum/</url>
+    <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
+<p>前綴和可記錄 0~n 的總和，在求區間和或者要使用差分轉原數列時會用到。</p>
+<h2 id="應用"><a class="markdownIt-Anchor" href="#應用"></a> 應用</h2>
+<p>區間和、差分陣列轉原陣列時</p>
+<span id="more"></span>
+<h2 id="原理前綴和"><a class="markdownIt-Anchor" href="#原理前綴和"></a> 原理：前綴和</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">index</th>
+<th style="text-align:center">0</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">原 Array</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">-5</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">-3</td>
+</tr>
+<tr>
+<td style="text-align:left">前綴和 sum</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">5</td>
+</tr>
+</tbody>
+</table>
+<p>這時區間和就運用到數學的和差公式：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>b</mi></munderover><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>a</mi></munderover><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><msub><mi>S</mi><mi>b</mi></msub><mo>−</mo><msub><mi>S</mi><mi>a</mi></msub></mstyle></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle\sum_{i=1}^{b}{x_i}-\displaystyle\sum_{i=1}^{a}{x_i}=S_b-S_a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.1137820000000005em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8361130000000003em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.929066em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6513970000000002em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
+<p>取 index 區間和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>2</mn><mo separator="true">,</mo><mn>4</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[2, 4]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">4</span><span class="mclose">]</span></span></span></span> 答案會是 <code>sum[4] - sum[1]</code></p>
+<p>快速總結：取 index 區間和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[a, b]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">]</span></span></span></span> 公式就是 <code>sum[b] - sum[a - 1]</code></p>
+<p>所以在輸入陣列時，我們可以一起記下前綴和。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> n, q;</span><br><span class="line">cin &gt;&gt; n &gt;&gt; q;</span><br><span class="line"><span class="type">int</span> arr[n];</span><br><span class="line"><span class="type">int</span> sum[n + <span class="number">1</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    cin &gt;&gt; arr[i];</span><br><span class="line">    (i == <span class="number">0</span>) ? (sum[i + <span class="number">1</span>] = arr[i]) : (sum[i + <span class="number">1</span>] = arr[i] + sum[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>初始化完後，就可以直接計算詢問的區間和。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (q--) &#123;</span><br><span class="line">    <span class="type">int</span> a, b;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    ll ans = sum[b] - sum[a - <span class="number">1</span>];</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="題目"><a class="markdownIt-Anchor" href="#題目"></a> 題目</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9jc2VzLmZpL3Byb2JsZW1zZXQvdGFzay8xNjQ2">CSES Static Range Sum Queries<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+]]></content>
+      <categories>
+        <category>計算機科學</category>
+        <category>演算法</category>
+      </categories>
+      <tags>
+        <tag>筆記</tag>
+        <tag>基礎演算法</tag>
+        <tag>Prefix Sum</tag>
+        <tag>前綴和</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【演算法】差分（Differential Evolution）</title>
     <url>/cs/algo/differential-evolution/</url>
     <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
@@ -2127,101 +2222,6 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【演算法】最大連續子序列和（Max Subarray Sum）</title>
-    <url>/cs/algo/max-subarray-sum/</url>
-    <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
-<p>題目要求我們從 <code>[1, 2, -4, 5 -2, 6, 2]</code> 數列中找出最大的子序列和為 11</p>
-<h2 id="解法-1暴力解"><a class="markdownIt-Anchor" href="#解法-1暴力解"></a> 解法 1：暴力解</h2>
-<p>時間複雜度為：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>3</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^3)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></p>
-<p>真的太大了，可以忽略不記這種解。</p>
-<span id="more"></span>
-<h2 id="解法-2卡丹算法kadanes-algorithm"><a class="markdownIt-Anchor" href="#解法-2卡丹算法kadanes-algorithm"></a> 解法 2：卡丹算法（Kadane’s Algorithm）</h2>
-<p>時間複雜度為：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
-<p>簡單說明就是決定子序列是否要加上當前值，或是重新開始一個子序列。</p>
-<p>基本上，一邊輸入一邊判斷是否加起來就可以直接用一個一層 for 迴圈解決。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    ll arr[n], sum = <span class="number">0</span>, mx = LONG_LONG_MIN;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; arr[i];</span><br><span class="line">        (i == <span class="number">0</span>) ? sum = arr[i] : sum = <span class="built_in">max</span>(arr[i], sum + arr[i]);</span><br><span class="line">        mx = <span class="built_in">max</span>(mx, sum);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    cout &lt;&lt; mx &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="題目"><a class="markdownIt-Anchor" href="#題目"></a> 題目</h2>
-<ul>
-<li><span class="exturl" data-url="aHR0cHM6Ly9jc2VzLmZpL3Byb2JsZW1zZXQvdGFzay8xNjQz">CSES Maximum Subarray Sum<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-]]></content>
-      <categories>
-        <category>計算機科學</category>
-        <category>演算法</category>
-      </categories>
-      <tags>
-        <tag>筆記</tag>
-        <tag>基礎演算法</tag>
-        <tag>Max Subarray Sum</tag>
-        <tag>最大連續子序列和</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【演算法】前綴和（Prefix Sum）</title>
-    <url>/cs/algo/prefix-sum/</url>
-    <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
-<p>前綴和可記錄 0~n 的總和，在求區間和或者要使用差分轉原數列時會用到。</p>
-<h2 id="應用"><a class="markdownIt-Anchor" href="#應用"></a> 應用</h2>
-<p>區間和、差分陣列轉原陣列時</p>
-<span id="more"></span>
-<h2 id="原理前綴和"><a class="markdownIt-Anchor" href="#原理前綴和"></a> 原理：前綴和</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">index</th>
-<th style="text-align:center">0</th>
-<th style="text-align:center">1</th>
-<th style="text-align:center">2</th>
-<th style="text-align:center">3</th>
-<th style="text-align:center">4</th>
-<th style="text-align:center">5</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">原 Array</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">-5</td>
-<td style="text-align:center">7</td>
-<td style="text-align:center">-3</td>
-</tr>
-<tr>
-<td style="text-align:left">前綴和 sum</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">6</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">5</td>
-</tr>
-</tbody>
-</table>
-<p>這時區間和就運用到數學的和差公式：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>b</mi></munderover><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>a</mi></munderover><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><msub><mi>S</mi><mi>b</mi></msub><mo>−</mo><msub><mi>S</mi><mi>a</mi></msub></mstyle></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle\sum_{i=1}^{b}{x_i}-\displaystyle\sum_{i=1}^{a}{x_i}=S_b-S_a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.1137820000000005em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8361130000000003em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.929066em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6513970000000002em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
-<p>取 index 區間和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>2</mn><mo separator="true">,</mo><mn>4</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[2, 4]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">4</span><span class="mclose">]</span></span></span></span> 答案會是 <code>sum[4] - sum[1]</code></p>
-<p>快速總結：取 index 區間和 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[a, b]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mclose">]</span></span></span></span> 公式就是 <code>sum[b] - sum[a - 1]</code></p>
-<p>所以在輸入陣列時，我們可以一起記下前綴和。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> n, q;</span><br><span class="line">cin &gt;&gt; n &gt;&gt; q;</span><br><span class="line"><span class="type">int</span> arr[n];</span><br><span class="line"><span class="type">int</span> sum[n + <span class="number">1</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    cin &gt;&gt; arr[i];</span><br><span class="line">    (i == <span class="number">0</span>) ? (sum[i + <span class="number">1</span>] = arr[i]) : (sum[i + <span class="number">1</span>] = arr[i] + sum[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>初始化完後，就可以直接計算詢問的區間和。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (q--) &#123;</span><br><span class="line">    <span class="type">int</span> a, b;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    ll ans = sum[b] - sum[a - <span class="number">1</span>];</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="題目"><a class="markdownIt-Anchor" href="#題目"></a> 題目</h2>
-<ul>
-<li><span class="exturl" data-url="aHR0cHM6Ly9jc2VzLmZpL3Byb2JsZW1zZXQvdGFzay8xNjQ2">CSES Static Range Sum Queries<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-]]></content>
-      <categories>
-        <category>計算機科學</category>
-        <category>演算法</category>
-      </categories>
-      <tags>
-        <tag>筆記</tag>
-        <tag>基礎演算法</tag>
-        <tag>Prefix Sum</tag>
-        <tag>前綴和</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【筆記】array 陣列</title>
     <url>/cs/cpp/array/</url>
     <content><![CDATA[<h1 id="基本介紹"><a class="markdownIt-Anchor" href="#基本介紹"></a> 基本介紹</h1>
@@ -2362,6 +2362,95 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
+    <title>【筆記】C++ 檔案讀寫 iofstream</title>
+    <url>/cs/cpp/iofstream/</url>
+    <content><![CDATA[<h2 id="簡述"><a class="markdownIt-Anchor" href="#簡述"></a> 簡述</h2>
+<p>檔案讀寫的用途以小作品來說是常常會用到的，像是遊戲的歷史紀錄、模擬貼文等等，想用 txt 檔存資料的時候都很常使用。</p>
+<p>使用檔案讀寫功能請先引入 <code>&lt;fstream&gt;</code> 標頭檔。</p>
+<p><code>ofstream</code> 表示要輸出到某文件的類別，而不是要輸出到程式。<br />
+<code>ifstream</code> 同理，只是這是輸入到程式中，而不是輸入到檔案。</p>
+<span id="more"></span>
+<h2 id="檔案寫入"><a class="markdownIt-Anchor" href="#檔案寫入"></a> 檔案寫入</h2>
+<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line">ofstream ofs;  <span class="comment">// Output File Stream</span></span><br><span class="line">ofs.<span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>);  <span class="comment">// Open the file u want to write in</span></span><br><span class="line"><span class="keyword">if</span> (ofs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">ofs &lt;&lt; <span class="string">&quot;Hi! World&quot;</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><figcaption><span>test.txt</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
+<p>那如果在執行一次程式呢？</p>
+<figure class="highlight txt"><figcaption><span>test.txt</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
+<p>結果還是一樣。如果我們要添加內容，而不是覆蓋內容，可以將 <code>ofs.open(&quot;test.txt&quot;);</code> 改成 <code>ofs.open(&quot;test.txt&quot;, ios::app);</code> 這個 app 推測是 append 也就是附加、添加內容。所以我們將下方的程式碼執行 2 次，原本 txt 檔裡的內容就不會被覆蓋。</p>
+<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line">ofstream ofs;  <span class="comment">// Output File Stream</span></span><br><span class="line">ofs.<span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>, ios::app);  <span class="comment">// Open the file u want to write in</span></span><br><span class="line"><span class="keyword">if</span> (ofs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">ofs &lt;&lt; <span class="string">&quot;Hi! World&quot;</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><figcaption><span>test.txt</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi! WorldHi! World</span><br></pre></td></tr></table></figure>
+<h2 id="檔案讀取"><a class="markdownIt-Anchor" href="#檔案讀取"></a> 檔案讀取</h2>
+<p>使用方式與檔案寫入相似。</p>
+<figure class="highlight txt"><figcaption><span>text.txt</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line">ifstream ifs;  <span class="comment">// Input File stream</span></span><br><span class="line">ifs.<span class="built_in">open</span>(<span class="string">&quot;text.txt&quot;</span>);  <span class="comment">// Open the file u want to read</span></span><br><span class="line"><span class="keyword">if</span> (ifs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">string str;</span><br><span class="line">ifs &gt;&gt; str;</span><br><span class="line">cout &lt;&lt; str &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><figcaption><span>Output Result</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi!</span><br></pre></td></tr></table></figure>
+<p>為什麼只有 <code>Hi!</code> 呢？其實就跟 cin 一樣，遇到空白就是為輸入完了，所以只擷取到 <code>Hi!</code> 的部分，那要一直重複寫 <code>ifs &gt;&gt; str;</code> 這行？不用，可以用 EoF 的方式做讀取。</p>
+<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line">ifstream ifs;  <span class="comment">// Input File stream</span></span><br><span class="line">ifs.<span class="built_in">open</span>(<span class="string">&quot;text.txt&quot;</span>);  <span class="comment">// Open the file u want to read</span></span><br><span class="line"><span class="keyword">if</span> (ifs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">string str;</span><br><span class="line"><span class="keyword">while</span> (ifs &gt;&gt; str) &#123;</span><br><span class="line">    cout &lt;&lt; str &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><figcaption><span>Output Result</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi!</span><br><span class="line">World</span><br></pre></td></tr></table></figure>
+<p>或是用 <code>getline()</code> 直接讀取整行，忽略空白字元</p>
+<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line">ifstream ifs;  <span class="comment">// Input File stream</span></span><br><span class="line">ifs.<span class="built_in">open</span>(<span class="string">&quot;text.txt&quot;</span>);  <span class="comment">// Open the file u want to read</span></span><br><span class="line"><span class="keyword">if</span> (ifs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">string str;</span><br><span class="line"><span class="keyword">while</span> (<span class="built_in">getline</span>(ifs, str)) &#123;</span><br><span class="line">    cout &lt;&lt; str &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><figcaption><span>Output Result</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
+<p>資料型態一定要用字串存取嗎？不用，看你的檔案放什麼，你就可以用什麼存，整數就用 int，小數點就用 float，都是可以的。</p>
+<h2 id="參考資料"><a class="markdownIt-Anchor" href="#參考資料"></a> 參考資料</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9oYWNrbWQuaW8vQG5kaHUtcHJvZ3JhbW1pbmctMjAyMS9Ca1p1a0c0aks=">C++ 檔案讀寫函式庫 fstream - 上<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+]]></content>
+      <categories>
+        <category>計算機科學</category>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>筆記</tag>
+        <tag>C++</tag>
+        <tag>檔案讀寫</tag>
+        <tag>iofstream</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【筆記】C++ std::min 簡介和使用</title>
+    <url>/cs/cpp/std-min/</url>
+    <content><![CDATA[<!-- Enter "note" to build
+primary
+info
+success
+warning
+danger
+<div class="note default"></div>
+<div class="note default no-icon"></div>
+<details class="note default"><summary><p>summary</p>
+</summary>
+
+</details> -->
+<h2 id="stdmin-簡介"><a class="markdownIt-Anchor" href="#stdmin-簡介"></a> <code>std::min()</code> 簡介</h2>
+<p><code>min</code> 用來判斷大小值，回傳值為判斷值中的最小值。</p>
+<h2 id="兩值判斷範例"><a class="markdownIt-Anchor" href="#兩值判斷範例"></a> 「兩值判斷」範例</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; <span class="built_in">min</span>(<span class="number">123</span>, <span class="number">321</span>);  <span class="comment">// return 123</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">min</span>(<span class="number">4.5</span>, <span class="number">103.0</span>);  <span class="comment">// return 4.5</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">min</span>(<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;D&#x27;</span>);  <span class="comment">// return &#x27;A&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>你說既然 int, float, char 都可以比較，那 string 呢？</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; <span class="built_in">min</span>(<span class="string">&quot;Aa&quot;</span>, <span class="string">&quot;Ab&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p>猜猜看答案是什麼？<code>Aa</code>？<code>Ab</code>？還是會報錯？</p>
+<details class="note info"><summary><p>點我看答案</p>
+</summary>
+<p>答案是不一定，要看編譯器的處理，在 gcc 中，會回傳以下答案</p>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">Ab</span></span><br></pre></td></tr></table></figure>
+<p>這是因為 “Aa” 跟 “Ab” 並非實際存在一個變數位置，因此這兩個實際稱作：字串常量，也就是這兩個會指向某個地址，而剛好，“Ab” 所在的指標地址比 “Aa” 小，因此回傳 “Ab”。</p>
+
+</details>
+<p>若要實際比較兩個字串，請使用變數存取後比較，否則要先強制轉型態</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string s1 = <span class="string">&quot;Aa&quot;</span>, s2 = <span class="string">&quot;Ab&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="built_in">min</span>(<span class="built_in">string</span>(<span class="string">&quot;Aa&quot;</span>), <span class="built_in">string</span>(<span class="string">&quot;Ab&quot;</span>)) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">cout &lt;&lt; <span class="built_in">min</span>(s1, s2) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">Aa</span></span><br><span class="line"><span class="attribute">Aa</span></span><br></pre></td></tr></table></figure>
+<h2 id="多值判斷範例"><a class="markdownIt-Anchor" href="#多值判斷範例"></a> 「多值判斷」範例</h2>
+<p>使用一對 <code>&#123;</code> <code>&#125;</code> 來建構 initializer_list 直接丟進 min 即可得最小值。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; <span class="built_in">min</span>(&#123;<span class="number">3</span>, <span class="number">5</span>, <span class="number">67</span>&#125;);            <span class="comment">// return 3</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">min</span>(&#123;<span class="string">&#x27;F&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;Z&#x27;</span>, <span class="string">&#x27;0&#x27;</span>&#125;);  <span class="comment">// return &#x27;0&#x27;</span></span><br><span class="line"></span><br><span class="line">initializer_list&lt;<span class="type">int</span>&gt; array1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>&#125;;</span><br><span class="line">cout &lt;&lt; <span class="built_in">min</span>(array1) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;  <span class="comment">// return 1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">auto</span> array2 = &#123;<span class="number">555</span>, <span class="number">8964</span>&#125;;</span><br><span class="line">cout &lt;&lt; <span class="built_in">min</span>(array2) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;  <span class="comment">// return 555</span></span><br></pre></td></tr></table></figure>
+<p>若要判斷 vector 中的最小值，建議使用 <code>std::min_element</code>。</p>
+]]></content>
+      <tags>
+        <tag>筆記</tag>
+        <tag>C++</tag>
+        <tag>min</tag>
+        <tag>std</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【筆記】set</title>
     <url>/cs/cpp/set/</url>
     <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
@@ -2488,95 +2577,6 @@ Hexo 的主題多，且擴充的外掛也很多，所以才使用它當我們的
       </tags>
   </entry>
   <entry>
-    <title>【筆記】C++ 檔案讀寫 iofstream</title>
-    <url>/cs/cpp/iofstream/</url>
-    <content><![CDATA[<h2 id="簡述"><a class="markdownIt-Anchor" href="#簡述"></a> 簡述</h2>
-<p>檔案讀寫的用途以小作品來說是常常會用到的，像是遊戲的歷史紀錄、模擬貼文等等，想用 txt 檔存資料的時候都很常使用。</p>
-<p>使用檔案讀寫功能請先引入 <code>&lt;fstream&gt;</code> 標頭檔。</p>
-<p><code>ofstream</code> 表示要輸出到某文件的類別，而不是要輸出到程式。<br />
-<code>ifstream</code> 同理，只是這是輸入到程式中，而不是輸入到檔案。</p>
-<span id="more"></span>
-<h2 id="檔案寫入"><a class="markdownIt-Anchor" href="#檔案寫入"></a> 檔案寫入</h2>
-<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line">ofstream ofs;  <span class="comment">// Output File Stream</span></span><br><span class="line">ofs.<span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>);  <span class="comment">// Open the file u want to write in</span></span><br><span class="line"><span class="keyword">if</span> (ofs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">ofs &lt;&lt; <span class="string">&quot;Hi! World&quot;</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><figcaption><span>test.txt</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
-<p>那如果在執行一次程式呢？</p>
-<figure class="highlight txt"><figcaption><span>test.txt</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
-<p>結果還是一樣。如果我們要添加內容，而不是覆蓋內容，可以將 <code>ofs.open(&quot;test.txt&quot;);</code> 改成 <code>ofs.open(&quot;test.txt&quot;, ios::app);</code> 這個 app 推測是 append 也就是附加、添加內容。所以我們將下方的程式碼執行 2 次，原本 txt 檔裡的內容就不會被覆蓋。</p>
-<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line">ofstream ofs;  <span class="comment">// Output File Stream</span></span><br><span class="line">ofs.<span class="built_in">open</span>(<span class="string">&quot;test.txt&quot;</span>, ios::app);  <span class="comment">// Open the file u want to write in</span></span><br><span class="line"><span class="keyword">if</span> (ofs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">ofs &lt;&lt; <span class="string">&quot;Hi! World&quot;</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><figcaption><span>test.txt</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi! WorldHi! World</span><br></pre></td></tr></table></figure>
-<h2 id="檔案讀取"><a class="markdownIt-Anchor" href="#檔案讀取"></a> 檔案讀取</h2>
-<p>使用方式與檔案寫入相似。</p>
-<figure class="highlight txt"><figcaption><span>text.txt</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
-<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line">ifstream ifs;  <span class="comment">// Input File stream</span></span><br><span class="line">ifs.<span class="built_in">open</span>(<span class="string">&quot;text.txt&quot;</span>);  <span class="comment">// Open the file u want to read</span></span><br><span class="line"><span class="keyword">if</span> (ifs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">string str;</span><br><span class="line">ifs &gt;&gt; str;</span><br><span class="line">cout &lt;&lt; str &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><figcaption><span>Output Result</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi!</span><br></pre></td></tr></table></figure>
-<p>為什麼只有 <code>Hi!</code> 呢？其實就跟 cin 一樣，遇到空白就是為輸入完了，所以只擷取到 <code>Hi!</code> 的部分，那要一直重複寫 <code>ifs &gt;&gt; str;</code> 這行？不用，可以用 EoF 的方式做讀取。</p>
-<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line">ifstream ifs;  <span class="comment">// Input File stream</span></span><br><span class="line">ifs.<span class="built_in">open</span>(<span class="string">&quot;text.txt&quot;</span>);  <span class="comment">// Open the file u want to read</span></span><br><span class="line"><span class="keyword">if</span> (ifs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">string str;</span><br><span class="line"><span class="keyword">while</span> (ifs &gt;&gt; str) &#123;</span><br><span class="line">    cout &lt;&lt; str &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><figcaption><span>Output Result</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi!</span><br><span class="line">World</span><br></pre></td></tr></table></figure>
-<p>或是用 <code>getline()</code> 直接讀取整行，忽略空白字元</p>
-<figure class="highlight cpp"><figcaption><span>main.cpp</span></figcaption><table><tr><td class="code"><pre><span class="line">ifstream ifs;  <span class="comment">// Input File stream</span></span><br><span class="line">ifs.<span class="built_in">open</span>(<span class="string">&quot;text.txt&quot;</span>);  <span class="comment">// Open the file u want to read</span></span><br><span class="line"><span class="keyword">if</span> (ifs.<span class="built_in">fail</span>()) &#123;  <span class="comment">// Debug, if file opening failed;</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;File opening failed\n&quot;</span>;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line">string str;</span><br><span class="line"><span class="keyword">while</span> (<span class="built_in">getline</span>(ifs, str)) &#123;</span><br><span class="line">    cout &lt;&lt; str &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight txt"><figcaption><span>Output Result</span></figcaption><table><tr><td class="code"><pre><span class="line">Hi! World</span><br></pre></td></tr></table></figure>
-<p>資料型態一定要用字串存取嗎？不用，看你的檔案放什麼，你就可以用什麼存，整數就用 int，小數點就用 float，都是可以的。</p>
-<h2 id="參考資料"><a class="markdownIt-Anchor" href="#參考資料"></a> 參考資料</h2>
-<ul>
-<li><span class="exturl" data-url="aHR0cHM6Ly9oYWNrbWQuaW8vQG5kaHUtcHJvZ3JhbW1pbmctMjAyMS9Ca1p1a0c0aks=">C++ 檔案讀寫函式庫 fstream - 上<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-]]></content>
-      <categories>
-        <category>計算機科學</category>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>筆記</tag>
-        <tag>C++</tag>
-        <tag>檔案讀寫</tag>
-        <tag>iofstream</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【筆記】C++ std::min 簡介和使用</title>
-    <url>/cs/cpp/std-min/</url>
-    <content><![CDATA[<!-- Enter "note" to build
-primary
-info
-success
-warning
-danger
-<div class="note default"></div>
-<div class="note default no-icon"></div>
-<details class="note default"><summary><p>summary</p>
-</summary>
-
-</details> -->
-<h2 id="stdmin-簡介"><a class="markdownIt-Anchor" href="#stdmin-簡介"></a> <code>std::min()</code> 簡介</h2>
-<p><code>min</code> 用來判斷大小值，回傳值為判斷值中的最小值。</p>
-<h2 id="兩值判斷範例"><a class="markdownIt-Anchor" href="#兩值判斷範例"></a> 「兩值判斷」範例</h2>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; <span class="built_in">min</span>(<span class="number">123</span>, <span class="number">321</span>);  <span class="comment">// return 123</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">min</span>(<span class="number">4.5</span>, <span class="number">103.0</span>);  <span class="comment">// return 4.5</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">min</span>(<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;D&#x27;</span>);  <span class="comment">// return &#x27;A&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>你說既然 int, float, char 都可以比較，那 string 呢？</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; <span class="built_in">min</span>(<span class="string">&quot;Aa&quot;</span>, <span class="string">&quot;Ab&quot;</span>);</span><br></pre></td></tr></table></figure>
-<p>猜猜看答案是什麼？<code>Aa</code>？<code>Ab</code>？還是會報錯？</p>
-<details class="note info"><summary><p>點我看答案</p>
-</summary>
-<p>答案是不一定，要看編譯器的處理，在 gcc 中，會回傳以下答案</p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">Ab</span></span><br></pre></td></tr></table></figure>
-<p>這是因為 “Aa” 跟 “Ab” 並非實際存在一個變數位置，因此這兩個實際稱作：字串常量，也就是這兩個會指向某個地址，而剛好，“Ab” 所在的指標地址比 “Aa” 小，因此回傳 “Ab”。</p>
-
-</details>
-<p>若要實際比較兩個字串，請使用變數存取後比較，否則要先強制轉型態</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">string s1 = <span class="string">&quot;Aa&quot;</span>, s2 = <span class="string">&quot;Ab&quot;</span>;</span><br><span class="line">cout &lt;&lt; <span class="built_in">min</span>(<span class="built_in">string</span>(<span class="string">&quot;Aa&quot;</span>), <span class="built_in">string</span>(<span class="string">&quot;Ab&quot;</span>)) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">cout &lt;&lt; <span class="built_in">min</span>(s1, s2) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">Aa</span></span><br><span class="line"><span class="attribute">Aa</span></span><br></pre></td></tr></table></figure>
-<h2 id="多值判斷範例"><a class="markdownIt-Anchor" href="#多值判斷範例"></a> 「多值判斷」範例</h2>
-<p>使用一對 <code>&#123;</code> <code>&#125;</code> 來建構 initializer_list 直接丟進 min 即可得最小值。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cout &lt;&lt; <span class="built_in">min</span>(&#123;<span class="number">3</span>, <span class="number">5</span>, <span class="number">67</span>&#125;);            <span class="comment">// return 3</span></span><br><span class="line">cout &lt;&lt; <span class="built_in">min</span>(&#123;<span class="string">&#x27;F&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;Z&#x27;</span>, <span class="string">&#x27;0&#x27;</span>&#125;);  <span class="comment">// return &#x27;0&#x27;</span></span><br><span class="line"></span><br><span class="line">initializer_list&lt;<span class="type">int</span>&gt; array1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>&#125;;</span><br><span class="line">cout &lt;&lt; <span class="built_in">min</span>(array1) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;  <span class="comment">// return 1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">auto</span> array2 = &#123;<span class="number">555</span>, <span class="number">8964</span>&#125;;</span><br><span class="line">cout &lt;&lt; <span class="built_in">min</span>(array2) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;  <span class="comment">// return 555</span></span><br></pre></td></tr></table></figure>
-<p>若要判斷 vector 中的最小值，建議使用 <code>std::min_element</code>。</p>
-]]></content>
-      <tags>
-        <tag>筆記</tag>
-        <tag>C++</tag>
-        <tag>min</tag>
-        <tag>std</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【筆記】字串 string</title>
     <url>/cs/cpp/string/</url>
     <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
@@ -2668,44 +2668,6 @@ danger
         <tag>strigstream</tag>
         <tag>字串流</tag>
         <tag>字串切割</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【圖論】BFS 廣度優先搜尋演算法</title>
-    <url>/cs/graph/bfs/</url>
-    <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
-<p>在競程中，常有幾種形式出現 BFS 題目，包括但不限於圖論的 Array、Tree 等。</p>
-<h2 id="原理"><a class="markdownIt-Anchor" href="#原理"></a> 原理</h2>
-<p>通常以 Queue 來實現 BFS。若找到此處為可走路徑，則加入其出邊至 Queue 容器（要判斷是否為邊界、是否走過）。</p>
-<span id="more"></span>
-<h2 id="例子"><a class="markdownIt-Anchor" href="#例子"></a> 例子</h2>
-<p>第一行輸入一個 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false">(</mo><mn>1</mn><mo>&lt;</mo><mo>=</mo><mi>N</mi><mo>&lt;</mo><mn>1000</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">N(1&lt;=N&lt;1000)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mclose">)</span></span></span></span> 值，表示圖為 N*N 的陣列。</p>
-<p>2 ~ N+1 行為輸入的圖，僅包含 <code>#</code>、<code>.</code> 前者表示牆壁，後者表示可走路徑，超出邊界亦視為牆壁。</p>
-<p>Sample Input:</p>
-<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"><span class="number">9</span></span><br><span class="line">#########</span><br><span class="line">#...#####</span><br><span class="line">#.#.##.##</span><br><span class="line">#...#####</span><br><span class="line">#####..##</span><br><span class="line">##.##..##</span><br><span class="line">##.##..##</span><br><span class="line">##.######</span><br><span class="line">######...</span><br></pre></td></tr></table></figure>
-<p>請輸出可走路徑的總個數。（我不知道怎麼描述）</p>
-<p>Sample Output:</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">5</span><br></pre></td></tr></table></figure>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">string str;</span><br><span class="line"><span class="type">int</span> n, cnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> g[<span class="number">1005</span>][<span class="number">1005</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"><span class="type">int</span> dx[<span class="number">4</span>] = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>&#125;;</span><br><span class="line"><span class="type">int</span> dy[<span class="number">4</span>] = &#123;<span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">bfs</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    queue&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt; que;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (g[i][j] == <span class="number">1</span>) &#123;</span><br><span class="line">                que.<span class="built_in">push</span>(&#123;i, j&#125;);</span><br><span class="line">                <span class="comment">// when loop finds availible path, cnt add 1</span></span><br><span class="line">                cnt++;</span><br><span class="line">                </span><br><span class="line">                <span class="comment">// BFS</span></span><br><span class="line">                <span class="keyword">while</span> (!que.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">                    <span class="keyword">auto</span> now = que.<span class="built_in">front</span>();</span><br><span class="line">                    que.<span class="built_in">pop</span>();</span><br><span class="line">                    </span><br><span class="line">                    <span class="comment">// when it checked, fix it to 0</span></span><br><span class="line">                    g[now.first][now.second] = <span class="number">0</span>;</span><br><span class="line">                    </span><br><span class="line">                    <span class="comment">// check for next 4 direction</span></span><br><span class="line">                    <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; <span class="number">4</span>; k++) &#123;</span><br><span class="line">                        <span class="type">int</span> x = now.first + dx[k];</span><br><span class="line">                        <span class="type">int</span> y = now.second + dy[k];</span><br><span class="line"></span><br><span class="line">                        <span class="keyword">if</span> (x &gt;= <span class="number">0</span> &amp;&amp; x &lt; n &amp;&amp; y &gt;= <span class="number">0</span> &amp;&amp; y &lt; n &amp;&amp; g[x][y]) &#123;</span><br><span class="line">                            que.<span class="built_in">push</span>(&#123;x, y&#125;);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// init</span></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; str;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (str[j] == <span class="string">&#x27;.&#x27;</span>) g[i][j] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// BFS</span></span><br><span class="line">    <span class="built_in">bfs</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// print count</span></span><br><span class="line">    cout &lt;&lt; cnt &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="練習題"><a class="markdownIt-Anchor" href="#練習題"></a> 練習題</h2>
-<ul>
-<li><span class="exturl" data-url="aHR0cHM6Ly9jc2VzLmZpL3Byb2JsZW1zZXQvdGFzay8xMTky">CSES Counting Rooms<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9jc2VzLmZpL3Byb2JsZW1zZXQvdGFzay8xMTkzLw==">CSES Labyrinth<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWQzNjU=">ZeroJudge d365. 10336 - Rank the Languages<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWQ0MDY=">ZeroJudge d406. 倒水時間<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWsyMDU=">ZeroJudge k205. 蝸牛的踩地雷攻略 1 (插旗)<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWs2MTU=">ZeroJudge k615. 蝸牛的踩地雷攻略 2 (掃雷)<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPW43MDA=">ZeroJudge n700. 蝸牛的踩地雷攻略 3 (點方塊)<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
-]]></content>
-      <categories>
-        <category>計算機科學</category>
-        <category>圖論</category>
-      </categories>
-      <tags>
-        <tag>筆記</tag>
-        <tag>BFS</tag>
-        <tag>圖論</tag>
       </tags>
   </entry>
   <entry>
@@ -2928,6 +2890,44 @@ E. Run Time Error</p>
       </tags>
   </entry>
   <entry>
+    <title>【圖論】BFS 廣度優先搜尋演算法</title>
+    <url>/cs/graph/bfs/</url>
+    <content><![CDATA[<h2 id="簡介"><a class="markdownIt-Anchor" href="#簡介"></a> 簡介</h2>
+<p>在競程中，常有幾種形式出現 BFS 題目，包括但不限於圖論的 Array、Tree 等。</p>
+<h2 id="原理"><a class="markdownIt-Anchor" href="#原理"></a> 原理</h2>
+<p>通常以 Queue 來實現 BFS。若找到此處為可走路徑，則加入其出邊至 Queue 容器（要判斷是否為邊界、是否走過）。</p>
+<span id="more"></span>
+<h2 id="例子"><a class="markdownIt-Anchor" href="#例子"></a> 例子</h2>
+<p>第一行輸入一個 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false">(</mo><mn>1</mn><mo>&lt;</mo><mo>=</mo><mi>N</mi><mo>&lt;</mo><mn>1000</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">N(1&lt;=N&lt;1000)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span></span><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mclose">)</span></span></span></span> 值，表示圖為 N*N 的陣列。</p>
+<p>2 ~ N+1 行為輸入的圖，僅包含 <code>#</code>、<code>.</code> 前者表示牆壁，後者表示可走路徑，超出邊界亦視為牆壁。</p>
+<p>Sample Input:</p>
+<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line"><span class="number">9</span></span><br><span class="line">#########</span><br><span class="line">#...#####</span><br><span class="line">#.#.##.##</span><br><span class="line">#...#####</span><br><span class="line">#####..##</span><br><span class="line">##.##..##</span><br><span class="line">##.##..##</span><br><span class="line">##.######</span><br><span class="line">######...</span><br></pre></td></tr></table></figure>
+<p>請輸出可走路徑的總個數。（我不知道怎麼描述）</p>
+<p>Sample Output:</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">5</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ouo ios_base::sync_with_stdio(false), cin.tie(0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> db double</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line">string str;</span><br><span class="line"><span class="type">int</span> n, cnt = <span class="number">0</span>;</span><br><span class="line"><span class="type">int</span> g[<span class="number">1005</span>][<span class="number">1005</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"><span class="type">int</span> dx[<span class="number">4</span>] = &#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>&#125;;</span><br><span class="line"><span class="type">int</span> dy[<span class="number">4</span>] = &#123;<span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>, <span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">bfs</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    queue&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt; que;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (g[i][j] == <span class="number">1</span>) &#123;</span><br><span class="line">                que.<span class="built_in">push</span>(&#123;i, j&#125;);</span><br><span class="line">                <span class="comment">// when loop finds availible path, cnt add 1</span></span><br><span class="line">                cnt++;</span><br><span class="line">                </span><br><span class="line">                <span class="comment">// BFS</span></span><br><span class="line">                <span class="keyword">while</span> (!que.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">                    <span class="keyword">auto</span> now = que.<span class="built_in">front</span>();</span><br><span class="line">                    que.<span class="built_in">pop</span>();</span><br><span class="line">                    </span><br><span class="line">                    <span class="comment">// when it checked, fix it to 0</span></span><br><span class="line">                    g[now.first][now.second] = <span class="number">0</span>;</span><br><span class="line">                    </span><br><span class="line">                    <span class="comment">// check for next 4 direction</span></span><br><span class="line">                    <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; <span class="number">4</span>; k++) &#123;</span><br><span class="line">                        <span class="type">int</span> x = now.first + dx[k];</span><br><span class="line">                        <span class="type">int</span> y = now.second + dy[k];</span><br><span class="line"></span><br><span class="line">                        <span class="keyword">if</span> (x &gt;= <span class="number">0</span> &amp;&amp; x &lt; n &amp;&amp; y &gt;= <span class="number">0</span> &amp;&amp; y &lt; n &amp;&amp; g[x][y]) &#123;</span><br><span class="line">                            que.<span class="built_in">push</span>(&#123;x, y&#125;);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// init</span></span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        cin &gt;&gt; str;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (str[j] == <span class="string">&#x27;.&#x27;</span>) g[i][j] = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// BFS</span></span><br><span class="line">    <span class="built_in">bfs</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// print count</span></span><br><span class="line">    cout &lt;&lt; cnt &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="練習題"><a class="markdownIt-Anchor" href="#練習題"></a> 練習題</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9jc2VzLmZpL3Byb2JsZW1zZXQvdGFzay8xMTky">CSES Counting Rooms<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9jc2VzLmZpL3Byb2JsZW1zZXQvdGFzay8xMTkzLw==">CSES Labyrinth<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWQzNjU=">ZeroJudge d365. 10336 - Rank the Languages<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWQ0MDY=">ZeroJudge d406. 倒水時間<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWsyMDU=">ZeroJudge k205. 蝸牛的踩地雷攻略 1 (插旗)<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWs2MTU=">ZeroJudge k615. 蝸牛的踩地雷攻略 2 (掃雷)<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPW43MDA=">ZeroJudge n700. 蝸牛的踩地雷攻略 3 (點方塊)<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+]]></content>
+      <categories>
+        <category>計算機科學</category>
+        <category>圖論</category>
+      </categories>
+      <tags>
+        <tag>筆記</tag>
+        <tag>BFS</tag>
+        <tag>圖論</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【解題】Zerojudge a013. 羅馬數字</title>
     <url>/solved/ZeroJudge/a013/</url>
     <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
@@ -2945,6 +2945,25 @@ E. Run Time Error</p>
         <tag>解題</tag>
         <tag>Zerojudge</tag>
         <tag>進位制</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【解題】Zerojudge a290: 新手訓練系列 ~ 圖論</title>
+    <url>/solved/ZeroJudge/a290/</url>
+    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWEyOTA=">a290: 新手訓練系列 ~ 圖論<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
+<p>先將圖建好，再用 BFS 慢慢走訪，從訪問的起點開始，走過的地方都標記為 true ，若最後終點是 true，輸出 Yes!!!，否則 No!!!</p>
+<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
+<figure class="highlight cpp"><figcaption><span>a290</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> N, M;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; N &gt;&gt; M) &#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; d[N];</span><br><span class="line">        queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">        <span class="type">bool</span> check[<span class="number">800</span>] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; M; i++) &#123;</span><br><span class="line">            <span class="type">int</span> a, b;</span><br><span class="line">            cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">            a--;</span><br><span class="line">            b--;</span><br><span class="line">            d[a].<span class="built_in">push_back</span>(b);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 將能走的路徑都設為 true</span></span><br><span class="line">        <span class="type">int</span> A, B;</span><br><span class="line">        cin &gt;&gt; A &gt;&gt; B;</span><br><span class="line">        A--;</span><br><span class="line">        B--;</span><br><span class="line">        q.<span class="built_in">push</span>(A);</span><br><span class="line">        check[A] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="type">int</span> temp = q.<span class="built_in">front</span>();</span><br><span class="line">            q.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;i : d[temp]) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!check[i]) &#123;</span><br><span class="line">                    check[i] = <span class="literal">true</span>;</span><br><span class="line">                    q.<span class="built_in">push</span>(i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 訪問 B 點是否能走到</span></span><br><span class="line">        <span class="keyword">if</span> (check[B]) &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Yes!!!\n&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;No!!!\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>解題</category>
+        <category>ZeroJudge</category>
+      </categories>
+      <tags>
+        <tag>解題</tag>
+        <tag>Zerojudge</tag>
+        <tag>Graph</tag>
       </tags>
   </entry>
   <entry>
@@ -2981,25 +3000,6 @@ danger
         <tag>CPE</tag>
         <tag>UVa</tag>
         <tag>GCD</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【解題】Zerojudge a290: 新手訓練系列 ~ 圖論</title>
-    <url>/solved/ZeroJudge/a290/</url>
-    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWEyOTA=">a290: 新手訓練系列 ~ 圖論<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
-<p>先將圖建好，再用 BFS 慢慢走訪，從訪問的起點開始，走過的地方都標記為 true ，若最後終點是 true，輸出 Yes!!!，否則 No!!!</p>
-<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
-<figure class="highlight cpp"><figcaption><span>a290</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ios_base::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> N, M;</span><br><span class="line">    <span class="keyword">while</span> (cin &gt;&gt; N &gt;&gt; M) &#123;</span><br><span class="line">        vector&lt;<span class="type">int</span>&gt; d[N];</span><br><span class="line">        queue&lt;<span class="type">int</span>&gt; q;</span><br><span class="line">        <span class="type">bool</span> check[<span class="number">800</span>] = &#123;<span class="literal">false</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; M; i++) &#123;</span><br><span class="line">            <span class="type">int</span> a, b;</span><br><span class="line">            cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">            a--;</span><br><span class="line">            b--;</span><br><span class="line">            d[a].<span class="built_in">push_back</span>(b);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 將能走的路徑都設為 true</span></span><br><span class="line">        <span class="type">int</span> A, B;</span><br><span class="line">        cin &gt;&gt; A &gt;&gt; B;</span><br><span class="line">        A--;</span><br><span class="line">        B--;</span><br><span class="line">        q.<span class="built_in">push</span>(A);</span><br><span class="line">        check[A] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">while</span> (!q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            <span class="type">int</span> temp = q.<span class="built_in">front</span>();</span><br><span class="line">            q.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;i : d[temp]) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!check[i]) &#123;</span><br><span class="line">                    check[i] = <span class="literal">true</span>;</span><br><span class="line">                    q.<span class="built_in">push</span>(i);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 訪問 B 點是否能走到</span></span><br><span class="line">        <span class="keyword">if</span> (check[B]) &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;Yes!!!\n&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;No!!!\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>解題</category>
-        <category>ZeroJudge</category>
-      </categories>
-      <tags>
-        <tag>解題</tag>
-        <tag>Zerojudge</tag>
-        <tag>Graph</tag>
       </tags>
   </entry>
   <entry>
@@ -3157,33 +3157,6 @@ danger
       </tags>
   </entry>
   <entry>
-    <title>【解題】Zerojudge j179: 資料分類 (Classification)</title>
-    <url>/solved/ZeroJudge/j179/</url>
-    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWoxNzk=">j179: 資料分類 (Classification)<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
-<p>這題用到 <code>#include &lt;string&gt;</code> 裡的 <code>stoi()</code> 函式和 <code>to_string()</code> 函式。（如果你想自己寫出來這兩個函式也可以www）</p>
-<p>然後其他照著題目敘述做應該可以吧！</p>
-<h2 id="stoi-用法"><a class="markdownIt-Anchor" href="#stoi-用法"></a> stoi() 用法</h2>
-<figure class="highlight cpp"><figcaption><span>use_stoi()</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    string str = <span class="string">&quot;01234&quot;</span>;</span><br><span class="line">    <span class="type">int</span> a = <span class="built_in">stoi</span>(str);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;a = &quot;</span> &lt;&lt; a &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line">輸出：</span><br><span class="line"><span class="attribute">a</span> <span class="operator">=</span> <span class="number">1234</span></span><br></pre></td></tr></table></figure>
-<h2 id="to_string-用法"><a class="markdownIt-Anchor" href="#to_string-用法"></a> to_string() 用法</h2>
-<figure class="highlight cpp"><figcaption><span>use_to_string()</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> num = <span class="number">-1234</span>;</span><br><span class="line">    string str = <span class="built_in">to_string</span>(num);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;str = &quot;</span> &lt;&lt; str &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line">輸出：</span><br><span class="line"><span class="attribute">str</span> <span class="operator">=</span> -<span class="number">1234</span></span><br></pre></td></tr></table></figure>
-<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
-<figure class="highlight cpp"><figcaption><span>j179</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function">string <span class="title">solve</span><span class="params">(string num, <span class="type">int</span> len)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n = <span class="built_in">stoi</span>(num), a = <span class="number">0</span>, b = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">switch</span> (len) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">            a = n / <span class="number">100</span>;</span><br><span class="line">            b = n % <span class="number">100</span>;</span><br><span class="line">            <span class="keyword">if</span> (a &gt; <span class="number">9</span>) a = (a / <span class="number">10</span>) * (a % <span class="number">10</span>);</span><br><span class="line">            <span class="keyword">if</span> (b &gt; <span class="number">9</span>) b = (b / <span class="number">10</span>) * (b % <span class="number">10</span>);</span><br><span class="line">            <span class="keyword">if</span> (a == <span class="number">0</span>) <span class="keyword">return</span> <span class="built_in">to_string</span>(b);</span><br><span class="line">            num = <span class="built_in">to_string</span>(a) + <span class="built_in">to_string</span>(b);</span><br><span class="line">            <span class="keyword">return</span> num;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">            a = (n / <span class="number">100</span>) * ((n / <span class="number">10</span>) % <span class="number">10</span>);</span><br><span class="line">            b = ((n / <span class="number">10</span>) % <span class="number">10</span>) * (n % <span class="number">10</span>);</span><br><span class="line">            num = <span class="built_in">to_string</span>(a) + <span class="built_in">to_string</span>(b);</span><br><span class="line">            <span class="keyword">return</span> num;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">            a = n / <span class="number">10</span>;</span><br><span class="line">            b = n % <span class="number">10</span>;</span><br><span class="line">            num = <span class="built_in">to_string</span>(a * b);</span><br><span class="line">            <span class="keyword">return</span> num;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;0&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;0&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    string num;</span><br><span class="line">    cin &gt;&gt; num;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (num.<span class="built_in">size</span>() != <span class="number">1</span>) &#123;</span><br><span class="line">        num = <span class="built_in">solve</span>(num, num.<span class="built_in">size</span>());</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; num;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>解題</category>
-        <category>ZeroJudge</category>
-      </categories>
-      <tags>
-        <tag>TOI</tag>
-        <tag>解題</tag>
-        <tag>Zerojudge</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【解題】Zerojudge j180: 戰備存糧 (Food)</title>
     <url>/solved/ZeroJudge/j180/</url>
     <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
@@ -3231,6 +3204,33 @@ danger
       </categories>
       <tags>
         <tag>APCS</tag>
+        <tag>解題</tag>
+        <tag>Zerojudge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【解題】Zerojudge j179: 資料分類 (Classification)</title>
+    <url>/solved/ZeroJudge/j179/</url>
+    <content><![CDATA[<h1 id="題目連結"><a class="markdownIt-Anchor" href="#題目連結"></a> 題目連結</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly96ZXJvanVkZ2UudHcvU2hvd1Byb2JsZW0/cHJvYmxlbWlkPWoxNzk=">j179: 資料分類 (Classification)<i class="fa fa-external-link-alt"></i></span></p>
+<h1 id="我的想法"><a class="markdownIt-Anchor" href="#我的想法"></a> 我的想法</h1>
+<p>這題用到 <code>#include &lt;string&gt;</code> 裡的 <code>stoi()</code> 函式和 <code>to_string()</code> 函式。（如果你想自己寫出來這兩個函式也可以www）</p>
+<p>然後其他照著題目敘述做應該可以吧！</p>
+<h2 id="stoi-用法"><a class="markdownIt-Anchor" href="#stoi-用法"></a> stoi() 用法</h2>
+<figure class="highlight cpp"><figcaption><span>use_stoi()</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    string str = <span class="string">&quot;01234&quot;</span>;</span><br><span class="line">    <span class="type">int</span> a = <span class="built_in">stoi</span>(str);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;a = &quot;</span> &lt;&lt; a &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line">輸出：</span><br><span class="line"><span class="attribute">a</span> <span class="operator">=</span> <span class="number">1234</span></span><br></pre></td></tr></table></figure>
+<h2 id="to_string-用法"><a class="markdownIt-Anchor" href="#to_string-用法"></a> to_string() 用法</h2>
+<figure class="highlight cpp"><figcaption><span>use_to_string()</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> num = <span class="number">-1234</span>;</span><br><span class="line">    string str = <span class="built_in">to_string</span>(num);</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;str = &quot;</span> &lt;&lt; str &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line">輸出：</span><br><span class="line"><span class="attribute">str</span> <span class="operator">=</span> -<span class="number">1234</span></span><br></pre></td></tr></table></figure>
+<h1 id="參考解答"><a class="markdownIt-Anchor" href="#參考解答"></a> 參考解答</h1>
+<figure class="highlight cpp"><figcaption><span>j179</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function">string <span class="title">solve</span><span class="params">(string num, <span class="type">int</span> len)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> n = <span class="built_in">stoi</span>(num), a = <span class="number">0</span>, b = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">switch</span> (len) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">            a = n / <span class="number">100</span>;</span><br><span class="line">            b = n % <span class="number">100</span>;</span><br><span class="line">            <span class="keyword">if</span> (a &gt; <span class="number">9</span>) a = (a / <span class="number">10</span>) * (a % <span class="number">10</span>);</span><br><span class="line">            <span class="keyword">if</span> (b &gt; <span class="number">9</span>) b = (b / <span class="number">10</span>) * (b % <span class="number">10</span>);</span><br><span class="line">            <span class="keyword">if</span> (a == <span class="number">0</span>) <span class="keyword">return</span> <span class="built_in">to_string</span>(b);</span><br><span class="line">            num = <span class="built_in">to_string</span>(a) + <span class="built_in">to_string</span>(b);</span><br><span class="line">            <span class="keyword">return</span> num;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">            a = (n / <span class="number">100</span>) * ((n / <span class="number">10</span>) % <span class="number">10</span>);</span><br><span class="line">            b = ((n / <span class="number">10</span>) % <span class="number">10</span>) * (n % <span class="number">10</span>);</span><br><span class="line">            num = <span class="built_in">to_string</span>(a) + <span class="built_in">to_string</span>(b);</span><br><span class="line">            <span class="keyword">return</span> num;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">            a = n / <span class="number">10</span>;</span><br><span class="line">            b = n % <span class="number">10</span>;</span><br><span class="line">            num = <span class="built_in">to_string</span>(a * b);</span><br><span class="line">            <span class="keyword">return</span> num;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;0&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;0&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    string num;</span><br><span class="line">    cin &gt;&gt; num;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (num.<span class="built_in">size</span>() != <span class="number">1</span>) &#123;</span><br><span class="line">        num = <span class="built_in">solve</span>(num, num.<span class="built_in">size</span>());</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; num;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>解題</category>
+        <category>ZeroJudge</category>
+      </categories>
+      <tags>
+        <tag>TOI</tag>
         <tag>解題</tag>
         <tag>Zerojudge</tag>
       </tags>
