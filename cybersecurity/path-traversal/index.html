@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-K.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-K.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-K.ico">
+  <link rel="mask-icon" href="/images/logo-K.svg" color="#222">
+  <meta name="google-site-verification" content="AaEkoAT3i0UsXWrh4ue4tbkDSIPbitczMwTw376jzb4">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Traditional+Chinese:300,300italic,400,400italic,700,700italic%7CFira+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"huangmayor0905.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="此網頁被加密了, 請輸入密碼查看">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【筆記】路徑爆破 Path Traversal">
+<meta property="og:url" content="https://huangmayor0905.github.io/cybersecurity/path-traversal/index.html">
+<meta property="og:site_name" content="市長的隨筆">
+<meta property="og:description" content="此網頁被加密了, 請輸入密碼查看">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2024-12-06T12:21:30.000Z">
+<meta property="article:modified_time" content="2024-12-06T12:59:07.331Z">
+<meta property="article:author" content="Eric Huang">
+<meta property="article:tag" content="筆記">
+<meta property="article:tag" content="資安">
+<meta property="article:tag" content="進階資安">
+<meta property="article:tag" content="Path Traversal">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://huangmayor0905.github.io/cybersecurity/path-traversal/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://huangmayor0905.github.io/cybersecurity/path-traversal/","path":"cybersecurity/path-traversal/","title":"【筆記】路徑爆破 Path Traversal"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【筆記】路徑爆破 Path Traversal | 市長的隨筆</title>
+  
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-H75BZLED7F","only_pageview":true,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
+
+
+
+
+
+
+
+<meta name="google-site-verification" content="AOnrBmQ6QhS1CQWvl1Cw5aKbZ9JsDkj4p-W1Nw6gBsA" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6440102652783062"
+     crossorigin="anonymous"></script>
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">市長的隨筆</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">我也好想成為電神喔～</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜尋" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>關於</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔<span class="badge">67</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類<span class="badge">17</span></a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤<span class="badge">81</span></a></li><li class="menu-item menu-item-note"><a href="/cplusplus/" rel="section"><i class="fa-solid fa-note-sticky fa-fw"></i>C++ 筆記</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜尋
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜尋..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Eric Huang"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Eric Huang</p>
+  <div class="site-description" itemprop="description">個人網站</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">67</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">81</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2h1YW5nbWF5b3IwOTA1" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huangmayor0905"><i class="fab fa-github fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOmxpb25odWFuZzkxNDkwM0BnbWFpbC5jb20=" title="E-Mail → mailto:lionhuang914903@gmail.com"><i class="fa fa-envelope fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9rdW9rdW9tYXlvcg==" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;kuokuomayor"><i class="fa-brands fa-x-twitter fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3Byb2ZpbGUucGhwP2lkPTEwMDAwODc0NDI4MDA1Nw==" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;profile.php?id&#x3D;100008744280057"><i class="fab fa-facebook fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zbGp3aGpzLw==" title="Instagram → https:&#x2F;&#x2F;www.instagram.com&#x2F;sljwhjs&#x2F;"><i class="fab fa-instagram fa-fw"></i></span>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="回到頂端">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://huangmayor0905.github.io/cybersecurity/path-traversal/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Eric Huang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="市長的隨筆">
+      <meta itemprop="description" content="個人網站">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【筆記】路徑爆破 Path Traversal | 市長的隨筆">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【筆記】路徑爆破 Path Traversal
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">發布於</span>
+      
+
+      <time title="創建時間：2024-12-06 20:21:30 / 修改時間：20:59:07" itemprop="dateCreated datePublished" datetime="2024-12-06T20:21:30+08:00">2024-12-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分類於</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/cybersecurity/" itemprop="url" rel="index"><span itemprop="name">資安</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">閱讀次數：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="文章字數">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">文章字數：</span>
+      <span>247</span>
+    </span>
+    <span class="post-meta-item" title="所需閱讀時間">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+      <span>1 分鐘</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，這組密碼似乎有些錯誤，請再試試。" data-whm="抱歉，這篇文章不能被校驗，不過您還是能看看解密後的內容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="e3564b89ee58c0b0280631c582e4bc015adc838b50320084ae509efd4d65d772">2255cf7f7e11f8171a4532a014168de864826fb8698783ff10c5face72dbef98830bd8b522d11484d8ec7438a01dbb24fb9632d11c821d728f8aba0b7786ae6eedde1823764181685cc433f0be53c22bfba43ac860d932bc00f1df5a1c81341a4678eeefefb14c991a722cac1f740b2b891f1224297359e8342b301792f6913582ce597276740b22860fb140de693a2e0d5152ee32559180d2c914df9fd452e86d0709221f7c709199fddce63d84b7fb4283395e076d642a1a1283c10910e82e030415d966e1a86a1fd0fb0fc988cf8f88936b32fd41773aac64b8fb0bdad015e3ba86d7b2e57bdb944c25b1a7182cc0601a587c36f369f91bb8a7dbdba68a67d3cd58fe34651771db19e9ebea0b2514995f5611bd2d75a01f3667ada5417b60c5cbced33fa34c707039f3c2430a14abbcd48c3624e93fab64d21474502f830cd9d5f3230eaab6b35501928cbf129fec5d0898139deaa987ade5a13a764922a35caae7765045665c2cfbcbb8760c70e9be509d32518d40eac50f0393106def430f3869033107b192c730abe761f8283a50646d6bb5fd40291e47ad78bd2f837ca6c6a6d96917c02b528a86170ae4ee6fca23b172c81a44b89a1f1a87dea10698551703519c82e4e9d619131bda4570835545d0a12f358d6ea0f4e0a57ba10ea7c75018283bd82bc60579dca341f8746e431de7e2dad6e130119dd5260fb4dffcda60186c01c10f32517172563f6f89fe3c403d08fb1c2c79dc49de7a96cbe6d4804e1af6904755d3d134e26c21ce43225dfba2316e7d865e7268cb1881de714a8bfae22297c205572fc114efe705c5a902b0a5abba762ab42c42ba9a33398fa587f1f3ae1c072c9e0804da0fb3be39a69cc070ca47b57f5f4a154a3cad8ef6c6ca7c05a4431b3644b673b03293fc1f0c69cb79c77b4a479ab5b9020506596317975d58bee14f1ed80de54a53a7ac6c68be141308800610bb6690b06625e2ad81bb362c58528c4fbc0b8519157af9357bee358aefe66af9d905af4f83e31af6f1d9262beff083166fa8d431f7f8d02cdb9a21a0e579c81444b1f1c29277478e4307b8f82afe7d5402663e81bcd888bc05c5c185bc0e84965a200931498ef09f74a70586b8741883ae0f08793fa79ac29d8ddd275780661c616a7d87d6506f2e64f07eedbabd8c26e2916d6bb86e43eff175ab95ce2a73a2450485e778c819a97c04a883c21d07648dbfe4104ca205d3ebaa9a34fd0105da087ef4445a744fe73d93b073d6400c66ce2219625443fe6b644b157449ca713b98f834e707059c65dd909c1939d5a1b376b14b717bd362ad41b247f7030df8d83be116a0abce8e085c552d171b81ac97c87283d82bfc83f3fabd70b5c2d91909bc45a8cfb1bdf806ce89c312323eecb22289129c95b0d5f1995dc58dacc249747793c80b47d900e7458f58d2d131dcf5898f7a3a0aa78225dc9181f972e62e526f660407e0d80a53824833019e50eed53d169948d57bb5915f15ef4bf0ce958b7cf3c08fe9586bcaf026579b7b73e4fff7c6852a42a2a2c9bd70ae47dba2731916a540cd09dc63e330866f90aeedca217842c27d7edbbe96d19fd8c530350d4cda576a7c55c807080f410f40321d317383c2ca354c2793f0a499738d7344195e0efe2ace4e2d12abb311f9ba9dc1940e95100fc1cbd98ff6a67a8086267fbea837ff5d9a0456d98b555d482fb775de01456c13ec0b7e5e0008be1a45d147293dee4a38a0ea0b4e7ad2b397a3c48f5d94ac91534c1afe89976f00474f07a7541dc79ea37ddaa42b9b193e051a6a3aeb8390c515c9bb67826b1b6a5786247b49ca3cf6cc3ba596420f231ae8c2a03a2e5264850bdeeabda9b7c539056c28668b03670c66c287248df49e0e61cb6b761976ed36744711f64242fa247dc8dbb8ec4625a0d5d9398b30dde49a8a024ae091dcc2c92ce78df53c85dcd44517573ee68e9a961d1fbbb357c71664ed3e774e34d495718cb5533ec8ff0b121c6f56893be797ee205f7b390141f51338897c8b50a85af7183140401f339978fc15c97cfe0c5e24e1867d4429cb75f08fd869e2f4ee7899a580992dd82f83dd17e991a9e6ce1c09533ffd37559cd81ac9112c3b93738d750d526fa62d9706a6e8ca12a46b8b48364ad20cb09ed09e4db281201cbd12154a1a3ab801ba02f18c17af31b29c83691acc78925a9740d3b08fddffa9ed72a09bac2435a0b2b534895ca51f2548a8367d846e259ca31b5ce72c03378a21658b181e97e196db54262b00dc8a61471ef0662f672073d9a3c1379c1ca0cb7f564320414b28aa433483091b1f253cf083496489db5f5b449fb97dee21fa4579448393001052c8fa09cd0b3e3f693ff2efc55bf2506e3d0c5c4fa713bcd63e03b070ad9c0b88db3b82ead2e7d898557efd36400f40ea933ab390c7ce8142970b83993ba885962e1aa5a8449e8664b3d023f8989fd0d4331db629600f64a48cac29689d1cafb48da3d4f849807a4d2124db31e56ad975644e54dc44de2fd6bd4408a396df8c547c48cfacb0d05eef518ac1cf789119acf0c871f8e9669f66a7bfb41c22a4020583fa403dd1d51d449b0287185901626aad518329daf3eaed0c59fe4c77b9c37e598d4e08a0e84d101e642313a8adc0eb78cb58366733c53ed227ad00491149e06b279612b0404035b41a140aa8fac52d99b9cea1b770ff1db3dd10fd2137d61a559f0edf4ac8a1e037938ed25edbe2dcdbd45c29de3523fdf5aeb604f8665a54ec5311d418c7e757e483eb0def9d7a349ed471873eeeb3441c06153e832a953c5a202649b1e79eb6c4115119706e122b765670ae15558082d2ed56cb6ec3a21282a9ca319280af62fee4cf10b0cd8b27664f9fe55348e8e7033bb8b23c697d61e2f07efb8acec839292943014920989f8fcbe84b7e3ff158a3b3c29a29196ae02a957128222e4cb201336f2a29d5587980de18b58112fe8b9264318c85bc130a026021a78b5dc870b35648195f50f65023a917ed33567d2ebcb600f532651a6ca8bf35c35ea8db38a0c40bc9e442da14bb07219e4403dbf1e7b4f155e9a0ce5fbec6270c8062f9f6d9342df507293f13abb61412db886401b8e071b99751dfe00d4d85a50101950d827a847a9a6c52d20627047150ac1b25c037186a6da853d97ebae544612fa3f9c2ab7052f83e5505010a70534052925e5b6f10326498cded77896193175d593844fa4b0e4ae4adf59ba986066559950f5df124834fb244215e796925b6fb7d047b0fd381df22004bbb136646997faf944f3e13adfbc6174fc18501e13571319e70a5ecb8217d3ed89cd54316a07f0d86a7cf2ad8ce43e82ab0cde6027dd776faf293ca1a053376647ecbaad1e57113bbc6f5180d27d6f2a9c33b0a3522ad1267e53386f7e2f5e0159d9b5e56b7c7507c2ad3abbe68f2107baecabd9278eb12eefcc0f74864827a7c8c6cf70a17fa0b0801fddb7f50e21e8681db1478960c10d2afadd2794eeed9036cf530e8e59bfddfb669a20e4382c39a203093bf3766b66f5d91f38ae82d7af95bddfbc3c1d838e328024caed3dde55b84531508b5e203fc1abb15e3146148bfd3e7154f57625b5a4ab9b3aa673f527a6c63721f923353e7732ee57e7d4ffd92dcdaf6316a7efa067d6767b2ecd5371e61ae35316f8265c0a29884ed6dbf6f637089a8a218404b41dc7af9530f54336174f0ea106f677fb1a13811eb53f68bd0c7b5ee60d6a67870b3f554401d3474f684c3063a7f4d17c8f3364d0c77263e4e0ef1ae6feb8ce92b818938491ea9a3b24a2b69d5f1e6c9c0a7159f69bd137be91cb3ce2dca14f11cdb597b8b1e80a941da46b337a92b3cf0c68ba12520474f95e4bc2d03f8c7d5f4dcdac18ecc4d30a02d8640e1677f186411fb75a948be3dabc790bed4bc27bc02be97625fa19e077ed82270cf66753dd70ac361d6077dfbed548c06a2530da8c8e19832c071b7c38c0b345eba6521360e26d17ce62c4f15a835cf55cb8fc4bf5fdc8a6cbe69d9ee43269c35b60b2a3103b956c538dc4ded7c9c5d6d6499808a6b5157ed8a47de4ba7d08196c3e9edc9a7b1d1a26efbfce52d64ebb10f177088ade5a6a3d267512f2aa856220bab5a5fc4fed1c5b9a9d9c9c933b9fa11e4be2db52e34705bf115ca101bec8d4441736ba3461b4f4455a39ae5687ab36088a05fc758b1abefd52ddbb70103b46c5c1e4300d3ddb903bf3434be6e449a1dae58ef90f42b79affb50b6e39a606f31020ca82bfb5110f2cccf8b06654e5098276aa107bf60982b246eb4d877f10af71e77d8b1acf16688f778fae18c1139edad48d03067cc0d11818154a47af87f076531c7375d83f88dfffa4d96bcba95bab89b276bc8b348e21487df530d129fe6eb4aad30f81986e8986a9b390a3e89ed0a09fd8efab11b763e1e27de9cb07801b4b27bae76e9cb57bd55fb6f1301dd6dfcd124bd75217da6694ceaae78345ee2b05992edc8aba80f5ea621053916758c0ca5707dffda627f4de3eede4bae8f91ac808356a4fee2dc36980d5b1019e0131086be1276f388a2898373b2d1460689d924cfb7f5461aaa93c08e8f9e0a8e1347d4c38f95f33b32ab72e55b599585c5a562d4af8a769556b5f736fd73e4e735b2c9b3e6f25059303890be6119ed13011ba32c34fa1a0b6a2c7dd2b2bc2b8ddf4931cb62e46209185ed2b0eb7eef2294879a0f08458e97559564e98190c78d8f7ae0194085bcb31f9387787b50f2703e751d4db81cc7a5d0aadc8323090fd0273ead877d59515c8f349e462241f777143a4ee252d2f1cccd74487cf7cfe04e4e3dac0d42441e7320b8cc8a936d658ef1a31178af23899b9e6479e2f3fb3fa041e52f80eea1e1333ecb9b3644aec925bf684ffaa9aee057e7d4f94f073a4a2ae321ee8a4d1ac6a8a09f42d7dfb3b7478847e7d19ab8a024526414299b5d3484e3314f5842235fcb9ec3c42dbe38c8bf258cdce65d82414f69c51c67cf99605f153e5e6608f68208400bb64a9718916a74384a797b3f54a1072548a954519456715bbbe72d02fc92edbe75f711fa2291a2d6265caf11e6afe6412a1296487c0385545f5c5b1d48813f811653ad6eb0ff553baf7c3c63d08972bec7af6ad5d7c12bf4406f9074ee479bb92944af3f680a7e5380595f74844cdeaa4b734e11502b7c6362d1c7aef7e0152c9e54b57fdc25fbeefaaf28a358a7560d2aea65ae84c258e32e2889403ad0fa92fbf2c709d61f04a2d8dd57e426f8775b2356b614a86d3f0b55bf90d1813c61f071bb228ba4df201baf4400d0a1a7319fb8479ac4e544d5d29b2c0ef025a1c8deec8842299b91a4acdddf6d669655eab9737e4bd795871d57693858a0ca2ebeeb3a0976dd3f47234241052423a707a1b45262c67e6ef7221259771fbcc0d54879def36c5fda7e3e637fa51f3759fd20514e95c198159e17e8752d0c4ee8e9abda7ae99ebd45dda3c0cbb347da380512489e55ae27e436da298e81c47fde6e25dbe6c470b4dbae8898b920f8f9a3760f43359dc6c9f2fe3535568fc23e53858c09946c370e4187718c96fc4bfb5fa5063ba631a2c342e7e879dfc4d6840997864911dc8d6a6408766c106cb715fe39cf08401788f1df915551cd9506f8cf0bf7fb5dca082e29a3852b9b1b87360630c076c78eb28328439a687944a04f9b2fc05f31fe43b2f920e7f53d7bdde250d858d0a563bef32b20b95b0838012610a3d3b6d5d556f84d72ad4ea2762f879d33aadc4a3694b31157e657b9d13c0e739246445fd44a07844a206728ba661cd6d78e4eb7e9e92f279ee422806cbed29345f5b6244de6b72f3f4ab17d256202e776ee2141adefc54229248b46d841a6e51b5be4ba1c34c088c3bcbc20329124083f7a037e90a0c62c7cb841725638481998cab75f7ea440faab9cc5083a068409b93dbf832c7db7d92e239a8594a56d86aaa920827dde850a5aa835f30de948de124e338a1620f8e86b6a308feaf0c1fa0448c35a6724ddbef22532f8706c6e714c7c3b7d333c53d8ae335a4f91f4ff92fb4c15f1c8994684ce3872800e1dbfeeda0f67b45c5143d299afb88328041bedf7b1f638a565dd62b26458cc1091157d98378747e63c120a7f54f23f3b22e9d96f1af58e7e11367d1de3fa721ea10b8539efe0beb841af6e0173507acb90a5f094d4e13a0d81bfa1cc34e0812ea957df3f1ed12a6234052c26d7bb6afc4c63ecb4419f67a98d53998fdd74a317d0a46168aed28c180ab24281f404f331a7308808932fbe8b5fce6d488b820989248a856a328344152243105764414218f724bb698d9984acbbb83cd63fc4f759e2843c8dbe520597f195f8a67944524ce5baeb6aa5dd933ef3a17c6d408b27e7fc9752c8ac2c4902c846a6768fbe46844b74a26d1274a582c827b51587aefcf8d1a3c4dfeea69a75601e8f493d056efef07b0f88da9629a2c22fde1da7b887027755e5e67906ab4d6ea317b1123563add5713d7b54bf839bff6d34592f14b162ba086ba297fdc37228f5205f483d8759e98b2c0365159a44b400ff7c868e89c765a5d5f618e19ee2ece958cfcd8c44b4a07404cdd82307087892f6148d17281ad9999aedfc8de97f7fc1a8affa20531ee916fad59f6340b2f23639783ace3e556728804a1e38ec0d48866b85f3a9d88ec73837d6fbcead8a79e02ce5be3061810794ff7c1a391c10bf83e77226f1d997c30cc12e970eede55032fcd8f3ed7424f3970ace525ec4e81418bff37205e9ff32ccb65905e3703450c9eb05ff3919fde75e5b5daa51135383e0ebccd072e35a01adfbad0f78a294ad5cd2b2b3ec94f3ec7c18cecd3d0ac1d366a5e6a29c6c4bde389b5eb8cfe65eef04445239c7a4fa8c8ae5425d36cb8a6a26f05317bb8b8851d70e754c65fc34a563efb55cb8d4b27db06e53b27d18ceafcce1461d6b37cec144f19246d4da2b138f9433b260b94dcf3b507e3636e9a35bdbab56617afd637314e516a37110e6c13053f5f66a0a6a2360766d2afba300994a7b60496c0cb35f26555f945fcb1a6d199da180</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Oops! 這裡似乎需要密碼</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>作者： </strong>Eric Huang
+  </li>
+  <li class="post-copyright-link">
+      <strong>文章連結：</strong>
+      <a href="https://huangmayor0905.github.io/cybersecurity/path-traversal/" title="【筆記】路徑爆破 Path Traversal">https://huangmayor0905.github.io/cybersecurity/path-traversal/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1UVw=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 許可協議。轉載請註明出處！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%AD%86%E8%A8%98/" rel="tag"># 筆記</a>
+              <a href="/tags/%E8%B3%87%E5%AE%89/" rel="tag"># 資安</a>
+              <a href="/tags/%E9%80%B2%E9%9A%8E%E8%B3%87%E5%AE%89/" rel="tag"># 進階資安</a>
+              <a href="/tags/Path-Traversal/" rel="tag"># Path Traversal</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/solved/ZeroJudge/d306/" rel="prev" title="【解題】d306. 10193 - All You Need Is Love">
+                  <i class="fa fa-angle-left"></i> 【解題】d306. 10193 - All You Need Is Love
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/solved/ZeroJudge/d424/" rel="next" title="【解題】Zerojudge d424. 00105 - The Skyline Problem">
+                  【解題】Zerojudge d424. 00105 - The Skyline Problem <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">若要轉載文章，麻煩請保留原作者名稱與原始連結。</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>總字數：</span>
+    <span title="總字數">29k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>所需總閱讀時間 &asymp;</span>
+    <span title="所需總閱讀時間">1:47</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="訪客總數">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 驅動
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":false,"archive":false,"delay":true,"timeout":3000,"priority":true,"url":"https://huangmayor0905.github.io/cybersecurity/path-traversal/"}</script>
+  <script src="/js/third-party/quicklink.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"huangmayor0905","repo":"huangmayor0905.github.io","client_id":"2edf56fae528fa5e1662","client_secret":"b9d5dcfcb3733c370d2e9b6688fc5c2576469520","admin_user":"huangmayor0905","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-TW","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"be407f982fcb64d9333f34b3578ca1b1"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
