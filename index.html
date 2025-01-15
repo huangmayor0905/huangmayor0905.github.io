@@ -250,7 +250,7 @@
       <span class="post-meta-item-text">發布於</span>
       
 
-      <time title="創建時間：2025-01-15 16:09:49 / 修改時間：17:54:21" itemprop="dateCreated datePublished" datetime="2025-01-15T16:09:49+08:00">2025-01-15</time>
+      <time title="創建時間：2025-01-15 16:09:49 / 修改時間：17:57:23" itemprop="dateCreated datePublished" datetime="2025-01-15T16:09:49+08:00">2025-01-15</time>
     </span>
 
   
@@ -280,186 +280,14 @@
     <div class="post-body" itemprop="articleBody">
           <h2 id="引言"><a class="markdownIt-Anchor" href="#引言"></a> 引言</h2>
 <p>隨科技發展下，身邊周遭都是資訊的應用。在享受資訊帶來的便利時，另一面卻是資安的警告。且不久前好友的 Ubuntu 被駭入，只因為「弱密碼」（12345678）被暴力破解，讓我覺得資安的意識應該要多多加強。</p>
-<h2 id="owasp-top-10"><a class="markdownIt-Anchor" href="#owasp-top-10"></a> OWASP Top 10</h2>
-<ol>
-<li><a href="#1-broken-access-control-%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6%E5%A4%B1%E6%95%88">Broken Access Control（XSS）</a></li>
-<li><a href="#2-cryptographic-failures-%E5%8A%A0%E5%AF%86%E6%A9%9F%E5%88%B6%E5%A4%B1%E6%95%88">Cryptographic Failures</a></li>
-<li><a href="#3-injection-%E6%B3%A8%E5%85%A5%E5%BC%8F%E6%94%BB%E6%93%8A">Injection</a></li>
-<li><a href="#4-insecure-design-%E4%B8%8D%E5%AE%89%E5%85%A8%E8%A8%AD%E8%A8%88">Insecure Design</a></li>
-<li><a href="#5-security-misconfiguration-%E5%AE%89%E5%85%A8%E8%A8%AD%E5%AE%9A%E7%BC%BA%E9%99%B7">Security Misconfiguration</a></li>
-<li><a href="#6-vulnerable-and-outdated-components-%E5%8D%B1%E9%9A%AA%E6%88%96%E9%81%8E%E8%88%8A%E7%9A%84%E5%85%83%E4%BB%B6">Vulnerable and Outdated Components</a></li>
-<li><a href="#7-identification-and-authentication-failures-%E8%AA%8D%E8%AD%89%E5%8F%8A%E9%A9%97%E8%AD%89%E6%A9%9F%E5%88%B6%E5%A4%B1%E6%95%88">Identification and Authentication Failures</a></li>
-<li><a href="#8-software-and-data-integrity-failures-%E8%BB%9F%E9%AB%94%E5%8F%8A%E8%B3%87%E6%96%99%E5%AE%8C%E6%95%B4%E6%80%A7%E5%A4%B1%E6%95%88">Software and Data Integrity Failures</a></li>
-<li><a href="#9-security-logging-and-monitoring-failures-%E5%AE%89%E5%85%A8%E6%97%A5%E8%AA%8C%E5%8F%8A%E7%9B%A3%E6%8E%A7%E5%A4%B1%E6%95%88">Security Logging and Monitoring Failures</a></li>
-<li><a href="#10-server-side-request-forgery-%E4%BC%BA%E6%9C%8D%E7%AB%AF%E8%AB%8B%E6%B1%82%E5%81%BD%E9%80%A0">Server-Side Request Forgery (SSRF)</a></li>
-</ol>
-<h3 id="1-broken-access-control-權限控制失效"><a class="markdownIt-Anchor" href="#1-broken-access-control-權限控制失效"></a> 1. Broken Access Control 權限控制失效</h3>
-<p>導致未經授權的用戶可以訪問敏感資料或功能，從而取得非預期提供的資訊。</p>
-<div class="note info no-icon"><h4 id="範例"><a class="markdownIt-Anchor" href="#範例"></a> 範例：</h4>
-<p>不小心或刻意更改了 Session、Cookie 等紀錄身分的訊息，而成功越權瀏覽或操作，最常見的就是學校學生系統。</p>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https://example.com/userinfo/username=webber</span><br><span class="line">https://example.com/userinfo/username=admin</span><br></pre></td></tr></table></figure></div>
-<div class="note danger"><p>若發現漏洞，請勿做任意操作，容易觸法！</p>
-</div>
-<h4 id="防範方式"><a class="markdownIt-Anchor" href="#防範方式"></a> 防範方式</h4>
-<ul>
-<li>嚴格限制存取權限。</li>
-<li>定期測試存取控制規則。</li>
-</ul>
-<h3 id="2-cryptographic-failures-加密機制失效"><a class="markdownIt-Anchor" href="#2-cryptographic-failures-加密機制失效"></a> 2. Cryptographic Failures 加密機制失效</h3>
-<p>敏感資料未正確加密，或使用不安全的加密方法。</p>
-<div class="note danger no-icon"><h4 id="錯誤範例"><a class="markdownIt-Anchor" href="#錯誤範例"></a> 錯誤範例</h4>
-<ul>
-<li>使用過時的加密演算法（如 MD5）</li>
-<li>未加密的敏感數據傳輸。</li>
-</ul>
-</div>
-<div class="note success no-icon"><h4 id="正確範例"><a class="markdownIt-Anchor" href="#正確範例"></a> 正確範例</h4>
-<ul>
-<li>使用現今較安全的加密方式</li>
-<li>密碼 -&gt; 雜湊/加密 -&gt; 資料庫</li>
-</ul>
-</div>
-<h4 id="防範方式-2"><a class="markdownIt-Anchor" href="#防範方式-2"></a> 防範方式</h4>
-<ul>
-<li>使用當代強加密方法（如 AES 或 TLS 1.2/1.3）</li>
-<li>避免硬編碼加密密鑰。</li>
-</ul>
-<h3 id="3-injection-注入式攻擊"><a class="markdownIt-Anchor" href="#3-injection-注入式攻擊"></a> 3. Injection 注入式攻擊</h3>
-<p>攻擊者透過未經驗證的輸入操縱查詢或指令（如 SQL injection、XSS 等）。</p>
-<div class="note info no-icon"><h4 id="範例"><a class="markdownIt-Anchor" href="#範例"></a> 範例：</h4>
-<p>最常見的 XSS（Cross-Site Scripting）若成功觸發，表示駭客能夠輕易竊取 Cookie、釣魚攻擊或監視等等。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span>alert(1);<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-<div class="note danger"><p>切勿隨意嘗試，小心觸法！</p>
-</div>
-<h4 id="防範方式-3"><a class="markdownIt-Anchor" href="#防範方式-3"></a> 防範方式</h4>
-<ul>
-<li>使用現代框架（如 React、Angular）自帶的防範機制，避免直接操作 DOM。</li>
-<li>建立 HTML 的白名單標籤。</li>
-<li>過濾並驗證用戶輸入。</li>
-</ul>
-<h3 id="4-insecure-design-不安全設計"><a class="markdownIt-Anchor" href="#4-insecure-design-不安全設計"></a> 4. Insecure Design 不安全設計</h3>
-<p>應用程式架構或設計缺乏安全考量。這比較不像是一種漏洞，算是一種人為失誤，未考量清楚資安問題而間接導致資安漏洞。</p>
-<div class="note danger no-icon"><h4 id="錯誤範例"><a class="markdownIt-Anchor" href="#錯誤範例"></a> 錯誤範例</h4>
-<p>假設駭客嘗試輸入一對帳密，此系統提示提供駭客有利訊息，表示這個帳號確實有人使用，駭客只需暴力破解密碼即可。</p>
-<p><label>帳號：</label><br />
-<input value="username123" readonly></input><br />
-<label>密碼：</label><br />
-<input value="12345678" readonly></input><br />
-<span style="color: #d9534f;font-weight: bold;">系統提示：密碼錯誤</span></p>
-</div>
-<div class="note success no-icon"><h4 id="正確做法"><a class="markdownIt-Anchor" href="#正確做法"></a> 正確做法</h4>
-<p>系統提示：使用者名稱或密碼有誤。</p>
-<h4 id="加強做法"><a class="markdownIt-Anchor" href="#加強做法"></a> 加強做法</h4>
-<p>再用 CAPTCHA 驗證或 2FA。</p>
-</div>
-<h4 id="防範方式-4"><a class="markdownIt-Anchor" href="#防範方式-4"></a> 防範方式</h4>
-<ul>
-<li>在設計階段進行安全審查。</li>
-<li>採用安全架構模式。</li>
-</ul>
-<h3 id="5-security-misconfiguration-安全設定缺陷"><a class="markdownIt-Anchor" href="#5-security-misconfiguration-安全設定缺陷"></a> 5. Security Misconfiguration 安全設定缺陷</h3>
-<p>不當的文件配置或任意權限使應用程式暴露在攻擊風險中。</p>
-<div class="note danger no-icon"><h4 id="錯誤範例"><a class="markdownIt-Anchor" href="#錯誤範例"></a> 錯誤範例</h4>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">https://example.com/.git</span><br><span class="line">https://example.com/.env</span><br><span class="line">https://example.com/.htaccess</span><br><span class="line">https://example.com/access.log</span><br></pre></td></tr></table></figure></div>
-<div class="note success no-icon"><h4 id="正確做法"><a class="markdownIt-Anchor" href="#正確做法"></a> 正確做法</h4>
-<p>敏感的配置內容都應該要避免公開，甚至能減少有這些敏感訊息都要盡量減少。也請勿將所有檔案權限改寫為 777。</p>
-</div>
-<h4 id="防範方式-5"><a class="markdownIt-Anchor" href="#防範方式-5"></a> 防範方式</h4>
-<ul>
-<li>關閉不必要的功能或服務。</li>
-<li>定期檢查配置安全性。</li>
-</ul>
-<h3 id="6-vulnerable-and-outdated-components-危險或過舊的元件"><a class="markdownIt-Anchor" href="#6-vulnerable-and-outdated-components-危險或過舊的元件"></a> 6. Vulnerable and Outdated Components 危險或過舊的元件</h3>
-<p>使用具有已知漏洞的第三方元件、框架或作業系統。</p>
-<div class="note danger no-icon"><h4 id="錯誤範例"><a class="markdownIt-Anchor" href="#錯誤範例"></a> 錯誤範例</h4>
-<ul>
-<li>Windows 7</li>
-<li>MySQL 5.5</li>
-<li>Node.js 10.x</li>
-</ul>
-</div>
-<div class="note success no-icon"><h4 id="正確做法"><a class="markdownIt-Anchor" href="#正確做法"></a> 正確做法</h4>
-<p>使用現今最新最穩定的版本（LTS），因為過去版本不再進行維護，過去的版本漏洞只會越找越多。因此要經常更新套件並維護專案。</p>
-</div>
-<h4 id="防範方式-6"><a class="markdownIt-Anchor" href="#防範方式-6"></a> 防範方式</h4>
-<ul>
-<li>定期更新依賴元件或系統。</li>
-<li>使用漏洞掃描工具。</li>
-</ul>
-<h3 id="7-identification-and-authentication-failures-認證及驗證機制失效"><a class="markdownIt-Anchor" href="#7-identification-and-authentication-failures-認證及驗證機制失效"></a> 7. Identification and Authentication Failures 認證及驗證機制失效</h3>
-<p>使用者身分驗證或管理存在問題。</p>
-<div class="note danger no-icon"><h4 id="錯誤範例"><a class="markdownIt-Anchor" href="#錯誤範例"></a> 錯誤範例</h4>
-<ul>
-<li>Token 暴露於 URL</li>
-<li>弱密碼（12345678、qwertyuiop）</li>
-<li>不能正確的失效 Session</li>
-</ul>
-</div>
-<div class="note success no-icon"><h4 id="正確做法"><a class="markdownIt-Anchor" href="#正確做法"></a> 正確做法</h4>
-<p>使用強化過的密碼（如：至少一個特殊字元、大寫字母、數字）、使用 2FA、Passkey 等等，確保帳號是由帳號本人操作，以及有時限的 Session。</p>
-</div>
-<h4 id="防範方式-7"><a class="markdownIt-Anchor" href="#防範方式-7"></a> 防範方式</h4>
-<ul>
-<li>實現多因素認證</li>
-<li>弱密碼檢查</li>
-</ul>
-<h3 id="8-software-and-data-integrity-failures-軟體及資料完整性失效"><a class="markdownIt-Anchor" href="#8-software-and-data-integrity-failures-軟體及資料完整性失效"></a> 8. Software and Data Integrity Failures 軟體及資料完整性失效</h3>
-<p>未檢查軟體和資料的完整性，導致可能被惡意操縱。</p>
-<div class="note danger no-icon"><h4 id="錯誤範例"><a class="markdownIt-Anchor" href="#錯誤範例"></a> 錯誤範例</h4>
-<ul>
-<li>使用不受信任的依賴套件</li>
-<li>未使用安全協議或未對更新檔案進行簽名驗證</li>
-<li>缺乏數據完整性保護</li>
-</ul>
-</div>
-<div class="note success no-icon"><h4 id="正確做法"><a class="markdownIt-Anchor" href="#正確做法"></a> 正確做法</h4>
-<ul>
-<li>對使用的套件進行來源和版本檢查</li>
-<li>使用數字簽名或哈希驗證數據和檔案的完整性</li>
-<li>對數據做加密檢查驗證</li>
-</ul>
-</div>
-<h4 id="防範方式-8"><a class="markdownIt-Anchor" href="#防範方式-8"></a> 防範方式</h4>
-<ul>
-<li>驗證軟體更新的簽名</li>
-<li>確保 CI/CD 管道的安全性</li>
-</ul>
-<h3 id="9-security-logging-and-monitoring-failures-安全日誌及監控失效"><a class="markdownIt-Anchor" href="#9-security-logging-and-monitoring-failures-安全日誌及監控失效"></a> 9. Security Logging and Monitoring Failures 安全日誌及監控失效</h3>
-<p>缺乏適當的日誌記錄和監控，無法及時發現和回應攻擊。</p>
-<div class="note danger no-icon"><h4 id="錯誤範例"><a class="markdownIt-Anchor" href="#錯誤範例"></a> 錯誤範例</h4>
-<ul>
-<li>無 Log 檔紀錄</li>
-<li>日誌內容資訊缺漏</li>
-<li>日誌保存時間過短</li>
-</ul>
-</div>
-<div class="note success no-icon"><h4 id="正確做法"><a class="markdownIt-Anchor" href="#正確做法"></a> 正確做法</h4>
-<ul>
-<li>對任意操作都記錄到日誌上</li>
-<li>將重要資訊都寫進日誌（IP、操作、日期等）</li>
-<li>依法保存日誌時限</li>
-</ul>
-</div>
-<h4 id="防範方式-9"><a class="markdownIt-Anchor" href="#防範方式-9"></a> 防範方式</h4>
-<ul>
-<li>設置集中式日誌管理。</li>
-<li>定期審查安全日誌。</li>
-</ul>
-<h3 id="10-server-side-request-forgery-伺服端請求偽造"><a class="markdownIt-Anchor" href="#10-server-side-request-forgery-伺服端請求偽造"></a> 10. Server-Side Request Forgery 伺服端請求偽造</h3>
-<p>攻擊者誘使伺服器向未經授權的目的地發出請求。</p>
-<div class="note info no-icon"><h4 id="基本原理"><a class="markdownIt-Anchor" href="#基本原理"></a> 基本原理：</h4>
-<p><img src="https://i.ibb.co/M8JYF4w/OWASP-SSRF.png" alt="OWASP-SSRF" /></p>
-<h4 id="範例"><a class="markdownIt-Anchor" href="#範例"></a> 範例：</h4>
-<p><img src="https://i.ibb.co/jHVnGhh/OWASP-SSRF-example.png" alt="OWASP-SSRF-example" /></p>
-</div>
-<h4 id="防範方式-10"><a class="markdownIt-Anchor" href="#防範方式-10"></a> 防範方式</h4>
-<ul>
-<li>定期檢查所有目錄及 API 權限</li>
-<li>使用安全代理來處理外部請求</li>
-</ul>
-<h6 id="標籤tags"><a class="markdownIt-Anchor" href="#標籤tags"></a> 標籤（Tags）</h6>
-<p><code>資安</code>, <code>Cybersecurity</code>, <code>OWASP</code></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/cybersecurity/owasp-top-10/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

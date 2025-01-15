@@ -23,17 +23,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"huangmayor0905.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":true,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="引言 隨科技發展下，身邊周遭都是資訊的應用。在享受資訊帶來的便利時，另一面卻是資安的警告。且不久前好友的 Ubuntu 被駭入，只因為「弱密碼」（12345678）被暴力破解，讓我覺得資安的意識應該要多多加強。  OWASP Top 10  Broken Access Control（XSS） Cryptographic Failures Injection Insecure Design Se">
+    <meta name="description" content="引言 隨科技發展下，身邊周遭都是資訊的應用。在享受資訊帶來的便利時，另一面卻是資安的警告。且不久前好友的 Ubuntu 被駭入，只因為「弱密碼」（12345678）被暴力破解，讓我覺得資安的意識應該要多多加強。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【資安】OWASP Top 10">
 <meta property="og:url" content="https://huangmayor0905.github.io/cybersecurity/owasp-top-10/index.html">
 <meta property="og:site_name" content="市長的隨筆">
-<meta property="og:description" content="引言 隨科技發展下，身邊周遭都是資訊的應用。在享受資訊帶來的便利時，另一面卻是資安的警告。且不久前好友的 Ubuntu 被駭入，只因為「弱密碼」（12345678）被暴力破解，讓我覺得資安的意識應該要多多加強。  OWASP Top 10  Broken Access Control（XSS） Cryptographic Failures Injection Insecure Design Se">
+<meta property="og:description" content="引言 隨科技發展下，身邊周遭都是資訊的應用。在享受資訊帶來的便利時，另一面卻是資安的警告。且不久前好友的 Ubuntu 被駭入，只因為「弱密碼」（12345678）被暴力破解，讓我覺得資安的意識應該要多多加強。">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://i.ibb.co/M8JYF4w/OWASP-SSRF.png">
 <meta property="og:image" content="https://i.ibb.co/jHVnGhh/OWASP-SSRF-example.png">
 <meta property="article:published_time" content="2025-01-15T08:09:49.000Z">
-<meta property="article:modified_time" content="2025-01-15T09:54:21.085Z">
+<meta property="article:modified_time" content="2025-01-15T09:57:23.869Z">
 <meta property="article:author" content="Eric Huang">
 <meta property="article:tag" content="資安">
 <meta property="article:tag" content="Cybersecurity">
@@ -259,7 +259,7 @@
       <span class="post-meta-item-text">發布於</span>
       
 
-      <time title="創建時間：2025-01-15 16:09:49 / 修改時間：17:54:21" itemprop="dateCreated datePublished" datetime="2025-01-15T16:09:49+08:00">2025-01-15</time>
+      <time title="創建時間：2025-01-15 16:09:49 / 修改時間：17:57:23" itemprop="dateCreated datePublished" datetime="2025-01-15T16:09:49+08:00">2025-01-15</time>
     </span>
 
   
@@ -295,6 +295,7 @@
     
     <div class="post-body" itemprop="articleBody"><h2 id="引言"><a class="markdownIt-Anchor" href="#引言"></a> 引言</h2>
 <p>隨科技發展下，身邊周遭都是資訊的應用。在享受資訊帶來的便利時，另一面卻是資安的警告。且不久前好友的 Ubuntu 被駭入，只因為「弱密碼」（12345678）被暴力破解，讓我覺得資安的意識應該要多多加強。</p>
+<span id="more"></span>
 <h2 id="owasp-top-10"><a class="markdownIt-Anchor" href="#owasp-top-10"></a> OWASP Top 10</h2>
 <ol>
 <li><a href="#1-broken-access-control-%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6%E5%A4%B1%E6%95%88">Broken Access Control（XSS）</a></li>
